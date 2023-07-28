@@ -1,0 +1,34 @@
+{
+    "navigation": {
+        "title": "Template",
+        "headers": [
+            {
+                "nav_id": 1,
+                "title": "Home",
+                "link": "#home"
+            },
+            {
+                "nav_id": 2,
+                "title": "About",
+                "link": "#about"
+            },
+            {
+                "nav_id": 3,
+                "title": "Products",
+                "link": "#products"
+            }
+        ]
+    },
+    "banner": {
+        "imgSrc": "/assets/img/default-image.png",
+        "imgAlt": "Banner image",
+        "originalWidth": "1366px",
+        "originalHeight": "768px",
+        "proportionX": "0.5622",
+        "proportionY": "1.7786"
+    },
+    "footer": {
+        "title": "Template",
+        "secondaryTitle": "© 2023 Template - Todos los derechos reservados."
+    }
+}
