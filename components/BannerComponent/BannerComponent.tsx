@@ -8,11 +8,11 @@ export default function BannerComponent() {
             <div className={styles['container-outer-banner-image']}>
                 <div className={styles['container-inner-banner-image']}>
                     <Image
-                        src={data.banner.imgSrc}
-                        alt={data.banner.imgAlt}
+                        src={data.homePage.banner.imgSrc}
+                        alt={data.homePage.banner.imgAlt}
                         fill
                         priority
-                        quality={75}
+                        quality={100}
                     />
                 </div>
             </div>

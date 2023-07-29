@@ -19,16 +19,48 @@
             }
         ]
     },
-    "banner": {
-        "imgSrc": "/assets/img/default-image.png",
-        "imgAlt": "Banner image",
-        "originalWidth": "1366px",
-        "originalHeight": "768px",
-        "proportionX": "0.5622",
-        "proportionY": "1.7786"
+    "homePage": {
+        "banner": {
+            "imgSrc": "/assets/img/home/banner/Strong_Wood_IG-43.webp",
+            "imgAlt": "Banner image",
+            "originalWidth": "6048px",
+            "originalHeight": "4024px",
+            "proportionX": "0.66534",
+            "proportionY": "1.50298"
+        },
+        "categories": {
+            "images": [
+                {
+                    "img_id": 1,
+                    "imgSrc": "/assets/img/home/categoires/Strong_Wood_IG-43.webp",
+                    "imgAlt": "Banner image",
+                    "originalWidth": "4024px",
+                    "originalHeight": "6048px",
+                    "proportionX": "1.50298",
+                    "proportionY": "0.66534"
+                },
+                {
+                    "img_id": 2,
+                    "imgSrc": "/assets/img/home/categoires/Strong_Wood_IG-46.webp",
+                    "imgAlt": "Banner image",
+                    "originalWidth": "4024px",
+                    "originalHeight": "6048px",
+                    "proportionX": "1.50298",
+                    "proportionY": "0.66534"
+                },
+                {
+                    "img_id": 3,
+                    "imgSrc": "/assets/img/home/categoires/Strong_Wood_IG-4.webp",
+                    "imgAlt": "Banner image",
+                    "originalWidth": "4024px",
+                    "originalHeight": "6048px",
+                    "proportionX": "1.50298",
+                    "proportionY": "0.66534"
+                }
+            ]
+        }
     },
     "footer": {
-        "title": "Template",
         "secondaryTitle": "© 2023 Template - Todos los derechos reservados."
     }
 }

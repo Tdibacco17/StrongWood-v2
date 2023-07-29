@@ -2,9 +2,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: var(--palletete-color-4);
-    // min-height: 3rem;
-    // max-height: 3rem;
+    background-color: var(--primary-color);
     min-width: 100%;
     max-width: 100%;
     display: flex;
@@ -12,20 +10,13 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding: 1rem 2rem 0 2rem;
-
-    .title {
-        font-size: var(--font-xmedium);
-        font-weight: var(--font-bold);
-        text-align: center;
-        text-transform: uppercase;
-    }
+    padding: 0 2rem;
 
     .divider {
-        border-top: 0.05rem solid var(--palletete-color-1);
+        border-top: 0.1rem solid var(--secondary-color);
         min-width: 100%;
         max-width: 100%;
-        padding: 0.5rem 0;
+        padding: 1rem;
 
         .secondary-title {
             font-size: var(--font-small);
