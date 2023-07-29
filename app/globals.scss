@@ -40,7 +40,8 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   position: absolute;
-
+  padding-bottom: 3rem; //height del footer
+  
   &::-webkit-scrollbar {
     width: 0.15rem;
   }

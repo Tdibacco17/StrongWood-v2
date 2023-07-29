@@ -1,0 +1,72 @@
+.container-outer-card-services {
+    --baner-image-print: 20vw;
+    --banner-image-proportion: calc(var(--baner-image-print) * 1.50298);
+    --banner-image-proportion-mobile: calc(100vh * 0.66534);
+
+    min-height: var(--banner-image-proportion);
+    max-height: var(--banner-image-proportion);
+    min-width: var(--baner-image-print);
+    max-width: var(--baner-image-print);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+        .container-overlay {
+            opacity: 0;
+        }
+
+        .title-overlay {
+            opacity: 0;
+        }
+    }
+
+    @media (max-width:992px) {
+        --baner-image-print: 25vw;
+    }
+
+    @media (max-width:768px) {
+        --baner-image-print: 50vw;
+    }
+
+    .container-inner-card-services {
+        position: relative;
+        min-height: var(--banner-image-proportion);
+        max-height: var(--banner-image-proportion);
+        min-width: var(--baner-image-print);
+        max-width: var(--baner-image-print);
+        user-select: none;
+
+        * {
+            pointer-events: none;
+        }
+    }
+
+    .container-overlay {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #232730;
+        opacity: 0.6;
+        transition: 0.3s ease-in-out;
+    }
+
+    .title-overlay {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        font-size: var(--font-medium);
+        font-weight: var(--font-bold);
+        text-transform: uppercase;
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s ease-in-out;
+    }
+}
