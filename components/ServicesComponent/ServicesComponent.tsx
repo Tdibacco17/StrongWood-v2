@@ -5,11 +5,11 @@ import { ImgDataInterface } from '@/types'
 
 export default function ServicesComponent() {
     return (
-        <div id={data.homePage.services.link} className={styles['container-section-services']}>
-            <p className={styles['services-title']}>{data.homePage.services.title}</p>
+        <div id={data.services.link} className={styles['container-section-services']}>
+            <p className={styles['services-title']}>{data.services.title}</p>
             <div className={styles['container-cards-services']}>
                 {
-                    data.homePage.services.images.map((card: ImgDataInterface) => {
+                    data.services.images.map((card: ImgDataInterface) => {
                         return <ServicesCardComponent imgData={card} />
                     })
                 }

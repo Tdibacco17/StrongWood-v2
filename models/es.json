@@ -9,75 +9,117 @@
             },
             {
                 "nav_id": 2,
-                "title": "About",
-                "link": "#about"
-            },
-            {
-                "nav_id": 3,
                 "title": "Products",
                 "link": "#products"
             },
             {
-                "nav_id": 4,
+                "nav_id": 3,
                 "title": "Services",
                 "link": "#services"
+            },
+            {
+                "nav_id": 4,
+                "title": "Design",
+                "link": "#design"
+            },
+            {
+                "nav_id": 5,
+                "title": "Contact",
+                "link": "#contact"
+            },
+            {
+                "nav_id": 6,
+                "title": "Projects",
+                "link": "#projects"
             }
         ]
     },
-    "homePage": {
+    "banner": {
         "link": "home",
-        "banner": {
+        "image": {
             "imgSrc": "/assets/img/home/banner/Strong_Wood_IG-43.webp",
             "imgAlt": "Banner image",
             "originalWidth": "6048px",
             "originalHeight": "4024px",
             "proportionX": "0.66534",
             "proportionY": "1.50298"
-        },
-        "services": {
-            "link": "services",
-            "title": "Our Services",
-            "images": [
-                {
-                    "img_id": 1,
-                    "imgSrc": "/assets/img/home/services/Strong_Wood_IG-51.webp",
-                    "imgAlt": "Titulo 1",
-                    "originalWidth": "4024px",
-                    "originalHeight": "6048px",
-                    "proportionX": "1.50298",
-                    "proportionY": "0.66534"
-                },
-                {
-                    "img_id": 2,
-                    "imgSrc": "/assets/img/home/services/Strong_Wood_IG-34.webp",
-                    "imgAlt": "Titulo 2",
-                    "originalWidth": "4024px",
-                    "originalHeight": "6048px",
-                    "proportionX": "1.50298",
-                    "proportionY": "0.66534"
-                },
-                {
-                    "img_id": 3,
-                    "imgSrc": "/assets/img/home/services/Strong_Wood_IG-4.webp",
-                    "imgAlt": "Titulo 3",
-                    "originalWidth": "4024px",
-                    "originalHeight": "6048px",
-                    "proportionX": "1.50298",
-                    "proportionY": "0.66534"
-                },
-                {
-                    "img_id": 4,
-                    "imgSrc": "/assets/img/home/services/Strong_Wood_IG-46.webp",
-                    "imgAlt": "Titulo 4",
-                    "originalWidth": "4024px",
-                    "originalHeight": "6048px",
-                    "proportionX": "1.50298",
-                    "proportionY": "0.66534"
-                }
-            ]
         }
     },
+    "aboutUs": {
+        "title": "About us",
+        "subtitle": "Creative solutions by profesional designers",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto earum eum optio inventore dignissimos fugit veniam iure labore at non, voluptatum sit! Quia quaerat voluptatem esse, optio quod tenetur distinctio?",
+        "box": {
+            "year": "15",
+            "texts": [
+                {
+                    "text_id": 1,
+                    "text": "Years"
+                },
+                {
+                    "text_id": 2,
+                    "text": "experience"
+                },
+                {
+                    "text_id": 3,
+                    "text": "working"
+                }
+            ]
+        },
+        "button": {
+            "title": "Contact service",
+            "link": "/contact"
+        }
+    },
+    "services": {
+        "link": "services",
+        "title": "Our Services",
+        "images": [
+            {
+                "img_id": 1,
+                "imgSrc": "/assets/img/home/services/Strong_Wood_IG-51.webp",
+                "imgAlt": "Title 1",
+                "originalWidth": "4024px",
+                "originalHeight": "6048px",
+                "proportionX": "1.50298",
+                "proportionY": "0.66534"
+            },
+            {
+                "img_id": 2,
+                "imgSrc": "/assets/img/home/services/Strong_Wood_IG-34.webp",
+                "imgAlt": "Title 2",
+                "originalWidth": "4024px",
+                "originalHeight": "6048px",
+                "proportionX": "1.50298",
+                "proportionY": "0.66534"
+            },
+            {
+                "img_id": 3,
+                "imgSrc": "/assets/img/home/services/Strong_Wood_IG-4.webp",
+                "imgAlt": "Title 3",
+                "originalWidth": "4024px",
+                "originalHeight": "6048px",
+                "proportionX": "1.50298",
+                "proportionY": "0.66534"
+            },
+            {
+                "img_id": 4,
+                "imgSrc": "/assets/img/home/services/Strong_Wood_IG-46.webp",
+                "imgAlt": "Title 4",
+                "originalWidth": "4024px",
+                "originalHeight": "6048px",
+                "proportionX": "1.50298",
+                "proportionY": "0.66534"
+            }
+        ]
+    },
+    "design": {
+        "link": "design",
+        "title": "Explore our kitchen designs",
+        "subtitle": "Our projects",
+        "images": []
+    },
     "footer": {
-        "secondaryTitle": "© 2023 Template - Todos los derechos reservados."
+        "secondaryTitle": "© 2023 Template - All rights reserved."
     }
 }

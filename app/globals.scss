@@ -5,6 +5,10 @@
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
   --font-regular: 400;
   --font-bold: 700;
+  --font-xgiant: 4rem; // 64px
+  --font-giant: 3.5rem; // 56px
+  --font-xbig: 3rem; //48px
+  --font-big: 2.5rem; //32px
   --font-xlarge: 2rem; //32px
   --font-large: 1.5rem; //24px
   --font-xmedium: 1.125rem; //18px
@@ -14,6 +18,7 @@
   --primary-white: #F2F2F2;
   --primary-color: #232730;
   --secondary-color: #2F3540;
+  --tertiary-color: #4477be;
   --wrapper-calc-7rem: calc(100vw - 7rem);
   --wrapper-calc-5rem: calc(100vw - 5rem);
   --wrapper-calc-3rem: calc(100vw - 3rem);
@@ -41,7 +46,7 @@ body {
   overflow-x: hidden;
   position: absolute;
   padding-bottom: 3rem; //height del footer
-  
+
   &::-webkit-scrollbar {
     width: 0.15rem;
   }

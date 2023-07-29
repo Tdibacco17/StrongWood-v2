@@ -26,6 +26,11 @@
         .titles {
             font-weight: var(--font-bold);
             font-size: var(--font-xmedium);
+
+            &:hover {
+                color: var(--tertiary-color);
+                transition: color 0.3s ease-in-out;
+            }
         }
     }
 }

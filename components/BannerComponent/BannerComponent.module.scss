@@ -5,13 +5,14 @@
         --banner-image-proportion: calc(var(--baner-image-print) * 0.66534);
         --banner-image-proportion-mobile: calc(100vh * 1.50298);
 
-        min-height: var(--banner-image-proportion);
-        max-height: var(--banner-image-proportion);
+        // min-height: var(--banner-image-proportion);
+        height: var(--banner-image-proportion);
+        max-height: 100vh;
         min-width: var(--baner-image-print);
         max-width: var(--baner-image-print);
         display: flex;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
         overflow: hidden;
 
         @media (max-width:442px) {
