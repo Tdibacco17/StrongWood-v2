@@ -10,7 +10,7 @@ export default function ServicesComponent() {
             <div className={styles['container-cards-services']}>
                 {
                     data.services.images.map((card: ImgDataInterface) => {
-                        return <ServicesCardComponent imgData={card} />
+                        return <ServicesCardComponent imgData={card} key={card.img_id}/>
                     })
                 }
             </div>
