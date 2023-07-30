@@ -113,6 +113,16 @@
             }
         ]
     },
+    "secondBanner": {
+        "image": {
+            "imgSrc": "/assets/img/home/secondBanner/Strong_Wood_IG-81.webp",
+            "imgAlt": "Banner image",
+            "originalWidth": "6048px",
+            "originalHeight": "4024px",
+            "proportionX": "0.66534",
+            "proportionY": "1.50298"
+        }
+    },
     "design": {
         "link": "design",
         "title": "Explore our kitchen designs",

@@ -1,4 +1,4 @@
-import './globals.scss'
+import './globals.css'
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 import NavigationComponent from '@/components/NavigationComponent/NavigationComponent'
