@@ -23,6 +23,10 @@
         display: flex;
         gap: 1.5rem;
 
+        @media (max-width:992px) {
+            display: none;
+        }
+
         .titles {
             font-weight: var(--font-bold);
             font-size: var(--font-xmedium);
