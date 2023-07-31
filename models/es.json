@@ -113,15 +113,38 @@
             }
         ]
     },
-    "secondBanner": {
+    "projects": {
+        "link": "projects",
+        "title": "Our Projects",
+        "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto earum eum optio inventore dignissimos fugit veniam iure labore at non, voluptatum sit!",
         "image": {
-            "imgSrc": "/assets/img/home/secondBanner/Strong_Wood_IG-81.webp",
-            "imgAlt": "Banner image",
+            "imgSrc": "/assets/img/home/projects/Strong_Wood_IG-81.webp",
+            "imgAlt": "Projects image",
             "originalWidth": "6048px",
             "originalHeight": "4024px",
             "proportionX": "0.66534",
             "proportionY": "1.50298"
-        }
+        },
+        "videos": [
+            {
+                "img_id": 1,
+                "imgSrc": "/assets/img/home/projects/Strong_Wood_IG-16.webp",
+                "imgAlt": "Video one",
+                "originalWidth": "6048px",
+                "originalHeight": "4024px",
+                "proportionX": "0.66534",
+                "proportionY": "1.50298"
+            },
+            {
+                "img_id": 2,
+                "imgSrc": "/assets/img/home/projects/Strong_Wood_IG-66.webp",
+                "imgAlt": "Video two",
+                "originalWidth": "6048px",
+                "originalHeight": "4024px",
+                "proportionX": "0.66534",
+                "proportionY": "1.50298"
+            }
+        ]
     },
     "design": {
         "link": "design",

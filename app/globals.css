@@ -60,7 +60,8 @@ body {
   font-family: var(--font-mono);
   font-weight: var(--font-regular);
   font-size: var(--calc-rem);
-  padding-bottom: 3rem;
+  /* height footer + padding top */
+  padding-bottom: 8rem;
 }
 
 body::-webkit-scrollbar {

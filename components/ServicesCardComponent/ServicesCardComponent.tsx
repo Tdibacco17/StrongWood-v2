@@ -12,8 +12,7 @@ export default function ServicesCardComponent({ imgData }: { imgData: ImgDataInt
                     fill
                 />
             </div>
-            <div className={styles['container-overlay']}>
-            </div>
+            <div className={styles['container-overlay']} />
             <p className={styles['title-overlay']}>{imgData.imgAlt}</p>
         </div>
     )
