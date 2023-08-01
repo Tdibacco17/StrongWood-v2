@@ -4,18 +4,16 @@ import data from '@/models/es.json'
 
 export default function BannerComponent() {
     return (
-        <div id={data.banner.link} className={styles['container-section-banner']}>
-            <div className={styles['container-outer-banner-image']}>
-                <div className={styles['container-inner-banner-image']}>
-                    <Image
-                        src={data.banner.image.imgSrc}
-                        alt={data.banner.image.imgAlt}
-                        fill
-                        priority
-                        quality={100}
-                    />
-                </div>
-            </div>
-        </div>
+        <section id={data.banner.scrollLink} className={styles['container-outer-banner-image']}>
+            <Image
+                className={styles['container-inner-banner-image']}
+                src={data.banner.image.imgSrc}
+                alt={data.banner.image.imgAlt}
+                fill
+                sizes='100vw'
+                priority
+                quality={100}
+            />
+        </section>
     )
 }

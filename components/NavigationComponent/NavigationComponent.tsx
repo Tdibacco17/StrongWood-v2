@@ -1,10 +1,13 @@
+import ScrollToButton from '@/utils/ScrollToButton/ScrollToButton'
 import styles from './NavigationComponent.module.scss'
 import data from '@/models/es.json'
+import Link from 'next/link'
 
 interface HedersTitleInterface {
     nav_id: number,
     title: string,
-    link: string
+    link?: string,
+    scrollTo?: string
 }
 
 export default function NavigationComponent() {
@@ -14,12 +17,22 @@ export default function NavigationComponent() {
             <div className={styles['container-menu-titles']}>
                 {
                     data.navigation.headers.map((item: HedersTitleInterface) => {
-                        return <a className={styles['titles']} href={item.link} key={item.nav_id}>
-                            {item.title}
-                        </a>
+                        return (
+                            <>
+                                {
+                                    item.scrollTo ?
+                                        <ScrollToButton targetSection={item.scrollTo} text={item.title} key={item.nav_id} />
+                                        : <Link href={``/*${item.link}*/} className={styles['titles']} key={item.nav_id}>
+                                            {item.title}
+                                        </Link>
+
+                                }
+                            </>
+
+                        )
                     })
                 }
             </div>
-        </section>
+        </section >
     )
 }

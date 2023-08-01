@@ -30,6 +30,7 @@
         .titles {
             font-weight: var(--font-bold);
             font-size: var(--font-xmedium);
+            cursor: pointer;
 
             &:hover {
                 color: var(--tertiary-color);

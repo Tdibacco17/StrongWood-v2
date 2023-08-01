@@ -7,7 +7,7 @@ import ProjectsVideoCardComponent from '../ProjectsCardComponent/ProjectsVideoCa
 export default function ProjectsComponent() {
     return (
         <div id={data.projects.link} className={styles['container-section-projects']}>
-            <div className={styles['container-wrapper-images']}>
+            {/* <div className={styles['container-wrapper-images']}>
                 <div className={styles['container-outer-project-image']}>
                     <div className={styles['container-inner-project-image']}>
                         <Image
@@ -25,12 +25,12 @@ export default function ProjectsComponent() {
                     <div className={styles['container-video-cards-projects']}>
                         {
                             data.projects.videos.map((video: ImgDataInterface) => {
-                                return <ProjectsVideoCardComponent videoData={video} key={video.img_id} />
+                                return <ProjectsVideoCardComponent videoData={video} key={video.imgId} />
                             })
                         }
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

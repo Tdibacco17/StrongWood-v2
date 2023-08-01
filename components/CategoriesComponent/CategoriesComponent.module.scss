@@ -1,0 +1,28 @@
+.container-section-categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 6rem;
+
+    .categories-title {
+        font-size: var(--font-xlarge);
+        font-weight: var(--font-bold);
+    }
+
+    .container-cards-categories {
+        min-width: 85vw;
+        max-width: 85vw;
+        height: 40rem;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 1rem;
+
+        @media (max-width:768px) {
+            min-width: 100vw;
+            max-width: 100vw;
+            padding: 0 1rem;
+        }
+    }
+}

@@ -1,9 +1,9 @@
 export interface ImgDataInterface {
-    img_id?: number,
+    imgId?: number,
     imgSrc: string,
     imgAlt: string,
-    originalWidth: string,
-    originalHeight: string,
+    originalWidth: number,
+    originalHeight: number,
     proportionX: string,
     proportionY: string
 }

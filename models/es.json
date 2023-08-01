@@ -1,51 +1,52 @@
 {
     "navigation": {
-        "title": "Template",
+        "title": "strong",
         "headers": [
             {
                 "nav_id": 1,
-                "title": "Home",
-                "link": "#home"
+                "title": "Productos",
+                "link": "productos"
             },
             {
                 "nav_id": 2,
-                "title": "Products",
-                "link": "#products"
+                "title": "Nosotros",
+                "link": "nosotros"
             },
             {
                 "nav_id": 3,
-                "title": "Services",
-                "link": "#services"
+                "title": "Diseño",
+                "link": "diseño"
             },
             {
                 "nav_id": 4,
-                "title": "Design",
-                "link": "#design"
+                "title": "Contacto",
+                "scrollTo": "contacto"
             },
             {
                 "nav_id": 5,
-                "title": "Contact",
-                "link": "#contact"
+                "title": "Proyectos",
+                "link": "proyectos"
             },
             {
                 "nav_id": 6,
-                "title": "Projects",
-                "link": "#projects"
+                "title": "Categorias",
+                "scrollTo": "categories"
             }
         ]
     },
     "banner": {
-        "link": "home",
+        "scrollLink": "top",
         "image": {
             "imgSrc": "/assets/img/home/banner/Strong_Wood_IG-43.webp",
             "imgAlt": "Banner image",
-            "originalWidth": "6048px",
-            "originalHeight": "4024px",
+            "originalWidth": 6048,
+            "originalHeight": 4024,
             "proportionX": "0.66534",
             "proportionY": "1.50298"
         }
     },
     "aboutUs": {
+        "scrollLink": "contacto",
         "title": "About us",
         "subtitle": "Creative solutions by profesional designers",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto earum eum optio inventore dignissimos fugit veniam iure labore at non, voluptatum sit! Quia quaerat voluptatem esse, optio quod tenetur distinctio?",
@@ -71,43 +72,52 @@
             "link": "/contact"
         }
     },
-    "services": {
-        "link": "services",
-        "title": "Our Services",
+    "categories": {
+        "scrollLink": "categories",
+        "title": "Categorias",
         "images": [
             {
-                "img_id": 1,
-                "imgSrc": "/assets/img/home/services/Strong_Wood_IG-51.webp",
+                "imgId": 1,
+                "imgSrc": "/assets/img/home/categories/Strong_Wood_IG-51.webp",
                 "imgAlt": "Title 1",
-                "originalWidth": "4024px",
-                "originalHeight": "6048px",
+                "originalWidth": 4024,
+                "originalHeight": 6048,
                 "proportionX": "1.50298",
                 "proportionY": "0.66534"
             },
             {
-                "img_id": 2,
-                "imgSrc": "/assets/img/home/services/Strong_Wood_IG-34.webp",
+                "imgId": 2,
+                "imgSrc": "/assets/img/home/categories/Strong_Wood_IG-34.webp",
                 "imgAlt": "Title 2",
-                "originalWidth": "4024px",
-                "originalHeight": "6048px",
+                "originalWidth": 4024,
+                "originalHeight": 6048,
                 "proportionX": "1.50298",
                 "proportionY": "0.66534"
             },
             {
-                "img_id": 3,
-                "imgSrc": "/assets/img/home/services/Strong_Wood_IG-4.webp",
+                "imgId": 3,
+                "imgSrc": "/assets/img/home/categories/Strong_Wood_IG-4.webp",
                 "imgAlt": "Title 3",
-                "originalWidth": "4024px",
-                "originalHeight": "6048px",
+                "originalWidth": 4024,
+                "originalHeight": 6048,
                 "proportionX": "1.50298",
                 "proportionY": "0.66534"
             },
             {
-                "img_id": 4,
-                "imgSrc": "/assets/img/home/services/Strong_Wood_IG-46.webp",
+                "imgId": 4,
+                "imgSrc": "/assets/img/home/categories/Strong_Wood_IG-46.webp",
                 "imgAlt": "Title 4",
-                "originalWidth": "4024px",
-                "originalHeight": "6048px",
+                "originalWidth": 4024,
+                "originalHeight": 6048,
+                "proportionX": "1.50298",
+                "proportionY": "0.66534"
+            },
+            {
+                "imgId": 5,
+                "imgSrc": "/assets/img/home/categories/Strong_Wood_web-149.webp",
+                "imgAlt": "Title 5",
+                "originalWidth": 4024,
+                "originalHeight": 6048,
                 "proportionX": "1.50298",
                 "proportionY": "0.66534"
             }
@@ -127,7 +137,7 @@
         },
         "videos": [
             {
-                "img_id": 1,
+                "imgId": 1,
                 "imgSrc": "/assets/img/home/projects/Strong_Wood_IG-16.webp",
                 "imgAlt": "Video one",
                 "originalWidth": "6048px",
@@ -136,7 +146,7 @@
                 "proportionY": "1.50298"
             },
             {
-                "img_id": 2,
+                "imgId": 2,
                 "imgSrc": "/assets/img/home/projects/Strong_Wood_IG-66.webp",
                 "imgAlt": "Video two",
                 "originalWidth": "6048px",
@@ -153,6 +163,6 @@
         "images": []
     },
     "footer": {
-        "secondaryTitle": "© 2023 Template - All rights reserved."
+        "secondaryTitle": "© 2023 StrongWood - Todos los derechos reservados."
     }
 }
