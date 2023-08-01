@@ -6,8 +6,8 @@ import ProjectsVideoCardComponent from '../ProjectsCardComponent/ProjectsVideoCa
 
 export default function ProjectsComponent() {
     return (
-        <div id={data.projects.link} className={styles['container-section-projects']}>
-            {/* <div className={styles['container-wrapper-images']}>
+        <div id={data.projects.scrollLink} className={styles['container-section-projects']}>
+            <div className={styles['container-wrapper-images']}>
                 <div className={styles['container-outer-project-image']}>
                     <div className={styles['container-inner-project-image']}>
                         <Image
@@ -30,7 +30,7 @@ export default function ProjectsComponent() {
                         }
                     </div>
                 </div>
-            </div> */}
+            </div>
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import styles from './page.module.scss'
 import AboutUsComponent from '@/components/AboutUsComponent/AboutUsComponent'
 import BannerComponent from '@/components/BannerComponent/BannerComponent'
-// import ProjectsComponent from '@/components/ProjectsComponent/ProjectsComponent'
+import ProjectsComponent from '@/components/ProjectsComponent/ProjectsComponent'
 import CategoriesComponent from '@/components/CategoriesComponent/CategoriesComponent'
 
 export default function HomePage() {
@@ -10,7 +10,7 @@ export default function HomePage() {
       <BannerComponent />
       <AboutUsComponent />
       <CategoriesComponent />
-      {/* <ProjectsComponent />  */}
+      <ProjectsComponent /> 
     </section>
   )
 }

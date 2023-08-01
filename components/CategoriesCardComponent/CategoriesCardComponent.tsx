@@ -9,9 +9,9 @@ export default function CategoriesCardComponent({ imgData }: { imgData: ImgDataI
                 src={imgData.imgSrc}
                 alt={imgData.imgAlt}
                 fill
-                // sizes='30vw'
+                sizes={imgData.sizes}
                 quality={100}
-                style={{ objectFit: 'cover', objectPosition: 'bottom'}}
+                style={{ objectFit: 'cover', objectPosition: imgData.objPosition }}
             />
             <div className={styles['container-overlay']} />
             <p className={styles['title-overlay']}>{imgData.imgAlt}</p>
