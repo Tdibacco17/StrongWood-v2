@@ -16,23 +16,18 @@
                 "nav_id": 3,
                 "title": "Contacto",
                 "scrollTo": "contact"
-            },
-            {
-                "nav_id": 4,
-                "title": "Proyectos",
-                "scrollTo": "proyects"
             }
         ]
     },
     "banner": {
-        "scrollLink": "top",
+        "sectionLink": "top",
         "image": {
             "imgSrc": "/assets/img/home/banner/Strong_Wood_IG-43.webp",
             "imgAlt": "Banner image"
         }
     },
     "aboutUs": {
-        "scrollLink": "contact",
+        "sectionLink": "contact",
         "title": "About us",
         "subtitle": "Creative solutions by profesional designers",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto earum eum optio inventore dignissimos fugit veniam iure labore at non, voluptatum sit! Quia quaerat voluptatem esse, optio quod tenetur distinctio?",
@@ -59,41 +54,37 @@
         }
     },
     "categories": {
-        "scrollLink": "categories",
+        "sectionLink": "categories",
         "title": "Categorias",
         "images": [
             {
                 "imgId": 1,
                 "imgSrc": "/assets/img/home/categories/Strong_Wood_IG-51.webp",
                 "imgAlt": "Camas",
-                "sizes": "(min-width: 100vw) 33.333vw, 37.5rem",
                 "objPosition": "0 bottom"
             },
             {
                 "imgId": 2,
                 "imgSrc": "/assets/img/home/categories/Strong_Wood_IG-34.webp",
                 "imgAlt": "Comodas",
-                "sizes": "(min-width: 100vw) 50vw, 50rem",
                 "objPosition": "right 10%"
             },
             {
                 "imgId": 3,
                 "imgSrc": "/assets/img/home/categories/Strong_Wood_IG-46.webp",
                 "imgAlt": "Escritorios",
-                "sizes": "(min-width: 100vw) 66.666vw, 50rem",
                 "objPosition": "30% 70%"
             },
             {
                 "imgId": 4,
                 "imgSrc": "/assets/img/home/categories/Strong_Wood_web-149.webp",
                 "imgAlt": "Productos",
-                "sizes": "(min-width: 100vw) 33.333vw, 25rem",
-                "objPosition": "25% center"
+                "objPosition": "25% 35%"
             }
         ]
     },
     "projects": {
-        "scrollLink": "proyects",
+        "sectionLink": "proyects",
         "title": "Our Projects",
         "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto earum eum optio inventore dignissimos fugit veniam iure labore at non, voluptatum sit!",
         "image": {
@@ -126,6 +117,10 @@
         ]
     },
     "footer": {
+        "scrollTo": "top",
+        "button": {
+            "title": "Ir arriba"
+        },
         "secondaryTitle": "© 2023 StrongWood - Todos los derechos reservados."
     }
 }

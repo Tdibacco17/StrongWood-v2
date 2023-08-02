@@ -9,7 +9,7 @@ export default function CategoriesCardComponent({ imgData }: { imgData: ImgDataI
                 src={imgData.imgSrc}
                 alt={imgData.imgAlt}
                 fill
-                sizes={imgData.sizes}
+                // sizes={imgData.sizes}
                 loading='lazy'
                 quality={100}
                 style={{ objectFit: 'cover', objectPosition: imgData.objPosition }}

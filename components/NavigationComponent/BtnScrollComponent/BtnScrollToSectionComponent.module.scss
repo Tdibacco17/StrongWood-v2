@@ -1,15 +1,13 @@
-.titles {
+.btn-scroll-to-section {
+    color: var(--primary-white);
     font-weight: var(--font-bold);
     font-size: var(--font-xmedium);
     cursor: pointer;
+    border: none;
+    background-color: transparent;
 
     &:hover {
         color: var(--tertiary-color);
         transition: color 0.3s ease-in-out;
-    }
-
-    &.isToTop {
-        font-weight: var(--font-regular);
-        font-size: var(--font-xsmall);
     }
 }

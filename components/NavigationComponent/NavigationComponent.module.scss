@@ -41,9 +41,12 @@
             }
 
             .titles {
+                color: var(--primary-white);
                 font-weight: var(--font-bold);
                 font-size: var(--font-xmedium);
                 cursor: pointer;
+                border: none;
+                background-color: transparent;
 
                 &:hover {
                     color: var(--tertiary-color);

@@ -5,7 +5,7 @@ import { ImgDataInterface } from '@/types'
 
 export default function CategoriesComponent() {
     return (
-        <section id={data.categories.scrollLink} className={styles['container-section-categories']}>
+        <section id={data.categories.sectionLink} className={styles['container-section-categories']}>
             <p className={styles['categories-title']}>{data.categories.title}</p>
             <div className={styles['container-cards-categories']}>
                 {

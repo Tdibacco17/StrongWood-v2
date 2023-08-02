@@ -8,7 +8,7 @@ interface TextsInterface {
 
 export default function AboutUsComponent() {
     return (
-        <div id={data.aboutUs.scrollLink} className={styles['container-section-about']}>
+        <div id={data.aboutUs.sectionLink} className={styles['container-section-about']}>
             <div className={styles['container-top-card']}>
                 <div className={styles['container-box']}>
                     <div className={styles['box']}>

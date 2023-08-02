@@ -4,7 +4,7 @@ import data from '@/models/es.json'
 
 export default function BannerComponent() {
     return (
-        <section id={data.banner.scrollLink} className={styles['container-outer-banner-image']}>
+        <section id={data.banner.sectionLink} className={styles['container-outer-banner-image']}>
             <Image
                 className={styles['container-inner-banner-image']}
                 src={data.banner.image.imgSrc}

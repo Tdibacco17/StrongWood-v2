@@ -1,38 +1,39 @@
-'use client'
-import ScrollToButton from '@/utils/ScrollToButton/ScrollToButton'
 import styles from './NavigationComponent.module.scss'
 import data from '@/models/es.json'
 import Link from 'next/link'
-import { useScrollPosition } from '@/utils/scroll/useScrollPosition'
+import BtnScrollToSectionComponent from './BtnScrollComponent/BtnScrollToSectionComponent'
 
-interface HedersTitleInterface {
+interface HeaderProps {
     nav_id: number,
     title: string,
     link?: string,
-    scrollTo?: string
+    scrollTo?: string | undefined
 }
 
 export default function NavigationComponent() {
     return (
         <section className={`${styles['container-section-navigation']}`}>
             <div className={styles['wrapper-nav']}>
-                <h1 className={styles['menu-logo']}>{data.navigation.title}</h1>
+                <Link as={'/'} href={'/'}>
+                    <h1 className={styles['menu-logo']}>{data.navigation.title}</h1>
+                </Link>
                 <div className={styles['container-menu-titles']}>
                     {
-                        data.navigation.headers.map((item: HedersTitleInterface) => {
-                            return (
-                                <>
-                                    {
-                                        item.scrollTo ?
-                                            <ScrollToButton targetSection={item.scrollTo} text={item.title} key={item.nav_id} />
-                                            : <Link href={``/*${item.link}*/} className={styles['titles']} key={item.nav_id}>
-                                                {item.title}
-                                            </Link>
-
-                                    }
-                                </>
-
-                            )
+                        data.navigation.headers.map((item: HeaderProps) => {
+                            return item.scrollTo ?
+                                <BtnScrollToSectionComponent
+                                    scrollTo={item.scrollTo}
+                                    title={item.title}
+                                    key={item.nav_id}
+                                />
+                                : <Link
+                                    as={`/${item.link}`}
+                                    href={`/${item.link}`}
+                                    className={styles['titles']}
+                                    key={item.nav_id}
+                                >
+                                    {item.title}
+                                </Link>
                         })
                     }
                 </div>
