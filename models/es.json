@@ -67,35 +67,28 @@
                 "imgSrc": "/assets/img/home/categories/Strong_Wood_IG-51.webp",
                 "imgAlt": "Camas",
                 "sizes": "(min-width: 100vw) 33.333vw, 37.5rem",
-                "objPosition": "bottom"
+                "objPosition": "0 bottom"
             },
             {
                 "imgId": 2,
                 "imgSrc": "/assets/img/home/categories/Strong_Wood_IG-34.webp",
                 "imgAlt": "Comodas",
                 "sizes": "(min-width: 100vw) 50vw, 50rem",
-                "objPosition": "top"
+                "objPosition": "right 10%"
             },
             {
                 "imgId": 3,
-                "imgSrc": "/assets/img/home/categories/Strong_Wood_IG-4.webp",
-                "imgAlt": "Mesas de luz",
-                "sizes": "(min-width: 100vw) 33.333vw, 75rem",
-                "objPosition": "bottom"
-            },
-            {
-                "imgId": 4,
                 "imgSrc": "/assets/img/home/categories/Strong_Wood_IG-46.webp",
                 "imgAlt": "Escritorios",
                 "sizes": "(min-width: 100vw) 66.666vw, 50rem",
-                "objPosition": "0 65%"
+                "objPosition": "30% 65%"
             },
             {
-                "imgId": 5,
+                "imgId": 4,
                 "imgSrc": "/assets/img/home/categories/Strong_Wood_web-149.webp",
                 "imgAlt": "Productos",
                 "sizes": "(min-width: 100vw) 33.333vw, 25rem",
-                "objPosition": "5% center"
+                "objPosition": "25% center"
             }
         ]
     },

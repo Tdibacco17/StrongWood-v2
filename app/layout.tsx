@@ -14,8 +14,8 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: 'Template',
-  description: 'Template',
+  title: 'StrongWood-v2',
+  description: 'StrongWood',
 }
 
 export default function RootLayout({
@@ -27,9 +27,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={roboto.className}>
         <main>
-          <NavigationComponent />
-          {children}
-          <FooterComponent />
+            <NavigationComponent />
+            {children}
+            <FooterComponent />
         </main>
       </body>
     </html>
