@@ -1,3 +1,3 @@
 ### ECOMMERCE TEMPLATE
 
-https://spa-template-tdibacco.vercel.app/
+https://strongwood-v2.vercel.app/
