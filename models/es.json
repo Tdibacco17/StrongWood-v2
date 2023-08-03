@@ -59,27 +59,33 @@
         "images": [
             {
                 "imgId": 1,
-                "imgSrc": "/assets/img/home/categories/Strong_Wood_IG-51.webp",
-                "imgAlt": "Camas",
-                "objPosition": "0 bottom"
+                "imgSrc": "/assets/img/home/categories/Strong_291.webp",
+                "imgAlt": "Placares",
+                "objPosition": "0% 35%"
             },
             {
                 "imgId": 2,
-                "imgSrc": "/assets/img/home/categories/Strong_Wood_IG-34.webp",
-                "imgAlt": "Comodas",
-                "objPosition": "right 10%"
+                "imgSrc": "/assets/img/home/categories/Strong-127.webp",
+                "imgAlt": "Baño",
+                "objPosition": "center 10%"
             },
             {
                 "imgId": 3,
                 "imgSrc": "/assets/img/home/categories/Strong_Wood_IG-46.webp",
-                "imgAlt": "Escritorios",
+                "imgAlt": "Productos",
                 "objPosition": "30% 70%"
             },
             {
                 "imgId": 4,
-                "imgSrc": "/assets/img/home/categories/Strong_Wood_web-149.webp",
-                "imgAlt": "Productos",
+                "imgSrc": "/assets/img/home/categories/Strong-142.webp",
+                "imgAlt": "Cocinas",
                 "objPosition": "25% 35%"
+            },
+            {
+                "imgId": 5,
+                "imgSrc": "/assets/img/home/categories/Strong_120.webp",
+                "imgAlt": "Dormitorio",
+                "objPosition": "0% bottom"
             }
         ]
     },

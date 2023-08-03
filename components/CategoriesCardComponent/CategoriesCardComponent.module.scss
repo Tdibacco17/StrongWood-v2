@@ -1,25 +1,59 @@
 .container-outer-card-services {
+
     &:nth-child(1),
     &:nth-child(2) {
         grid-column: span 5;
-        grid-row: span 3;
+        grid-row: span 5;
     }
 
     &:nth-child(3) {
         grid-column: span 4;
-        grid-row: span 6
+        grid-row: span 7
     }
 
     &:nth-child(4) {
         grid-column: span 10;
-        grid-row: span 3;
+        grid-row: span 6;
+    }
+
+    &:nth-child(5) {
+        grid-column: span 4;
+        grid-row: span 4;
     }
 
     @media (max-width:768px) {
+        &:nth-child(1) {
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 2;
+        }
+
+        &:nth-child(2) {
+            grid-column: 1 / span 1;
+            grid-row: 3 / span 3;
+        }
+
+        &:nth-child(3) {
+            grid-column: 2 / span 1;
+            grid-row: 1 / span 3;
+        }
+
+        &:nth-child(5) {
+            grid-column: 2 / span 1;
+            grid-row: 4 / span 2;
+        }
+
+        &:nth-child(4) {
+            grid-column: span 2;
+            grid-row: span 3;
+        }
+    }
+
+    @media (max-width:523px) {
         &:nth-child(1),
         &:nth-child(2),
         &:nth-child(3),
-        &:nth-child(4) {
+        &:nth-child(4),
+        &:nth-child(5) {
             grid-column: revert;
             grid-row: revert;
         }
@@ -27,6 +61,11 @@
 
     position: relative;
     cursor: pointer;
+    user-select: none;
+
+    * {
+        pointer-events: none;
+    }
 
     &:hover {
         .container-overlay {
@@ -61,5 +100,6 @@
         justify-content: center;
         align-items: center;
         transition: opacity 0.3s ease-in-out;
+        text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.5);
     }
 }

@@ -10,7 +10,7 @@ export default function CategoriesComponent() {
             <div className={styles['container-cards-categories']}>
                 {
                     data.categories.images.map((card: ImgDataInterface) => {
-                        return <CategoriesCardComponent imgData={card} key={card.imgId}/>
+                        return <CategoriesCardComponent imgData={card} key={card.imgId} />
                     })
                 }
             </div>
