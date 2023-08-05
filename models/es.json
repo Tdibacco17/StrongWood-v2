@@ -5,7 +5,7 @@
             {
                 "nav_id": 1,
                 "title": "Categorias",
-                "scrollTo": "categories"
+                "scrollTo": "categorias"
             },
             {
                 "nav_id": 2,
@@ -15,7 +15,12 @@
             {
                 "nav_id": 3,
                 "title": "Contacto",
-                "scrollTo": "contact"
+                "scrollTo": "contacto"
+            },
+            {
+                "nav_id": 4,
+                "title": "Proyectos",
+                "scrollTo": "proyectos"
             }
         ]
     },
@@ -23,11 +28,12 @@
         "sectionLink": "top",
         "image": {
             "imgSrc": "/assets/img/home/banner/Strong_Wood_IG-43.webp",
-            "imgAlt": "Banner image"
+            "imgAlt": "Banner",
+            "objPosition": "7.5% center"
         }
     },
-    "aboutUs": {
-        "sectionLink": "contact",
+    "slogan": {
+        "sectionLink": "contacto",
         "title": "About us",
         "subtitle": "Creative solutions by profesional designers",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto earum eum optio inventore dignissimos fugit veniam iure labore at non, voluptatum sit! Quia quaerat voluptatem esse, optio quod tenetur distinctio?",
@@ -54,7 +60,7 @@
         }
     },
     "categories": {
-        "sectionLink": "categories",
+        "sectionLink": "categorias",
         "title": "Categorias",
         "images": [
             {
@@ -90,37 +96,51 @@
         ]
     },
     "projects": {
-        "sectionLink": "proyects",
-        "title": "Our Projects",
-        "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto earum eum optio inventore dignissimos fugit veniam iure labore at non, voluptatum sit!",
-        "image": {
-            "imgSrc": "/assets/img/home/projects/Strong_Wood_IG-81.webp",
-            "imgAlt": "Projects image",
-            "originalWidth": "6048px",
-            "originalHeight": "4024px",
-            "proportionX": "0.66534",
-            "proportionY": "1.50298"
-        },
-        "videos": [
+        "sectionLink": "proyectos",
+        "title": "Proyectos",
+        "subtitle": "Mira nuestros videos",
+        "images": [
             {
                 "imgId": 1,
-                "imgSrc": "/assets/img/home/projects/Strong_Wood_IG-16.webp",
-                "imgAlt": "Video one",
-                "originalWidth": "6048px",
-                "originalHeight": "4024px",
-                "proportionX": "0.66534",
-                "proportionY": "1.50298"
+                "imgSrc": "/assets/img/home/proyects/Strong_Wood_web-149.webp",
+                "imgAlt": "Proyectos"
             },
             {
                 "imgId": 2,
-                "imgSrc": "/assets/img/home/projects/Strong_Wood_IG-66.webp",
-                "imgAlt": "Video two",
-                "originalWidth": "6048px",
-                "originalHeight": "4024px",
-                "proportionX": "0.66534",
-                "proportionY": "1.50298"
+                "imgSrc": "/assets/img/home/proyects/Strong_Wood_web-149.webp",
+                "imgAlt": "Proyectos"
+            },
+            {
+                "imgId": 3,
+                "imgSrc": "/assets/img/home/proyects/Strong_Wood_web-149.webp",
+                "imgAlt": "Proyectos"
+            },
+            {
+                "imgId": 4,
+                "imgSrc": "/assets/img/home/proyects/Strong_Wood_web-149.webp",
+                "imgAlt": "Proyectos"
+            }
+        ],
+        "videos": [
+            {
+                "imgId": 1,
+                "imgSrc": "/assets/img/home/proyects/Strong_Wood_web-149.webp",
+                "imgAlt": "Video uno"
+            },
+            {
+                "imgId": 2,
+                "imgSrc": "/assets/img/home/proyects/Strong_Wood_web-149.webp",
+                "imgAlt": "Video dos"
             }
         ]
+    },
+    "aboutUs": {
+        "sectionLink": "top",
+        "image": {
+            "imgSrc": "/assets/img/home/aboutUs/Strong-61.webp",
+            "imgAlt": "Nosotros",
+            "objPosition": "55% 0%"
+        }
     },
     "footer": {
         "scrollTo": "top",

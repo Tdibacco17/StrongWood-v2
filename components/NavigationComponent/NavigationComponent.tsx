@@ -1,7 +1,7 @@
 import styles from './NavigationComponent.module.scss'
 import data from '@/models/es.json'
 import Link from 'next/link'
-import BtnScrollToSectionComponent from './BtnScrollComponent/BtnScrollToSectionComponent'
+import BtnScrollToSectionComponent from './BtnScrollToComponent/BtnScrollToComponent'
 
 interface HeaderProps {
     nav_id: number,

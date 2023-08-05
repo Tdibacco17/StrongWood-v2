@@ -1,18 +1,18 @@
 import Image from 'next/image'
 import styles from './BannerComponent.module.scss'
-import data from '@/models/es.json'
+import { ImgDataInterface } from '@/types'
 
-export default function BannerComponent() {
+export default function BannerComponent({ imgData }: { imgData: ImgDataInterface }) {
     return (
-        <section id={data.banner.sectionLink} className={styles['container-outer-banner-image']}>
+        <section className={styles['container-outer-banner-image']}>
             <Image
-                className={styles['container-inner-banner-image']}
-                src={data.banner.image.imgSrc}
-                alt={data.banner.image.imgAlt}
+                src={imgData.imgSrc}
+                alt={imgData.imgAlt}
                 fill
                 sizes='100vw'
                 priority
                 quality={100}
+                style={{ objectFit: 'cover', objectPosition: imgData.objPosition }}
             />
         </section>
     )

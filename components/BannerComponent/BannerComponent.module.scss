@@ -1,14 +1,4 @@
 .container-outer-banner-image {
     position: relative;
     height: 35rem;
-
-    .container-inner-banner-image {
-        object-fit: cover;
-        object-position: 7.5% center;
-        user-select: none;
-
-        * {
-            pointer-events: none;
-        }
-    }
 }

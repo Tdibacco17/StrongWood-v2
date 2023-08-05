@@ -1,21 +1,21 @@
-import styles from './AboutUsComponent.module.scss'
+import styles from './SloganComponent.module.scss'
 import data from '@/models/es.json'
 
 interface TextsInterface {
     text_id: number,
     text: string
 }
-
-export default function AboutUsComponent() {
+    
+export default function SloganComponent() {
     return (
-        <div id={data.aboutUs.sectionLink} className={styles['container-section-about']}>
+        <div id={data.slogan.sectionLink} className={styles['container-section-about']}>
             <div className={styles['container-top-card']}>
                 <div className={styles['container-box']}>
                     <div className={styles['box']}>
-                        <p className={styles['year']}>{data.aboutUs.box.year}</p>
+                        <p className={styles['year']}>{data.slogan.box.year}</p>
                         <div className={styles['container-texts']}>
                             {
-                                data.aboutUs.box.texts.map((text: TextsInterface) => {
+                                data.slogan.box.texts.map((text: TextsInterface) => {
                                     return <p className={styles['text']} key={text.text_id}>{text.text}</p>
                                 })
                             }
@@ -25,13 +25,13 @@ export default function AboutUsComponent() {
                     </div>
                 </div>
                 <div className={styles['container-titles']}>
-                    <p className={styles['title']}>{data.aboutUs.title}</p>
-                    <p className={styles['subtitle']} >{data.aboutUs.subtitle}</p>
+                    <p className={styles['title']}>{data.slogan.title}</p>
+                    <p className={styles['subtitle']} >{data.slogan.subtitle}</p>
                 </div>
             </div>
             <div className={styles['container-description']}>
-                <p className={styles['description']}>{data.aboutUs.description}</p>
-                <button className={styles['button-contact']}>{data.aboutUs.button.title}</button>
+                <p className={styles['description']}>{data.slogan.description}</p>
+                <button className={styles['button-contact']}>{data.slogan.button.title}</button>
             </div>
         </div>
     )

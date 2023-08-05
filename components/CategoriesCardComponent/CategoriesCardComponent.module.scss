@@ -68,16 +68,16 @@
     }
 
     &:hover {
-        .container-overlay {
+        .container-overlay-card-services {
             opacity: 0;
         }
 
-        .title-overlay {
+        .title-services-overlay {
             opacity: 0;
         }
     }
 
-    .container-overlay {
+    .container-overlay-card-services {
         position: absolute;
         top: 0;
         width: 100%;
@@ -87,7 +87,7 @@
         transition: opacity 0.3s ease-in-out;
     }
 
-    .title-overlay {
+    .title-services-overlay {
         position: absolute;
         top: 0;
         width: 100%;

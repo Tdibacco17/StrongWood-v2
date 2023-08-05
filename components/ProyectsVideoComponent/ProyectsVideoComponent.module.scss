@@ -1,0 +1,17 @@
+.container-outer-proyects-video {
+    position: relative;
+    min-width: 15rem;
+    max-width: 15rem;
+    min-height: 10rem;
+    max-height: 10rem;
+
+    .container-overlay-proyects-video {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--primary-color);
+        opacity: 0.6;
+        transition: opacity 0.3s ease-in-out;
+    }
+}

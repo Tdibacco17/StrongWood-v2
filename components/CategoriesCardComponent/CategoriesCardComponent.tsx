@@ -14,8 +14,8 @@ export default function CategoriesCardComponent({ imgData }: { imgData: ImgDataI
                 quality={100}
                 style={{ objectFit: 'cover', objectPosition: imgData.objPosition }}
             />
-            <div className={styles['container-overlay']} />
-            <p className={styles['title-overlay']}>{imgData.imgAlt}</p>
+            <div className={styles['container-overlay-card-services']} />
+            <p className={styles['title-services-overlay']}>{imgData.imgAlt}</p>
         </div>
     )
 }
