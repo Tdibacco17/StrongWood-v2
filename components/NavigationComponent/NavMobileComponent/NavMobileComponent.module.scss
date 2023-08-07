@@ -1,0 +1,14 @@
+.container-menu-mobile {
+    position: fixed;
+    top: 0;
+    left: 35vw;
+    width: 65vw;
+    height: 100vh;
+    background-color: var(--secondary-color);
+    z-index: 3;
+
+    .container-side-menu {
+        display: flex;
+        flex-direction: column;
+    }
+}

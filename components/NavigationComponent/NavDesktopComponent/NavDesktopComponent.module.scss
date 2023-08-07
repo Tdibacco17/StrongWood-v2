@@ -1,0 +1,24 @@
+.container-menu-desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    @media (max-width:768px) {
+        display: none;
+    }
+
+    .desktop-title {
+        color: var(--primary-white);
+        font-weight: var(--font-bold);
+        font-size: var(--font-xmedium);
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+
+        &:hover {
+            color: var(--tertiary-color);
+            transition: color 0.3s ease-in-out;
+        }
+    }
+}
