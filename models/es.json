@@ -1,28 +1,42 @@
 {
     "navigation": {
         "title": "strong",
-        "headers": [
-            {
-                "nav_id": 1,
-                "title": "Categorias",
-                "scrollTo": "categorias"
-            },
-            {
-                "nav_id": 2,
-                "title": "Nosotros",
-                "link": "nosotros"
-            },
-            {
-                "nav_id": 3,
-                "title": "Contacto",
-                "link": "contacto"
-            },
-            {
-                "nav_id": 4,
-                "title": "Proyectos",
-                "scrollTo": "proyectos"
-            }
-        ]
+        "headers": {
+            "home": [
+                {
+                    "nav_id": 1,
+                    "title": "Categorías",
+                    "scrollTo": "categorias"
+                },
+                {
+                    "nav_id": 2,
+                    "title": "Proyectos",
+                    "scrollTo": "proyectos"
+                },
+                {
+                    "nav_id": 3,
+                    "title": "Nosotros",
+                    "link": "nosotros"
+                },
+                {
+                    "nav_id": 4,
+                    "title": "Contacto",
+                    "link": "contacto"
+                }
+            ],
+            "others": [
+                {
+                    "nav_id": 1,
+                    "title": "Nosotros",
+                    "link": "nosotros"
+                },
+                {
+                    "nav_id": 2,
+                    "title": "Contacto",
+                    "link": "contacto"
+                }
+            ]
+        }
     },
     "banner": {
         "sectionLink": "top",
@@ -45,7 +59,7 @@
     },
     "categories": {
         "sectionLink": "categorias",
-        "title": "Categorias",
+        "title": "Categorías",
         "images": [
             {
                 "img_id": 1,

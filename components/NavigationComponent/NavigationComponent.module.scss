@@ -28,9 +28,11 @@
 
         .container-menu-titles {
             display: flex;
+            justify-content: center;
+            align-items: center;
             gap: 1.5rem;
 
-            @media (max-width:992px) {
+            @media (max-width:768px) {
                 display: none;
             }
 
@@ -46,6 +48,19 @@
                     color: var(--tertiary-color);
                     transition: color 0.3s ease-in-out;
                 }
+            }
+        }
+
+        .container-menu-mobile {
+            display: none;
+
+            @media (max-width:768px) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         }
     }
