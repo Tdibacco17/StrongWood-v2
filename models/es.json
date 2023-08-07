@@ -97,30 +97,7 @@
     },
     "projects": {
         "sectionLink": "proyectos",
-        "title": "Proyectos",
-        "subtitle": "Mira nuestros videos",
-        "images": [
-            {
-                "imgId": 1,
-                "imgSrc": "/assets/img/home/proyects/Strong_Wood_web-149.webp",
-                "imgAlt": "Proyectos"
-            },
-            {
-                "imgId": 2,
-                "imgSrc": "/assets/img/home/proyects/Strong_Wood_web-149.webp",
-                "imgAlt": "Proyectos"
-            },
-            {
-                "imgId": 3,
-                "imgSrc": "/assets/img/home/proyects/Strong_Wood_web-149.webp",
-                "imgAlt": "Proyectos"
-            },
-            {
-                "imgId": 4,
-                "imgSrc": "/assets/img/home/proyects/Strong_Wood_web-149.webp",
-                "imgAlt": "Proyectos"
-            }
-        ],
+        "title": "Nuestros proyectos",
         "videos": [
             {
                 "imgId": 1,
@@ -137,7 +114,7 @@
     "aboutUs": {
         "sectionLink": "top",
         "image": {
-            "imgSrc": "/assets/img/home/aboutUs/Strong-61.webp",
+            "imgSrc": "/assets/img/aboutUs/banner/Strong-61.webp",
             "imgAlt": "Nosotros",
             "objPosition": "55% 0%"
         }
