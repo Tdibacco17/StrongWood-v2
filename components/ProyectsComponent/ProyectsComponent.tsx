@@ -11,7 +11,7 @@ export default function ProyectsComponent() {
                 <div className={styles['container-videos-proyects']}>
                     {
                         data.projects.videos.map((cardVideo: ImgDataInterface) => {
-                            return <ProyectsVideoComponent imgData={cardVideo} key={cardVideo.imgId} />
+                            return <ProyectsVideoComponent imgData={cardVideo} key={cardVideo.img_id} />
                         })
                     }
                 </div>

@@ -4,6 +4,11 @@
     max-width: 15rem;
     min-height: 10rem;
     max-height: 10rem;
+    user-select: none;
+
+    * {
+        pointer-events: none;
+    }
 
     .container-overlay-proyects-video {
         position: absolute;

@@ -1,5 +1,5 @@
 export interface ImgDataInterface {
-    imgId?: number,
+    img_id?: number,
     imgSrc: string,
     imgAlt: string,
     objPosition?: string

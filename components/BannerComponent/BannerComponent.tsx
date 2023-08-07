@@ -12,7 +12,7 @@ export default function BannerComponent({ imgData }: { imgData: ImgDataInterface
                 sizes='100vw'
                 priority
                 quality={100}
-                style={{ objectFit: 'cover', objectPosition: imgData.objPosition }}
+                style={{ objectFit: 'cover', objectPosition: imgData.objPosition, }}
             />
         </section>
     )

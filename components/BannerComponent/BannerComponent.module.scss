@@ -1,4 +1,9 @@
 .container-outer-banner-image {
     position: relative;
     height: 35rem;
+    user-select: none;
+
+    * {
+        pointer-events: none;
+    }
 }

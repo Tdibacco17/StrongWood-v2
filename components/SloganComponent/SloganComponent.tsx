@@ -1,37 +1,26 @@
 import styles from './SloganComponent.module.scss'
 import data from '@/models/es.json'
+import { WhatsappIconComponent, InstagramIconComponent, GoogleIconComponent } from '../IconComponent/IconComponent'
 
-interface TextsInterface {
-    text_id: number,
-    text: string
-}
-    
 export default function SloganComponent() {
     return (
-        <div id={data.slogan.sectionLink} className={styles['container-section-about']}>
-            <div className={styles['container-top-card']}>
-                <div className={styles['container-box']}>
-                    <div className={styles['box']}>
-                        <p className={styles['year']}>{data.slogan.box.year}</p>
-                        <div className={styles['container-texts']}>
-                            {
-                                data.slogan.box.texts.map((text: TextsInterface) => {
-                                    return <p className={styles['text']} key={text.text_id}>{text.text}</p>
-                                })
-                            }
+        <div className={styles['container-section-slogan']}>
+            <div className={styles['container-slogan-card']}>
+                <div className={styles['container-networks']}>
+                    <div className={styles['box-networks']}>
+                        <p className={styles['title-networks']}>{data.slogan.networks.title}</p>
+                        <div className={styles['container-icons-networks']}>
+                            <GoogleIconComponent fill={'white'} width={30} height={30} />
+                            <InstagramIconComponent fill={'white'} width={30} height={30} />
+                            <WhatsappIconComponent fill={'white'} width={30} height={30} />
                         </div>
-                        <div className={styles['container-overlay-left']} />
-                        <div className={styles['container-overlay-right']} />
                     </div>
+                    <button className={styles['button-contact']}>{data.slogan.button.title}</button>
                 </div>
                 <div className={styles['container-titles']}>
-                    <p className={styles['title']}>{data.slogan.title}</p>
-                    <p className={styles['subtitle']} >{data.slogan.subtitle}</p>
+                    <p className={styles['subtitle']}>{data.slogan.subtitle}</p>
+                    <p className={styles['title']} >{data.slogan.title}</p>
                 </div>
-            </div>
-            <div className={styles['container-description']}>
-                <p className={styles['description']}>{data.slogan.description}</p>
-                <button className={styles['button-contact']}>{data.slogan.button.title}</button>
             </div>
         </div>
     )

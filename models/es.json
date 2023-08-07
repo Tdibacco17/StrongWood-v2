@@ -15,7 +15,7 @@
             {
                 "nav_id": 3,
                 "title": "Contacto",
-                "scrollTo": "contacto"
+                "link": "contacto"
             },
             {
                 "nav_id": 4,
@@ -33,30 +33,14 @@
         }
     },
     "slogan": {
-        "sectionLink": "contacto",
-        "title": "About us",
-        "subtitle": "Creative solutions by profesional designers",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto earum eum optio inventore dignissimos fugit veniam iure labore at non, voluptatum sit! Quia quaerat voluptatem esse, optio quod tenetur distinctio?",
-        "box": {
-            "year": "15",
-            "texts": [
-                {
-                    "text_id": 1,
-                    "text": "Years"
-                },
-                {
-                    "text_id": 2,
-                    "text": "experience"
-                },
-                {
-                    "text_id": 3,
-                    "text": "working"
-                }
-            ]
+        "title": "El balance perfecto entre hierro y madera",
+        "subtitle": "Diseños personalizados",
+        "networks": {
+            "title": "Redes"
         },
         "button": {
-            "title": "Contact service",
-            "link": "/contact"
+            "title": "Contactanos",
+            "link": "/contacto"
         }
     },
     "categories": {
@@ -64,31 +48,31 @@
         "title": "Categorias",
         "images": [
             {
-                "imgId": 1,
+                "img_id": 1,
                 "imgSrc": "/assets/img/home/categories/Strong_291.webp",
                 "imgAlt": "Placares",
                 "objPosition": "0% 35%"
             },
             {
-                "imgId": 2,
+                "img_id": 2,
                 "imgSrc": "/assets/img/home/categories/Strong-127.webp",
                 "imgAlt": "Baño",
                 "objPosition": "center 10%"
             },
             {
-                "imgId": 3,
+                "img_id": 3,
                 "imgSrc": "/assets/img/home/categories/Strong_Wood_IG-46.webp",
                 "imgAlt": "Productos",
                 "objPosition": "30% 70%"
             },
             {
-                "imgId": 4,
+                "img_id": 4,
                 "imgSrc": "/assets/img/home/categories/Strong-142.webp",
                 "imgAlt": "Cocinas",
                 "objPosition": "25% 35%"
             },
             {
-                "imgId": 5,
+                "img_id": 5,
                 "imgSrc": "/assets/img/home/categories/Strong_120.webp",
                 "imgAlt": "Dormitorio",
                 "objPosition": "0% bottom"
@@ -100,12 +84,12 @@
         "title": "Nuestros proyectos",
         "videos": [
             {
-                "imgId": 1,
+                "img_id": 1,
                 "imgSrc": "/assets/img/home/proyects/Strong_Wood_web-149.webp",
                 "imgAlt": "Video uno"
             },
             {
-                "imgId": 2,
+                "img_id": 2,
                 "imgSrc": "/assets/img/home/proyects/Strong_Wood_web-149.webp",
                 "imgAlt": "Video dos"
             }

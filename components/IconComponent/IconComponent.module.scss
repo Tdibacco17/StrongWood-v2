@@ -1,0 +1,11 @@
+.container-icon-svg {
+    padding: 0.3rem;
+    cursor: pointer;
+
+    &:hover {
+        .icon-svg {
+            fill: var(--tertiary-color);
+            transition: 0.3s ease-in-out;
+        }
+    }
+}

@@ -2,12 +2,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
     padding-top: 6rem;
+    min-width: 100vw;
+    max-width: 100vw;
 
-    .categories-title {
-        font-size: var(--font-xlarge);
-        font-weight: var(--font-bold);
+    .box-header-categories {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        min-width: 100vw;
+        max-width: 100vw;
+
+        .categories-title {
+            font-size: var(--font-xlarge);
+            font-weight: var(--font-bold);
+            width: 90vw;
+            text-align: left;
+            padding-bottom: 0.3rem;
+        }
+
+        .line-divisor-categories {
+            width: 90vw;
+            border-bottom: 0.3rem solid var(--secondary-color);
+        }
     }
 
     .container-cards-categories {
