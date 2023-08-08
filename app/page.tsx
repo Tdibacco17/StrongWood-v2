@@ -4,7 +4,8 @@ import BannerComponent from '@/components/BannerComponent/BannerComponent'
 import CategoriesComponent from '@/components/CategoriesComponent/CategoriesComponent'
 import ProyectsComponent from '@/components/ProyectsComponent/ProyectsComponent';
 import data from '@/models/es.json'
-import NavigationContainer from '@/containers/NavigationContainer';
+import NavigationContainer from '@/containers/NavigationContainer/NavigationContainer';
+import ServicesComponent from '@/components/ServicesComponent/ServicesComponent';
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <SloganComponent />
       <CategoriesComponent />
       <ProyectsComponent />
+      <ServicesComponent />
     </section>
   )
 }

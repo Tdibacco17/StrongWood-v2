@@ -33,7 +33,11 @@
             background-color: transparent;
             background-color: var(--secondary-color);
             border-radius: var(--border-radius);
-
+            min-width: 2.5rem;
+            max-width: 2.5rem;
+            min-height: 2.5rem;
+            max-height: 2.5rem;
+            
             @media (max-width:768px) {
                 display: flex;
                 justify-content: center;
@@ -51,7 +55,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        backdrop-filter: blur(4px);
+        backdrop-filter: blur(20px);
         z-index: 2;
 
         @media (max-width:768px) {

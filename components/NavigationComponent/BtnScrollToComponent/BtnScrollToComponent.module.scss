@@ -17,5 +17,9 @@
         background-color: var(--secondary-color);
         text-align: left;
         padding: 1rem 2rem;
+
+        @media (max-width:442px) {
+            padding: 1rem 1rem;
+        }
     }
 }

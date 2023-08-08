@@ -81,7 +81,19 @@
         "title": "El balance perfecto entre hierro y madera",
         "subtitle": "Diseños personalizados",
         "networks": {
-            "title": "Redes"
+            "title": "Redes",
+            "gmail": {
+                "href": "mailto:strongwoodventas@gmail.com",
+                "label": "Email StrongWood"
+            },
+            "instagram": {
+                "href": "https://instagram.com/strongwood_ar",
+                "label": "Instagram StrongWood"
+            },
+            "whatsapp": {
+                "href": "https://wa.me/5491171196506",
+                "label": "Whatsapp StrongWood"
+            }
         },
         "button": {
             "title": "Contactanos",
@@ -123,6 +135,20 @@
                 "objPosition": "0% bottom"
             }
         ]
+    },
+    "services": {
+        "shippingCar":{
+            "title": "Envíos gratis",
+            "subtitle": "Para compras de mas de $10.000"
+        },
+        "wallet":{
+            "title": "Descuento",
+            "subtitle": "Abonando en efectivo"
+        },
+        "hands":{
+            "title": "Compra segura",
+            "subtitle": "Devolución dentro de las 48hs"
+        }
     },
     "projects": {
         "sectionLink": "proyectos",

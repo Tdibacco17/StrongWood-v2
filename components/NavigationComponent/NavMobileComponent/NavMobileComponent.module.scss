@@ -1,7 +1,7 @@
 .container-menu-mobile {
-    position: fixed;
+    position: absolute;
     top: 0;
-    right: 0;
+    right: -60vw;
     min-width: 60vw;
     min-height: 100vh;
     max-height: 100vh;
@@ -10,12 +10,21 @@
     border-left: 2px solid var(--secondary-color);
     display: block;
     z-index: 3;
+    transition: right 0.3s ease;
+    opacity: 0;
+
+    &.isOpen {
+        right: 0;
+        opacity: 1;
+    }
 
     @media (max-width:442px) {
+        right: -75vw;
         width: 75vw;
     }
 
     @media (max-width:350px) {
+        right: -100vw;
         width: 100vw;
     }
 
@@ -31,7 +40,10 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
-            padding: 1rem 1.5rem;
+            align-items: center;
+            min-height: 4rem;
+            max-height: 4rem;
+            padding: 0rem 1.5rem;
             border-bottom: 2px solid var(--secondary-color);
 
             @media (max-width:442px) {

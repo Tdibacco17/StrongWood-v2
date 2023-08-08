@@ -34,16 +34,17 @@ export default function NavigationComponent({
                 </button>
             </div>
             {
-                showMenu && <div className={styles['container-overlay-menu-mobile']}>
-                    <NavMobileComponent
-                        isHome={isHome}
-                        handleShowMenu={handleShowMenu}
-                        showDropdown={showDropdown}
-                        handleShowDropdown={handleShowDropdown}
-                        menuRef={menuRef}
-                    />
-                </div>
+                showMenu &&
+                <div className={styles['container-overlay-menu-mobile']} />
             }
+            <NavMobileComponent
+                isHome={isHome}
+                showMenu={showMenu}
+                handleShowMenu={handleShowMenu}
+                showDropdown={showDropdown}
+                handleShowDropdown={handleShowDropdown}
+                menuRef={menuRef}
+            />
         </section>
     )
 }

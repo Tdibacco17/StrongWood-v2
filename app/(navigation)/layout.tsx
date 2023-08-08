@@ -1,4 +1,4 @@
-import NavigationContainer from '@/containers/NavigationContainer'
+import NavigationContainer from '@/containers/NavigationContainer/NavigationContainer'
 
 export default function NavigationLayout({
     children,

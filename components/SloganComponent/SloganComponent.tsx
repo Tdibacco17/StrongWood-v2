@@ -10,9 +10,15 @@ export default function SloganComponent() {
                     <div className={styles['box-networks']}>
                         <p className={styles['title-networks']}>{data.slogan.networks.title}</p>
                         <div className={styles['container-icons-networks']}>
-                            <GoogleIconComponent fill={'white'} width={30} height={30} />
-                            <InstagramIconComponent fill={'white'} width={30} height={30} />
-                            <WhatsappIconComponent fill={'white'} width={30} height={30} />
+                            <a href={data.slogan.networks.gmail.href} target="_blank" rel="preload" aria-label={data.slogan.networks.gmail.label}>
+                                <GoogleIconComponent fill={'white'} width={30} height={30} />
+                            </a>
+                            <a  href={data.slogan.networks.instagram.href} target="_blank" rel="preload" aria-label={data.slogan.networks.instagram.label}>
+                                <InstagramIconComponent fill={'white'} width={30} height={30} />
+                            </a>
+                            <a  href={data.slogan.networks.whatsapp.href} target="_blank" rel="preload" aria-label={data.slogan.networks.whatsapp.label}>
+                                <WhatsappIconComponent fill={'white'} width={30} height={30} />
+                            </a>
                         </div>
                     </div>
                     <button className={styles['button-contact']}>{data.slogan.button.title}</button>
