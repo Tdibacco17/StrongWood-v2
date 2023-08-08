@@ -5,7 +5,6 @@ import BtnScrollToSectionComponent from '../BtnScrollToComponent/BtnScrollToComp
 import { HeaderProps } from "@/types"
 
 export default function NavDesktopComponent({ isHome }: { isHome: boolean }) {
-
     return (
         <div className={styles['container-menu-desktop']}>
             {
@@ -26,20 +25,14 @@ export default function NavDesktopComponent({ isHome }: { isHome: boolean }) {
                                 {item.title}
                             </Link>
                     }) : data.navigation.headers.others.map((item: HeaderProps) => {
-                        return item.scrollTo ?
-                            <BtnScrollToSectionComponent
-                                scrollTo={item.scrollTo}
-                                title={item.title}
-                                key={item.nav_id}
-                            />
-                            : <Link
-                                as={`/${item.link}`}
-                                href={`/${item.link}`}
-                                className={styles['desktop-title']}
-                                key={item.nav_id}
-                            >
-                                {item.title}
-                            </Link>
+                        return <Link
+                            as={`/${item.link}`}
+                            href={`/${item.link}`}
+                            className={styles['desktop-title']}
+                            key={item.nav_id}
+                        >
+                            {item.title}
+                        </Link>
                     })
             }
         </div>

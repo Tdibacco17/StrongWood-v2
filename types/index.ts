@@ -8,6 +8,13 @@ export interface ImgDataInterface {
 export interface HeaderProps {
     nav_id: number,
     title: string,
-    link?: string,
-    scrollTo?: string | undefined
+    link?: string
+    scrollTo?: string
+}
+
+export interface NavigationProps {
+    isHome: boolean,
+    showMenu?: boolean,
+    handleShowMenu: () => void,
+    menuRef: React.RefObject<HTMLDivElement>;
 }

@@ -5,9 +5,15 @@
     cursor: pointer;
     border: none;
     background-color: transparent;
+    width: 100%;
+    padding: 1rem 0;
 
     &:hover {
         color: var(--tertiary-color);
         transition: color 0.3s ease-in-out;
+    }
+
+    &.isMobile {
+        background-color: var(--secondary-color);
     }
 }

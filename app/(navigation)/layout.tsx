@@ -1,4 +1,4 @@
-import NavigationComponent from '@/components/NavigationComponent/NavigationComponent'
+import NavigationContainer from '@/containers/NavigationContainer'
 
 export default function NavigationLayout({
     children,
@@ -7,7 +7,7 @@ export default function NavigationLayout({
 }) {
     return (
         <>
-            <NavigationComponent isHome={false} />
+            <NavigationContainer isHome={false} />
             {children}
         </>
     )
