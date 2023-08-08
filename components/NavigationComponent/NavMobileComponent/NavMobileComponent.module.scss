@@ -4,6 +4,7 @@
     right: 0;
     min-width: 60vw;
     min-height: 100vh;
+    max-height: 100vh;
     background-color: var(--primary-color);
     box-shadow: -5px 0 10px rgba(0, 0, 0, 0.6);
     border-left: 2px solid var(--secondary-color);
@@ -22,8 +23,9 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        gap: 4rem;
+        gap: 1.5rem;
         width: 100%;
+        overflow-y: auto;
 
         .container-header-mobile-menu {
             width: 100%;
