@@ -37,7 +37,6 @@ export default function NavigationComponent({
                 showMenu && <div className={styles['container-overlay-menu-mobile']}>
                     <NavMobileComponent
                         isHome={isHome}
-                        showMenu={showMenu}
                         handleShowMenu={handleShowMenu}
                         showDropdown={showDropdown}
                         handleShowDropdown={handleShowDropdown}
