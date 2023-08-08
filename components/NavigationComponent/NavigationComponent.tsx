@@ -42,7 +42,6 @@ export default function NavigationComponent({
                         showDropdown={showDropdown}
                         handleShowDropdown={handleShowDropdown}
                         menuRef={menuRef}
-                        dropdownRef={dropdownRef}
                     />
                 </div>
             }

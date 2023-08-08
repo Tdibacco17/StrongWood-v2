@@ -5,17 +5,16 @@ import { useWindowSize } from "@/utils/size/useWindowSize";
 import { useEffect, useState } from "react"
 
 export default function NavigationContainer({ isHome }: { isHome: boolean }) {
-    const [showMenu, isShowMenu] = useState<boolean>(false);
-    const [showDropdown, isShowDropdown] = useState<boolean>(false);
-
-    console.log(showDropdown, showMenu)
+    const [showMenu, setShowMenu] = useState<boolean>(false);
+    const [showDropdown, setShowDropdown] = useState<boolean>(false);
 
     const handleShowMenu = () => {
-        isShowMenu(!showMenu);
+        setShowMenu(!showMenu);
+        setShowDropdown(false)
     }
 
     const handleShowDropdown = () => {
-        isShowDropdown(!showDropdown)
+        setShowDropdown(!showDropdown)
     }
 
     const menuRef = useOutsideClick(() => {
@@ -36,14 +35,16 @@ export default function NavigationContainer({ isHome }: { isHome: boolean }) {
     const { width } = useWindowSize();
 
     useEffect(() => {
-        if ((width > 768) && !showMenu) {
+        if (width < 768 && showDropdown) {
             return
         }
-        isShowDropdown(false);
-        if ((width < 768) && !showDropdown) {
+        if (width > 768 && showMenu && showDropdown) {
+            setShowDropdown(false);
+            setShowMenu(false);
+        }
+        if (width > 768 && !showMenu && !showDropdown) {
             return
         }
-        isShowMenu(false)
     }, [width])
 
     return <NavigationComponent

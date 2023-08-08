@@ -4,7 +4,7 @@ import BtnScrollToSectionComponent from '../BtnScrollToComponent/BtnScrollToComp
 import data from '@/models/es.json'
 import Link from 'next/link'
 
-export default function NavMobileComponent({ isHome, showMenu, handleShowMenu, menuRef, showDropdown, handleShowDropdown, dropdownRef }: NavigationProps) {
+export default function NavMobileComponent({ isHome, showMenu, handleShowMenu, menuRef, showDropdown, handleShowDropdown }: NavigationProps) {
     return (
         <div className={styles['container-menu-mobile']} ref={menuRef}>
             <div className={styles['container-side-menu']}>
@@ -47,7 +47,7 @@ export default function NavMobileComponent({ isHome, showMenu, handleShowMenu, m
                                         </p>
                                         {
                                             showDropdown &&
-                                            <div className={styles['container-mobile-dropdowns-titles']} ref={dropdownRef}>
+                                            <div className={styles['container-mobile-dropdowns-titles']}>
                                                 {item.dropdown.map((item: DropdownData) => {
                                                     return <Link
                                                         key={item.dropdown_id}
