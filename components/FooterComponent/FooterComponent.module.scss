@@ -27,10 +27,7 @@
         min-height: 3rem;
         max-height: 3rem;
         padding: 1rem;
-
-        @media (max-width:442px) {
-            padding-bottom: 2rem;
-        }
+        padding-bottom: 3rem;
 
         .secondary-title {
             font-size: var(--font-small);
