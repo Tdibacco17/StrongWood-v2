@@ -40,6 +40,9 @@ export default function NavigationContainer({ isHome }: { isHome: boolean }) {
             return
         }
         isShowDropdown(false);
+        if ((width < 768) && !showDropdown) {
+            return
+        }
         isShowMenu(false)
     }, [width])
 

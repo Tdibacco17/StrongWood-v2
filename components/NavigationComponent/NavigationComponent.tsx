@@ -34,7 +34,7 @@ export default function NavigationComponent({
                 </button>
             </div>
             {
-                showMenu && <div className={styles['container-overlay-menu-mobile']} >
+                showMenu && <div className={styles['container-overlay-menu-mobile']}>
                     <NavMobileComponent
                         isHome={isHome}
                         showMenu={showMenu}
