@@ -17,10 +17,32 @@
         background-color: transparent;
         width: 100%;
         padding: 1rem 0;
+        user-select: none;
 
         &:hover {
             color: var(--tertiary-color);
-            transition: color 0.3s ease-in-out;
+            transition: color 0s ease-in-out;
+        }
+    }
+
+    .container-desktop-dropdowns-titles {
+        position: fixed;
+        top: 3.6rem;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        background-color: var(--secondary-color);
+        width: 100%;
+
+        .desktop-title {
+            font-size: var(--font-medium);
+            padding: 1rem 0;
+            padding-left: 1.5rem;
+            border-bottom: 2px solid var(--primary-color);
+
+            @media (max-width:442px) {
+                padding-left: 2rem;
+            }
         }
     }
 }

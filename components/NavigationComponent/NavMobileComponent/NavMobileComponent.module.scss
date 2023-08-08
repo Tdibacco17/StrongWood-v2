@@ -8,11 +8,21 @@
     box-shadow: -5px 0 10px rgba(0, 0, 0, 0.6);
     border-left: 2px solid var(--secondary-color);
 
+    @media (max-width:442px) {
+        left: 25vw;
+        width: 75vw;
+    }
+
+    @media (max-width:350px) {
+        left: 0;
+        width: 100vw;
+    }
+
     .container-side-menu {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        gap: 3rem;
+        gap: 4rem;
         width: 100%;
 
         .container-header-mobile-menu {
@@ -20,7 +30,11 @@
             display: flex;
             justify-content: space-between;
             padding: 1rem 1.5rem;
-            border-bottom: 1px solid var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color);
+
+            @media (max-width:442px) {
+                padding: 1rem 1rem;
+            }
 
             .menu-logo {
                 font-size: var(--font-xlarge);
@@ -32,18 +46,21 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 2.5rem;
-                height: 2.5rem;
+                min-width: 2.5rem;
+                max-width: 2.5rem;
+                min-height: 2.5rem;
+                max-height: 2.5rem;
                 cursor: pointer;
                 border: none;
                 font-size: var(--font-xmedium);
                 font-weight: var(--font-bold);
                 background-color: var(--secondary-color);
                 color: var(--primary-white);
+                border-radius: var(--border-radius);
 
                 &:hover {
                     color: var(--tertiary-color);
-                    transition: color 0.3s ease-in-out;
+                    transition: color 0s ease-in-out;
                 }
             }
         }
@@ -51,7 +68,7 @@
         .container-mobile-titles {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 4rem;
             width: 100%;
 
             .mobile-title {
@@ -62,13 +79,41 @@
                 border: none;
                 background-color: var(--secondary-color);
                 width: 100%;
-                text-align: center;
-                padding: 1rem 0;
+                text-align: left;
+                padding: 1rem 2rem;
+                user-select: none;
+
+                @media (max-width:442px) {
+                    padding: 1rem 1rem;
+                }
 
                 &:hover {
                     color: var(--tertiary-color);
-                    transition: color 0.3s ease-in-out;
+                    transition: color 0s ease-in-out;
                 }
+
+                &.dropdownActive {
+                    border-bottom: 2px solid var(--primary-color);
+                }
+
+                &.dropdown {
+                    font-size: var(--font-medium);
+                    padding: 1rem 0;
+                    padding-left: 3rem;
+                    border-bottom: 2px solid var(--primary-color);
+
+                    @media (max-width:442px) {
+                        padding-left: 2rem;
+                    }
+                }
+            }
+
+            .container-mobile-dropdowns-titles {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                background-color: var(--secondary-color);
+                width: 100%;
             }
         }
     }

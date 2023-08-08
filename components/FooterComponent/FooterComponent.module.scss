@@ -21,12 +21,16 @@
     }
 
     .divider {
-        border-top: 1px solid var(--secondary-color);
+        border-top: 2px solid var(--secondary-color);
         min-width: 90vw;
         max-width: 90vw;
         min-height: 3rem;
         max-height: 3rem;
         padding: 1rem;
+
+        @media (max-width:442px) {
+            padding-bottom: 2rem;
+        }
 
         .secondary-title {
             font-size: var(--font-small);

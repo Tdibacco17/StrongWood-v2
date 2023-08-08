@@ -10,11 +10,21 @@ export interface HeaderProps {
     title: string,
     link?: string
     scrollTo?: string
+    dropdown?: DropdownData[]
+}
+
+export interface DropdownData {
+    dropdown_id: number,
+    title: string,
+    link?: string
 }
 
 export interface NavigationProps {
     isHome: boolean,
     showMenu?: boolean,
-    handleShowMenu: () => void,
-    menuRef: React.RefObject<HTMLDivElement>;
+    handleShowMenu?: () => void,
+    showDropdown?: boolean,
+    handleShowDropdown?: () => void,
+    menuRef?: React.RefObject<HTMLDivElement>;
+    dropdownRef?: React.RefObject<HTMLDivElement>;
 }

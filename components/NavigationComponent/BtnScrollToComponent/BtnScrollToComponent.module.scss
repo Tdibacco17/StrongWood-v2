@@ -10,10 +10,12 @@
 
     &:hover {
         color: var(--tertiary-color);
-        transition: color 0.3s ease-in-out;
+        transition: color 0s ease-in-out;
     }
 
     &.isMobile {
         background-color: var(--secondary-color);
+        text-align: left;
+        padding: 1rem 2rem;
     }
 }

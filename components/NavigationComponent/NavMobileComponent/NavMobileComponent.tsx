@@ -1,10 +1,10 @@
-import { HeaderProps, NavigationProps } from '@/types'
+import { DropdownData, HeaderProps, NavigationProps } from '@/types'
 import styles from './NavMobileComponent.module.scss'
 import BtnScrollToSectionComponent from '../BtnScrollToComponent/BtnScrollToComponent'
 import data from '@/models/es.json'
 import Link from 'next/link'
 
-export default function NavMobileComponent({ isHome, handleShowMenu, menuRef }: NavigationProps) {
+export default function NavMobileComponent({ isHome, showMenu, handleShowMenu, menuRef, showDropdown, handleShowDropdown, dropdownRef }: NavigationProps) {
     return (
         <div className={styles['container-menu-mobile']} ref={menuRef}>
             <div className={styles['container-side-menu']}>
@@ -39,15 +39,37 @@ export default function NavMobileComponent({ isHome, handleShowMenu, menuRef }: 
                                         {item.title}
                                     </Link>
                             }) : data.navigation.headers.others.map((item: HeaderProps) => {
-                                return <Link
-                                    as={`/${item.link}`}
-                                    href={`/${item.link}`}
-                                    className={styles['mobile-title']}
-                                    key={item.nav_id}
-                                    onClick={handleShowMenu}
-                                >
-                                    {item.title}
-                                </Link>
+                                return item.dropdown ?
+                                    <div key={item.nav_id}>
+                                        <p className={`${styles['mobile-title']} ${showDropdown ? styles['dropdownActive'] : ''}`}
+                                            onClick={handleShowDropdown}>
+                                            {item.title}
+                                        </p>
+                                        {
+                                            showDropdown &&
+                                            <div className={styles['container-mobile-dropdowns-titles']} ref={dropdownRef}>
+                                                {item.dropdown.map((item: DropdownData) => {
+                                                    return <Link
+                                                        key={item.dropdown_id}
+                                                        as={`/${item.link}`}
+                                                        href={`/${item.link}`}
+                                                        className={`${styles['mobile-title']} ${showDropdown ? styles['dropdown'] : ''}`}
+                                                    >
+                                                        {item.title}
+                                                    </Link>
+                                                })}
+                                            </div>
+                                        }
+                                    </div>
+                                    : <Link
+                                        as={`/${item.link}`}
+                                        href={`/${item.link}`}
+                                        className={styles['mobile-title']}
+                                        key={item.nav_id}
+                                        onClick={handleShowMenu}
+                                    >
+                                        {item.title}
+                                    </Link>
                             })
                     }
                 </div>

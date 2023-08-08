@@ -27,11 +27,42 @@
             "others": [
                 {
                     "nav_id": 1,
+                    "title": "Categorías",
+                    "dropdown": [
+                        {
+                            "dropdown_id": 1,
+                            "title": "• Placares",
+                            "link": "placares"
+                        },
+                        {
+                            "dropdown_id": 2,
+                            "title": "• Baño",
+                            "link": "baño"
+                        },
+                        {
+                            "dropdown_id": 3,
+                            "title": "• Productos",
+                            "link": "productos"
+                        },
+                        {
+                            "dropdown_id": 4,
+                            "title": "• Cocinas",
+                            "link": "cocinas"
+                        },
+                        {
+                            "dropdown_id": 5,
+                            "title": "• Dormitorios",
+                            "link": "dormitorios"
+                        }
+                    ]
+                },
+                {
+                    "nav_id": 2,
                     "title": "Nosotros",
                     "link": "nosotros"
                 },
                 {
-                    "nav_id": 2,
+                    "nav_id": 3,
                     "title": "Contacto",
                     "link": "contacto"
                 }
