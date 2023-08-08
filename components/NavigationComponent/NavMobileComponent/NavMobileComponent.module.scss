@@ -1,7 +1,7 @@
 .container-menu-mobile {
     position: fixed;
     top: 0;
-    left: 40vw;
+    right: 0;
     width: 60vw;
     height: 100%;
     background-color: var(--primary-color);
@@ -9,12 +9,10 @@
     border-left: 2px solid var(--secondary-color);
 
     @media (max-width:442px) {
-        left: 25vw;
         width: 75vw;
     }
 
     @media (max-width:350px) {
-        left: 0;
         width: 100vw;
     }
 
@@ -81,7 +79,6 @@
                 width: 100%;
                 text-align: left;
                 padding: 1rem 2rem;
-                user-select: none;
 
                 @media (max-width:442px) {
                     padding: 1rem 1rem;

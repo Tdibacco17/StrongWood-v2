@@ -47,6 +47,10 @@ export default function NavigationContainer({ isHome }: { isHome: boolean }) {
             setShowMenu(false);
             return
         }
+        if (width > 768 && showMenu) {
+            setShowMenu(false);
+            return
+        }
     }, [width]);
 
     return <NavigationComponent
