@@ -17,18 +17,29 @@ export default function NavMobileComponent({ isHome, handleShowMenu, menuRef }: 
                         className={styles["button-mobile-menu"]}
                         onClick={handleShowMenu}>x</button>
                 </div>
-                {
-                    isHome ?
-                        data.navigation.headers.home.map((item: HeaderProps) => {
-                            return item.scrollTo ?
-                                <BtnScrollToSectionComponent
-                                    isMobile={true}
-                                    scrollTo={item.scrollTo}
-                                    handleShowMenu={handleShowMenu}
-                                    title={item.title}
-                                    key={item.nav_id}
-                                />
-                                : <Link
+                <div className={styles['container-mobile-titles']}>
+                    {
+                        isHome ?
+                            data.navigation.headers.home.map((item: HeaderProps) => {
+                                return item.scrollTo ?
+                                    <BtnScrollToSectionComponent
+                                        isMobile={true}
+                                        scrollTo={item.scrollTo}
+                                        handleShowMenu={handleShowMenu}
+                                        title={item.title}
+                                        key={item.nav_id}
+                                    />
+                                    : <Link
+                                        as={`/${item.link}`}
+                                        href={`/${item.link}`}
+                                        className={styles['mobile-title']}
+                                        key={item.nav_id}
+                                        onClick={handleShowMenu}
+                                    >
+                                        {item.title}
+                                    </Link>
+                            }) : data.navigation.headers.others.map((item: HeaderProps) => {
+                                return <Link
                                     as={`/${item.link}`}
                                     href={`/${item.link}`}
                                     className={styles['mobile-title']}
@@ -37,18 +48,9 @@ export default function NavMobileComponent({ isHome, handleShowMenu, menuRef }: 
                                 >
                                     {item.title}
                                 </Link>
-                        }) : data.navigation.headers.others.map((item: HeaderProps) => {
-                            return <Link
-                                as={`/${item.link}`}
-                                href={`/${item.link}`}
-                                className={styles['mobile-title']}
-                                key={item.nav_id}
-                                onClick={handleShowMenu}
-                            >
-                                {item.title}
-                            </Link>
-                        })
-                }
+                            })
+                    }
+                </div>
             </div>
         </div>
     )

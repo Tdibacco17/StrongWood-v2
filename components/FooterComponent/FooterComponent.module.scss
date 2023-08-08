@@ -9,16 +9,15 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid var(--secondary-color);
 
     .primary-footer {
         min-width: 90vw;
         max-width: 90vw;
-        min-height: 9rem;
-        max-height: 9rem;
+        min-height: 3rem;
+        max-height: 3rem;
         padding: 1rem 0;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        display: flex;
+        justify-content: flex-end;
     }
 
     .divider {

@@ -61,8 +61,8 @@ body {
   font-family: var(--font-mono);
   font-weight: var(--font-regular);
   font-size: var(--calc-rem);
-  /* height footer: 12rem + padding top: 6rem + gap:4rem */
-  padding-bottom: 22rem;
+  /* height footer: 6rem + padding top: 6rem + gap:4rem */
+  padding-bottom: 16rem;
 }
 
 body::-webkit-scrollbar {
