@@ -55,8 +55,10 @@
         position: fixed;
         top: 0;
         left: 0;
-        background-color: var(--secondary-color) 50%;
-        backdrop-filter: blur(40px);
+        bottom: 0;
+        right: 0;
+        background-color: var(--secondary-color);
+        opacity: 0.9;
         z-index: 2;
 
         @media (max-width:768px) {
