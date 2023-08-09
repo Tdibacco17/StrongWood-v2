@@ -15,7 +15,7 @@ export default function NavMobileComponent({ isHome, showMenu, handleShowMenu, m
                     </Link>
 
                     <button
-                        className={styles["button-mobile-menu"]}
+                        className={styles["btn-mobile-burgermenu"]}
                         onClick={handleShowMenu}><CloseIconComponent fill={'white'} height={30} width={30} /></button>
                 </div>
                 <div className={styles['container-mobile-titles']}>
