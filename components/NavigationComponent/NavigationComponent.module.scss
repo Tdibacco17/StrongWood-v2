@@ -59,6 +59,7 @@
         right: 0;
         background-color: var(--secondary-color);
         opacity: 0.9;
+        // backdrop-filter: blur(25px);
         z-index: 2;
 
         @media (max-width:768px) {
