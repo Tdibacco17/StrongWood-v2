@@ -1,10 +1,11 @@
 import { ImgDataInterface } from '@/types'
 import styles from './CategoriesCardComponent.module.scss'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function CategoriesCardComponent({ imgData }: { imgData: ImgDataInterface }) {
     return (
-        <div className={styles['container-outer-card-services']}>
+        <Link href={imgData.link ?? ''} as={imgData.link ?? ''} className={styles['container-outer-card-services']} >
             <Image
                 src={imgData.imgSrc}
                 alt={imgData.imgAlt}
@@ -16,6 +17,6 @@ export default function CategoriesCardComponent({ imgData }: { imgData: ImgDataI
             />
             <div className={styles['container-overlay-card-services']} />
             <p className={styles['title-services-overlay']}>{imgData.imgAlt}</p>
-        </div>
+        </Link >
     )
 }

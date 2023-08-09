@@ -6,8 +6,8 @@ import ProyectsVideoComponent from '../ProyectsVideoComponent/ProyectsVideoCompo
 export default function ProyectsComponent() {
     return (
         <section id={data.projects.sectionLink} className={styles['container-section-proyects']}>
+            <p className={styles['proyects-title']}>{data.projects.title}</p>
             <div className={styles['container-content']}>
-                <p className={styles['proyects-title']}>{data.projects.title}</p>
                 <div className={styles['container-videos-proyects']}>
                     {
                         data.projects.videos.map((cardVideo: ImgDataInterface) => {

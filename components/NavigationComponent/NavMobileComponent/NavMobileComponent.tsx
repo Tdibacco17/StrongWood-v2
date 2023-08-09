@@ -10,7 +10,7 @@ export default function NavMobileComponent({ isHome, showMenu, handleShowMenu, m
         <div className={`${styles['container-menu-mobile']} ${showMenu ? styles['isOpen'] : ''}`} ref={menuRef}>
             <div className={styles['container-side-menu']}>
                 <div className={styles['container-header-mobile-menu']}>
-                    <Link as={'/'} href={'/'} onClick={handleShowMenu}>
+                    <Link as={data.navigation.link} href={data.navigation.link} onClick={handleShowMenu}>
                         <h1 className={styles['menu-logo']}>{data.navigation.title}</h1>
                     </Link>
 
@@ -31,8 +31,8 @@ export default function NavMobileComponent({ isHome, showMenu, handleShowMenu, m
                                         key={item.nav_id}
                                     />
                                     : <Link
-                                        as={`/${item.link}`}
-                                        href={`/${item.link}`}
+                                        as={item.link ?? ''}
+                                        href={item.link ?? ''}
                                         className={styles['mobile-title']}
                                         key={item.nav_id}
                                         onClick={handleShowMenu}
@@ -52,8 +52,8 @@ export default function NavMobileComponent({ isHome, showMenu, handleShowMenu, m
                                                 {item.dropdown.map((item: DropdownData) => {
                                                     return <Link
                                                         key={item.dropdown_id}
-                                                        as={`/${item.link}`}
-                                                        href={`/${item.link}`}
+                                                        as={item.link ?? ''}
+                                                        href={item.link ?? ''}
                                                         className={`${styles['mobile-title']} ${showDropdown ? styles['dropdown'] : ''}`}
                                                     >
                                                         {item.title}
@@ -63,8 +63,8 @@ export default function NavMobileComponent({ isHome, showMenu, handleShowMenu, m
                                         }
                                     </div>
                                     : <Link
-                                        as={`/${item.link}`}
-                                        href={`/${item.link}`}
+                                        as={item.link ?? ''}
+                                        href={item.link ?? ''}
                                         className={styles['mobile-title']}
                                         key={item.nav_id}
                                         onClick={handleShowMenu}

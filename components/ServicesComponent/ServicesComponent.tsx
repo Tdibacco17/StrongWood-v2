@@ -4,7 +4,7 @@ import data from '@/models/es.json'
 
 export default function ServicesComponent() {
     return (
-        <div className={styles['container-section-services']}>
+        <section className={styles['container-section-services']}>
             <div className={styles['container-cards-services']}>
                 <div className={styles['box-icon-services']}>
                     <ShippingCarIconComponent fill={'white'} height={50} width={50} />
@@ -28,6 +28,6 @@ export default function ServicesComponent() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

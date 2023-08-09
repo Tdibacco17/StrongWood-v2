@@ -18,7 +18,7 @@ export default function NavigationComponent({
     return (
         <section className={`${styles['container-section-navigation']}`}>
             <div className={styles['wrapper-nav']}>
-                <Link as={'/'} href={'/'}>
+                <Link as={data.navigation.link} href={data.navigation.link}>
                     <h1 className={styles['menu-logo']}>{data.navigation.title}</h1>
                 </Link>
                 <NavDesktopComponent

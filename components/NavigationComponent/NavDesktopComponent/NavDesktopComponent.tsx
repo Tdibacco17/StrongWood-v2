@@ -17,8 +17,8 @@ export default function NavDesktopComponent({ isHome, showDropdown, handleShowDr
                                 key={item.nav_id}
                             />
                             : <Link
-                                as={`/${item.link}`}
-                                href={`/${item.link}`}
+                                as={item.link ?? ''}
+                                href={item.link ?? ''}
                                 className={styles['desktop-title']}
                                 key={item.nav_id}
                             >
@@ -37,8 +37,8 @@ export default function NavDesktopComponent({ isHome, showDropdown, handleShowDr
                                         {item.dropdown.map((item: DropdownData) => {
                                             return <Link
                                                 key={item.dropdown_id}
-                                                as={`/${item.link}`}
-                                                href={`/${item.link}`}
+                                                as={item.link ?? ''}
+                                                href={item.link ?? ''}
                                                 className={`${styles['desktop-title']}`}
                                             >
                                                 {item.title}
@@ -48,8 +48,8 @@ export default function NavDesktopComponent({ isHome, showDropdown, handleShowDr
                                 }
                             </div>
                             : <Link
-                                as={`/${item.link}`}
-                                href={`/${item.link}`}
+                                as={item.link ?? ''}
+                                href={item.link ?? ''}
                                 className={styles['desktop-title']}
                                 key={item.nav_id}
                             >

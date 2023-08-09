@@ -1,6 +1,7 @@
 {
     "navigation": {
         "title": "strong",
+        "link": "/",
         "headers": {
             "home": [
                 {
@@ -51,8 +52,8 @@
                         },
                         {
                             "dropdown_id": 5,
-                            "title": "• Dormitorios",
-                            "link": "dormitorios"
+                            "title": "• Dormitorio",
+                            "link": "dormitorio"
                         }
                     ]
                 },
@@ -102,57 +103,63 @@
     },
     "categories": {
         "sectionLink": "categorias",
-        "title": "Categorías",
+        "title": "Cotiza tu mueble seleccionando una categoría",
         "images": [
             {
                 "img_id": 1,
                 "imgSrc": "/assets/img/home/categories/Strong_291.webp",
                 "imgAlt": "Placares",
-                "objPosition": "0% 35%"
+                "objPosition": "0% 35%",
+                "link": "placares"
             },
             {
                 "img_id": 2,
                 "imgSrc": "/assets/img/home/categories/Strong-127.webp",
                 "imgAlt": "Baño",
-                "objPosition": "center 10%"
+                "objPosition": "center 10%",
+                "link": "baño"
             },
             {
                 "img_id": 3,
                 "imgSrc": "/assets/img/home/categories/Strong_Wood_IG-46.webp",
                 "imgAlt": "Productos",
-                "objPosition": "30% 70%"
+                "objPosition": "30% 70%",
+                "link": "productos"
+
             },
             {
                 "img_id": 4,
                 "imgSrc": "/assets/img/home/categories/Strong-142.webp",
                 "imgAlt": "Cocinas",
-                "objPosition": "25% 35%"
+                "objPosition": "25% 35%",
+                "link": "cocinas"
             },
             {
                 "img_id": 5,
                 "imgSrc": "/assets/img/home/categories/Strong_120.webp",
                 "imgAlt": "Dormitorio",
-                "objPosition": "0% bottom"
+                "objPosition": "0% bottom",
+                "link": "dormitorio"
             }
         ]
     },
     "services": {
-        "shippingCar":{
+        "shippingCar": {
             "title": "Envíos gratis",
-            "subtitle": "Para compras de mas de $10.000"
+            "subtitle": "Para compras de mas de $80.000"
         },
-        "wallet":{
-            "title": "Descuento",
-            "subtitle": "Abonando en efectivo"
+        "wallet": {
+            "title": "Descuentos",
+            "subtitle": "Hasta 30% abonando en efectivo"
         },
-        "hands":{
+        "hands": {
             "title": "Compra segura",
             "subtitle": "Devolución dentro de las 48hs"
         }
     },
     "projects": {
         "sectionLink": "proyectos",
-        "title": "Nuestros proyectos",
+        "title": "Mira nuestros proyectos",
         "videos": [
             {
                 "img_id": 1,
