@@ -14,7 +14,7 @@ export default function BtnScrollToComponent({ scrollTo, title, isMobile, handle
         handleShowMenu && handleShowMenu()
         handleScrollToSection(scrollTo)
     }
-    return <button onClick={handleButtonSCroll} className={`${styles['btn-scroll-to-section']} ${isMobile ? styles['isMobile'] : ''}`}>
+    return <button type='button' aria-label={`Ir a ${title}`} onClick={handleButtonSCroll} className={`${styles['btn-scroll-to-section']} ${isMobile ? styles['isMobile'] : ''}`}>
         {title}
     </button>
 }

@@ -15,6 +15,8 @@ export default function NavMobileComponent({ isHome, showMenu, handleShowMenu, m
                     </Link>
 
                     <button
+                        type='button'
+                        aria-label="Cerrar menú"
                         className={styles["btn-mobile-burgermenu"]}
                         onClick={handleShowMenu}><CloseIconComponent fill={'white'} height={30} width={30} /></button>
                 </div>

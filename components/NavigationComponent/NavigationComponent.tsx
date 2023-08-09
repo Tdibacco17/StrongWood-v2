@@ -29,7 +29,12 @@ export default function NavigationComponent({
                     showMenu={showMenu}
                     dropdownRef={dropdownRef}
                 />
-                <button className={styles['container-icon-menu']} onClick={handleShowMenu}>
+                <button
+                    type='button'
+                    aria-label="Mostrar menú"
+                    className={styles['container-icon-menu']}
+                    onClick={handleShowMenu}
+                >
                     <BurgerMenuIconComponent fill={'white'} width={30} height={30} />
                 </button>
             </div>
