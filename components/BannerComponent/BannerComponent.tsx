@@ -11,7 +11,7 @@ export default function BannerComponent({ imgData }: { imgData: ImgDataInterface
                 fill
                 sizes='100vw'
                 // loading='lazy'
-                // priority
+                priority
                 quality={100}
                 style={{ objectFit: 'cover', objectPosition: imgData.objPosition, }}
             />
