@@ -13,9 +13,10 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: 'StrongWood-v2',
+  title: 'StrongWood',
   description: 'StrongWood',
-  colorScheme: 'dark'
+  colorScheme: 'light',
+  themeColor: 'dark'
 }
 
 export default function RootLayout({
