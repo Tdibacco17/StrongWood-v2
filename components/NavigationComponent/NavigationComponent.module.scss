@@ -55,7 +55,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(40px);
         z-index: 2;
 
         @media (max-width:768px) {

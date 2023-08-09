@@ -34,7 +34,8 @@
         align-items: flex-end;
         gap: 1.5rem;
         width: 100%;
-        overflow-y: auto;
+        min-height: 100vh;
+        max-height: 100vh;
 
         .container-header-mobile-menu {
             width: 100%;
@@ -84,6 +85,11 @@
             flex-direction: column;
             gap: 3rem;
             width: 100%;
+            overflow-y: auto;
+
+            &::-webkit-scrollbar {
+                width: 0;
+            }
 
             .mobile-title {
                 color: var(--primary-white);

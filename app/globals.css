@@ -67,7 +67,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 0.15rem;
+  width: 0.2rem;
 }
 
 body::-webkit-scrollbar-thumb {

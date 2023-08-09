@@ -56,6 +56,7 @@ export default function NavMobileComponent({ isHome, showMenu, handleShowMenu, m
                                                         key={item.dropdown_id}
                                                         as={item.link ?? ''}
                                                         href={item.link ?? ''}
+                                                        onClick={handleShowMenu}
                                                         className={`${styles['mobile-title']} ${showDropdown ? styles['dropdown'] : ''}`}
                                                     >
                                                         {item.title}
