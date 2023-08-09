@@ -3,7 +3,8 @@ export interface ImgDataInterface {
     imgSrc: string,
     imgAlt: string,
     objPosition?: string,
-    link?: string
+    link?: string,
+    sizes?: string
 }
 
 export interface HeaderProps {

@@ -15,6 +15,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: 'StrongWood-v2',
   description: 'StrongWood',
+  colorScheme: 'dark'
 }
 
 export default function RootLayout({
@@ -26,8 +27,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={roboto.className}>
         <main>
-            {children}
-            <FooterComponent />
+          {children}
+          <FooterComponent />
         </main>
       </body>
     </html>

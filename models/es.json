@@ -110,36 +110,40 @@
                 "imgSrc": "/assets/img/home/categories/Strong_291.webp",
                 "imgAlt": "Placares",
                 "objPosition": "0% 35%",
-                "link": "placares"
+                "link": "placares",
+                "sizes": "(max-width: 768px) 100vw, (max-width: 992px) 33.33vw, (max-width: 1200px) 25vw, 14.28vw"
             },
             {
                 "img_id": 2,
                 "imgSrc": "/assets/img/home/categories/Strong-127.webp",
                 "imgAlt": "Baño",
                 "objPosition": "center 10%",
-                "link": "baño"
+                "link": "baño",
+                "sizes": "(max-width: 768px) 100vw, (max-width: 992px) 33.33vw, (max-width: 1200px) 20vw, 14.28vw"
             },
             {
                 "img_id": 3,
                 "imgSrc": "/assets/img/home/categories/Strong_Wood_IG-46.webp",
                 "imgAlt": "Productos",
                 "objPosition": "30% 70%",
-                "link": "productos"
-
+                "link": "productos",
+                "sizes": "100vw"
             },
             {
                 "img_id": 4,
                 "imgSrc": "/assets/img/home/categories/Strong-142.webp",
                 "imgAlt": "Cocinas",
                 "objPosition": "25% 35%",
-                "link": "cocinas"
+                "link": "cocinas",
+                "sizes": "(max-width: 768px) 100vw, (max-width: 992px) 66.66vw, (max-width: 1200px) 40vw, 28.57vw"
             },
             {
                 "img_id": 5,
                 "imgSrc": "/assets/img/home/categories/Strong_120.webp",
                 "imgAlt": "Dormitorio",
                 "objPosition": "0% bottom",
-                "link": "dormitorio"
+                "link": "dormitorio",
+                "sizes": "(max-width: 768px) 100vw, (max-width: 992px) 66.66vw, (max-width: 1200px) 30vw, 20vw"
             }
         ]
     },
