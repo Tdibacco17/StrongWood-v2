@@ -1,11 +1,18 @@
-import { DropdownData, HeaderProps, NavigationProps } from '@/types'
+import { NavigationDropdownInterface, NavigationInterface, NavigationProps } from '@/types'
 import styles from './NavMobileComponent.module.scss'
 import BtnScrollToSectionComponent from '../BtnScrollToComponent/BtnScrollToComponent'
 import data from '@/models/es.json'
 import Link from 'next/link'
 import { CloseIconComponent } from '@/components/IconComponent/IconComponent'
 
-export default function NavMobileComponent({ isHome, showMenu, handleShowMenu, menuRef, showDropdown, handleShowDropdown }: NavigationProps) {
+export default function NavMobileComponent({
+    isHome,
+    showMenu,
+    handleShowMenu,
+    menuRef,
+    showDropdown,
+    handleShowDropdown
+}: NavigationProps) {
     return (
         <>
             {
@@ -27,7 +34,7 @@ export default function NavMobileComponent({ isHome, showMenu, handleShowMenu, m
                     <div className={styles['container-mobile-titles']}>
                         {
                             isHome ?
-                                data.navigation.headers.home.map((item: HeaderProps) => {
+                                data.navigation.headers.home.map((item: NavigationInterface) => {
                                     return item.scrollTo ?
                                         <BtnScrollToSectionComponent
                                             isMobile={true}
@@ -45,7 +52,7 @@ export default function NavMobileComponent({ isHome, showMenu, handleShowMenu, m
                                         >
                                             {item.title}
                                         </Link>
-                                }) : data.navigation.headers.others.map((item: HeaderProps) => {
+                                }) : data.navigation.headers.others.map((item: NavigationInterface) => {
                                     return item.dropdown ?
                                         <div key={item.nav_id}>
                                             <p className={`${styles['mobile-title']} ${showDropdown ? styles['dropdownActive'] : ''}`}
@@ -55,11 +62,11 @@ export default function NavMobileComponent({ isHome, showMenu, handleShowMenu, m
                                             {
                                                 showDropdown &&
                                                 <div className={styles['container-mobile-dropdowns-titles']}>
-                                                    {item.dropdown.map((item: DropdownData) => {
+                                                    {item.dropdown.map((item: NavigationDropdownInterface) => {
                                                         return <Link
                                                             key={item.dropdown_id}
-                                                            as={item.link ?? ''}
-                                                            href={item.link ?? ''}
+                                                            as={item.link}
+                                                            href={item.link}
                                                             onClick={handleShowMenu}
                                                             className={`${styles['mobile-title']} ${showDropdown ? styles['dropdown'] : ''}`}
                                                         >

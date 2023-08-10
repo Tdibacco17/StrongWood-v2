@@ -1,7 +1,7 @@
 import styles from './CategoriesComponent.module.scss'
 import data from '@/models/es.json'
 import CategoriesCardComponent from '../CategoriesCardComponent/CategoriesCardComponent'
-import { ImgDataInterface } from '@/types'
+import { LinkImgDataInterface } from '@/types'
 
 export default function CategoriesComponent() {
     return (
@@ -9,7 +9,7 @@ export default function CategoriesComponent() {
             <p className={styles['categories-title']}>{data.categories.title}</p>
             <div className={styles['container-cards-categories']}>
                 {
-                    data.categories.images.map((card: ImgDataInterface) => {
+                    data.categories.images.map((card: LinkImgDataInterface) => {
                         return <CategoriesCardComponent imgData={card} key={card.img_id} />
                     })
                 }

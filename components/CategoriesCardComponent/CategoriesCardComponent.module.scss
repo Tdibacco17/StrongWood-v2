@@ -49,6 +49,7 @@
     }
 
     @media (max-width:523px) {
+
         &:nth-child(1),
         &:nth-child(2),
         &:nth-child(3),
@@ -75,6 +76,11 @@
         .title-services-overlay {
             opacity: 0;
         }
+    }
+
+    .container-inner-card-services {
+        object-fit: cover;
+        object-position: 35% 70%;
     }
 
     .container-overlay-card-services {

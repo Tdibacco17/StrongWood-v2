@@ -2,14 +2,14 @@ import Link from "next/link"
 import styles from './NavDesktopComponent.module.scss'
 import data from '@/models/es.json'
 import BtnScrollToSectionComponent from '../BtnScrollToComponent/BtnScrollToComponent'
-import { DropdownData, HeaderProps, NavigationProps } from "@/types"
+import { NavigationDropdownInterface, NavigationInterface, NavigationProps } from "@/types"
 
 export default function NavDesktopComponent({ isHome, showDropdown, handleShowDropdown, dropdownRef }: NavigationProps) {
     return (
         <div className={styles['container-menu-desktop']}>
             {
                 isHome ?
-                    data.navigation.headers.home.map((item: HeaderProps) => {
+                    data.navigation.headers.home.map((item: NavigationInterface) => {
                         return item.scrollTo ?
                             <BtnScrollToSectionComponent
                                 scrollTo={item.scrollTo}
@@ -24,7 +24,7 @@ export default function NavDesktopComponent({ isHome, showDropdown, handleShowDr
                             >
                                 {item.title}
                             </Link>
-                    }) : data.navigation.headers.others.map((item: HeaderProps) => {
+                    }) : data.navigation.headers.others.map((item: NavigationInterface) => {
                         return item.dropdown ?
                             <div key={item.nav_id}>
                                 <p className={`${styles['desktop-title']}`}
@@ -34,11 +34,11 @@ export default function NavDesktopComponent({ isHome, showDropdown, handleShowDr
                                 {
                                     showDropdown &&
                                     <div className={styles['container-desktop-dropdowns-titles']} ref={dropdownRef}>
-                                        {item.dropdown.map((item: DropdownData) => {
+                                        {item.dropdown.map((item: NavigationDropdownInterface) => {
                                             return <Link
                                                 key={item.dropdown_id}
-                                                as={item.link ?? ''}
-                                                href={item.link ?? ''}
+                                                as={item.link}
+                                                href={item.link}
                                                 className={`${styles['desktop-title']}`}
                                             >
                                                 {item.title}

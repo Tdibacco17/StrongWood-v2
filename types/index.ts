@@ -2,23 +2,25 @@ export interface ImgDataInterface {
     img_id?: number,
     imgSrc: string,
     imgAlt: string,
-    objPosition?: string,
-    link?: string,
     sizes?: string
 }
 
-export interface HeaderProps {
+export interface LinkImgDataInterface extends ImgDataInterface {
+    link: string
+}
+
+export interface NavigationInterface {
     nav_id: number,
     title: string,
     link?: string
     scrollTo?: string
-    dropdown?: DropdownData[]
+    dropdown?: NavigationDropdownInterface[]
 }
 
-export interface DropdownData {
+export interface NavigationDropdownInterface {
     dropdown_id: number,
     title: string,
-    link?: string
+    link: string
 }
 
 export interface NavigationProps {
