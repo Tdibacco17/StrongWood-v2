@@ -45,25 +45,4 @@
             }
         }
     }
-
-    .container-overlay-menu-mobile {
-        display: none;
-        min-width: 100%;
-        max-width: 100%;
-        min-height: 100%;
-        max-height: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-color: var(--secondary-color);
-        opacity: 0.9;
-        // backdrop-filter: blur(25px);
-        z-index: 2;
-
-        @media (max-width:768px) {
-            display: revert;
-        }
-    }
 }

@@ -38,10 +38,6 @@ export default function NavigationComponent({
                     <BurgerMenuIconComponent fill={'white'} width={30} height={30} />
                 </button>
             </div>
-            {
-                showMenu &&
-                <div className={styles['container-overlay-menu-mobile']} />
-            }
             <NavMobileComponent
                 isHome={isHome}
                 showMenu={showMenu}
