@@ -9,7 +9,7 @@ const roboto = Roboto({
   style: 'normal',
   preload: true,
   variable: '--font-Roboto',
-  display: 'optional'
+  display: 'swap'
 })
 
 export const metadata: Metadata = {

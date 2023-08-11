@@ -1,9 +1,8 @@
 :root {
   --max-width: 1600px;
   --calc-rem: calc(14px + (20.56 - 14) * ((100vw - 280px) / (3840 - 280)));
-  --font-mono: var(--font-Roboto), ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: 'Roboto Mono', 'Source Code Pro', ui-monospace, Menlo, Monaco, 'Cascadia Mono',
+    'Segoe UI Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
   --font-regular: 400;
   --font-bold: 700;
   --font-xgiant: 4rem;
@@ -56,7 +55,7 @@ body {
   max-width: 100vw;
   background-color: var(--primary-color);
   color: var(--primary-white);
-  font-family: var(--font-mono);
+  font-family: var(--font-Roboto), var(--font-mono);
   font-weight: var(--font-regular);
   font-size: var(--calc-rem);
   /* scrollbar */
