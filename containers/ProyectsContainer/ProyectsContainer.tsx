@@ -8,7 +8,7 @@ export default function ProyectsContainer() {
     const handleScrollLeft = () => {
         if (carouselRef.current) {
             carouselRef.current.scrollBy({
-                left: -424,
+                left: -448,
                 behavior: 'smooth',
             });
         }
@@ -17,7 +17,7 @@ export default function ProyectsContainer() {
     const handleScrollRight = () => {
         if (carouselRef.current) {
             carouselRef.current.scrollBy({
-                left: 424,
+                left: 448,
                 behavior: 'smooth',
             });
         }

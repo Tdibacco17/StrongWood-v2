@@ -30,7 +30,7 @@
         max-width: 100vw;
 
         &:hover {
-            .container-carousel-btns .btn-arrow {
+            .container-carousel-btns .carousel-btn-arrow {
                 opacity: 1;
                 transition: opacity 0.3s ease-in-out;
 
@@ -79,7 +79,7 @@
                 display: none;
             }
 
-            .btn-arrow {
+            .carousel-btn-arrow {
                 opacity: 0;
                 background-color: var(--primary-color);
                 pointer-events: auto;

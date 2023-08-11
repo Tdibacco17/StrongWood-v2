@@ -26,12 +26,12 @@ export default function ProyectsComponent({
                 </div>
                 <div className={styles['container-carousel-btns']}>
                     <button
-                        className={styles['btn-arrow']}
+                        className={styles['carousel-btn-arrow']}
                         onClick={handleScrollLeft}>
                         <ArrowLeftIconComponent fill={'white'} height={30} width={30} />
                     </button>
                     <button
-                        className={styles['btn-arrow']}
+                        className={styles['carousel-btn-arrow']}
                         onClick={handleScrollRight}>
                         <ArrowRightIconComponent fill={'white'} height={30} width={30} />
                     </button>
