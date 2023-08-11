@@ -29,9 +29,6 @@
   --primary-color: #232730;
   --secondary-color: #2F3540;
   --tertiary-color: #d87e2a;
-  --wrapper-calc-7rem: calc(100vw - 7rem);
-  --wrapper-calc-5rem: calc(100vw - 5rem);
-  --wrapper-calc-3rem: calc(100vw - 3rem);
 }
 
 * {
@@ -62,6 +59,9 @@ body {
   font-family: var(--font-mono);
   font-weight: var(--font-regular);
   font-size: var(--calc-rem);
+  /* scrollbar */
+  scrollbar-gutter: stable;
+  scroll-padding: 0 0.2rem;
   /* height footer: 6rem + padding top: 6rem + gap:4rem */
   padding-bottom: 16rem;
 }

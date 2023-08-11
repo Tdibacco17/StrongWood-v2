@@ -95,6 +95,7 @@ export const BurgerMenuIconComponent = ({ width, height, fill }: Props) => {
         </div>
     )
 }
+
 export const CloseIconComponent = ({ width, height, fill }: Props) => {
     return (
         <div className={styles['container-icon-svg']}>
@@ -187,6 +188,46 @@ export const CreditCardIconComponent = ({ width, height, fill }: Props) => {
             >
                 <path
                     d="M32 416a16 16 0 0016 16h416a16 16 0 0016-16V222H32zm66-138a8 8 0 018-8h92a8 8 0 018 8v64a8 8 0 01-8 8h-92a8 8 0 01-8-8zM464 80H48a16 16 0 00-16 16v66h448V96a16 16 0 00-16-16z"
+                    fill={fill}
+                    className={styles['icon-svg']}
+                />
+            </svg>
+        </div>
+    )
+}
+
+export const ArrowLeftIconComponent = ({ width, height, fill }: Props) => {
+    return (
+        <div className={styles['container-icon-svg']}>
+            <svg
+                width={width || "1em"}
+                height={height || "1em"}
+                fill="none"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"
+                    fill={fill}
+                    className={styles['icon-svg']}
+                />
+            </svg>
+        </div>
+    )
+}
+
+export const ArrowRightIconComponent = ({ width, height, fill }: Props) => {
+    return (
+        <div className={styles['container-icon-svg']}>
+            <svg
+                width={width || "1em"}
+                height={height || "1em"}
+                fill="none"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"
                     fill={fill}
                     className={styles['icon-svg']}
                 />

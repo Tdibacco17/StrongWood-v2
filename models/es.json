@@ -102,7 +102,8 @@
     },
     "categories": {
         "sectionLink": "categorias",
-        "title": "Cotiza tu mueble seleccionando una categoría",
+        "title": "Cotiza tu mueble",
+        "subtitle": "seleccionando una categoría",
         "images": [
             {
                 "img_id": 1,
@@ -157,17 +158,67 @@
     },
     "projects": {
         "sectionLink": "proyectos",
-        "title": "Mira nuestros proyectos",
-        "videos": [
+        "title": "Nuestros proyectos",
+        "cards": [
             {
                 "img_id": 1,
-                "imgSrc": "/assets/img/home/proyects/Strong_Wood_web-149.webp",
-                "imgAlt": "Video uno"
+                "imgSrc": "/assets/img/home/proyects/Strong-140.webp",
+                "imgAlt": "Imagen"
             },
             {
                 "img_id": 2,
-                "imgSrc": "/assets/img/home/proyects/Strong_Wood_web-149.webp",
-                "imgAlt": "Video dos"
+                "imgSrc": "/assets/img/home/proyects/Strong-247.webp",
+                "imgAlt": "Imagen"
+            },
+            {
+                "img_id": 3,
+                "imgSrc": "/assets/img/home/proyects/Strong-149.webp",
+                "imgAlt": "Imagen"
+            },
+            {
+                "img_id": 4,
+                "imgSrc": "/assets/img/home/proyects/Strong-162.webp",
+                "imgAlt": "Imagen"
+            },
+            {
+                "img_id": 5,
+                "imgSrc": "/assets/img/home/proyects/Strong-176.webp",
+                "imgAlt": "Imagen"
+            },
+            {
+                "img_id": 6,
+                "imgSrc": "/assets/img/home/proyects/Strong-265.webp",
+                "imgAlt": "Imagen"
+            },
+            {
+                "img_id": 7,
+                "imgSrc": "/assets/img/home/proyects/Strong-285.webp",
+                "imgAlt": "Imagen"
+            },
+            {
+                "img_id": 8,
+                "imgSrc": "/assets/img/home/proyects/Strong-302.webp",
+                "imgAlt": "Imagen"
+            },
+            {
+                "img_id": 9,
+                "imgSrc": "/assets/img/home/proyects/Strong-227.webp",
+                "imgAlt": "Imagen"
+            },
+            {
+                "img_id": 10,
+                "imgSrc": "/assets/img/home/proyects/Strong-001.webp",
+                "imgAlt": "Imagen"
+            },
+            {
+                "img_id": 11,
+                "imgSrc": "/assets/img/home/proyects/Strong-000.webp",
+                "imgAlt": "Imagen"
+            },
+            {
+                "img_id": 12,
+                "imgSrc": "/assets/img/home/proyects/Strong-156.webp",
+                "imgAlt": "Imagen"
             }
         ]
     },

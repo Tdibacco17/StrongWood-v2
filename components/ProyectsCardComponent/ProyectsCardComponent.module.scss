@@ -1,0 +1,49 @@
+.container-outer-proyects-card {
+    min-width: 25rem;
+    max-width: 25rem;
+    min-height: 15rem;
+    max-height: 15rem;
+
+    position: relative;
+    user-select: none;
+    overflow: hidden;
+
+    * {
+        pointer-events: none;
+    }
+
+    &:hover {
+        .container-overlay-proyects-video {
+            opacity: 0;
+            transition: opacity 350ms ease-in-out;
+        }
+
+        .container-inner-proyects-card {
+            transform: scale(1.05);
+            transition: transform 350ms ease-in-out;
+        }
+    }
+
+    @media (max-width: 442px) {
+        min-width: 85vw;
+        max-width: 85vw;
+        min-height: 15rem;
+        max-height: 15rem;
+    }
+
+    .container-inner-proyects-card {
+        object-fit: cover;
+        object-position: center;
+        transition: transform 350ms ease-in-out;
+    }
+
+    .container-overlay-proyects-video {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--primary-color);
+        opacity: 0.5;
+        transition: opacity 350ms ease-in-out;
+    }
+}

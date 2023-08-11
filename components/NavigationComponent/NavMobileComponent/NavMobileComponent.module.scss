@@ -67,16 +67,8 @@
                 max-height: 2.5rem;
                 cursor: pointer;
                 border: none;
-                font-size: var(--font-xmedium);
-                font-weight: var(--font-bold);
                 background-color: var(--secondary-color);
-                color: var(--primary-white);
                 border-radius: var(--border-radius);
-
-                &:hover {
-                    color: var(--tertiary-color);
-                    transition: color 0s ease-in-out;
-                }
             }
         }
 
