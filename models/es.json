@@ -143,6 +143,7 @@
         ]
     },
     "services": {
+        "title": "Te ofrecemos",
         "shippingCar": {
             "title": "Envíos gratis",
             "subtitle": "Para compras de mas de $80.000"
@@ -158,7 +159,8 @@
     },
     "projects": {
         "sectionLink": "proyectos",
-        "title": "Nuestros proyectos",
+        "title": "Algunos de nuestros",
+        "subtitle": "proyectos",
         "cards": [
             {
                 "img_id": 1,

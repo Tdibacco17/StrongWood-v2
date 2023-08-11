@@ -5,6 +5,7 @@ import data from '@/models/es.json'
 export default function ServicesComponent() {
     return (
         <section className={styles['container-section-services']}>
+            <p className={styles['container-title-services']}>{data.services.title}</p>
             <div className={styles['container-cards-services']}>
                 <div className={styles['box-icon-services']}>
                     <ShippingCarIconComponent fill={'white'} height={50} width={50} />

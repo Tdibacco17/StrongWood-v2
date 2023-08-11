@@ -15,7 +15,10 @@ export default function ProyectsComponent({
 }) {
     return (
         <section id={data.projects.sectionLink} className={styles['container-section-proyects']}>
-            <p className={styles['proyects-title']}>{data.projects.title}</p>
+            <div className={styles['container-header-proyects']}>
+                <p className={styles['proyects-title']}>{data.projects.title}</p>
+                <p className={styles['proyects-subtitle']}>{data.projects.subtitle}</p>
+            </div>
             <div className={styles['container-carousel']}>
                 <div className={styles['container-cards-proyects']} ref={carouselRef}>
                     {
@@ -26,11 +29,15 @@ export default function ProyectsComponent({
                 </div>
                 <div className={styles['container-carousel-btns']}>
                     <button
+                        type='button'
+                        aria-label='Boton izquierda'
                         className={styles['carousel-btn-arrow']}
                         onClick={handleScrollLeft}>
                         <ArrowLeftIconComponent fill={'white'} height={30} width={30} />
                     </button>
                     <button
+                        type='button'
+                        aria-label='Boton derecha'
                         className={styles['carousel-btn-arrow']}
                         onClick={handleScrollRight}>
                         <ArrowRightIconComponent fill={'white'} height={30} width={30} />

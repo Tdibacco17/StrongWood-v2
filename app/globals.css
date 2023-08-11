@@ -62,8 +62,8 @@ body {
   /* scrollbar */
   scrollbar-gutter: stable;
   scroll-padding: 0 0.2rem;
-  /* height footer: 6rem + padding top: 6rem + gap:4rem */
-  padding-bottom: 16rem;
+  /* height footer: 6rem + padding top: 6rem + gap:6rem */
+  padding-bottom: 18rem;
 }
 
 body::-webkit-scrollbar {
