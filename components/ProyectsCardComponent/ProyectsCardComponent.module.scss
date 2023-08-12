@@ -13,7 +13,7 @@
     }
 
     &:hover {
-        .container-overlay-proyects-video {
+        .container-overlay-proyects-card {
             opacity: 0;
             transition: opacity 350ms ease-in-out;
         }
@@ -37,7 +37,7 @@
         transition: transform 350ms ease-in-out;
     }
 
-    .container-overlay-proyects-video {
+    .container-overlay-proyects-card {
         position: absolute;
         top: 0;
         width: 100%;

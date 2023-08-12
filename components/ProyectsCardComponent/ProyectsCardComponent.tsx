@@ -9,7 +9,6 @@ export default async function ProyectsCardComponent({ imagesData }: { imagesData
         ...photo, blurHash: await dynamicBlurDataUrl(photo.imgSrc)
     }))
     const photos = await Promise.all(photosArray)
-
     return (
         <>
             {
@@ -27,7 +26,7 @@ export default async function ProyectsCardComponent({ imagesData }: { imagesData
                                 blurDataURL={card.blurHash || staticBlurDataUrl()}
                                 priority={card.img_id <= 1 ? true : false}
                             />
-                            <div className={styles['container-overlay-proyects-video']} />
+                            <div className={`${styles['container-overlay-proyects-card']}`}/>
                         </div>
                     )
                 })
