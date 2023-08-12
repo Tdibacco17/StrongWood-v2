@@ -64,6 +64,23 @@
                     display: flex;
                     justify-content: space-between;
                     width: 9rem;
+
+                    .icon-network {
+                        @media (max-width:659px) {
+                            background-color: var(--secondary-color);
+                            border-radius: var(--border-radius);
+                            min-width: 2.5rem;
+                            max-width: 2.5rem;
+                            min-height: 2.5rem;
+                            max-height: 2.5rem;
+                            padding: 1.5rem;
+                            cursor: pointer;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            box-shadow: var(--box-shadow);
+                        }
+                    }
                 }
 
                 @media (max-width:659px) {
@@ -98,6 +115,7 @@
                 text-transform: uppercase;
                 border-radius: var(--border-radius);
                 border: none;
+                box-shadow: var(--box-shadow);
 
                 &:hover {
                     color: var(--tertiary-color);

@@ -41,21 +41,24 @@
         @media (max-width:992px) {
             min-width: 100vw;
             max-width: 100vw;
+            padding: 0 1.5rem;
         }
 
         @media (max-width:768px) {
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             grid-template-rows: repeat(8, 1fr);
-            padding: revert;
+            // padding: revert;
             min-height: 55rem;
             max-height: 55rem;
         }
 
         @media (max-width:523px) {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             grid-template-rows: revert;
-            min-height: 70rem;
-            max-height: 70rem;
+            min-height: 80rem;
+            max-height: 80rem;
             gap: 2rem;
+            padding: 0 1rem;
         }
     }
 }

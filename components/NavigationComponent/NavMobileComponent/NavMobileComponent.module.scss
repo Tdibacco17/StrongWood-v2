@@ -42,8 +42,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            min-height: 4rem;
-            max-height: 4rem;
+            min-height: 4.5rem;
+            max-height: 4.5rem;
             padding: 0rem 1.5rem;
             border-bottom: 2px solid var(--secondary-color);
 
@@ -69,6 +69,7 @@
                 border: none;
                 background-color: var(--secondary-color);
                 border-radius: var(--border-radius);
+                box-shadow: var(--box-shadow);
             }
         }
 
