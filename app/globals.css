@@ -78,3 +78,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+img {
+  object-fit: contain;
+}

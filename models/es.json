@@ -73,6 +73,7 @@
     "banner": {
         "sectionLink": "top",
         "image": {
+            "img_id": 1,
             "imgSrc": "/assets/img/home/banner/Strong_Wood_IG-43.webp",
             "imgAlt": "Banner"
         }
@@ -110,35 +111,35 @@
                 "imgSrc": "/assets/img/home/categories/Strong_291.webp",
                 "imgAlt": "Placares",
                 "link": "placares",
-                "sizes": "(max-width: 768px) 50vw, (max-width: 523px) 100vw, 100vw"
+                "sizes": "35vw, (max-width: 768px) 50vw, (max-width: 523px) 100vw"
             },
             {
                 "img_id": 2,
                 "imgSrc": "/assets/img/home/categories/Strong-127.webp",
                 "imgAlt": "Baño",
                 "link": "baño",
-                "sizes": "(max-width: 768px) 50vw, (max-width: 523px) 100vw, 100vw"
+                "sizes": "35vw, (max-width: 768px) 50vw, (max-width: 523px) 100vw"
             },
             {
                 "img_id": 3,
                 "imgSrc": "/assets/img/home/categories/Strong_Wood_IG-46.webp",
                 "imgAlt": "Productos",
                 "link": "productos",
-                "sizes": "(max-width: 768px) 50vw, (max-width: 523px) 100vw, 100vw"
+                "sizes": "30vw, (max-width: 768px) 50vw, (max-width: 523px) 100vw"
             },
             {
                 "img_id": 4,
                 "imgSrc": "/assets/img/home/categories/Strong-142.webp",
                 "imgAlt": "Cocinas",
                 "link": "cocinas",
-                "sizes": "(max-width: 768px) 50vw, (max-width: 523px) 100vw, 100vw"
+                "sizes": "70vw, (max-width: 768px) 100vw"
             },
             {
                 "img_id": 5,
                 "imgSrc": "/assets/img/home/categories/Strong_120.webp",
                 "imgAlt": "Dormitorio",
                 "link": "dormitorio",
-                "sizes": "(max-width: 768px) 50vw, (max-width: 523px) 100vw, 100vw"
+                "sizes": "30vw, (max-width: 768px) 50vw, (max-width: 523px) 100vw"
             }
         ]
     },
@@ -227,6 +228,7 @@
     "aboutUs": {
         "sectionLink": "top",
         "image": {
+            "img_id": 1,
             "imgSrc": "/assets/img/aboutUs/banner/Strong-61.webp",
             "imgAlt": "Nosotros"
         }

@@ -1,12 +1,13 @@
 export interface ImgDataInterface {
-    img_id?: number,
+    img_id: number,
     imgSrc: string,
     imgAlt: string,
-    sizes?: string
+    sizes?: string,
 }
 
-export interface LinkImgDataInterface extends ImgDataInterface {
-    link: string
+export interface ImgBlurDataInterface extends ImgDataInterface {
+    blurHash:string,
+    link?: string
 }
 
 export interface NavigationInterface {
