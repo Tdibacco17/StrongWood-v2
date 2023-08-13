@@ -74,7 +74,7 @@
         "sectionLink": "top",
         "image": {
             "img_id": 1,
-            "imgSrc": "/assets/img/home/banner/Strong_Wood_IG-43.webp",
+            "imgSrc": "/assets/img/homePage/banner/Strong_Wood_IG-43.webp",
             "imgAlt": "Banner"
         }
     },
@@ -108,35 +108,35 @@
         "images": [
             {
                 "img_id": 1,
-                "imgSrc": "/assets/img/home/categories/Strong_291.webp",
+                "imgSrc": "/assets/img/homePage/categories/Strong_291.webp",
                 "imgAlt": "Placares",
                 "link": "placares",
                 "sizes": "35vw, (max-width: 768px) 50vw, (max-width: 523px) 100vw"
             },
             {
                 "img_id": 2,
-                "imgSrc": "/assets/img/home/categories/Strong-127.webp",
+                "imgSrc": "/assets/img/homePage/categories/Strong-127.webp",
                 "imgAlt": "Baño",
                 "link": "baño",
                 "sizes": "35vw, (max-width: 768px) 50vw, (max-width: 523px) 100vw"
             },
             {
                 "img_id": 3,
-                "imgSrc": "/assets/img/home/categories/Strong_Wood_IG-46.webp",
+                "imgSrc": "/assets/img/homePage/categories/Strong_Wood_IG-46.webp",
                 "imgAlt": "Productos",
                 "link": "productos",
                 "sizes": "30vw, (max-width: 768px) 50vw, (max-width: 523px) 100vw"
             },
             {
                 "img_id": 4,
-                "imgSrc": "/assets/img/home/categories/Strong-142.webp",
+                "imgSrc": "/assets/img/homePage/categories/Strong-142.webp",
                 "imgAlt": "Cocinas",
                 "link": "cocinas",
                 "sizes": "70vw, (max-width: 768px) 100vw"
             },
             {
                 "img_id": 5,
-                "imgSrc": "/assets/img/home/categories/Strong_120.webp",
+                "imgSrc": "/assets/img/homePage/categories/Strong_120.webp",
                 "imgAlt": "Dormitorio",
                 "link": "dormitorio",
                 "sizes": "30vw, (max-width: 768px) 50vw, (max-width: 523px) 100vw"
@@ -165,62 +165,62 @@
         "cards": [
             {
                 "img_id": 1,
-                "imgSrc": "/assets/img/home/proyects/Strong-140.webp",
+                "imgSrc": "/assets/img/homePage/proyects/Strong-140.webp",
                 "imgAlt": "Imagen"
             },
             {
                 "img_id": 2,
-                "imgSrc": "/assets/img/home/proyects/Strong-247.webp",
+                "imgSrc": "/assets/img/homePage/proyects/Strong-247.webp",
                 "imgAlt": "Imagen"
             },
             {
                 "img_id": 3,
-                "imgSrc": "/assets/img/home/proyects/Strong-149.webp",
+                "imgSrc": "/assets/img/homePage/proyects/Strong-149.webp",
                 "imgAlt": "Imagen"
             },
             {
                 "img_id": 4,
-                "imgSrc": "/assets/img/home/proyects/Strong-162.webp",
+                "imgSrc": "/assets/img/homePage/proyects/Strong-162.webp",
                 "imgAlt": "Imagen"
             },
             {
                 "img_id": 5,
-                "imgSrc": "/assets/img/home/proyects/Strong-176.webp",
+                "imgSrc": "/assets/img/homePage/proyects/Strong-176.webp",
                 "imgAlt": "Imagen"
             },
             {
                 "img_id": 6,
-                "imgSrc": "/assets/img/home/proyects/Strong-265.webp",
+                "imgSrc": "/assets/img/homePage/proyects/Strong-265.webp",
                 "imgAlt": "Imagen"
             },
             {
                 "img_id": 7,
-                "imgSrc": "/assets/img/home/proyects/Strong-285.webp",
+                "imgSrc": "/assets/img/homePage/proyects/Strong-285.webp",
                 "imgAlt": "Imagen"
             },
             {
                 "img_id": 8,
-                "imgSrc": "/assets/img/home/proyects/Strong-302.webp",
+                "imgSrc": "/assets/img/homePage/proyects/Strong-302.webp",
                 "imgAlt": "Imagen"
             },
             {
                 "img_id": 9,
-                "imgSrc": "/assets/img/home/proyects/Strong-227.webp",
+                "imgSrc": "/assets/img/homePage/proyects/Strong-227.webp",
                 "imgAlt": "Imagen"
             },
             {
                 "img_id": 10,
-                "imgSrc": "/assets/img/home/proyects/Strong-001.webp",
+                "imgSrc": "/assets/img/homePage/proyects/Strong-001.webp",
                 "imgAlt": "Imagen"
             },
             {
                 "img_id": 11,
-                "imgSrc": "/assets/img/home/proyects/Strong-000.webp",
+                "imgSrc": "/assets/img/homePage/proyects/Strong-000.webp",
                 "imgAlt": "Imagen"
             },
             {
                 "img_id": 12,
-                "imgSrc": "/assets/img/home/proyects/Strong-156.webp",
+                "imgSrc": "/assets/img/homePage/proyects/Strong-156.webp",
                 "imgAlt": "Imagen"
             }
         ]
@@ -229,7 +229,7 @@
         "sectionLink": "top",
         "image": {
             "img_id": 1,
-            "imgSrc": "/assets/img/aboutUs/banner/Strong-61.webp",
+            "imgSrc": "/assets/img/aboutUsPage/banner/Strong-61.webp",
             "imgAlt": "Nosotros"
         }
     },
