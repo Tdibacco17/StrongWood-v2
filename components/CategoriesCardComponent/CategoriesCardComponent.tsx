@@ -16,7 +16,7 @@ export default async function CategoriesCardComponent({ imagesData }: { imagesDa
             {
                 photos.map((card: ImgBlurDataInterface) => {
                     return (
-                        <Link key={card.img_id} href={card.link ?? ''} as={card.link ?? ''} className={styles['container-outer-card-services']}>
+                        <Link key={card.img_id} href={card.link ?? ''} /*as={card.link ?? ''}*/ className={styles['container-outer-card-services']}>
                             <Image
                                 className={styles['container-inner-card-services']}
                                 src={card.imgSrc}

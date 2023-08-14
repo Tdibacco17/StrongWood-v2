@@ -21,7 +21,7 @@ export default function NavMobileComponent({
             <div className={`${styles['container-menu-mobile']} ${showMenu ? styles['isOpen'] : ''}`} ref={menuRef}>
                 <div className={styles['container-side-menu']}>
                     <div className={styles['container-header-mobile-menu']}>
-                        <Link as={data.navigation.link} href={data.navigation.link} onClick={handleShowMenu}>
+                        <Link /*as={data.navigation.link}*/ href={data.navigation.link} onClick={handleShowMenu}>
                             <h1 className={styles['menu-logo']}>{data.navigation.title}</h1>
                         </Link>
 
@@ -44,7 +44,7 @@ export default function NavMobileComponent({
                                             key={item.nav_id}
                                         />
                                         : <Link
-                                            as={item.link ?? ''}
+                                            /* as={item.link ?? ''}*/
                                             href={item.link ?? ''}
                                             className={styles['mobile-title']}
                                             key={item.nav_id}
@@ -65,7 +65,7 @@ export default function NavMobileComponent({
                                                     {item.dropdown.map((item: NavigationDropdownInterface) => {
                                                         return <Link
                                                             key={item.dropdown_id}
-                                                            as={item.link}
+                                                            /* as={item.link}*/
                                                             href={item.link}
                                                             onClick={handleShowMenu}
                                                             className={`${styles['mobile-title']} ${showDropdown ? styles['dropdown'] : ''}`}
@@ -77,7 +77,7 @@ export default function NavMobileComponent({
                                             }
                                         </div>
                                         : <Link
-                                            as={item.link ?? ''}
+                                            /*as={item.link ?? ''}*/
                                             href={item.link ?? ''}
                                             className={styles['mobile-title']}
                                             key={item.nav_id}

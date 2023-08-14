@@ -23,7 +23,7 @@ export default function SloganComponent() {
                             </a>
                         </div>
                     </div>
-                    <Link as={data.slogan.button.link} href={data.slogan.button.link} className={styles['button-contact']}>{data.slogan.button.title}</Link>
+                    <Link /* as={data.slogan.button.link}*/ href={data.slogan.button.link} className={styles['button-contact']}>{data.slogan.button.title}</Link>
                 </div>
                 <div className={styles['container-titles']}>
                     <p className={styles['subtitle']}>{data.slogan.subtitle}</p>
