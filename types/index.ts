@@ -35,9 +35,8 @@ export interface NavigationProps {
 }
 
 export interface ProductsDataContextInterface {
-    productsData: ProductDataInterface;
-    handleProductDataChange: Function;
     productData: ProductInterface;
+    handleProductDataChange: Function;
 }
 
 export interface ProductDataInterface {
@@ -45,25 +44,23 @@ export interface ProductDataInterface {
 }
 
 export interface ProductInterface {
-    productSlug: string;
+    product_slug: string;
     title: string;
     image: ImgDataInterface;
     price: string;
     offerPrice: string;
     offerPercentage: number;
-    detail: {
-        payment: PaymentDataInterface;
+    details: {
+        cash_payment: PaymentDataInterface;
         description: DescriptionDataInterface,
-        images?: ImgDataInterface[];
+        // images?: ImgDataInterface[];
     },
 }
 
 export interface PaymentDataInterface {
-    cash: {
-        price: string,
-        offerPrice: string,
-        offerPercentage: number;
-    },
+    price: string,
+    offerPrice: string,
+    offerPercentage: number;
 }
 
 export interface DescriptionDataInterface {

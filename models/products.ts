@@ -1,5 +1,8 @@
-{
+import { ProductDataInterface } from "@/types";
+
+export const productsData: ProductDataInterface = {
     "mesa-de-luz-roma": {
+        "product_slug": "mesa-de-luz-roma",
         "title": "Mesa de luz Roma",
         "price": "121.059,40",
         "offerPrice": "76.758,80",
@@ -10,7 +13,7 @@
             "imgAlt": "Mesa de luz Roma"
         },
         "details": {
-            "cash": {
+            "cash_payment": {
                 "price": "76.758,80",
                 "offerPrice": "53.730,70",
                 "offerPercentage": 30
@@ -27,6 +30,7 @@
         }
     },
     "mesa-cracovia": {
+        "product_slug": "mesa-cracovia",
         "title": "Mesa Cracovia",
         "price": "378.319,20",
         "offerPrice": "243.600,00",
@@ -37,7 +41,7 @@
             "imgAlt": "Mesa Cracovia"
         },
         "details": {
-            "cash": {
+            "cash_payment": {
                 "price": "243.600,00",
                 "offerPrice": "170.520,00",
                 "offerPercentage": 30
@@ -53,6 +57,7 @@
         }
     },
     "mesa-ratona-edimburgo": {
+        "product_slug": "mesa-ratona-edimburgo",
         "title": "Mesa ratona Edimburgo",
         "price": "221.424,00",
         "offerPrice": "172.635,40",
@@ -63,7 +68,7 @@
             "imgAlt": "Mesa ratona Edimburgo"
         },
         "details": {
-            "cash": {
+            "cash_payment": {
                 "price": "172.635,40",
                 "offerPrice": "120.844,78",
                 "offerPercentage": 30
@@ -79,6 +84,7 @@
         }
     },
     "maceta-sintra": {
+        "product_slug": "maceta-sintra",
         "title": "Maceta Sintra",
         "price": "77.865,20",
         "offerPrice": "55.685,00",
@@ -89,7 +95,7 @@
             "imgAlt": "Maceta Sintra"
         },
         "details": {
-            "cash": {
+            "cash_payment": {
                 "price": "55.685,00",
                 "offerPrice": "38.789,75",
                 "offerPercentage": 30
@@ -104,6 +110,7 @@
         }
     },
     "maceta-aviñon": {
+        "product_slug": "maceta-aviñon",
         "title": "Maceta Aviñon",
         "price": "54.741,40",
         "offerPrice": "54.741,40",
@@ -114,7 +121,7 @@
             "imgAlt": "Maceta Aviñon"
         },
         "details": {
-            "cash": {
+            "cash_payment": {
                 "price": "54.741,40",
                 "offerPrice": "38.159,98",
                 "offerPercentage": 30
@@ -129,6 +136,7 @@
         }
     },
     "estanteria-siena": {
+        "product_slug": "estanteria-siena",
         "title": "Estanteria Siena",
         "price": "103.509,00",
         "offerPrice": "71.670,40",
@@ -139,7 +147,7 @@
             "imgAlt": "Estanteria Siena"
         },
         "details": {
-            "cash": {
+            "cash_payment": {
                 "price": "71.670,40",
                 "offerPrice": "50.105,28",
                 "offerPercentage": 30
@@ -155,6 +163,7 @@
         }
     },
     "estanteria-avila": {
+        "product_slug": "estanteria-avila",
         "title": "Estanteria Avila",
         "price": "116.221,00",
         "offerPrice": "68.243,00",
@@ -165,7 +174,7 @@
             "imgAlt": "Estanteria Avila"
         },
         "details": {
-            "cash": {
+            "cash_payment": {
                 "price": "68.243,00",
                 "offerPrice": "47.649,10",
                 "offerPercentage": 30
@@ -181,6 +190,7 @@
         }
     },
     "estanteria-bath": {
+        "product_slug": "estanteria-bath",
         "title": "Estanteria Bath",
         "price": "56.236,60",
         "offerPrice": "47.819,80",
@@ -191,7 +201,7 @@
             "imgAlt": "Estanteria Bath"
         },
         "details": {
-            "cash": {
+            "cash_payment": {
                 "price": "47.819,80",
                 "offerPrice": "33.537,86",
                 "offerPercentage": 30
@@ -207,6 +217,7 @@
         }
     },
     "estanteria-bergen": {
+        "product_slug": "estanteria-bergen",
         "title": "Estanteria Bergen",
         "price": "408.387,20",
         "offerPrice": "291.004,00",
@@ -217,7 +228,7 @@
             "imgAlt": "Estanteria Bergen"
         },
         "details": {
-            "cash": {
+            "cash_payment": {
                 "price": "291.004,00",
                 "offerPrice": "203.701,40",
                 "offerPercentage": 30
@@ -233,6 +244,7 @@
         }
     },
     "llavero-corfu": {
+        "product_slug": "llavero-corfu",
         "title": "Llavero Corfu",
         "price": "73.539,20",
         "offerPrice": "52.066,40",
@@ -243,7 +255,7 @@
             "imgAlt": "Llavero Corfu"
         },
         "details": {
-            "cash": {
+            "cash_payment": {
                 "price": "52.066,40",
                 "offerPrice": "36.224,78",
                 "offerPercentage": 30
@@ -259,6 +271,7 @@
         }
     },
     "llavero-viena": {
+        "product_slug": "llavero-viena",
         "title": "Llavero Viena",
         "price": "56.236,60",
         "offerPrice": "41.528,20",
@@ -269,7 +282,7 @@
             "imgAlt": "Llavero Viena"
         },
         "details": {
-            "cash": {
+            "cash_payment": {
                 "price": "41.528,20",
                 "offerPrice": "28.984,74",
                 "offerPercentage": 30
@@ -285,6 +298,7 @@
         }
     },
     "leñero": {
+        "product_slug": "leñero",
         "title": "Leñero",
         "price": "53.997,80",
         "offerPrice": "53.997,80",
@@ -295,7 +309,7 @@
             "imgAlt": "Leñero"
         },
         "details": {
-            "cash": {
+            "cash_payment": {
                 "price": "53.997,80",
                 "offerPrice": "37.068,23",
                 "offerPercentage": 30
@@ -311,6 +325,7 @@
         }
     },
     "rack-tv-cordoba": {
+        "product_slug": "rack-tv-cordoba",
         "title": "Rack TV Cordoba",
         "price": "197.780,80",
         "offerPrice": "141.929,20",
@@ -321,7 +336,7 @@
             "imgAlt": "Rack TV Cordoba"
         },
         "details": {
-            "cash": {
+            "cash_payment": {
                 "price": "141.929,20",
                 "offerPrice": "98.250,44",
                 "offerPercentage": 30
@@ -337,6 +352,7 @@
         }
     },
     "toallero-matera": {
+        "product_slug": "toallero-matera",
         "title": "Toallero Matera",
         "price": "62.983,60",
         "offerPrice": "46.248,40",
@@ -347,7 +363,7 @@
             "imgAlt": "Toallero Matera"
         },
         "details": {
-            "cash": {
+            "cash_payment": {
                 "price": "46.248,40",
                 "offerPrice": "32.286,78",
                 "offerPercentage": 30
@@ -363,6 +379,7 @@
         }
     },
     "toallero-cuenca": {
+        "product_slug": "toallero-cuenca",
         "title": "Toallero Cuenca",
         "price": "83.923,00",
         "offerPrice": "56.787,40",
@@ -373,7 +390,7 @@
             "imgAlt": "Toallero Cuenca"
         },
         "details": {
-            "cash": {
+            "cash_payment": {
                 "price": "56.787,40",
                 "offerPrice": "39.750,18",
                 "offerPercentage": 30
@@ -389,6 +406,7 @@
         }
     },
     "bodega-segovia": {
+        "product_slug": "bodega-segovia",
         "title": "Bodega Segovia",
         "price": "196.728,00",
         "offerPrice": "116.037,20",
@@ -399,7 +417,7 @@
             "imgAlt": "Bodega Segovia"
         },
         "details": {
-            "cash": {
+            "cash_payment": {
                 "price": "116.037,20",
                 "offerPrice": "81.226,04",
                 "offerPercentage": 30
@@ -416,6 +434,7 @@
         }
     },
     "porta-vinos": {
+        "product_slug": "porta-vinos",
         "title": "Porta Vinos",
         "price": "61.978,00",
         "offerPrice": "61.978,00",
@@ -426,7 +445,7 @@
             "imgAlt": "Porta Vinos"
         },
         "details": {
-            "cash": {
+            "cash_payment": {
                 "price": "61.978,00",
                 "offerPrice": "43.385,60",
                 "offerPercentage": 30
@@ -441,6 +460,7 @@
         }
     },
     "escritorio-brujas": {
+        "product_slug": "escritorio-brujas",
         "title": "Escritorio Brujas",
         "price": "177.288,20",
         "offerPrice": "135.107,00",
@@ -451,7 +471,7 @@
             "imgAlt": "Escritorio Brujas"
         },
         "details": {
-            "cash": {
+            "cash_payment": {
                 "price": "135.107,00",
                 "offerPrice": "94.574,90",
                 "offerPercentage": 30
@@ -468,6 +488,7 @@
         }
     },
     "perchero-oporto": {
+        "product_slug": "perchero-oporto",
         "title": "Perchero Oporto",
         "price": "64.890,40",
         "offerPrice": "53.011,00",
@@ -478,7 +499,7 @@
             "imgAlt": "Perchero Oporto"
         },
         "details": {
-            "cash": {
+            "cash_payment": {
                 "price": "53.011,00",
                 "offerPrice": "37.057,70",
                 "offerPercentage": 30
@@ -494,6 +515,7 @@
         }
     },
     "recibidor-salamanca": {
+        "product_slug": "recibidor-salamanca",
         "title": "Recibidor Salamanca",
         "price": "197.935,20",
         "offerPrice": "113.523,20",
@@ -504,7 +526,7 @@
             "imgAlt": "Recibidor Salamanca"
         },
         "details": {
-            "cash": {
+            "cash_payment": {
                 "price": "113.523,20",
                 "offerPrice": "79.466,24",
                 "offerPercentage": 30
@@ -520,6 +542,7 @@
         }
     },
     "tabla-asado": {
+        "product_slug": "tabla-asado",
         "title": "Tabla Asado",
         "price": "23.716,00",
         "offerPrice": "13.160,00",
@@ -530,7 +553,7 @@
             "imgAlt": "Tabla Asado"
         },
         "details": {
-            "cash": {
+            "cash_payment": {
                 "price": "13.160,00",
                 "offerPrice": "9.212,00",
                 "offerPercentage": 30
@@ -548,6 +571,7 @@
         }
     },
     "soporte-auricular": {
+        "product_slug": "soporte-auricular",
         "title": "Soporte Auricular",
         "price": "15.747,20",
         "offerPrice": "11.326,00",
@@ -558,7 +582,7 @@
             "imgAlt": "Soporte Auricular"
         },
         "details": {
-            "cash": {
+            "cash_payment": {
                 "price": "11.326,00",
                 "offerPrice": "7.928,20",
                 "offerPercentage": 30

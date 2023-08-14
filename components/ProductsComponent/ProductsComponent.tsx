@@ -1,16 +1,18 @@
-import { useContext } from 'react'
 import styles from './ProductsComponent.module.scss'
-import { ProductsContext } from '@/context/ProductsConextProvider'
-import { ProductsDataContextInterface } from '@/types'
+import { productsData } from '@/models/products'
+import ProductCardComponent from '../ProductCardComponent/ProductCardComponent'
 
 export default function ProductsComponent() {
-    const { productsData } = useContext(
-        ProductsContext
-    ) as ProductsDataContextInterface
-
     return (
         <div className={styles['container-section-products']}>
-            {JSON.stringify(productsData)}
+            {
+                Object.keys(productsData).map((productKey: string) => {
+                    return <ProductCardComponent
+                        key={productKey}
+                        product={productsData[productKey]}
+                    />
+                })
+            }
         </div>
     )
 }
