@@ -5,16 +5,19 @@ import dynamicBlurDataUrl from '@/utils/blur/dynamicBlurDataUrl'
 import { ProductInterface } from '@/types/products';
 
 export default async function ProductsComponent() {
-    const photosArray = await Promise.all(Object.keys(productsData).map(async (productKey) => {
-        const product = productsData[productKey];
-        const blurHash = await dynamicBlurDataUrl(product.image.imgSrc);
-        return { ...product, image: { ...product.image, blurHash } };
-    }));
+    const photosArray = Object.keys(productsData).map(async (productKey) => ({
+        ...productsData[productKey],
+        image: {
+            ...productsData[productKey].image,
+            blurHash: await dynamicBlurDataUrl(productsData[productKey].image.imgSrc)
+        }
+    }))
+    const photos = await Promise.all(photosArray)
 
     return (
         <div className={styles['container-section-products']}>
             {
-                photosArray.map((product: ProductInterface) => {
+                photos.map((product: ProductInterface) => {
                     return <ProductCardComponent
                         key={product.product_slug}
                         product={product}
