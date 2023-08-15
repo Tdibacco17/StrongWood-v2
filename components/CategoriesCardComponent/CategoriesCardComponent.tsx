@@ -1,4 +1,4 @@
-import { ImgBlurDataInterface, ImgDataInterface } from '@/types'
+import { ImgDataInterface } from '@/types'
 import styles from './CategoriesCardComponent.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -7,14 +7,15 @@ import dynamicBlurDataUrl from '@/utils/blur/dynamicBlurDataUrl'
 
 export default async function CategoriesCardComponent({ imagesData }: { imagesData: ImgDataInterface[] }) {
     const photosArray = imagesData.map(async (photo) => ({
-        ...photo, blurHash: await dynamicBlurDataUrl(photo.imgSrc)
+        ...photo,
+        blurHash: await dynamicBlurDataUrl(photo.imgSrc)
     }))
     const photos = await Promise.all(photosArray)
 
     return (
         <>
             {
-                photos.map((card: ImgBlurDataInterface) => {
+                photos.map((card: ImgDataInterface) => {
                     return (
                         <Link key={card.img_id} href={card.link ?? ''} /*as={card.link ?? ''}*/ className={styles['container-outer-card-services']}>
                             <Image
@@ -35,6 +36,5 @@ export default async function CategoriesCardComponent({ imagesData }: { imagesDa
                 })
             }
         </>
-
     )
 }

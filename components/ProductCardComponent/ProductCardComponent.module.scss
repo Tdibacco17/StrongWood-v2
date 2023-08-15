@@ -1,3 +1,16 @@
-.container-section-product-card{
-    
+.container-outer-product-card {
+    user-select: none;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+
+    * {
+        pointer-events: none;
+    }
+
+    .container-inner-product-card {
+        object-fit: cover;
+        object-position: center center;
+    }
 }

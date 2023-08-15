@@ -1,0 +1,12 @@
+.container-section-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+    padding: 6rem 1.5rem;
+
+    @media (max-width: 523px) {
+        padding: 6rem 1rem;
+    }
+}

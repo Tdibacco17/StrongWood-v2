@@ -1,5 +1,5 @@
 'use client'
-import { ProductInterface, ProductsDataContextInterface } from '@/types';
+import { ProductInterface, ProductsDataContextInterface } from '@/types/products';
 import { ReactNode, createContext, useState } from "react";
 
 export const ProductDetailContext = createContext<ProductsDataContextInterface | {}>({});

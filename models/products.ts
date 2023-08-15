@@ -1,4 +1,4 @@
-import { ProductDataInterface } from "@/types";
+import { ProductDataInterface } from "@/types/products";
 
 export const productsData: ProductDataInterface = {
     "mesa-de-luz-roma": {
@@ -109,7 +109,7 @@ export const productsData: ProductDataInterface = {
             }
         }
     },
-    "maceta-aviñon": {
+    "maceta-avi%C3%B1on": {
         "product_slug": "maceta-aviñon",
         "title": "Maceta Aviñon",
         "price": "54.741,40",
@@ -297,7 +297,7 @@ export const productsData: ProductDataInterface = {
             }
         }
     },
-    "leñero": {
+    "le%C3%B1ero": {
         "product_slug": "leñero",
         "title": "Leñero",
         "price": "53.997,80",

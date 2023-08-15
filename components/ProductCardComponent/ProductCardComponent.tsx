@@ -1,9 +1,22 @@
+import { ProductInterface } from '@/types/products';
 import styles from './ProductCardComponent.module.scss';
+import Image from 'next/image';
+import Link from 'next/link';
 
-export default function ProductCardComponent({ product }: { product: any }) {
+export default function ProductCardComponent({ product }: { product: ProductInterface }) {
     return (
-        <div className={styles['container-section-product-card']}>
-            a
-        </div>
+        <Link href={`/productos/${product.product_slug}`} className={styles['container-outer-product-card']}>
+            <Image
+                src={product.image.imgSrc}
+                alt={product.image.imgAlt}
+                quality={100}
+                height={250}
+                width={250}
+                className={styles['container-inner-product-card']}
+                placeholder='blur'
+                blurDataURL={product.image.blurHash}
+                style={{ height: 'auto', width: '100%' }}
+            />
+        </Link>
     )
 }

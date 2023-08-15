@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './ProyectsCardComponent.module.scss';
-import { ImgBlurDataInterface, ImgDataInterface } from '@/types';
+import { ImgDataInterface } from '@/types';
 import staticBlurDataUrl from '@/utils/blur/staticBlurDataUrl'
 import dynamicBlurDataUrl from '@/utils/blur/dynamicBlurDataUrl'
 
@@ -12,7 +12,7 @@ export default async function ProyectsCardComponent({ imagesData }: { imagesData
     return (
         <>
             {
-                photos.map((card: ImgBlurDataInterface) => {
+                photos.map((card: ImgDataInterface) => {
                     return (
                         <div key={card.img_id} className={`${styles['container-outer-proyects-card']}`}>
                             <Image
@@ -26,7 +26,7 @@ export default async function ProyectsCardComponent({ imagesData }: { imagesData
                                 blurDataURL={card.blurHash || staticBlurDataUrl()}
                                 priority={card.img_id <= 1 ? true : false}
                             />
-                            <div className={`${styles['container-overlay-proyects-card']}`}/>
+                            <div className={`${styles['container-overlay-proyects-card']}`} />
                         </div>
                     )
                 })
