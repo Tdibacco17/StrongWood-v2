@@ -4,6 +4,9 @@
     overflow: hidden;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     * {
         pointer-events: none;

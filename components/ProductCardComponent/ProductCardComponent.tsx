@@ -10,8 +10,8 @@ export default function ProductCardComponent({ product }: { product: ProductInte
                 src={product.image.imgSrc}
                 alt={product.image.imgAlt}
                 quality={100}
-                height={250}
-                width={250}
+                height={225}
+                width={225}
                 className={styles['container-inner-product-card']}
                 placeholder='blur'
                 blurDataURL={product.image.blurHash}

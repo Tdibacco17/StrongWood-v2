@@ -18,7 +18,9 @@ export default async function BannerComponent({ imgData }: { imgData: ImgDataInt
                 priority
                 quality={100}
                 placeholder='blur'
-                blurDataURL={blurHash || staticBlurDataUrl()}
+                blurDataURL={
+                    blurHash
+                    || staticBlurDataUrl()}
             />
         </section>
     )

@@ -1,6 +1,7 @@
 import { ImgDataInterface } from ".";
 
 export interface ProductsDataContextInterface {
+    productsData: ProductDataInterface;
     productData: ProductInterface;
     handleProductDataChange: Function;
 }

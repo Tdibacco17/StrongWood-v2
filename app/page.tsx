@@ -12,10 +12,10 @@ export default function HomePage() {
     <section id={data.banner.sectionLink} className={styles['container-section-home-page']}>
       <NavigationContainer isHome={true} />
       <BannerComponent imgData={data.banner.image} />
-      <SloganComponent />
+      {/* <SloganComponent />
       <CategoriesComponent />
       <ProyectsContainer />
-      <ServicesComponent />
+      <ServicesComponent /> */}
     </section>
   )
 }
