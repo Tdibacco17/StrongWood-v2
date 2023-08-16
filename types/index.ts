@@ -4,7 +4,8 @@ export interface ImgDataInterface {
     imgAlt: string,
     sizes?: string,
     blurHash?: string,
-    link?: string
+    link?: string,
+    imgBlur: string
 }
 
 export interface NavigationInterface {

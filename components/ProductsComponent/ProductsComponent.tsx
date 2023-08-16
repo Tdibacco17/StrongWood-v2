@@ -1,35 +1,16 @@
 import styles from './ProductsComponent.module.scss'
-import { productsData } from '@/models/products'
 import ProductCardComponent from '../ProductCardComponent/ProductCardComponent'
-import dynamicBlurDataUrl from '@/utils/blur/dynamicBlurDataUrl'
-import { ProductInterface } from '@/types/products';
+import { productsData } from '@/models/products';
 
-export default async function ProductsComponent() {
-    // const { productsData } = useContext(
-    // ProductsContext
-    // ) as ProductsDataContextInterface
-    // console.log(productsData)
-
-    const photosArray = Object.keys(productsData).map(async (productKey) => ({
-        ...productsData[productKey],
-        image: {
-            ...productsData[productKey].image,
-            blurHash: await dynamicBlurDataUrl(productsData[productKey].image.imgSrc)
-        }
-    }))
-    const photos = await Promise.all(photosArray)
-
+export default function ProductsComponent() {
     return (
         <div className={styles['container-section-products']}>
-            <div className={styles['container-filters']}>
-                filtrar
-            </div>
             <div className={styles['container-product-cards']}>
                 {
-                    photos.map((product: ProductInterface) => {
+                    Object.keys(productsData).map((productKey: string) => {
                         return <ProductCardComponent
-                            key={product.product_slug}
-                            product={product}
+                            key={productsData[productKey].product_slug}
+                            product={productsData[productKey]}
                         />
                     })
                 }

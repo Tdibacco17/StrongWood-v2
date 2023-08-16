@@ -2,6 +2,7 @@ import styles from './ProyectsComponent.module.scss'
 import data from '@/models/es.json'
 import ProyectsCardComponent from '../ProyectsCardComponent/ProyectsCardComponent'
 import { ArrowLeftIconComponent, ArrowRightIconComponent } from '../IconComponent/IconComponent';
+import { ImgDataInterface } from '@/types';
 
 export default function ProyectsComponent({
     carouselRef,
@@ -20,7 +21,11 @@ export default function ProyectsComponent({
             </div>
             <div className={styles['container-carousel']}>
                 <div className={styles['container-cards-proyects']} ref={carouselRef}>
-                    <ProyectsCardComponent imagesData={data.projects.cards} />
+                    {
+                        data.projects.cards.map((card: ImgDataInterface) => {
+                            return <ProyectsCardComponent imageData={card} key={card.img_id} />
+                        })
+                    }
                 </div>
                 <div className={styles['container-carousel-btns']}>
                     <button

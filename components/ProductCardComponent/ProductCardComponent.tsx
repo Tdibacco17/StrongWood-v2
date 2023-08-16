@@ -14,7 +14,7 @@ export default function ProductCardComponent({ product }: { product: ProductInte
                 width={225}
                 className={styles['container-inner-product-card']}
                 placeholder='blur'
-                blurDataURL={product.image.blurHash}
+                blurDataURL={product.image.imgBlur}
                 style={{ height: 'auto', width: '100%' }}
             />
         </Link>

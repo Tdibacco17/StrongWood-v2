@@ -1,12 +1,8 @@
 import Image from 'next/image'
 import styles from './BannerComponent.module.scss'
 import { ImgDataInterface } from '@/types'
-import staticBlurDataUrl from '@/utils/blur/staticBlurDataUrl'
-import dynamicBlurDataUrl from '@/utils/blur/dynamicBlurDataUrl'
 
-export default async function BannerComponent({ imgData }: { imgData: ImgDataInterface }) {
-    const blurHash = await dynamicBlurDataUrl(imgData.imgSrc);
-
+export default function BannerComponent({ imgData }: { imgData: ImgDataInterface }) {
     return (
         <section className={styles['container-outer-banner-image']}>
             <Image
@@ -18,9 +14,7 @@ export default async function BannerComponent({ imgData }: { imgData: ImgDataInt
                 priority
                 quality={100}
                 placeholder='blur'
-                blurDataURL={
-                    blurHash
-                    || staticBlurDataUrl()}
+                blurDataURL={imgData.imgBlur}
             />
         </section>
     )
