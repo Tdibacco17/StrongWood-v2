@@ -17,6 +17,7 @@ export default function ProductCardComponent({ product }: { product: ProductInte
                 placeholder='blur'
                 blurDataURL={product.image.imgBlur}
                 style={{ height: 'auto', width: '100%' }}
+                priority={product.image.img_id <= 1 ? true : false}
             />
         </Link>
     )
