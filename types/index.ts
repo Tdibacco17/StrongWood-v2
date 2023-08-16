@@ -3,7 +3,6 @@ export interface ImgDataInterface {
     imgSrc: string,
     imgAlt: string,
     sizes?: string,
-    blurHash?: string,
     link?: string,
     imgBlur: string
 }

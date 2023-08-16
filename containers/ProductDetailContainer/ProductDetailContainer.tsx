@@ -6,7 +6,7 @@ import { useContext, useEffect } from "react";
 import { productsData } from '@/models/products'
 
 export default function ProductDetailContainer({ params }: { params: { slug: string } }) {
-    const { handleProductDataChange, productData } = useContext(
+    const { handleProductDataChange } = useContext(
         ProductDetailContext
     ) as ProductsDataContextInterface;
     

@@ -16,7 +16,7 @@ export interface ProductInterface {
     image: ImgDataInterface;
     price: string;
     offerPrice: string;
-    offerPercentage: number;
+    offerPercentage: string;
     details: {
         cash_payment: PaymentDataInterface;
         description: DescriptionDataInterface,
