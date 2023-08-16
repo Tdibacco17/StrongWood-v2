@@ -11,12 +11,12 @@ export default function ProyectsCardComponent({ imageData }: { imageData: ImgDat
                 fill
                 sizes='100vw, (max-width: 442px) 33vw, (max-width: 768px) 35vw, (max-width: 992px) 50vw, (max-width: 1024px) 75vw'
                 quality={100}
-                className={`${styles['container-inner-proyects-card']}`}
+                className={styles['container-inner-proyects-card']}
                 placeholder='blur'
                 blurDataURL={imageData.imgBlur}
-                // priority={imageData.img_id <= 1 ? true : false}
+                priority={imageData.img_id <= 1 ? true : false}
             />
-            <div className={`${styles['container-overlay-proyects-card']}`} />
+            <div className={styles['container-overlay-proyects-card']} />
         </div>
     )
 }
