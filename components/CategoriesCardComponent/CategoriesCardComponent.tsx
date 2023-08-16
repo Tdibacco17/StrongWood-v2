@@ -15,7 +15,6 @@ export default function CategoriesCardComponent({ imageData }: { imageData: ImgD
                 quality={100}
                 placeholder='blur'
                 blurDataURL={imageData.imgBlur}
-                priority={imageData.img_id <= 1 ? true : false}
             />
             <div className={styles['container-overlay-card-services']} />
             <p className={styles['title-services-overlay']}>{imageData.imgAlt}</p>

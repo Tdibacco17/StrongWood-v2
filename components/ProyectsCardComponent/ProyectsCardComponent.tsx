@@ -14,7 +14,6 @@ export default function ProyectsCardComponent({ imageData }: { imageData: ImgDat
                 className={styles['container-inner-proyects-card']}
                 placeholder='blur'
                 blurDataURL={imageData.imgBlur}
-                priority={imageData.img_id <= 1 ? true : false}
             />
             <div className={styles['container-overlay-proyects-card']} />
         </div>
