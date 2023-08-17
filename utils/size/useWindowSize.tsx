@@ -12,18 +12,25 @@ export const useWindowSize = () => {
     });
 
     useEffect(() => {
-        function handleResize() {
+        function handleWindowSizeChange() {
             setWindowSize({
-                width: window.innerWidth || 0,
-                height: window.innerHeight || 0,
+                width: window.innerWidth,
+                height: window.innerHeight,
             });
         }
 
-        handleResize();
+        const mediaQueryList = window.matchMedia('(min-width: 768px)');
 
-        window.addEventListener('resize', handleResize);
+        handleWindowSizeChange();
 
-        return () => window.removeEventListener('resize', handleResize);
+        const mediaQueryHandler = (event: MediaQueryListEvent) =>
+            handleWindowSizeChange();
+
+        mediaQueryList.addEventListener('change', mediaQueryHandler);
+
+        return () => {
+            mediaQueryList.removeEventListener('change', mediaQueryHandler);
+        };
     }, []);
 
     return windowSize;
