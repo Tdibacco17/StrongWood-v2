@@ -6,19 +6,21 @@ import Link from 'next/link';
 export default function ProductCardComponent({ product }: { product: ProductInterface }) {
     return (
         <Link href={`/productos/${product.product_slug}`} className={styles['container-product-card']}>
+            <div className={styles['container-outer-product-card']}>
                 <Image
                     src={product.image.imgSrc}
                     alt={product.image.imgAlt}
                     quality={100}
                     height={225}
                     width={225}
-                    sizes='225px'
+                    sizes='100vw, (max-width:442px) 225px'
                     className={styles['container-inner-product-card']}
                     placeholder='blur'
                     blurDataURL={product.image.imgBlur}
-                    style={{ height: 'auto', width: '100%' }}
                     priority={product.image.img_id <= 1 ? true : false}
                 />
+                <div className={styles['container-overlay-product-card']} />
+            </div>
             <div className={styles['container-info-product']}>
                 <p className={styles['product-title']}>{product.title}</p>
                 <div className={styles['container-info-price']}>
