@@ -14,20 +14,24 @@ export interface ProductInterface {
     product_slug: string;
     title: string;
     image: ImgDataInterface;
-    price: string;
+    price?: string;
     offerPrice: string;
-    offerPercentage: string;
+    offerPercentage?: string;
     details: {
-        cash_payment: PaymentDataInterface;
+        payment: {
+            cash: PaymentDataInterface;
+            card: PaymentDataInterface;
+        },
         description: DescriptionDataInterface,
         // images?: ImgDataInterface[];
     },
 }
 
 export interface PaymentDataInterface {
-    price: string,
+    title: string,
+    price?: string,
     offerPrice: string,
-    offerPercentage: number;
+    offerPercentage?: string;
 }
 
 export interface DescriptionDataInterface {

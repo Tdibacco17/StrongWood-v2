@@ -24,10 +24,10 @@ export default function ProductCardComponent({ product }: { product: ProductInte
             <div className={styles['container-info-product']}>
                 <p className={styles['product-title']}>{product.title}</p>
                 <div className={styles['container-info-price']}>
-                    <p className={styles['product-price']}>{product.price}</p>
+                    {product.price && <p className={styles['product-price']}>{product.price}</p>}
                     <p className={styles['product-offerprice']}>{product.offerPrice}</p>
                 </div>
             </div>
-        </Link>
+        </Link >
     )
 }

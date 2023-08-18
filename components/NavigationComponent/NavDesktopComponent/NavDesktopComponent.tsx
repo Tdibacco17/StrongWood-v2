@@ -39,6 +39,7 @@ export default function NavDesktopComponent({ isHome, showDropdown, handleShowDr
                                                 key={item.dropdown_id}
                                                 /*as={item.link}*/
                                                 href={item.link}
+                                                onClick={handleShowDropdown}
                                                 className={`${styles['desktop-title']}`}
                                             >
                                                 {item.title}

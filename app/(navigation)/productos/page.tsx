@@ -1,9 +1,10 @@
 import styles from './page.module.scss'
 import ProductsComponent from '@/components/ProductsComponent/ProductsComponent'
+import data from '@/models/es.json'
 
 export default function ProductsPage() {
     return (
-        <section className={styles['container-section-products']}>
+        <section id={data.homePage.sectionLink} className={styles['container-section-products']}>
             <ProductsComponent />
         </section>
     )

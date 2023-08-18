@@ -1,4 +1,3 @@
-'use client'
 import styles from './SloganComponent.module.scss'
 import data from '@/models/es.json'
 import { WhatsappIconComponent, InstagramIconComponent, GoogleIconComponent } from '../IconComponent/IconComponent'

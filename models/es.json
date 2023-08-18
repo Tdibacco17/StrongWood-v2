@@ -71,7 +71,6 @@
         }
     },
     "banner": {
-        "sectionLink": "top",
         "image": {
             "img_id": 1,
             "imgSrc": "/assets/img/homePage/banner/Strong_Wood_IG-43.webp",
@@ -257,5 +256,11 @@
             "title": "Ir arriba"
         },
         "secondaryTitle": "© 2023 StrongWood - Todos los derechos reservados."
+    },
+    "homePage": {
+        "sectionLink": "top"
+    },
+    "productPage": {
+        "sectionLink": "top"
     }
 }
