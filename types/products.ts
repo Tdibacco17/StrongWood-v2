@@ -23,7 +23,7 @@ export interface ProductInterface {
             card: PaymentDataInterface;
         },
         description: DescriptionDataInterface,
-        // images?: ImgDataInterface[];
+        images: ImgDataInterface[]
     },
 }
 
