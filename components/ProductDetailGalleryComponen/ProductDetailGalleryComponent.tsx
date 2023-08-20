@@ -37,8 +37,8 @@ export default function ProductDetailGalleryComponent({
                     <Image
                         src={activeImage.imgSrc}
                         alt={activeImage.imgAlt}
-                        // placeholder='blur'
-                        // blurDataURL={activeImage.imgBlur}
+                        placeholder='blur'
+                        blurDataURL={activeImage.imgBlur}
                         quality={100}
                         fill
                         sizes='100vw'
@@ -48,22 +48,25 @@ export default function ProductDetailGalleryComponent({
             </div>
             <div className={styles['container-section-carousel']}>
                 <div className={styles['carousel']} ref={carouselRef}>
-                    {productData &&
-                        productData.details.images.map((image: ImgDataInterface) => {
-                            return (
-                                <div key={image.img_id} className={styles["container-outer-image-carousel"]} onClick={() => handleImageClick(image.img_id)}>
-                                    <Image
-                                        src={image.imgSrc}
-                                        alt={image.imgAlt}
-                                        fill
-                                        className={styles['container-inner-image-carousel']}
-                                    />
-                                </div>
-                            );
-                        })}
+                    {productData.details.images.map((image: ImgDataInterface, index: number) => {
+                        return (
+                            <div key={image.img_id} className={styles["container-outer-image-carousel"]} onClick={() => handleImageClick(index)}>
+                                <Image
+                                    src={image.imgSrc}
+                                    alt={image.imgAlt}
+                                    placeholder='blur'
+                                    blurDataURL={image.imgBlur}
+                                    fill
+                                    className={styles['container-inner-image-carousel']}
+                                />
+                            </div>
+                        );
+                    })}
                 </div>
                 <div className={styles['carousel-buttons']}>
                     <button
+                        type='button'
+                        aria-label={width < 768 ? 'Boton izquierda' : 'Boton arriba'}
                         className={styles['carousel-arrow']}
                         onClick={width < 768 ? handleScrollLeft : handleScrollUp}>
                         {
@@ -73,6 +76,8 @@ export default function ProductDetailGalleryComponent({
                         }
                     </button>
                     <button
+                        type='button'
+                        aria-label={width < 768 ? 'Boton derecha' : 'Boton abajo'}
                         className={styles['carousel-arrow']}
                         onClick={width < 768 ? handleScrollRight : handleScrollDown}>
                         {
@@ -83,6 +88,6 @@ export default function ProductDetailGalleryComponent({
                     </button>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
