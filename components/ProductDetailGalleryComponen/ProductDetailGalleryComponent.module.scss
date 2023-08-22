@@ -4,27 +4,49 @@
     gap: 1rem;
     align-items: center;
     justify-content: center;
-    min-width: 36rem;
-    max-width: 36rem;
 
     @media (max-width:768px) {
         flex-direction: column;
-        min-width: 25rem;
-        max-width: 25rem;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    @media (max-width:442px) {
+        min-height: 100%;
+        max-height: 100%;
     }
 
     .container-outer-image-product-detail {
         position: relative;
-        min-width: 25rem;
-        max-width: 25rem;
-        min-height: 25rem;
-        max-height: 25rem;
+        min-width: 30rem;
+        max-width: 30rem;
+        min-height: 30rem;
+        max-height: 30rem;
         overflow: hidden;
         border-radius: var(--border-radius);
+
+        @media (max-width:768px) {
+            min-width: 100%;
+            max-width: 100%;
+            min-height: 37.5rem;
+            max-height: 37.5rem;
+        }
+
+        @media (max-width:630px) {
+            min-width: 100%;
+            max-width: 100%;
+            min-height: 100%;
+            max-height: 100%;
+        }
 
         .container-inner-image-product-detail {
             object-fit: cover;
             object-position: center;
+
+            @media (max-width:630px) {
+                object-fit: contain;
+                position: revert !important;
+            }
         }
     }
 
@@ -35,15 +57,25 @@
         align-items: center;
         justify-content: flex-start;
         overflow: hidden;
-        min-height: 25rem;
-        max-height: 25rem;
-        min-width: 10rem;
-        max-width: 10rem;
+        min-height: 30rem;
+        max-height: 30rem;
+        min-width: 11rem;
+        max-width: 11rem;
 
         @media (max-width:768px) {
             flex-direction: row;
-            min-width: 25rem;
-            max-width: 25rem;
+            min-width: 100%;
+            max-width: 100%;
+            min-height: 13rem;
+            max-height: 13rem;
+        }
+
+        @media (max-width:442px) {
+            min-height: 11.5rem;
+            max-height: 11.5rem;
+        }
+
+        @media (max-width:400px) {
             min-height: 10rem;
             max-height: 10rem;
         }
@@ -82,13 +114,23 @@
 
             .container-outer-image-carousel {
                 position: relative;
-                min-width: 10rem;
-                max-width: 10rem;
-                min-height: 10rem;
-                max-height: 10rem;
+                min-width: 11rem;
+                max-width: 11rem;
+                min-height: 12.5rem;
+                max-height: 12.5rem;
                 overflow: hidden;
                 border-radius: var(--border-radius);
                 cursor: pointer;
+
+                @media (max-width:442px) {
+                    min-height: 11.5rem;
+                    max-height: 11.5rem;
+                }
+
+                @media (max-width:400px) {
+                    min-height: 10rem;
+                    max-height: 10rem;
+                }
 
                 .container-inner-image-carousel {
                     object-fit: cover;

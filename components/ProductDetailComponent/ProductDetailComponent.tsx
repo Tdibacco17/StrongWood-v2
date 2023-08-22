@@ -15,17 +15,19 @@ export default function ProductDetailComponent() {
             <div className={styles['wrapper-header-product-detail']}>
                 {productData && <>
                     <ProductDetailGalleryContainer />
-                    <div className={styles['container-titles-product-detail']}>
+                    <div className={styles['container-info-product-detail']}>
                         <p className={styles['product-title']}>{productData?.title}</p>
-                        <div className={styles['container-prices-product-detail']}>
-                            <p>{productData.details.payment.cash.title}</p>
-                            <p>{productData.details.payment.cash.price}</p>
-                            <p>{productData.details.payment.cash.offerPrice}</p>
-                            <p>{productData.details.payment.cash.offerPercentage}</p>
-                        </div>
-                        <div className={styles['container-prices-product-detail']}>
-                            <p>{productData.details.payment.card.title}</p>
-                            <p>{productData.details.payment.card.offerPrice}</p>
+                        <div className={styles['container-buttons-prices']}>
+                            <div className={styles['container-prices-product-detail']}>
+                                <p>{productData.details.payment.cash.title}</p>
+                                <p>{productData.details.payment.cash.price}</p>
+                                <p>{productData.details.payment.cash.offerPrice}</p>
+                                <p>{productData.details.payment.cash.offerPercentage}</p>
+                            </div>
+                            <div className={styles['container-prices-product-detail']}>
+                                <p>{productData.details.payment.card.title}</p>
+                                <p>{productData.details.payment.card.offerPrice}</p>
+                            </div>
                         </div>
                     </div>
                 </>}
