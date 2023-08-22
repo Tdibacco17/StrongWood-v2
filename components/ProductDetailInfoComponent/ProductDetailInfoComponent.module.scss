@@ -48,7 +48,6 @@
         display: flex;
         flex-direction: column;
         gap: 3rem;
-        cursor: pointer;
         font-weight: var(--font-bold);
         font-size: var(--font-xmedium);
 
@@ -72,6 +71,7 @@
                 .percentage {
                     color: var(--tertiary-color);
                     text-transform: uppercase;
+                    text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.5);
                 }
             }
 
@@ -81,11 +81,13 @@
                 gap: 1rem;
                 background-color: var(--primary-color);
                 border-radius: var(--border-radius);
+                color: var(--primary-white);
                 padding: 0.5rem 1rem;
                 box-shadow: var(--box-shadow);
                 cursor: pointer;
                 font-weight: var(--font-bold);
-                font-family: var(--font-xmedium);
+                font-size: var(--font-xmedium);
+                border: none;
 
                 &:hover {
                     color: var(--tertiary-color);
