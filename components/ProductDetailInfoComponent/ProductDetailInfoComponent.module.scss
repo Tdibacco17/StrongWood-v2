@@ -1,0 +1,96 @@
+.container-section-info-product-detail {
+    min-height: 30rem;
+    max-height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @media (max-width:992px) {
+        min-height: revert;
+        max-height: revert;
+        min-width: 42rem;
+        max-width: 42rem;
+        gap: 6rem;
+    }
+
+    @media (max-width:768px) {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .container-section-old-prices {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .product-title {
+            text-transform: uppercase;
+            font-size: var(--font-xlarge);
+            font-weight: var(--font-bold);
+        }
+
+        .old {
+            font-size: var(--font-medium);
+            font-weight: var(--font-regular);
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+
+        .new {
+            font-size: var(--font-xmedium);
+            font-weight: var(--font-regular);
+            font-weight: var(--font-bold);
+        }
+    }
+
+    .container-section-buttons-prices {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        cursor: pointer;
+        font-weight: var(--font-bold);
+        font-size: var(--font-xmedium);
+
+        @media (max-width:992px) {
+            flex-direction: row;
+        }
+
+        @media (max-width: 630px) {
+            flex-direction: column;
+        }
+
+        .wrapper-btns-prices {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .info-wallet {
+                display: flex;
+                gap: 1rem;
+
+                .percentage {
+                    color: var(--tertiary-color);
+                    text-transform: uppercase;
+                }
+            }
+
+            .container-btn-prices {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                background-color: var(--primary-color);
+                border-radius: var(--border-radius);
+                padding: 0.5rem 1rem;
+                box-shadow: var(--box-shadow);
+                cursor: pointer;
+                font-weight: var(--font-bold);
+                font-family: var(--font-xmedium);
+
+                &:hover {
+                    color: var(--tertiary-color);
+                }
+            }
+        }
+    }
+}

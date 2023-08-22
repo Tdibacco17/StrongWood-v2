@@ -17,13 +17,12 @@ export const productsData: ProductDataInterface = {
             payment: {
                 cash: {
                     title: "Abonando en efectivo",
-                    price: "$107.262,32",
-                    offerPrice: "Precio: $75.222,98",
+                    offerPrice: "$75.222,98",
                     offerPercentage: "30% off"
                 },
                 card: {
                     title: "Abonando con tarjeta",
-                    offerPrice: "Precio: $107.262,32",
+                    offerPrice: "$107.262,32",
                 },
             },
             description: {
@@ -99,12 +98,12 @@ export const productsData: ProductDataInterface = {
                 cash: {
                     title: "Abonando en efectivo",
                     price: "$340.240,00",
-                    offerPrice: "Precio: $238.728,00",
+                    offerPrice: "$238.728,00",
                     offerPercentage: "30% off"
                 },
                 card: {
                     title: "Abonando con tarjeta",
-                    offerPrice: "Precio: $340.240,00",
+                    offerPrice: "$340.240,00",
                 },
             },
             description: {
@@ -166,12 +165,12 @@ export const productsData: ProductDataInterface = {
                 cash: {
                     title: "Abonando en efectivo",
                     price: "$241.689,56",
-                    offerPrice: "Precio: $169.183,69",
+                    offerPrice: "$169.183,69",
                     offerPercentage: "30% off"
                 },
                 card: {
                     title: "Abonando con tarjeta",
-                    offerPrice: "Precio: $241.689,56",
+                    offerPrice: "$241.689,56",
                 },
             },
             description: {
@@ -227,12 +226,12 @@ export const productsData: ProductDataInterface = {
                 cash: {
                     title: "Abonando en efectivo",
                     price: "$78.959,00",
-                    offerPrice: "Precio: $54.305,65",
+                    offerPrice: "$54.305,65",
                     offerPercentage: "30% off"
                 },
                 card: {
                     title: "Abonando con tarjeta",
-                    offerPrice: "Precio: $78.959,00",
+                    offerPrice: "$78.959,00",
                 },
             },
             description: {
@@ -290,12 +289,12 @@ export const productsData: ProductDataInterface = {
                 cash: {
                     title: "Abonando en efectivo",
                     price: "$76.637,96",
-                    offerPrice: "Precio: $53.423,97",
+                    offerPrice: "$53.423,97",
                     offerPercentage: "30% off"
                 },
                 card: {
                     title: "Abonando con tarjeta",
-                    offerPrice: "Precio: $76.637,96",
+                    offerPrice: "$76.637,96",
                 },
             },
             description: {
@@ -350,12 +349,12 @@ export const productsData: ProductDataInterface = {
                 cash: {
                     title: "Abonando en efectivo",
                     price: "$100.338,56",
-                    offerPrice: "Precio: $70.147,39",
+                    offerPrice: "$70.147,39",
                     offerPercentage: "30$ off"
                 },
                 card: {
                     title: "Abonando con tarjeta",
-                    offerPrice: "Precio: $100.338,56",
+                    offerPrice: "$100.338,56",
                 },
             },
             description: {
@@ -429,12 +428,12 @@ export const productsData: ProductDataInterface = {
                 cash: {
                     title: "Abonando en efectivo",
                     price: "$95.540,20",
-                    offerPrice: "Precio: $66.707,74",
+                    offerPrice: "$66.707,74",
                     offerPercentage: "30% off"
                 },
                 card: {
                     title: "Abonando con tarjeta",
-                    offerPrice: "Precio: $95.540,20",
+                    offerPrice: "$95.540,20",
                 },
             },
             description: {
@@ -478,12 +477,12 @@ export const productsData: ProductDataInterface = {
                 cash: {
                     title: "Abonando en efectivo",
                     price: "$67.147,72",
-                    offerPrice: "Precio: $47.072,00",
+                    offerPrice: "$47.072,00",
                     offerPercentage: "30% off"
                 },
                 card: {
                     title: "Abonando con tarjeta",
-                    offerPrice: "Precio: $67.147,72",
+                    offerPrice: "$67.147,72",
                 },
             },
             description: {
@@ -527,12 +526,12 @@ export const productsData: ProductDataInterface = {
                 cash: {
                     title: "Abonando en efectivo",
                     price: "$406.405,60",
-                    offerPrice: "Precio: $285.181,96",
+                    offerPrice: "$285.181,96",
                     offerPercentage: "30% off"
                 },
                 card: {
                     title: "Abonando con tarjeta",
-                    offerPrice: "Precio: $406.405,60",
+                    offerPrice: "$406.405,60",
                 },
             },
             description: {
@@ -612,12 +611,12 @@ export const productsData: ProductDataInterface = {
                 cash: {
                     title: "Abonando en efectivo",
                     price: "$72.892,96",
-                    offerPrice: "Precio: $50.713,69",
+                    offerPrice: "$50.713,69",
                     offerPercentage: "30% off"
                 },
                 card: {
                     title: "Abonando con tarjeta",
-                    offerPrice: "Precio: $72.892,96",
+                    offerPrice: "$72.892,96",
                 },
             },
             description: {
@@ -673,12 +672,12 @@ export const productsData: ProductDataInterface = {
                 cash: {
                     title: "Abonando en efectivo",
                     price: "$58.139,48",
-                    offerPrice: "Precio: $40.578,64",
+                    offerPrice: "$40.578,64",
                     offerPercentage: "30% off"
                 },
                 card: {
                     title: "Abonando con tarjeta",
-                    offerPrice: "Precio: $58.139,48",
+                    offerPrice: "$58.139,48",
                 },
             },
             description: {
@@ -738,12 +737,12 @@ export const productsData: ProductDataInterface = {
                 cash: {
                     title: "Abonando en efectivo",
                     price: "$75.596,92",
-                    offerPrice: "Precio: $51.895,52",
+                    offerPrice: "$51.895,52",
                     offerPercentage: "30% off"
                 },
                 card: {
                     title: "Abonando con tarjeta",
-                    offerPrice: "Precio: $75.596,92",
+                    offerPrice: "$75.596,92",
                 },
             },
             description: {
@@ -799,12 +798,12 @@ export const productsData: ProductDataInterface = {
                 cash: {
                     title: "Abonando en efectivo",
                     price: "$198.701,88",
-                    offerPrice: "Precio: $137.550,62",
+                    offerPrice: "$137.550,62",
                     offerPercentage: "30% off"
                 },
                 card: {
                     title: "Abonando con tarjeta",
-                    offerPrice: "Precio: $198.701,88",
+                    offerPrice: "$198.701,88",
                 },
             },
             description: {
@@ -878,12 +877,12 @@ export const productsData: ProductDataInterface = {
                 cash: {
                     title: "Abonando en efectivo",
                     price: "$64.697,76",
-                    offerPrice: "Precio: $45.201,49",
+                    offerPrice: "$45.201,49",
                     offerPercentage: "30% off"
                 },
                 card: {
                     title: "Abonando con tarjeta",
-                    offerPrice: "Precio: $64.697,76",
+                    offerPrice: "$64.697,76",
                 },
             },
             description: {
@@ -939,12 +938,12 @@ export const productsData: ProductDataInterface = {
                 cash: {
                     title: "Abonando en efectivo",
                     price: "$79.702,16",
-                    offerPrice: "Precio: $55.650,25",
+                    offerPrice: "$55.650,25",
                     offerPercentage: "30% off"
                 },
                 card: {
                     title: "Abonando con tarjeta",
-                    offerPrice: "Precio: $79.702,16",
+                    offerPrice: "$79.702,16",
                 },
             },
             description: {
@@ -1012,12 +1011,12 @@ export const productsData: ProductDataInterface = {
                 cash: {
                     title: "Abonando en efectivo",
                     price: "$162.251,08",
-                    offerPrice: "Precio: $113.515,46",
+                    offerPrice: "$113.515,46",
                     offerPercentage: "30% off"
                 },
                 card: {
                     title: "Abonando con tarjeta",
-                    offerPrice: "Precio: $162.251,08",
+                    offerPrice: "$162.251,08",
                 },
             },
             description: {
@@ -1084,12 +1083,12 @@ export const productsData: ProductDataInterface = {
                 cash: {
                     title: "Abonando en efectivo",
                     price: "$86.569,20",
-                    offerPrice: "Precio: $60.739,84",
+                    offerPrice: "$60.739,84",
                     offerPercentage: "30% off"
                 },
                 card: {
                     title: "Abonando con tarjeta",
-                    offerPrice: "Precio: $86.569,20",
+                    offerPrice: "$86.569,20",
                 },
             },
             description: {
@@ -1144,12 +1143,12 @@ export const productsData: ProductDataInterface = {
                 cash: {
                     title: "Abonando en efectivo",
                     price: "$189.149,80",
-                    offerPrice: "Precio: $132.404,86",
+                    offerPrice: "$132.404,86",
                     offerPercentage: "30% off"
                 },
                 card: {
                     title: "Abonando con tarjeta",
-                    offerPrice: "Precio: $189.149,80",
+                    offerPrice: "$189.149,80",
                 },
             },
             description: {
@@ -1212,12 +1211,12 @@ export const productsData: ProductDataInterface = {
                 cash: {
                     title: "Abonando en efectivo",
                     price: "$74.214,40",
-                    offerPrice: "Precio: $51.880,78",
+                    offerPrice: "$51.880,78",
                     offerPercentage: "30% off"
                 },
                 card: {
                     title: "Abonando con tarjeta",
-                    offerPrice: "Precio: $74.214,40",
+                    offerPrice: "$74.214,40",
                 },
             },
             description: {
@@ -1291,12 +1290,12 @@ export const productsData: ProductDataInterface = {
                 cash: {
                     title: "Abonando en efectivo",
                     price: "$158.933,28",
-                    offerPrice: "Precio: $111.349,74",
+                    offerPrice: "$111.349,74",
                     offerPercentage: "30% off"
                 },
                 card: {
                     title: "Abonando con tarjeta",
-                    offerPrice: "Precio: $158.933,28",
+                    offerPrice: "$158.933,28",
                 },
             },
             description: {
@@ -1376,12 +1375,12 @@ export const productsData: ProductDataInterface = {
                 cash: {
                     title: "Abonando en efectivo",
                     price: "$18.424,00",
-                    offerPrice: "Precio: $18.424,00",
+                    offerPrice: "$18.424,00",
                     offerPercentage: "30% off"
                 },
                 card: {
                     title: "Abonando con tarjeta",
-                    offerPrice: "Precio: $15.816,40",
+                    offerPrice: "$15.816,40",
                 },
             },
             description: {
@@ -1463,12 +1462,12 @@ export const productsData: ProductDataInterface = {
                 cash: {
                     title: "Abonando en efectivo",
                     price: "$15.816,40",
-                    offerPrice: "Precio: $11.099,48",
+                    offerPrice: "$11.099,48",
                     offerPercentage: "30% off"
                 },
                 card: {
                     title: "Abonando con tarjeta",
-                    offerPrice: "Precio: $15.816,40",
+                    offerPrice: "$15.816,40",
                 },
             },
             description: {

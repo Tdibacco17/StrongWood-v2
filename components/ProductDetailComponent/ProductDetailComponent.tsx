@@ -4,6 +4,7 @@ import { ProductsDataContextInterface } from "@/types/products";
 import { useContext } from "react";
 import ProductDetailGalleryContainer from '@/containers/ProductDetailGalleryContainer/ProductDetailGalleryContainer';
 import LoadingComponent from '../LoadingComponent/LoadingComponent';
+import ProductDetailInfoComponent from '../ProductDetailInfoComponent/ProductDetailInfoComponent';
 
 export default function ProductDetailComponent() {
     const { productData } = useContext(
@@ -15,21 +16,7 @@ export default function ProductDetailComponent() {
             <div className={styles['wrapper-header-product-detail']}>
                 {productData && <>
                     <ProductDetailGalleryContainer />
-                    <div className={styles['container-info-product-detail']}>
-                        <p className={styles['product-title']}>{productData?.title}</p>
-                        <div className={styles['container-buttons-prices']}>
-                            <div className={styles['container-prices-product-detail']}>
-                                <p>{productData.details.payment.cash.title}</p>
-                                <p>{productData.details.payment.cash.price}</p>
-                                <p>{productData.details.payment.cash.offerPrice}</p>
-                                <p>{productData.details.payment.cash.offerPercentage}</p>
-                            </div>
-                            <div className={styles['container-prices-product-detail']}>
-                                <p>{productData.details.payment.card.title}</p>
-                                <p>{productData.details.payment.card.offerPrice}</p>
-                            </div>
-                        </div>
-                    </div>
+                    <ProductDetailInfoComponent />
                 </>}
                 {!productData && <div className={styles['container-loader']}><LoadingComponent /></div>}
             </div>
