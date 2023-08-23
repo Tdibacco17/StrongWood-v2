@@ -55,7 +55,7 @@
             flex-direction: row;
         }
 
-        @media (max-width: 630px) {
+        @media (max-width: 768px) {
             flex-direction: column;
         }
 
@@ -63,10 +63,21 @@
             display: flex;
             flex-direction: column;
             gap: 1rem;
+            min-width: 17rem;
+            max-width: 17rem;
+
+            @media (max-width:350px) {
+                min-width: revert;
+                max-width: revert;
+            }
 
             .info-wallet {
                 display: flex;
-                gap: 1rem;
+                justify-content: space-between;
+
+                @media (max-width:350px) {
+                    gap: 1rem;
+                }
 
                 .percentage {
                     color: var(--tertiary-color);
