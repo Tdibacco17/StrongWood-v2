@@ -13,7 +13,7 @@ export default function ProductCardComponent({ product }: { product: ProductInte
                     quality={75}
                     height={225}
                     width={225}
-                    sizes='75vw,(max-width:768px) 50vw, (max-width:442px) 33vw'
+                    sizes='75vw,(max-width:768px) 33vw, (max-width:442px) 25vw'
                     className={styles['container-inner-product-card']}
                     placeholder='blur'
                     blurDataURL={product.image.imgBlur}
