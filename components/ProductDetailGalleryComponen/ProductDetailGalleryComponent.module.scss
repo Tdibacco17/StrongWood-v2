@@ -150,6 +150,15 @@
                     max-height: 10rem;
                 }
 
+                @media (max-width:442px) {
+                    transition: var(--transition-scale-mobile);
+
+                    &:hover {
+                        transform: var(--scale-mobile);
+                        transition: var(--transition-scale-mobile);
+                    }
+                }
+
                 .container-inner-image-carousel {
                     object-fit: cover;
                     object-position: center;

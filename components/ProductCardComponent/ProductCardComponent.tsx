@@ -18,7 +18,6 @@ export default function ProductCardComponent({ product }: { product: ProductInte
                     blurDataURL={product.image.imgBlur}
                     priority={product.image.img_id <= 1 ? true : false}
                 />
-                <div className={styles['container-overlay-product-card']} />
             </div>
             <div className={styles['container-info-product']}>
                 <p className={styles['product-title']}>{product.title}</p>

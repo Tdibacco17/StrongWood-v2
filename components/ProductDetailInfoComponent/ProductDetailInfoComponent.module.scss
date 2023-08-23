@@ -103,6 +103,16 @@
                 &:hover {
                     color: var(--tertiary-color);
                 }
+
+                @media (max-width:442px) {
+                    transition: var(--transition-scale-mobile);
+
+                    &:hover {
+                        color: var(--primary-white);
+                        transform: var(--scale-mobile);
+                        transition: var(--transition-scale-mobile);
+                    }
+                }
             }
         }
     }
