@@ -29,7 +29,6 @@ export default function ProductDetailGalleryComponent({
                         alt={activeImage.imgAlt}
                         placeholder='blur'
                         blurDataURL={activeImage.imgBlur}
-                        quality={75}
                         priority
                         fill
                         sizes='(max-width: 992px) 50vw, (max-width: 442px) 33vw, 40vw'
@@ -49,7 +48,7 @@ export default function ProductDetailGalleryComponent({
                                         alt={image.imgAlt}
                                         placeholder='blur'
                                         blurDataURL={image.imgBlur}
-                                        quality={75}
+                                        quality={50}
                                         sizes='(max-width:442px) 33vw, 40vw'
                                         fill
                                         className={styles['container-inner-image-carousel']}
