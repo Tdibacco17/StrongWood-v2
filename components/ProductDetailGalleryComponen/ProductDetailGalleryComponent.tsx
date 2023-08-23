@@ -49,21 +49,22 @@ export default function ProductDetailGalleryComponent({
             </div>
             <div className={styles['container-section-carousel']}>
                 <div className={styles['carousel']} ref={carouselRef}>
-                    {productData.details.images.map((image: ImgDataInterface, index: number) => {
-                        return (
-                            <div key={image.img_id} className={styles["container-outer-image-carousel"]} onClick={() => handleImageClick(index)}>
-                                <Image
-                                    src={image.imgSrc}
-                                    alt={image.imgAlt}
-                                    placeholder='blur'
-                                    blurDataURL={image.imgBlur}
-                                    sizes='50vw,(max-width: 992px) 40vw,(max-width:442px) 33vw'
-                                    fill
-                                    className={styles['container-inner-image-carousel']}
-                                />
-                            </div>
-                        );
-                    })}
+                    {productData &&
+                        productData.details.images.map((image: ImgDataInterface, index: number) => {
+                            return (
+                                <div key={image.img_id} className={styles["container-outer-image-carousel"]} onClick={() => handleImageClick(index)}>
+                                    <Image
+                                        src={image.imgSrc}
+                                        alt={image.imgAlt}
+                                        placeholder='blur'
+                                        blurDataURL={image.imgBlur}
+                                        sizes='50vw,(max-width: 992px) 40vw,(max-width:442px) 33vw'
+                                        fill
+                                        className={styles['container-inner-image-carousel']}
+                                    />
+                                </div>
+                            );
+                        })}
                 </div>
                 <div className={styles['carousel-buttons']}>
                     <button

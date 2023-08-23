@@ -14,8 +14,8 @@ export default function ProductDetailComponent() {
     return (
         <div className={styles['container-section-product-detail']}>
             <div className={styles['wrapper-header-product-detail']}>
+                <ProductDetailGalleryContainer />
                 {productData && <>
-                    <ProductDetailGalleryContainer />
                     <ProductDetailInfoComponent />
                 </>}
                 {!productData && <div className={styles['container-loader']}><LoadingComponent /></div>}

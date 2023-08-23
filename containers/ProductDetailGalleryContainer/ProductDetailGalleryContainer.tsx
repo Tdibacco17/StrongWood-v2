@@ -22,7 +22,6 @@ export default function ProductDetailGalleryContainer() {
 
     const activeImage: ImgDataInterface | undefined = productData?.details?.images?.[activeImageIndex];
 
-
     const handleScrollUp = () => {
         if (carouselRef.current) {
             carouselRef.current.scrollBy({
