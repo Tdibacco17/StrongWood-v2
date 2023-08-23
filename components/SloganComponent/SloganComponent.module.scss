@@ -104,6 +104,17 @@
                     color: var(--tertiary-color);
                     transition: color 0s ease-in-out;
                 }
+
+                @media (max-width:442px) {
+                    transition: var(--transition-scale-mobile);
+
+                    &:focus,
+                    &:hover {
+                        color: var(--primary-white);
+                        transform: var(--scale-mobile);
+                        transition: var(--transition-scale-mobile);
+                    }
+                }
             }
         }
 
