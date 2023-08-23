@@ -11,8 +11,8 @@ export default function ProductCardComponent({ product }: { product: ProductInte
                     src={product.image.imgSrc}
                     alt={product.image.imgAlt}
                     quality={75}
-                    height={225}
-                    width={225}
+                    height={275}
+                    width={275}
                     sizes='275px, (max-width:442px) 225px'
                     className={styles['container-inner-product-card']}
                     placeholder='blur'
