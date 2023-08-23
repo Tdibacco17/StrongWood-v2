@@ -30,7 +30,6 @@ export default function ProductDetailGalleryComponent({
                         placeholder='blur'
                         blurDataURL={activeImage.imgBlur}
                         priority
-                        // quality={75}
                         fill
                         sizes='40vw, (max-width: 992px) 50vw, (max-width: 442px) 33vw'
                         className={styles['container-inner-image-product-detail']}

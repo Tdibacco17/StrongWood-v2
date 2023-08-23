@@ -12,7 +12,6 @@ export default function CategoriesCardComponent({ imageData }: { imageData: ImgD
                 alt={imageData.imgAlt}
                 fill
                 sizes={imageData.sizes}
-                quality={100}
                 placeholder='blur'
                 blurDataURL={imageData.imgBlur}
             />

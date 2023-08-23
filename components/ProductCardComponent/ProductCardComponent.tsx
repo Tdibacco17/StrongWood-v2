@@ -10,7 +10,6 @@ export default function ProductCardComponent({ product }: { product: ProductInte
                 <Image
                     src={product.image.imgSrc}
                     alt={product.image.imgAlt}
-                    quality={75}
                     height={275}
                     width={275}
                     sizes='(max-width:1100px) 275px, (max-width:442px) 225px, 75vw'
