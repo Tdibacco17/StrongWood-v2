@@ -13,11 +13,11 @@ export default function ProductCardComponent({ product }: { product: ProductInte
                     quality={75}
                     height={225}
                     width={225}
-                    sizes='75vw,(max-width:442px) 25vw'
+                    sizes='75vw,(max-width:442px) 35vw'
                     className={styles['container-inner-product-card']}
                     placeholder='blur'
                     blurDataURL={product.image.imgBlur}
-                    priority={product.image.img_id <= 8 ? true : false}
+                    priority={product.image.img_id <= 1 ? true : false}
                 />
                 <div className={styles['container-overlay-product-card']} />
             </div>
