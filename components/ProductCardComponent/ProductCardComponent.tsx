@@ -17,7 +17,7 @@ export default function ProductCardComponent({ product }: { product: ProductInte
                     className={styles['container-inner-product-card']}
                     placeholder='blur'
                     blurDataURL={product.image.imgBlur}
-                    priority={product.image.img_id <= 8 ? true : false}
+                    priority={product.image.img_id <= 1 ? true : false}
                 />
                 <div className={styles['container-overlay-product-card']} />
             </div>
@@ -28,6 +28,6 @@ export default function ProductCardComponent({ product }: { product: ProductInte
                     <p className={styles['product-offerprice']}>{product.offerPrice}</p>
                 </div>
             </div>
-        </Link >
+        </Link>
     )
 }
