@@ -1,7 +1,6 @@
 import { ImgDataInterface } from ".";
 
 export interface ProductsDataContextInterface {
-    productsData: ProductDataInterface;
     productData: ProductInterface;
     handleProductDataChange: Function;
 }
@@ -38,4 +37,16 @@ export interface DescriptionDataInterface {
     title: string,
     itemsDescription: string[],
     measures?: string
+}
+
+
+export interface ProductGalleryProps {
+    width: number,
+    handleScrollLeft: () => void;
+    handleScrollUp: () => void;
+    handleScrollRight: () => void;
+    handleScrollDown: () => void;
+    activeImage: ImgDataInterface | undefined;
+    carouselRef: React.RefObject<HTMLDivElement>;
+    handleImageClick: (index: number) => void;
 }

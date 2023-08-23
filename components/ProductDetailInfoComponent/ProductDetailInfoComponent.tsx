@@ -25,14 +25,20 @@ export default function ProductDetailInfoComponent() {
                         <p>{productData.details.payment.cash.title}</p>
                         <p className={styles['percentage']}>{productData.details.payment.cash.offerPercentage}</p>
                     </div>
-                    <button className={styles['container-btn-prices']}>
+                    <button
+                        type='button'
+                        aria-label={`${productData.details.payment.cash.title}`}
+                        className={styles['container-btn-prices']}>
                         <WalletIconComponent fill={'white'} height={30} width={30} />
                         <p>{productData.details.payment.cash.offerPrice}</p>
                     </button>
                 </div>
                 <div className={styles['wrapper-btns-prices']}>
                     <p>{productData.details.payment.card.title}</p>
-                    <button className={styles['container-btn-prices']}>
+                    <button
+                        type='button'
+                        aria-label={`${productData.details.payment.card.title}`}
+                        className={styles['container-btn-prices']}>
                         <CreditCardIconComponent fill={'white'} height={30} width={30} />
                         <p>{productData.details.payment.card.offerPrice}</p>
                     </button>

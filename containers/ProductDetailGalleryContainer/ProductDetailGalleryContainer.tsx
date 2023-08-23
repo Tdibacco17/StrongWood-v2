@@ -4,23 +4,25 @@ import { ProductDetailContext } from "@/context/ProductDetailProvider";
 import { ImgDataInterface } from "@/types";
 import { ProductsDataContextInterface } from "@/types/products";
 import { useWindowSize } from "@/utils/size/useWindowSize";
-import {  useContext, useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 
-export default function ProductDetailGalleryContainer() { 
+export default function ProductDetailGalleryContainer() {
     const { productData } = useContext(
         ProductDetailContext
     ) as ProductsDataContextInterface;
 
-    const { width } = useWindowSize()
-    const carouselRef = useRef<HTMLDivElement>(null);
-
     const [activeImageIndex, setActiveImageIndex] = useState<number>(0);
 
     const handleImageClick = (index: number) => {
-        setActiveImageIndex(index);
+        if (activeImageIndex !== index) {
+            setActiveImageIndex(index);
+        }
     };
+    const activeImage: ImgDataInterface | undefined = productData?.details.images[activeImageIndex];
 
-    const activeImage: ImgDataInterface | undefined = productData?.details?.images?.[activeImageIndex];
+    const carouselRef = useRef<HTMLDivElement>(null);
+
+    const { width } = useWindowSize()
 
     const handleScrollUp = () => {
         if (carouselRef.current) {

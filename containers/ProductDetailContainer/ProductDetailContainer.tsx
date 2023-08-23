@@ -9,9 +9,11 @@ export default function ProductDetailContainer({ params }: { params: { slug: str
     const { handleProductDataChange } = useContext(
         ProductDetailContext
     ) as ProductsDataContextInterface;
-    
+
     useEffect(() => {
-        handleProductDataChange(productsData[params.slug as keyof typeof productsData]);
+        if (params.slug) {
+            handleProductDataChange(productsData[params.slug]);
+        }
     }, [params.slug]);
 
     return <ProductDetailComponent />

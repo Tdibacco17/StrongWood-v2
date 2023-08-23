@@ -1,7 +1,7 @@
 import { ImgDataInterface } from '@/types';
 import styles from './ProductDetailGalleryComponent.module.scss'
 import Image from 'next/image';
-import { ProductsDataContextInterface } from '@/types/products';
+import { ProductGalleryProps, ProductsDataContextInterface } from '@/types/products';
 import { ProductDetailContext } from '@/context/ProductDetailProvider';
 import { useContext } from 'react';
 import { ArrowBottomIconComponent, ArrowLeftIconComponent, ArrowRightIconComponent, ArrowTopIconComponent } from '../IconComponent/IconComponent';
@@ -15,20 +15,10 @@ export default function ProductDetailGalleryComponent({
     activeImage,
     carouselRef,
     handleImageClick
-}: {
-    width: number,
-    handleScrollLeft: () => void;
-    handleScrollUp: () => void;
-    handleScrollRight: () => void;
-    handleScrollDown: () => void;
-    activeImage: ImgDataInterface | undefined;
-    carouselRef: React.RefObject<HTMLDivElement>;
-    handleImageClick: (index: number) => void;
-}) {
+}: ProductGalleryProps) {
     const { productData } = useContext(
         ProductDetailContext
     ) as ProductsDataContextInterface;
-
     return (
         <div className={styles['container-section-product-detail-gallery']}>
             <div className={styles['container-outer-image-product-detail']}>
@@ -39,10 +29,10 @@ export default function ProductDetailGalleryComponent({
                         alt={activeImage.imgAlt}
                         placeholder='blur'
                         blurDataURL={activeImage.imgBlur}
-                        quality={100}
                         priority
+                        quality={75}
                         fill
-                        sizes='75vw, (max-width: 992px) 50vw, (max-width: 442px) 33vw'
+                        sizes='40vw, (max-width: 992px) 50vw, (max-width: 442px) 33vw'
                         className={styles['container-inner-image-product-detail']}
                     />
                 }
@@ -52,13 +42,14 @@ export default function ProductDetailGalleryComponent({
                     {productData &&
                         productData.details.images.map((image: ImgDataInterface, index: number) => {
                             return (
-                                <div key={image.img_id} className={styles["container-outer-image-carousel"]} onClick={() => handleImageClick(index)}>
+                                <div key={image.img_id} className={styles["container-outer-image-carousel"]}
+                                    onClick={() => handleImageClick(index)}>
                                     <Image
                                         src={image.imgSrc}
                                         alt={image.imgAlt}
                                         placeholder='blur'
                                         blurDataURL={image.imgBlur}
-                                        sizes='50vw,(max-width: 992px) 40vw,(max-width:442px) 33vw'
+                                        sizes='40vw,(max-width:442px) 33vw'
                                         fill
                                         className={styles['container-inner-image-carousel']}
                                     />
