@@ -9,7 +9,7 @@ export default function ProyectsCardComponent({ imageData }: { imageData: ImgDat
                 src={imageData.imgSrc}
                 alt={imageData.imgAlt}
                 fill
-                sizes='100vw, (max-width: 442px) 33vw, (max-width: 768px) 35vw, (max-width: 992px) 50vw, (max-width: 1024px) 75vw'
+                sizes='(max-width: 1024px) 75vw,(max-width: 992px) 50vw,(max-width: 768px) 35vw,(max-width: 442px) 33vw, 100vw'
                 className={styles['container-inner-proyects-card']}
                 placeholder='blur'
                 blurDataURL={imageData.imgBlur}

@@ -31,7 +31,7 @@ export default function ProductDetailGalleryComponent({
                         blurDataURL={activeImage.imgBlur}
                         priority
                         fill
-                        sizes='40vw, (max-width: 992px) 50vw, (max-width: 442px) 33vw'
+                        sizes='(max-width: 992px) 50vw, (max-width: 442px) 33vw, 40vw'
                         className={styles['container-inner-image-product-detail']}
                     />
                 }
@@ -48,7 +48,7 @@ export default function ProductDetailGalleryComponent({
                                         alt={image.imgAlt}
                                         placeholder='blur'
                                         blurDataURL={image.imgBlur}
-                                        sizes='40vw,(max-width:442px) 33vw'
+                                        sizes='(max-width:442px) 33vw, 40vw'
                                         fill
                                         className={styles['container-inner-image-carousel']}
                                     />

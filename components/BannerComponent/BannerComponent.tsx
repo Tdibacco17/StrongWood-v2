@@ -10,7 +10,7 @@ export default function BannerComponent({ imgData }: { imgData: ImgDataInterface
                 src={imgData.imgSrc}
                 alt={imgData.imgAlt}
                 fill
-                sizes='(max-width: 1024px) 75vw, (max-width: 768px) 35vw,(max-width: 442px) 32vw, 100vw'
+                sizes='(max-width: 1024px) 75vw, (max-width: 768px) 35vw,(max-width: 442px) 33vw, 100vw'
                 priority
                 placeholder='blur'
                 blurDataURL={imgData.imgBlur}
