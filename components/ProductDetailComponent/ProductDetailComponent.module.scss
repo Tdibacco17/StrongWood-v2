@@ -43,17 +43,20 @@
             max-height: 74rem;
         }
 
-
         @media (max-width:442px) {
-            padding: 1rem;
             min-height: 67rem;
             max-height: 67rem;
         }
 
         @media (max-width:350px) {
-            padding: 1rem;
-            min-height: 63rem;
-            max-height: 63rem;
+            min-height: 66rem;
+            max-height: 66rem;
+        }
+
+
+        @media (max-width:300px) {
+            min-height: 68rem;
+            max-height: 68rem;
         }
 
         .container-loader {
