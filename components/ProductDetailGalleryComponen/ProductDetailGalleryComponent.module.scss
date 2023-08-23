@@ -24,6 +24,11 @@
         max-height: 30rem;
         overflow: hidden;
         border-radius: var(--border-radius);
+        user-select: none;
+
+        * {
+            pointer-events: none;
+        }
 
         @media (max-width:768px) {
             min-width: 100%;
@@ -55,11 +60,6 @@
         .container-inner-image-product-detail {
             object-fit: cover;
             object-position: center;
-
-            @media (max-width:630px) {
-                // object-fit: contain;
-                // position: revert !important;
-            }
         }
     }
 
@@ -134,6 +134,11 @@
                 overflow: hidden;
                 border-radius: var(--border-radius);
                 cursor: pointer;
+                user-select: none;
+
+                * {
+                    pointer-events: none;
+                }
 
                 @media (max-width:442px) {
                     min-height: 11.5rem;
