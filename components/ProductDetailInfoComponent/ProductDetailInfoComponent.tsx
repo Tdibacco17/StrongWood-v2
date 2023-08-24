@@ -3,6 +3,7 @@ import styles from './ProductDetailInfoComponent.module.scss';
 import { ProductDetailContext } from '@/context/ProductDetailProvider';
 import { useContext } from 'react';
 import { CreditCardIconComponent, WalletIconComponent } from '../IconComponent/IconComponent';
+import Link from 'next/link';
 
 export default function ProductDetailInfoComponent() {
     const { productData } = useContext(
@@ -25,23 +26,25 @@ export default function ProductDetailInfoComponent() {
                         <p>{productData.details.payment.cash.title}</p>
                         <p className={styles['percentage']}>{productData.details.payment.cash.offerPercentage}</p>
                     </div>
-                    <button
-                        type='button'
-                        aria-label={`${productData.details.payment.cash.title}`}
+                    <Link href={{
+                            pathname: '/contacto',
+                            query: { pago: 'efectivo' },
+                        }}
                         className={styles['container-btn-prices']}>
                         <WalletIconComponent fill={'white'} height={30} width={30} />
                         <p>{productData.details.payment.cash.offerPrice}</p>
-                    </button>
+                    </Link>
                 </div>
                 <div className={styles['wrapper-btns-prices']}>
                     <p>{productData.details.payment.card.title}</p>
-                    <button
-                        type='button'
-                        aria-label={`${productData.details.payment.card.title}`}
+                    <Link href={{
+                            pathname: '/contacto',
+                            query: { pago: 'tarjeta' },
+                        }}
                         className={styles['container-btn-prices']}>
                         <CreditCardIconComponent fill={'white'} height={30} width={30} />
                         <p>{productData.details.payment.card.offerPrice}</p>
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -1,4 +1,5 @@
 import NavigationContainer from '@/containers/NavigationContainer/NavigationContainer'
+import { ProductDetailProvider } from '@/context/ProductDetailProvider'
 
 export default function NavigationLayout({
     children,
@@ -8,7 +9,9 @@ export default function NavigationLayout({
     return (
         <>
             <NavigationContainer isHome={false} />
-            {children}
+            <ProductDetailProvider>
+                {children}
+            </ProductDetailProvider>
         </>
     )
 }

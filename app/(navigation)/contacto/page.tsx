@@ -1,9 +1,17 @@
-import styles from './page.module.scss'
+import ContactContainer from '@/containers/ContactContainer/ContactContainer'
 
-export default function ContactPage() {
-    return(
-        <section className={styles['container-section-contact']}>
-            contacto
+export default function ContactPage({ searchParams }: { searchParams?: { pago?: string | undefined } }) {
+    return (
+        <section>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <ContactContainer pago={searchParams?.pago?.trim() ?? ""} />
         </section>
     )
 }
