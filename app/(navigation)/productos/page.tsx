@@ -3,8 +3,8 @@ import data from '@/models/es.json'
 
 export default function ProductsPage() {
     return (
-        <section id={data.homePage.sectionLink}>
-            <ProductsComponent />
+        <section id={data.productPage.sectionLink}>
+                <ProductsComponent />
         </section>
     )
 }

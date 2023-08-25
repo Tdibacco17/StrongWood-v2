@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 const nodemailer = require("nodemailer");
 
-
 export async function POST(req: Request) {
     try {
 

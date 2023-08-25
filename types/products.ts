@@ -1,8 +1,10 @@
-import { ImgDataInterface } from ".";
+import { ImgDataInterface, PaymentMethodInterface } from ".";
 
 export interface ProductsDataContextInterface {
     productData: ProductInterface;
     handleProductDataChange: Function;
+    paymentMethod: PaymentMethodInterface;
+    handlePaymentMethod: (method: PaymentMethodInterface) => void;
 }
 
 export interface ProductDataInterface {

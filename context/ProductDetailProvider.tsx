@@ -1,4 +1,5 @@
 'use client'
+import { PaymentMethodInterface } from '@/types';
 import { ProductInterface, ProductsDataContextInterface } from '@/types/products';
 import { ReactNode, createContext, useState } from "react";
 
@@ -11,9 +12,18 @@ export const ProductDetailProvider = ({ children, }: { children: ReactNode; }) =
         setProductData(productData);
     };
 
+    const [paymentMethod, setPaymentMethod] = useState<PaymentMethodInterface | undefined>(undefined)
+
+    const handlePaymentMethod = (paymentMethod: PaymentMethodInterface) => {
+        setPaymentMethod(paymentMethod);
+    };
+
     return (
         <ProductDetailContext.Provider
-            value={{ productData, handleProductDataChange }}
+            value={{
+                productData, handleProductDataChange,
+                paymentMethod, handlePaymentMethod
+            }}
         >
             {children}
         </ProductDetailContext.Provider>

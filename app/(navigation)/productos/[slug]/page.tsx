@@ -4,7 +4,7 @@ import data from '@/models/es.json'
 
 export default function ProductDetailPage({ params }: { params: { slug: string } }) {
     return (
-        <section id={data.homePage.sectionLink} >
+        <section id={data.productPage.sectionLink} >
             <ProductDetailContainer params={params} />
             <ServicesComponent />
         </section>

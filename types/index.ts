@@ -30,3 +30,5 @@ export interface NavigationProps {
     menuRef?: React.RefObject<HTMLDivElement>;
     dropdownRef?: React.RefObject<HTMLDivElement>;
 }
+
+export type PaymentMethodInterface = 'efectivo' | 'tarjeta';

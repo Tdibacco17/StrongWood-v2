@@ -6,7 +6,7 @@ import { CreditCardIconComponent, WalletIconComponent } from '../IconComponent/I
 import Link from 'next/link';
 
 export default function ProductDetailInfoComponent() {
-    const { productData } = useContext(
+    const { productData, handlePaymentMethod } = useContext(
         ProductDetailContext
     ) as ProductsDataContextInterface;
     return (
@@ -26,10 +26,9 @@ export default function ProductDetailInfoComponent() {
                         <p>{productData.details.payment.cash.title}</p>
                         <p className={styles['percentage']}>{productData.details.payment.cash.offerPercentage}</p>
                     </div>
-                    <Link href={{
-                            pathname: '/contacto',
-                            query: { pago: 'efectivo' },
-                        }}
+                    <Link
+                        onClick={() => handlePaymentMethod('efectivo')}
+                        href={`${productData.product_slug}/contacto`}
                         className={styles['container-btn-prices']}>
                         <WalletIconComponent fill={'white'} height={30} width={30} />
                         <p>{productData.details.payment.cash.offerPrice}</p>
@@ -37,16 +36,15 @@ export default function ProductDetailInfoComponent() {
                 </div>
                 <div className={styles['wrapper-btns-prices']}>
                     <p>{productData.details.payment.card.title}</p>
-                    <Link href={{
-                            pathname: '/contacto',
-                            query: { pago: 'tarjeta' },
-                        }}
+                    <Link
+                        onClick={() => handlePaymentMethod('tarjeta')}
+                        href={`${productData.product_slug}/contacto`}
                         className={styles['container-btn-prices']}>
                         <CreditCardIconComponent fill={'white'} height={30} width={30} />
                         <p>{productData.details.payment.card.offerPrice}</p>
                     </Link>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }

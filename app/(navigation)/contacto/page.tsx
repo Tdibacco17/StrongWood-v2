@@ -1,6 +1,5 @@
-import ContactContainer from '@/containers/ContactContainer/ContactContainer'
 
-export default function ContactPage({ searchParams }: { searchParams?: { pago?: string | undefined } }) {
+export default function ContactPage() {
     return (
         <section>
             <br></br>
@@ -11,7 +10,7 @@ export default function ContactPage({ searchParams }: { searchParams?: { pago?: 
             <br></br>
             <br></br>
             <br></br>
-            <ContactContainer pago={searchParams?.pago?.trim() ?? ""} />
+            contacto page
         </section>
     )
 }
