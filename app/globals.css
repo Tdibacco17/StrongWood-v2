@@ -26,6 +26,7 @@
   --border-radius: 0.2rem;
   /*font*/
   --primary-white: #F2F2F2;
+  --secondary-white: rgba(242, 242, 242, 0.6);
   --primary-color: #232730;
   --secondary-color: #2F3540;
   --tertiary-color: #d87e2a;

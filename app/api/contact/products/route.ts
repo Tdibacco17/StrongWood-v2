@@ -1,10 +1,11 @@
+import { MessageDataInterface } from "@/types";
 import { NextResponse } from "next/server";
 const nodemailer = require("nodemailer");
 
 export async function POST(req: Request) {
     try {
 
-        const body = await req.json();
+        const { messageData }: { messageData: MessageDataInterface } = await req.json();
 
         const contentHtml = `
     <!DOCTYPE html>
@@ -93,24 +94,24 @@ export async function POST(req: Request) {
                 <div class="personal-info">
                     <h3>Datos personales:</h3>
                     <ul>
-                        <li><strong>Nombre: </strong>{name}</li>
-                        <li><strong>Email: </strong><a href="mailto:{email}" class="link">{email}</a></li>
-                        <li><strong>Teléfono: </strong><a href="https://wa.me/{phone}" class="link">{phone}</a></li>
-                        <li><strong>Dirección: </strong>{direction}</li>
+                        <li><strong>Nombre: </strong>${messageData.name}</li>
+                        <li><strong>Email: </strong><a href="mailto:{email}" class="link">${messageData.email}</a></li>
+                        <li><strong>Teléfono: </strong><a href="https://wa.me/{phone}" class="link">${messageData.phone}</a></li>
+                        <li><strong>Dirección: </strong>${messageData.direction}</li>
                     </ul>
                 </div>
                 <br></br>
                 <div class="order-summary">
                     <h3>Resumen del pedido:</h3>
                     <ul>
-                        <li><strong>Producto: </strong>{product}</li>
-                        <li><strong>Abona en: </strong>{paymentMethod}</li>
-                        <li><strong>Precio: </strong>{price}</li>
+                        <li><strong>Producto: </strong>${messageData.product}</li>
+                        <li><strong>Abona en: </strong>${messageData.paymentMethod}</li>
+                        <li><strong>Precio: </strong>${messageData.price}</li>
                     </ul>
                 </div>
             </div>
             <div class="footer">
-                <li><strong>Nota: </strong>{note}</li>
+                <li><strong>Nota: </strong>${messageData.note}</li>
             </div>
         </div>
     </body>

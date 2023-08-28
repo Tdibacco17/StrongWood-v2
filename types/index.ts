@@ -32,3 +32,14 @@ export interface NavigationProps {
 }
 
 export type PaymentMethodInterface = 'efectivo' | 'tarjeta';
+
+export interface MessageDataInterface {
+    name: string,
+    phone: string,
+    email: string,
+    direction: string,
+    note: string,
+    product: string,
+    paymentMethod: string,
+    price: string,
+}

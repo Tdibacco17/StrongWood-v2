@@ -45,100 +45,122 @@ export default function ContactComponent({
     ) as ProductsDataContextInterface;
 
     return (
-        <div>
-            {/* MODAL */}
-            <div>
-                {/* {productData && <Image
-                    src={productData.image.imgSrc}
-                    alt={productData.image.imgAlt}
-                    placeholder='blur'
-                    blurDataURL={productData.image.imgBlur}
-                    priority
-                    fill
-                    sizes='(max-width: 992px) 50vw, (max-width: 442px) 33vw, 40vw'
-                    className={styles['container-inner-image-product-detail']}
-                />} */}
-            </div>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>
-                        <p>Nombre</p>
-                        <input
-                            required
-                            type="text"
-                            name="name"
-                            ref={nameRef} />
-                    </label>
-                    <label>
-                        <p>Telefono</p>
-                        <input
-                            required
-                            type="text"
-                            name="name"
-                            ref={phoneRef} />
-                    </label>
-                    <label>
-                        <p>Email</p>
-                        <input
-                            required
-                            type="email"
-                            name="email"
-                            ref={emailRef} />
-                    </label>
-                    <label>
-                        <p>Dirección</p>
-                        <input
-                            required
-                            type="text"
-                            name="direction"
-                            ref={directionRef} />
-                    </label>
+        <div className={styles['container-section-product-contact']}>
+            <div className={styles['container-wrapper-card-contact-vertical']}>
+                {/* MODAL */}
+                <div className={styles['container-wrapper-card-contact']}>
+                    <div className={styles['container-outer-image-product-contact']}>
+                        {productData && <Image
+                            src={productData.image.imgSrc}
+                            alt={productData.image.imgAlt}
+                            placeholder='blur'
+                            blurDataURL={productData.image.imgBlur}
+                            priority
+                            fill
+                            sizes='(max-width: 992px) 50vw, (max-width: 442px) 33vw, 40vw'
+                            className={styles['container-inner-image-product-contact']}
+                        />}
+                        </div>
+                    <form onSubmit={handleSubmit} className={styles['container-section-form']}>
+                        <div className={styles['wrapper-input']}>
+                            <label className={styles['wrapper-label']}>
+                                <p className={styles['text-custom']}>Nombre</p>
+                                <input
+                                    className={styles['input-custom']}
+                                    required
+                                    type="text"
+                                    name="name"
+                                    placeholder='Ej: Nombre'
+                                    ref={nameRef} />
+                            </label>
+                            <label className={styles['wrapper-label']}>
+                                <p className={styles['text-custom']}>Teléfono</p>
+                                <input
+                                    className={styles['input-custom']}
+                                    required
+                                    type="text"
+                                    name="name"
+                                    placeholder='Ej: +54911...'
+                                    ref={phoneRef} />
+                            </label>
+                        </div>
+                        <div className={styles['wrapper-input']}>
+                            <label className={styles['wrapper-label']}>
+                                <p className={styles['text-custom']}>Email</p>
+                                <input
+                                    className={styles['input-custom']}
+                                    required
+                                    type="email"
+                                    name="email"
+                                    placeholder='Ej: email@email.com'
+                                    ref={emailRef} />
+                            </label>
+                            <label className={styles['wrapper-label']}>
+                                <p className={styles['text-custom']}>Dirección</p>
+                                <input
+                                    className={styles['input-custom']}
+                                    required
+                                    type="text"
+                                    name="direction"
+                                    placeholder='Ej: Calle 123 piso A'
+                                    ref={directionRef} />
+                            </label>
+                        </div>
+                        <div className={styles['wrapper-input']}>
+                            <label className={styles['wrapper-label']}>
+                                {
+                                    !isSelect ?
+                                        <p className={styles['text-custom']}>
+                                            Abonar en {paymentMethod ? paymentMethod : ""}
+                                        </p>
+                                        : <p className={styles['text-custom']}>
+                                            Abonar en {selectedPayment}
+                                        </p>
+                                }
+                                <select
+                                    className={styles['select-custom']}
+                                    value={selectedPayment}
+                                    onChange={handlePaymentChange}
+                                    ref={selectRef}>
+                                    <option value="">
+                                        Seleccionar metodo de pago
+                                    </option>
+                                    <option value="tarjeta">
+                                        Tarjeta
+                                    </option>
+                                    <option value="efectivo">
+                                        Efectivo
+                                    </option>
+                                </select>
+                            </label>
+                            <button
+                                className={styles['btn-custom']}
+                                disabled={noteRef.trim().length > 0}
+                                onClick={handleChangeIsNote}
+                                type="button">
+                                Agregar nota
+                            </button>
+                        </div>
+                        <button
+                            className={styles['btn-send-custom']}
+                            disabled={loadingText}
+                            type='submit'
+                            aria-label='Enviar mensaje de contacto'>
+                            {loadingText ? "Cargando.." : "Enviar"}
+                        </button>
+                        {errorMessage && <p>{errorMessage}</p>}
+                        <p className={styles['text-note-custom']}>Nos pondremos en contacto dentro de las proximias 72hs</p>
+                    </form>
                 </div>
-                <div>
-                    <label>
-                        {
-                            !isSelect ?
-                                <p>
-                                    Abonar en {paymentMethod ? paymentMethod : ""}
-                                </p>
-                                : <p>
-                                    Abonar en {selectedPayment}
-                                </p>
-                        }
-                        <select
-                            value={selectedPayment}
-                            onChange={handlePaymentChange}
-                            ref={selectRef}>
-                            <option value="">
-                                Seleccionar metodo de pago
-                            </option>
-                            <option value="tarjeta">
-                                Tarjeta
-                            </option>
-                            <option value="efectivo">
-                                Efectivo
-                            </option>
-                        </select>
-                    </label>
-                    <button
-                        disabled={noteRef.trim().length > 0}
-                        onClick={handleChangeIsNote}
-                        type="button">
-                        Agregar nota
-                    </button>
-                </div>
-                <button disabled={loadingText} type='submit' aria-label='Enviar mensaje de contacto'>
-                    {loadingText ? "Cargando.." : "Enviar"}
-                </button>
-                <p>Nos pondremos en contacto dentro de las proximias 72hs</p>
-                {errorMessage && <p>{errorMessage}</p>}
-                {isNote && <label>
-                    <p>Nota</p>
+
+                {isNote && <label className={styles['wrapper-note']}>
+                    <p className={styles['text-custom']}>Nota</p>
                     <textarea
-                        placeholder="Agregar nota.."
+                        className={styles['text-area-custom']}
+                        placeholder="Ej: Que falto detallar?"
                         onChange={handleChangeNoteRef} />
                 </label>}
-            </form>
+            </div>
         </div>
     )
 }

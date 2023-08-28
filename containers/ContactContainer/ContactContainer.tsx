@@ -5,6 +5,7 @@ import { ProductsDataContextInterface } from "@/types/products";
 import { productsData } from '@/models/products'
 import { useContext, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { MessageDataInterface } from "@/types";
 
 export default function ContactContainer({
     params
@@ -15,7 +16,7 @@ export default function ContactContainer({
         ProductDetailContext
     ) as ProductsDataContextInterface;
 
-    const router= useRouter()
+    const router = useRouter()
 
     useEffect(() => {
         if (!productData) {
@@ -56,7 +57,7 @@ export default function ContactContainer({
     };
 
     const handleValidation = () => {
-        const regex = /^[0-9]+$/;
+        const regex = /^\+?[0-9]+$/;
 
         if (
             nameRef.current?.value.trim() === "" ||
@@ -69,7 +70,7 @@ export default function ContactContainer({
         }
 
         if (phoneRef.current?.value && !(regex.test(phoneRef.current?.value.trim()))) {
-            setErrorMessage("Numero de telefono tiene que ser solo caracteres numericos");
+            setErrorMessage("Numero de telefono tiene que ser solo caracteres numericos y el signo + delante");
             return false;
         }
 
@@ -97,48 +98,45 @@ export default function ContactContainer({
         }
         setLoadingText(true);
 
-        if (productData) {
-            let messageData = {
-                name: nameRef.current?.value.trim(),
-                phone: phoneRef.current?.value.trim(),
-                email: emailRef.current?.value.trim(),
-                direction: directionRef.current?.value.trim(),
-                note: noteRef.trim().length > 0 ? noteRef.trim() : "No se paso una nota",
-                product: productData?.title,
-                paymentMethod: selectedPayment,
-                price: selectedPayment === "efectivo" ?
-                    productData?.details.payment.cash.offerPrice
-                    : productData?.details.payment.card.offerPrice
-            }
-            try {
-                const response = await fetch("/api/contact/products", {
-                    method: "POST",
-                    headers: {
-                        "Accept": "application/json, text/plain",
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({ messageData })
-                })
-                const parseResponse = await response.json()
-
-                if (parseResponse.status === 200) {
-                    alert("Email enviado correctamente")
-                    setErrorMessage("")
-                    // setIsModal(true);
-                    // setIsCheck(true)
-                    setTimeout(() => {
-                        setLoadingText(false);
-                        // setIsModal(false);
-                        router.push("/");
-                    }, 2500)
-                    return
-                }
-                return
-            } catch (error) {
-                console.log("Error al enviar el correo electrónico:", error);
-            }
+        let messageData: MessageDataInterface = {
+            name: nameRef.current?.value.trim() || "No se paso un nombre",
+            phone: phoneRef.current?.value.trim() || "No se paso un teléfono",
+            email: emailRef.current?.value.trim() || "No se paso un email",
+            direction: directionRef.current?.value.trim() || "No se paso una dirección",
+            note: noteRef.trim().length > 0 ? noteRef.trim() : "No se paso una nota",
+            product: productData?.title,
+            paymentMethod: selectedPayment || "No se paso un metodo de pago",
+            price: selectedPayment === "efectivo" ?
+                productData?.details.payment.cash.offerPrice
+                : productData?.details.payment.card.offerPrice
         }
-        //designData
+        try {
+            const response = await fetch("/api/contact/products", {
+                method: "POST",
+                headers: {
+                    "Accept": "application/json, text/plain",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ messageData })
+            })
+            const parseResponse = await response.json()
+
+            if (parseResponse.status === 200) {
+                alert("Email enviado correctamente")
+                setErrorMessage("")
+                // setIsModal(true);
+                // setIsCheck(true)
+                setTimeout(() => {
+                    setLoadingText(false);
+                    // setIsModal(false);
+                    router.push("/");
+                }, 2500)
+                return
+            }
+            return
+        } catch (error) {
+            console.log("Error al enviar el correo electrónico:", error);
+        }
     }
 
     return <ContactComponent

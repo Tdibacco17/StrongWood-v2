@@ -1,0 +1,192 @@
+.container-section-product-contact {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 0 1.5rem;
+
+    .container-wrapper-card-contact-vertical {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--secondary-color);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        padding: 2rem;
+
+        .container-wrapper-card-contact {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+
+            .container-outer-image-product-contact {
+                position: relative;
+                min-height: 25rem;
+                max-height: 25rem;
+                min-width: 25rem;
+                max-width: 25rem;
+                user-select: none;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+
+                * {
+                    pointer-events: none;
+                }
+
+                .container-inner-image-product-contact {
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            .container-section-form {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                --width-large-form: 20rem;
+
+                .wrapper-input {
+                    display: flex;
+                    align-items: flex-end;
+                    gap: 3rem;
+
+                    .wrapper-label {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+
+                        .text-custom {
+                            font-weight: var(--font-bold);
+                            font-size: var(--font-xmedium);
+                        }
+
+                        .input-custom {
+                            min-width: var(--width-large-form);
+                            max-width: var(--width-large-form);
+                            outline: none;
+                            background-color: transparent;
+                            border: none;
+                            color: var(--primary-white);
+                            border: 1px solid var(--secondary-white);
+                            border-radius: var(--border-radius);
+                            padding: 0.5rem 1rem;
+                            font-weight: var(--font-regular);
+                            font-size: var(--font-small);
+
+                            &:focus {
+                                border: 1px solid var(--tertiary-color);
+                            }
+
+                            &::placeholder {
+                                font-size: var(--font-small);
+                            }
+                        }
+                    }
+
+                    .select-custom {
+                        min-width: var(--width-large-form);
+                        max-width: var(--width-large-form);
+                        outline: none;
+                        padding: 0.5rem 1rem;
+                        border-radius: var(--border-radius);
+                        border: 1px solid var(--secondary-white);
+                        font-weight: var(--font-bold);
+                        font-size: var(--font-small);
+                        appearance: none;
+                        position: relative;
+                        background-color: var(--primary-color);
+                        color: var(--primary-white);
+                        cursor: pointer;
+
+                        &:focus {
+                            border: 1px solid var(--tertiary-color);
+                        }
+
+                        &::-ms-expand {
+                            display: none;
+                        }
+                    }
+
+                    .btn-custom {
+                        min-width: var(--width-large-form);
+                        max-width: var(--width-large-form);
+                        border: none;
+                        padding: 0.5rem 1rem;
+                        border-radius: var(--border-radius);
+                        font-weight: var(--font-bold);
+                        font-size: var(--font-small);
+                        background-color: var(--primary-color);
+                        color: var(--primary-white);
+                        cursor: pointer;
+
+                        &:hover {
+                            color: var(--tertiary-color)
+                        }
+
+                        &:disabled {
+                            cursor: not-allowed;
+                            opacity: 0.6;
+
+                            &:hover {
+                                color: var(--primary-white);
+                            }
+                        }
+                    }
+                }
+
+                .btn-send-custom {
+                    border: none;
+                    padding: 0.5rem 1rem;
+                    border-radius: var(--border-radius);
+                    font-weight: var(--font-bold);
+                    font-size: var(--font-small);
+                    background-color: var(--primary-color);
+                    color: var(--primary-white);
+                    cursor: pointer;
+
+                    &:hover {
+                        color: var(--tertiary-color)
+                    }
+                }
+
+                .text-note-custom {
+                    font-weight: var(--font-bold);
+                    font-size: var(--font-small);
+                    color: var(--secondary-white);
+                }
+            }
+        }
+
+        .wrapper-note {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .text-custom {
+                font-weight: var(--font-bold);
+                font-size: var(--font-xmedium);
+            }
+
+            .text-area-custom {
+                min-width: 100%;
+                max-width: 100%;
+                min-height: 10rem;
+                max-height: 10rem;
+                border-radius: var(--border-radius);
+                border: 1px solid var(--secondary-white);
+                background-color: transparent;
+                padding: 0.5rem;
+                font-weight: var(--font-regular);
+                font-size: var(--font-small);
+                color: var(--primary-white);
+                outline: none;
+
+                &:focus {
+                    border: 1px solid var(--tertiary-color);
+                }
+
+                &::placeholder {
+                    font-size: var(--font-small);
+                }
+            }
+        }
+    }
+}
