@@ -1,11 +1,11 @@
-import { MessageDataInterface } from "@/types";
+import { MessageContactProductDataInterface } from "@/types";
 import { NextResponse } from "next/server";
 const nodemailer = require("nodemailer");
 
 export async function POST(req: Request) {
     try {
 
-        const { messageData }: { messageData: MessageDataInterface } = await req.json();
+        const { messageData }: { messageData: MessageContactProductDataInterface } = await req.json();
 
         const contentHtml = `
     <!DOCTYPE html>
@@ -47,23 +47,23 @@ export async function POST(req: Request) {
     
             .personal-info {
                 margin-bottom: 15px;
-                color: #555;
+                color: #3a3a3a;
             }
     
             .personal-info li {
                 margin-bottom: 5px;
-                color: #555;
+                color: #3a3a3a;
                 font-weight: 500;
             }
     
             .order-summary {
                 margin-bottom: 15px;
-                color: #555;
+                color: #3a3a3a;
             }
     
             .order-summary li {
                 margin-bottom: 5px;
-                color: #555;
+                color: #3a3a3a;
             }
         
             .link {
@@ -80,7 +80,7 @@ export async function POST(req: Request) {
             .footer li {
                 list-style-type: none;
                 margin-bottom: 5px;
-                color: #777;
+                color: #3a3a3a;
             }
         </style>
     </head>
@@ -131,9 +131,9 @@ export async function POST(req: Request) {
         });
 
         const mailOptions = {
-            from: "NODEMAILER",
+            from: "Strongwood",
             to: `${process.env.USERNAME_TEST}`,
-            subject: "Prueba nodemailer!",
+            subject: "Nueva venta",
             html: contentHtml,
         };
 

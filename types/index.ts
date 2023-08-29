@@ -33,7 +33,8 @@ export interface NavigationProps {
 
 export type PaymentMethodInterface = 'efectivo' | 'tarjeta';
 
-export interface MessageDataInterface {
+//CONTACT PRODUCT
+export interface MessageContactProductDataInterface {
     name: string,
     phone: string,
     email: string,
@@ -44,7 +45,6 @@ export interface MessageDataInterface {
     paymentMethod: string,
     price: string,
 }
-
 export interface ContactProductProps {
     handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
     handlePaymentChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
@@ -63,4 +63,25 @@ export interface ContactProductProps {
     errorMessage: string,
     handleChangeIsNote: () => void,
     isNote: boolean
+}
+//CONTACT FORM
+export interface MessageContactDataInterface {
+    name: string,
+    phone: string,
+    email: string,
+    direction: string,
+    location: string,
+    note: string,
+}
+export interface ContactProps {
+    nameRef: React.RefObject<HTMLInputElement>,
+    phoneRef: React.RefObject<HTMLInputElement>,
+    emailRef: React.RefObject<HTMLInputElement>,
+    directionRef: React.RefObject<HTMLInputElement>,
+    locationRef: React.RefObject<HTMLInputElement>,
+    noteRef: string,
+    handleChangeNoteRef: (event: React.ChangeEvent<HTMLTextAreaElement>) => void
+    loadingText: boolean,
+    errorMessage: string,
+    handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }

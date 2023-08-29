@@ -32,6 +32,11 @@
         padding: 0;
         background-color: var(--secondary-color);
         width: 100%;
+        box-shadow: rgb(0, 0, 0, 0.4) -10px 10px 20px;
+
+        @media (max-width:768px) {
+            box-shadow: revert
+        }
 
         .desktop-title {
             font-size: var(--font-medium);

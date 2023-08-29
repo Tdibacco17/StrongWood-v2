@@ -1,16 +1,9 @@
+import ContactContainer from "@/containers/ContactContainer/ContactContainer";
 
 export default function ContactPage() {
     return (
         <section>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            contacto page
+            <ContactContainer />
         </section>
     )
 }
