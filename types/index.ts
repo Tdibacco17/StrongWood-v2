@@ -38,6 +38,7 @@ export interface MessageDataInterface {
     phone: string,
     email: string,
     direction: string,
+    location: string,
     note: string,
     product: string,
     paymentMethod: string,

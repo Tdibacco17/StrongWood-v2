@@ -97,6 +97,7 @@ export async function POST(req: Request) {
                         <li><strong>Nombre: </strong>${messageData.name}</li>
                         <li><strong>Email: </strong><a href="mailto:{email}" class="link">${messageData.email}</a></li>
                         <li><strong>Teléfono: </strong><a href="https://wa.me/{phone}" class="link">${messageData.phone}</a></li>
+                        <li><strong>Localidad: </strong>${messageData.location}</li>
                         <li><strong>Dirección: </strong>${messageData.direction}</li>
                     </ul>
                 </div>

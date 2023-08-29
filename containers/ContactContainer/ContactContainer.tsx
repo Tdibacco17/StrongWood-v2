@@ -50,6 +50,7 @@ export default function ContactContainer({
     const phoneRef = useRef<HTMLInputElement>(null);
     const emailRef = useRef<HTMLInputElement>(null);
     const directionRef = useRef<HTMLInputElement>(null);
+    const locationRef = useRef<HTMLInputElement>(null);
     const [noteRef, setNoteRef] = useState<string>("");
     const handleChangeNoteRef = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         const text = event.target.value;
@@ -57,25 +58,26 @@ export default function ContactContainer({
     };
 
     const handleValidation = () => {
-        const regex = /^\+?[0-9]+$/;
+        const regex = /^\+[0-9]+$/;
 
         if (
             nameRef.current?.value.trim() === "" ||
             phoneRef.current?.value.trim() === "" ||
             emailRef.current?.value.trim() === "" ||
-            directionRef.current?.value.trim() === ""
+            directionRef.current?.value.trim() === "" ||
+            locationRef.current?.value.trim() === ""
         ) {
             setErrorMessage("Por favor, complete todos los campos");
             return false;
         }
 
-        if (phoneRef.current?.value && !(regex.test(phoneRef.current?.value.trim()))) {
-            setErrorMessage("Numero de telefono tiene que ser solo caracteres numericos y el signo + delante");
+        if (phoneRef.current?.value && !(phoneRef.current?.value.length >= 8)) {
+            setErrorMessage("El número de teléfono no cumple con la longitud mínima");
             return false;
         }
 
-        if (phoneRef.current?.value && !(phoneRef.current?.value.length >= 8)) {
-            setErrorMessage("El número de teléfono no cumple con la longitud mínima");
+        if (phoneRef.current?.value && !(regex.test(phoneRef.current?.value.trim()))) {
+            setErrorMessage("Numero de telefono tiene que ser solo caracteres numericos y el signo + delante");
             return false;
         }
 
@@ -103,6 +105,7 @@ export default function ContactContainer({
             phone: phoneRef.current?.value.trim() || "No se paso un teléfono",
             email: emailRef.current?.value.trim() || "No se paso un email",
             direction: directionRef.current?.value.trim() || "No se paso una dirección",
+            location: locationRef.current?.value.trim() || "No se paso una localidad",
             note: noteRef.trim().length > 0 ? noteRef.trim() : "No se paso una nota",
             product: productData?.title,
             paymentMethod: selectedPayment || "No se paso un metodo de pago",
@@ -144,6 +147,7 @@ export default function ContactContainer({
         phoneRef={phoneRef}
         emailRef={emailRef}
         directionRef={directionRef}
+        locationRef={locationRef}
         noteRef={noteRef}
         handleChangeNoteRef={handleChangeNoteRef}
         selectRef={selectRef}

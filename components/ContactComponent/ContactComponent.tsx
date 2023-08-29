@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useContext } from 'react';
 import { ProductDetailContext } from '@/context/ProductDetailProvider';
 import { ProductsDataContextInterface } from '@/types/products';
+import LoadingComponent from '../LoadingComponent/LoadingComponent';
 
 export default function ContactComponent({
     handleSubmit,
@@ -12,6 +13,7 @@ export default function ContactComponent({
     phoneRef,
     emailRef,
     directionRef,
+    locationRef,
     noteRef,
     handleChangeNoteRef,
     selectRef,
@@ -29,6 +31,7 @@ export default function ContactComponent({
     phoneRef: React.RefObject<HTMLInputElement>,
     emailRef: React.RefObject<HTMLInputElement>,
     directionRef: React.RefObject<HTMLInputElement>,
+    locationRef: React.RefObject<HTMLInputElement>,
     noteRef: string,
     handleChangeNoteRef: (event: React.ChangeEvent<HTMLTextAreaElement>) => void
     selectRef: React.RefObject<HTMLSelectElement>,
@@ -50,7 +53,7 @@ export default function ContactComponent({
                 {/* MODAL */}
                 <div className={styles['container-wrapper-card-contact']}>
                     <div className={styles['container-outer-image-product-contact']}>
-                        {productData && <Image
+                        {productData ? <Image
                             src={productData.image.imgSrc}
                             alt={productData.image.imgAlt}
                             placeholder='blur'
@@ -59,15 +62,17 @@ export default function ContactComponent({
                             fill
                             sizes='(max-width: 992px) 50vw, (max-width: 442px) 33vw, 40vw'
                             className={styles['container-inner-image-product-contact']}
-                        />}
-                        </div>
+                        />
+                            : <LoadingComponent />
+                        }
+                    </div>
                     <form onSubmit={handleSubmit} className={styles['container-section-form']}>
                         <div className={styles['wrapper-input']}>
                             <label className={styles['wrapper-label']}>
                                 <p className={styles['text-custom']}>Nombre</p>
                                 <input
                                     className={styles['input-custom']}
-                                    required
+                                    // required
                                     type="text"
                                     name="name"
                                     placeholder='Ej: Nombre'
@@ -77,9 +82,9 @@ export default function ContactComponent({
                                 <p className={styles['text-custom']}>Teléfono</p>
                                 <input
                                     className={styles['input-custom']}
-                                    required
+                                    // required
                                     type="text"
-                                    name="name"
+                                    name="phone"
                                     placeholder='Ej: +54911...'
                                     ref={phoneRef} />
                             </label>
@@ -99,7 +104,7 @@ export default function ContactComponent({
                                 <p className={styles['text-custom']}>Dirección</p>
                                 <input
                                     className={styles['input-custom']}
-                                    required
+                                    // required
                                     type="text"
                                     name="direction"
                                     placeholder='Ej: Calle 123 piso A'
@@ -107,6 +112,16 @@ export default function ContactComponent({
                             </label>
                         </div>
                         <div className={styles['wrapper-input']}>
+                            <label className={styles['wrapper-label']}>
+                                <p className={styles['text-custom']}>Localidad</p>
+                                <input
+                                    className={styles['input-custom']}
+                                    // required
+                                    type="text"
+                                    name="location"
+                                    placeholder='Ej: Caseros'
+                                    ref={locationRef} />
+                            </label>
                             <label className={styles['wrapper-label']}>
                                 {
                                     !isSelect ?
@@ -133,6 +148,8 @@ export default function ContactComponent({
                                     </option>
                                 </select>
                             </label>
+                        </div>
+                        <div className={styles['wrapper-input']}>
                             <button
                                 className={styles['btn-custom']}
                                 disabled={noteRef.trim().length > 0}
@@ -140,26 +157,28 @@ export default function ContactComponent({
                                 type="button">
                                 Agregar nota
                             </button>
+                            <button
+                                className={styles['btn-send-custom']}
+                                disabled={loadingText}
+                                type='submit'
+                                aria-label='Enviar mensaje de contacto'>
+                                {loadingText ? "Cargando.." : "Enviar"}
+                            </button>
                         </div>
-                        <button
-                            className={styles['btn-send-custom']}
-                            disabled={loadingText}
-                            type='submit'
-                            aria-label='Enviar mensaje de contacto'>
-                            {loadingText ? "Cargando.." : "Enviar"}
-                        </button>
-                        {errorMessage && <p>{errorMessage}</p>}
                         <p className={styles['text-note-custom']}>Nos pondremos en contacto dentro de las proximias 72hs</p>
                     </form>
                 </div>
-
-                {isNote && <label className={styles['wrapper-note']}>
-                    <p className={styles['text-custom']}>Nota</p>
-                    <textarea
-                        className={styles['text-area-custom']}
-                        placeholder="Ej: Que falto detallar?"
-                        onChange={handleChangeNoteRef} />
-                </label>}
+                {
+                    errorMessage &&
+                    <p className={styles['text-error-custom']}>{errorMessage}</p>}
+                {isNote &&
+                    <label className={styles['wrapper-note']}>
+                        <p className={styles['text-custom']}>Nota</p>
+                        <textarea
+                            className={styles['text-area-custom']}
+                            placeholder="Ej: Que falto detallar?"
+                            onChange={handleChangeNoteRef} />
+                    </label>}
             </div>
         </div>
     )

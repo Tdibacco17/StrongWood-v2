@@ -1,15 +1,20 @@
 .container-section-product-contact {
     min-width: 100%;
     max-width: 100%;
-    padding: 0 1.5rem;
+    padding: 6rem 1.5rem;
 
     .container-wrapper-card-contact-vertical {
         display: flex;
         flex-direction: column;
+        gap: 2rem;
         background-color: var(--secondary-color);
         border-radius: var(--border-radius);
         box-shadow: var(--box-shadow);
         padding: 2rem;
+
+        @media (max-width:1170px) {
+            padding: 2rem 1rem;
+        }
 
         .container-wrapper-card-contact {
             display: flex;
@@ -30,6 +35,13 @@
                     pointer-events: none;
                 }
 
+                @media (max-width:1170px) {
+                    min-height: 21.4rem;
+                    max-height: 21.4rem;
+                    min-width: 21.4rem;
+                    max-width: 21.4rem;
+                }
+
                 .container-inner-image-product-contact {
                     object-fit: cover;
                     object-position: center;
@@ -40,13 +52,24 @@
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;
-
                 --width-large-form: 20rem;
+
+                @media (max-width:1250px) {
+                    --width-large-form: 18rem;
+                }
+
+                @media (max-width:1170px) {
+                    --width-large-form: 16rem;
+                }
 
                 .wrapper-input {
                     display: flex;
                     align-items: flex-end;
                     gap: 3rem;
+
+                    @media (max-width:1170px) {
+                        gap: 1.5rem;
+                    }
 
                     .wrapper-label {
                         display: flex;
@@ -130,20 +153,31 @@
                             }
                         }
                     }
-                }
 
-                .btn-send-custom {
-                    border: none;
-                    padding: 0.5rem 1rem;
-                    border-radius: var(--border-radius);
-                    font-weight: var(--font-bold);
-                    font-size: var(--font-small);
-                    background-color: var(--primary-color);
-                    color: var(--primary-white);
-                    cursor: pointer;
+                    .btn-send-custom {
+                        min-width: var(--width-large-form);
+                        max-width: var(--width-large-form);
+                        border: none;
+                        padding: 0.5rem 1rem;
+                        border-radius: var(--border-radius);
+                        font-weight: var(--font-bold);
+                        font-size: var(--font-small);
+                        background-color: var(--primary-color);
+                        color: var(--primary-white);
+                        cursor: pointer;
 
-                    &:hover {
-                        color: var(--tertiary-color)
+                        &:hover {
+                            color: var(--tertiary-color)
+                        }
+
+                        &:disabled {
+                            cursor: not-allowed;
+                            opacity: 0.6;
+
+                            &:hover {
+                                color: var(--primary-white);
+                            }
+                        }
                     }
                 }
 
@@ -153,6 +187,12 @@
                     color: var(--secondary-white);
                 }
             }
+        }
+
+        .text-error-custom {
+            color: var(--tertiary-color);
+            font-weight: var(--font-bold);
+            font-size: var(--font-medium);
         }
 
         .wrapper-note {
@@ -178,6 +218,7 @@
                 font-size: var(--font-small);
                 color: var(--primary-white);
                 outline: none;
+                font-family: var(--font-Roboto), var(--font-mono);
 
                 &:focus {
                     border: 1px solid var(--tertiary-color);
