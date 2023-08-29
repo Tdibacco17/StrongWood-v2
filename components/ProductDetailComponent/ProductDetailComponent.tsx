@@ -15,10 +15,11 @@ export default function ProductDetailComponent() {
         <div className={styles['container-section-product-detail']}>
             <div className={styles['wrapper-header-product-detail']}>
                 <ProductDetailGalleryContainer />
-                {productData && <>
+                {productData ?
                     <ProductDetailInfoComponent />
-                </>}
-                {!productData && <div className={styles['container-loader']}><LoadingComponent /></div>}
+                    : <div className={styles['container-loader']}>
+                        <LoadingComponent />
+                    </div>}
             </div>
             <div className={styles['description-product-detail']}>
                 <p className={styles['title-description']}>{productData?.details.description.title}</p>

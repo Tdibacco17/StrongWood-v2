@@ -1,4 +1,4 @@
-import { PaymentMethodInterface } from '@/types';
+import { ContactProductProps, PaymentMethodInterface } from '@/types';
 import styles from './ContactComponent.module.scss'
 import Image from 'next/image';
 import { useContext } from 'react';
@@ -24,25 +24,7 @@ export default function ContactComponent({
     errorMessage,
     handleChangeIsNote,
     isNote
-}: {
-    handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
-    handlePaymentChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
-    nameRef: React.RefObject<HTMLInputElement>,
-    phoneRef: React.RefObject<HTMLInputElement>,
-    emailRef: React.RefObject<HTMLInputElement>,
-    directionRef: React.RefObject<HTMLInputElement>,
-    locationRef: React.RefObject<HTMLInputElement>,
-    noteRef: string,
-    handleChangeNoteRef: (event: React.ChangeEvent<HTMLTextAreaElement>) => void
-    selectRef: React.RefObject<HTMLSelectElement>,
-    paymentMethod: PaymentMethodInterface,
-    selectedPayment: string,
-    isSelect: boolean,
-    loadingText: boolean,
-    errorMessage: string,
-    handleChangeIsNote: () => void,
-    isNote: boolean
-}) {
+}: ContactProductProps) {
     const { productData } = useContext(
         ProductDetailContext
     ) as ProductsDataContextInterface;
@@ -162,14 +144,13 @@ export default function ContactComponent({
                                 disabled={loadingText}
                                 type='submit'
                                 aria-label='Enviar mensaje de contacto'>
-                                {loadingText ? "Cargando.." : "Enviar"}
+                                {loadingText ? "Cargando.." : "Enviar consulta"}
                             </button>
                         </div>
                         <p className={styles['text-note-custom']}>Nos pondremos en contacto dentro de las proximias 72hs</p>
                     </form>
                 </div>
-                {
-                    errorMessage &&
+                {errorMessage &&
                     <p className={styles['text-error-custom']}>{errorMessage}</p>}
                 {isNote &&
                     <label className={styles['wrapper-note']}>

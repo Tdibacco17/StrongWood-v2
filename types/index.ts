@@ -44,3 +44,23 @@ export interface MessageDataInterface {
     paymentMethod: string,
     price: string,
 }
+
+export interface ContactProductProps {
+    handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+    handlePaymentChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+    nameRef: React.RefObject<HTMLInputElement>,
+    phoneRef: React.RefObject<HTMLInputElement>,
+    emailRef: React.RefObject<HTMLInputElement>,
+    directionRef: React.RefObject<HTMLInputElement>,
+    locationRef: React.RefObject<HTMLInputElement>,
+    noteRef: string,
+    handleChangeNoteRef: (event: React.ChangeEvent<HTMLTextAreaElement>) => void
+    selectRef: React.RefObject<HTMLSelectElement>,
+    paymentMethod: PaymentMethodInterface,
+    selectedPayment: string,
+    isSelect: boolean,
+    loadingText: boolean,
+    errorMessage: string,
+    handleChangeIsNote: () => void,
+    isNote: boolean
+}
