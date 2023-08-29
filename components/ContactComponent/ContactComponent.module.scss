@@ -145,13 +145,18 @@
                             padding: 0.5rem 1rem;
                             font-weight: var(--font-regular);
                             font-size: var(--font-small);
-
+                            touch-action: manipulation; 
+                            
                             &:focus {
                                 border: 1px solid var(--tertiary-color);
                             }
 
                             &::placeholder {
                                 font-size: var(--font-small);
+                            }
+
+                            &::-ms-expand {
+                                display: none;
                             }
 
                             @media (max-width:992px) {
