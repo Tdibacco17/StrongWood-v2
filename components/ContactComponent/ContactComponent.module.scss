@@ -232,6 +232,15 @@
                         @media (max-width:585px) {
                             padding: 0.5rem;
                         }
+
+                        @media (max-width:442px) {
+                            transition: var(--transition-scale-mobile);
+
+                            &:hover {
+                                transform: var(--scale-mobile);
+                                transition: var(--transition-scale-mobile);
+                            }
+                        }
                     }
 
                     .btn-send-custom {
@@ -267,6 +276,15 @@
 
                         @media (max-width:585px) {
                             padding: 0.5rem;
+                        }
+
+                        @media (max-width:442px) {
+                            transition: var(--transition-scale-mobile);
+
+                            &:hover {
+                                transform: var(--scale-mobile);
+                                transition: var(--transition-scale-mobile);
+                            }
                         }
                     }
                 }
