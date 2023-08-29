@@ -144,7 +144,7 @@
                             border-radius: var(--border-radius);
                             padding: 0.5rem 1rem;
                             font-weight: var(--font-regular);
-                            font-size: var(--font-small);
+                            font-size: var(--font-medium);
 
                             &:focus {
                                 border: 1px solid var(--tertiary-color);
@@ -177,7 +177,7 @@
                         border-radius: var(--border-radius);
                         border: 1px solid var(--secondary-white);
                         font-weight: var(--font-bold);
-                        font-size: var(--font-small);
+                        font-size: var(--font-medium);
                         appearance: none;
                         position: relative;
                         background-color: var(--primary-color);
@@ -209,7 +209,7 @@
                         padding: 0.5rem 1rem;
                         border-radius: var(--border-radius);
                         font-weight: var(--font-bold);
-                        font-size: var(--font-small);
+                        font-size: var(--font-medium);
                         background-color: var(--primary-color);
                         color: var(--primary-white);
                         cursor: pointer;
@@ -254,7 +254,7 @@
                         padding: 0.5rem 1rem;
                         border-radius: var(--border-radius);
                         font-weight: var(--font-bold);
-                        font-size: var(--font-small);
+                        font-size: var(--font-medium);
                         background-color: var(--primary-color);
                         color: var(--primary-white);
                         box-shadow: var(--box-shadow);
@@ -327,7 +327,7 @@
                 background-color: transparent;
                 padding: 0.5rem;
                 font-weight: var(--font-regular);
-                font-size: var(--font-small);
+                font-size: var(--font-medium);
                 color: var(--primary-white);
                 outline: none;
                 font-family: var(--font-Roboto), var(--font-mono);
