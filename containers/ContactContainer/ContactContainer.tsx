@@ -58,7 +58,8 @@ export default function ContactContainer({
     };
 
     const handleValidation = () => {
-        const regex = /^\+[0-9]+$/;
+        // const regex = /^\+[0-9]+$/;
+        const regex = /^[0-9]+$/;
 
         if (
             nameRef.current?.value.trim() === "" ||
@@ -77,7 +78,7 @@ export default function ContactContainer({
         }
 
         if (phoneRef.current?.value && !(regex.test(phoneRef.current?.value.trim()))) {
-            setErrorMessage("Numero de telefono tiene que ser solo caracteres numericos y el signo + delante");
+            setErrorMessage("Numero de telefono tiene que ser solo caracteres numericos");
             return false;
         }
 
@@ -133,7 +134,7 @@ export default function ContactContainer({
                     setLoadingText(false);
                     // setIsModal(false);
                     router.push("/");
-                }, 2500)
+                }, 1500)
                 return
             }
             return
