@@ -18,7 +18,7 @@ export async function POST(req: Request) {
         });
 
         const mailOptions = {
-            from: `Strongwood ${process.env.USERNAME_TEST}`,
+            from: `STRONGWOOD ${process.env.USERNAME_TEST}`,
             to: `${process.env.USERNAME_TEST}`,
             subject: "Nueva venta",
             html: contentHtml,
