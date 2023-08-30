@@ -34,7 +34,7 @@ export default function ContactComponent({
                             // required
                             type="text"
                             name="phone"
-                            placeholder='Ej: +54911...'
+                            placeholder='Ej: 114344...'
                             ref={phoneRef} />
                     </label>
                 </div>
@@ -77,7 +77,7 @@ export default function ContactComponent({
                     <p className={styles['text-custom']}>Nota</p>
                     <textarea
                         className={styles['text-area-custom']}
-                        placeholder="Ej: Que falto detallar?"
+                        placeholder="Ej: Dejanos tu consulta"
                         onChange={handleChangeNoteRef} />
                 </label>
                 <button

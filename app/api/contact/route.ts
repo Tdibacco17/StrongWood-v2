@@ -1,89 +1,11 @@
-import { MessageContactDataInterface } from "@/types";
+import { templateContactHtml } from "@/utils/email/templateContactHtml";
 import { NextResponse } from "next/server";
 const nodemailer = require("nodemailer");
 
 export async function POST(req: Request) {
     try {
-
-        const { messageData }: { messageData: MessageContactDataInterface } = await req.json();
-
-        const contentHtml = `
-    <!DOCTYPE html>
-    <html>
-    
-    <head>
-        <meta charset="UTF-8">
-        <title>NUEVO PEDIDO</title>
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-                font-family: Arial, sans-serif;
-                line-height: 1.5;
-            }
-    
-            .container {
-                max-width: 600px;
-                margin: 0 auto;
-                padding: 20px;
-            }
-    
-            .header {
-                text-align: left;
-                padding-bottom: 20px;
-            }
-    
-            .header h1 {
-                margin: 0;
-                font-size: 24px;
-                font-weight: 900;
-            }
-    
-            .content {
-                padding: 20px 0;
-                border-top: 1px solid #ccc;
-                border-bottom: 1px solid #ccc;
-            }
-    
-            .personal-info {
-                margin-bottom: 15px;
-                color: #3a3a3a;
-            }
-    
-            .personal-info li {
-                margin-bottom: 5px;
-                color: #3a3a3a;
-                font-weight: 500;
-            }
-        
-            .link {
-                color: #007bff;
-                text-decoration: none;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="header">
-                <h1>STRONG WOOD</h1>
-            </div>
-            <div class="content">
-                <div class="personal-info">
-                    <h3>Datos personales:</h3>
-                    <ul>
-                        <li><strong>Nombre: </strong>${messageData.name}</li>
-                        <li><strong>Email: </strong><a href="mailto:{email}" class="link">${messageData.email}</a></li>
-                        <li><strong>Teléfono: </strong><a href="https://wa.me/{phone}" class="link">${messageData.phone}</a></li>
-                        <li><strong>Localidad: </strong>${messageData.location}</li>
-                        <li><strong>Dirección: </strong>${messageData.direction}</li>
-                        <li><strong>Nota: </strong>${messageData.note}</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </body>
-    </html>
-    `
+        const body = await req.json();
+        const contentHtml = templateContactHtml(body)
 
         const transporter = nodemailer.createTransport({
             host: `${process.env.EMAIL_SERVICE}`,
@@ -111,7 +33,7 @@ export async function POST(req: Request) {
             })
         })
         if (!server) {
-            return NextResponse.json({ message: "ERROR SERVER", status: 500 }, { status: 500 })
+            return NextResponse.json({ message: "Error instantiating smtp transporter", status: 500 }, { status: 500 })
         }
 
         const success = await new Promise((resolve, reject) => {
@@ -123,11 +45,11 @@ export async function POST(req: Request) {
             })
         })
         if (!success) {
-            return NextResponse.json({ message: "ERROR SUCCESS", status: 500 }, { status: 500 })
+            return NextResponse.json({ message: "An error ocurred sending your email", status: 500 }, { status: 500 })
         }
-        return NextResponse.json({ message: "OKEY", status: 200 }, { status: 200 })
+        return NextResponse.json({ message: "Message sent", status: 200 }, { status: 200 })
     } catch (error) {
-        return NextResponse.json({ message: "ERROR SERVER", status: 500 }, { status: 500 });
+        return NextResponse.json({ message: "Catch error", status: 500 }, { status: 500 });
     }
 
 }

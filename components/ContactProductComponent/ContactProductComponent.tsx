@@ -67,7 +67,7 @@ export default function ContactProductComponent({
                                     // required
                                     type="text"
                                     name="phone"
-                                    placeholder='Ej: +54911...'
+                                    placeholder='Ej: 114344...'
                                     ref={phoneRef} />
                             </label>
                         </div>
