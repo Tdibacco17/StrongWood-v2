@@ -5,7 +5,7 @@ const nodemailer = require("nodemailer");
 export async function POST(req: Request) {
     try {
         const body = await req.json();
-        const contentHtml = templateContactHtml(body)
+        const contentHtml = templateContactHtml(body.messageData)
 
         const transporter = nodemailer.createTransport({
             host: `${process.env.EMAIL_SERVICE}`,
