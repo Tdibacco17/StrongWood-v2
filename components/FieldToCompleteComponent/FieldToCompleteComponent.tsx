@@ -18,7 +18,7 @@ export default function FieldToCompleteComponent({
     if (isTextAreaField) {
         return (
             <label className={styles['wrapper-note']}>
-                <p className={styles['text-custom']}>Nota</p>
+                <p className={styles['text-custom']}>{fieldProps?.label}</p>
                 <textarea
                     className={styles['text-area-custom']}
                     placeholder="Ej: Dejanos tu consulta"

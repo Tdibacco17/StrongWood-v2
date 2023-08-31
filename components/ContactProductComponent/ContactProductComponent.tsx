@@ -53,23 +53,16 @@ export default function ContactProductComponent({
                     </div>
                     <form onSubmit={handleSubmit} className={styles['container-section-form']}>
                         <div className={styles['wrapper-field-complete']}>
-                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={false}
-                                fieldProps={data.contact.fields.name} valueRef={nameRef} />
-                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={false}
-                                fieldProps={data.contact.fields.phone} valueRef={phoneRef} />
+                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={false} fieldProps={data.contact.fields.name} valueRef={nameRef} />
+                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={false} fieldProps={data.contact.fields.phone} valueRef={phoneRef} />
                         </div>
                         <div className={styles['wrapper-field-complete']}>
-                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={false}
-                                fieldProps={data.contact.fields.email} valueRef={emailRef} />
-                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={false}
-                                fieldProps={data.contact.fields.direction} valueRef={directionRef} />
+                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={false} fieldProps={data.contact.fields.email} valueRef={emailRef} />
+                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={false} fieldProps={data.contact.fields.direction} valueRef={directionRef} />
                         </div>
                         <div className={styles['wrapper-field-complete']}>
-                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={false}
-                                fieldProps={data.contact.fields.location} valueRef={locationRef} />
-                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={true}
-                                selectProps={data.contact.fields.select.options} handlePaymentChange={handlePaymentChange}
-                                selectRef={selectRef} selectedPayment={selectedPayment} />
+                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={false} fieldProps={data.contact.fields.location} valueRef={locationRef} />
+                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={true} selectProps={data.contact.fields.select.options} handlePaymentChange={handlePaymentChange} selectRef={selectRef} selectedPayment={selectedPayment} />
                         </div>
                         <div className={styles['wrapper-field-complete']}>
                             <button className={styles['btn-custom']}
@@ -91,8 +84,7 @@ export default function ContactProductComponent({
                 </div>
                 {errorMessage && <p className={styles['text-error-custom']}>{errorMessage}</p>}
                 {isNote &&
-                    <FieldToCompleteComponent isTextAreaField={true} isSelectField={false}
-                        fieldProps={data.contact.fields.textarea} handleChangeNoteRef={handleChangeNoteRef} />}
+                    <FieldToCompleteComponent isTextAreaField={true} isSelectField={false} fieldProps={data.contact.fields.textarea} handleChangeNoteRef={handleChangeNoteRef} />}
             </div>
         </div>
     )

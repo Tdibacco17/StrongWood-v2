@@ -42,7 +42,7 @@
                 gap: 1.5rem;
             }
 
-            @media (max-width:585px) {
+            @media (max-width:600px) {
                 grid-template-columns: repeat(1, 1fr);
             }
         }
@@ -80,7 +80,7 @@
             max-width: 100%;
         }
 
-        @media (max-width:585px) {
+        @media (max-width:600px) {
             padding: 0.5rem;
         }
 

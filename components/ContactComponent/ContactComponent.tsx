@@ -20,23 +20,17 @@ export default function ContactComponent({
         <div className={styles['container-section-contact']}>
             <form onSubmit={handleSubmit} className={styles['container-section-form']}>
                 <div className={styles['wrapper-field-complete']}>
-                    <FieldToCompleteComponent isTextAreaField={false} isSelectField={false}
-                        fieldProps={data.contact.fields.name} valueRef={nameRef} />
-                    <FieldToCompleteComponent isTextAreaField={false} isSelectField={false}
-                        fieldProps={data.contact.fields.phone} valueRef={phoneRef} />
+                    <FieldToCompleteComponent isTextAreaField={false} isSelectField={false} fieldProps={data.contact.fields.name} valueRef={nameRef} />
+                    <FieldToCompleteComponent isTextAreaField={false} isSelectField={false} fieldProps={data.contact.fields.phone} valueRef={phoneRef} />
                 </div>
                 <div className={styles['wrapper-field-complete']}>
-                    <FieldToCompleteComponent isTextAreaField={false} isSelectField={false}
-                        fieldProps={data.contact.fields.email} valueRef={emailRef} />
-                    <FieldToCompleteComponent isTextAreaField={false} isSelectField={false}
-                        fieldProps={data.contact.fields.direction} valueRef={directionRef} />
+                    <FieldToCompleteComponent isTextAreaField={false} isSelectField={false} fieldProps={data.contact.fields.email} valueRef={emailRef} />
+                    <FieldToCompleteComponent isTextAreaField={false} isSelectField={false} fieldProps={data.contact.fields.direction} valueRef={directionRef} />
                 </div>
                 <div className={styles['wrapper-field-complete']}>
-                    <FieldToCompleteComponent isTextAreaField={false} isSelectField={false}
-                        fieldProps={data.contact.fields.location} valueRef={locationRef} />
+                    <FieldToCompleteComponent isTextAreaField={false} isSelectField={false} fieldProps={data.contact.fields.location} valueRef={locationRef} />
                 </div>
-                <FieldToCompleteComponent isTextAreaField={true} isSelectField={false}
-                    fieldProps={data.contact.fields.textarea} handleChangeNoteRef={handleChangeNoteRef} />
+                <FieldToCompleteComponent isTextAreaField={true} isSelectField={false} fieldProps={data.contact.fields.textarea} handleChangeNoteRef={handleChangeNoteRef} />
                 <button className={styles['btn-send-custom']}
                     type='submit'
                     disabled={loadingText}
