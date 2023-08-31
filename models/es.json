@@ -262,5 +262,88 @@
     },
     "productPage": {
         "sectionLink": "top"
+    },
+    "contact": {
+        "fields": {
+            "name": {
+                "label": "Nombre",
+                "input": {
+                    "type": "text",
+                    "name": "name",
+                    "placeholder": "Ej: Nombre"
+                }
+            },
+            "phone": {
+                "label": "Teléfono",
+                "input": {
+                    "type": "text",
+                    "name": "phone",
+                    "placeholder": "Ej: 114344.."
+                }
+            },
+            "email": {
+                "label": "Email",
+                "input": {
+                    "type": "email",
+                    "name": "email",
+                    "placeholder": "Ej: email@email.com"
+                }
+            },
+            "direction": {
+                "label": "Dirección",
+                "input": {
+                    "type": "text",
+                    "name": "direction",
+                    "placeholder": "Ej: Calle 123 piso A"
+                }
+            },
+            "location": {
+                "label": "Localidad",
+                "input": {
+                    "type": "text",
+                    "name": "location",
+                    "placeholder": "Ej: Caseros"
+                }
+            },
+            "textarea": {
+                "label": "Nota",
+                "input": {
+                    "placeholder": "Ej: Dejanos tu consulta"
+                }
+            },
+            "select":{
+                "options":[
+                    {
+                        "option_id":1,
+                        "text": "Seleccionar metodo de pago",
+                        "value": ""
+                    },
+                    {
+                        "option_id":2,
+                        "text": "Tarjeta",
+                        "value": "tarjeta"
+                    },
+                    {
+                        "option_id":3,
+                        "text": "Efectivo",
+                        "value": "efectivo"
+                    }
+                ]
+            }
+        },
+        "buttons": {
+            "submit": {
+                "type": "submit",
+                "ariaLabel": "Enviar mensaje de contacto",
+                "text": "Enviar consulta",
+                "loading": "Cargando.."
+            },
+            "addNote": {
+                "type": "button",
+                "ariaLabel": "Agregar nota",
+                "text": "Agregar nota"
+            }
+        },
+        "info": "Nos pondremos en contacto dentro de las proximias 72hs"
     }
 }

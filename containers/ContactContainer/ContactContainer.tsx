@@ -47,7 +47,6 @@ export default function ContactContainer() {
         return true;
     };
 
-
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 

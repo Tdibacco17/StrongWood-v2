@@ -33,6 +33,35 @@ export interface NavigationProps {
 
 export type PaymentMethodInterface = 'efectivo' | 'tarjeta';
 
+export interface FieldToCompleteProps {
+    fieldProps?: FieldProps,
+    selectProps?: SelectProps[],
+    valueRef?: React.RefObject<HTMLInputElement>,
+    selectRef?: React.RefObject<HTMLSelectElement>,
+    handleChangeNoteRef?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void,
+    handlePaymentChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void,
+    selectedPayment?: string,
+    paymentMethod?: string,
+    isSelect?: boolean,
+    isTextAreaField: boolean,
+    isSelectField: boolean
+}
+
+export interface FieldProps {
+    label: string,
+    input: {
+        type?: string,
+        name?: string,
+        placeholder: string,
+    }
+}
+
+export interface SelectProps {
+    option_id: number,
+    text: string,
+    value: string
+}
+
 //CONTACT PRODUCT
 export interface MessageContactProductDataInterface {
     name: string,

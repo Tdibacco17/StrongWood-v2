@@ -5,6 +5,8 @@ import { useContext } from 'react';
 import { ProductDetailContext } from '@/context/ProductDetailProvider';
 import { ProductsDataContextInterface } from '@/types/products';
 import LoadingComponent from '../LoadingComponent/LoadingComponent';
+import FieldToCompleteComponent from '../FieldToCompleteComponent/FieldToCompleteComponent';
+import data from '@/models/es.json'
 
 export default function ContactProductComponent({
     handleSubmit,
@@ -35,130 +37,62 @@ export default function ContactProductComponent({
                 {/* MODAL */}
                 <div className={styles['container-wrapper-card-contact']}>
                     <div className={styles['container-outer-image-product-contact']}>
-                        {productData ? <Image
-                            src={productData.image.imgSrc}
-                            alt={productData.image.imgAlt}
-                            placeholder='blur'
-                            blurDataURL={productData.image.imgBlur}
-                            priority
-                            fill
-                            sizes='(max-width: 992px) 50vw, (max-width: 442px) 33vw, 40vw'
-                            className={styles['container-inner-image-product-contact']}
-                        />
+                        {productData ?
+                            <Image
+                                src={productData.image.imgSrc}
+                                alt={productData.image.imgAlt}
+                                placeholder='blur'
+                                blurDataURL={productData.image.imgBlur}
+                                priority
+                                fill
+                                sizes='(max-width: 992px) 50vw, (max-width: 442px) 33vw, 40vw'
+                                className={styles['container-inner-image-product-contact']}
+                            />
                             : <LoadingComponent />
                         }
                     </div>
                     <form onSubmit={handleSubmit} className={styles['container-section-form']}>
-                        <div className={styles['wrapper-input']}>
-                            <label className={styles['wrapper-label']}>
-                                <p className={styles['text-custom']}>Nombre</p>
-                                <input
-                                    className={styles['input-custom']}
-                                    // required
-                                    type="text"
-                                    name="name"
-                                    placeholder='Ej: Nombre'
-                                    ref={nameRef} />
-                            </label>
-                            <label className={styles['wrapper-label']}>
-                                <p className={styles['text-custom']}>Teléfono</p>
-                                <input
-                                    className={styles['input-custom']}
-                                    // required
-                                    type="text"
-                                    name="phone"
-                                    placeholder='Ej: 114344...'
-                                    ref={phoneRef} />
-                            </label>
+                        <div className={styles['wrapper-field-complete']}>
+                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={false}
+                                fieldProps={data.contact.fields.name} valueRef={nameRef} />
+                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={false}
+                                fieldProps={data.contact.fields.phone} valueRef={phoneRef} />
                         </div>
-                        <div className={styles['wrapper-input']}>
-                            <label className={styles['wrapper-label']}>
-                                <p className={styles['text-custom']}>Email</p>
-                                <input
-                                    className={styles['input-custom']}
-                                    required
-                                    type="email"
-                                    name="email"
-                                    placeholder='Ej: email@email.com'
-                                    ref={emailRef} />
-                            </label>
-                            <label className={styles['wrapper-label']}>
-                                <p className={styles['text-custom']}>Dirección</p>
-                                <input
-                                    className={styles['input-custom']}
-                                    // required
-                                    type="text"
-                                    name="direction"
-                                    placeholder='Ej: Calle 123 piso A'
-                                    ref={directionRef} />
-                            </label>
+                        <div className={styles['wrapper-field-complete']}>
+                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={false}
+                                fieldProps={data.contact.fields.email} valueRef={emailRef} />
+                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={false}
+                                fieldProps={data.contact.fields.direction} valueRef={directionRef} />
                         </div>
-                        <div className={styles['wrapper-input']}>
-                            <label className={styles['wrapper-label']}>
-                                <p className={styles['text-custom']}>Localidad</p>
-                                <input
-                                    className={styles['input-custom']}
-                                    // required
-                                    type="text"
-                                    name="location"
-                                    placeholder='Ej: Caseros'
-                                    ref={locationRef} />
-                            </label>
-                            <label className={styles['wrapper-label']}>
-                                {
-                                    !isSelect ?
-                                        <p className={styles['text-custom']}>
-                                            Abonar en {paymentMethod ? paymentMethod : ""}
-                                        </p>
-                                        : <p className={styles['text-custom']}>
-                                            Abonar en {selectedPayment}
-                                        </p>
-                                }
-                                <select
-                                    className={styles['select-custom']}
-                                    value={selectedPayment}
-                                    onChange={handlePaymentChange}
-                                    ref={selectRef}>
-                                    <option value="">
-                                        Seleccionar metodo de pago
-                                    </option>
-                                    <option value="tarjeta">
-                                        Tarjeta
-                                    </option>
-                                    <option value="efectivo">
-                                        Efectivo
-                                    </option>
-                                </select>
-                            </label>
+                        <div className={styles['wrapper-field-complete']}>
+                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={false}
+                                fieldProps={data.contact.fields.location} valueRef={locationRef} />
+                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={true}
+                                selectProps={data.contact.fields.select.options} handlePaymentChange={handlePaymentChange}
+                                selectRef={selectRef} selectedPayment={selectedPayment} />
                         </div>
-                        <div className={styles['wrapper-input']}>
-                            <button
-                                className={styles['btn-custom']}
+                        <div className={styles['wrapper-field-complete']}>
+                            <button className={styles['btn-custom']}
                                 disabled={noteRef.trim().length > 0}
                                 onClick={handleChangeIsNote}
-                                type="button">
-                                Agregar nota
+                                type="button"
+                                aria-label={data.contact.buttons.addNote.ariaLabel}>
+                                {data.contact.buttons.addNote.text}
                             </button>
-                            <button
-                                className={styles['btn-send-custom']}
-                                disabled={loadingText}
+                            <button className={styles['btn-send-custom']}
                                 type='submit'
-                                aria-label='Enviar mensaje de contacto'>
-                                {loadingText ? "Cargando.." : "Enviar consulta"}
+                                disabled={loadingText}
+                                aria-label={data.contact.buttons.submit.ariaLabel}>
+                                {loadingText ? data.contact.buttons.submit.loading : data.contact.buttons.submit.text}
                             </button>
                         </div>
-                        <p className={styles['text-note-custom']}>Nos pondremos en contacto dentro de las proximias 72hs</p>
+                        <p className={styles['text-note-custom']}>{data.contact.info}</p>
                     </form>
                 </div>
                 {errorMessage && <p className={styles['text-error-custom']}>{errorMessage}</p>}
                 {isNote &&
-                    <label className={styles['wrapper-note']}>
-                        <p className={styles['text-custom']}>Nota</p>
-                        <textarea
-                            className={styles['text-area-custom']}
-                            placeholder="Ej: Que falto detallar?"
-                            onChange={handleChangeNoteRef} />
-                    </label>}
+                    <FieldToCompleteComponent isTextAreaField={true} isSelectField={false}
+                        fieldProps={data.contact.fields.textarea} handleChangeNoteRef={handleChangeNoteRef} />}
             </div>
         </div>
     )

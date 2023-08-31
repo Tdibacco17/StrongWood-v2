@@ -1,10 +1,15 @@
+import { MessageContactDataInterface } from "@/types";
 import { templateContactHtml } from "@/utils/email/templateContactHtml";
 import { NextResponse } from "next/server";
 const nodemailer = require("nodemailer");
 
+interface FormRequestInterface {
+    messageData: MessageContactDataInterface
+}
+
 export async function POST(req: Request) {
     try {
-        const body = await req.json();
+        const body = (await req.json()) as FormRequestInterface;
         const contentHtml = templateContactHtml(body.messageData)
 
         const transporter = nodemailer.createTransport({
@@ -19,7 +24,7 @@ export async function POST(req: Request) {
 
         const mailOptions = {
             from: `STRONGWOOD ${process.env.USERNAME_TEST}`,
-            to: `${process.env.USERNAME_TEST}`,
+            to: [`${process.env.USERNAME_TEST}`, body.messageData.email],
             subject: "Consulta de contacto",
             html: contentHtml,
         };

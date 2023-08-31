@@ -97,11 +97,12 @@
                 font-weight: var(--font-bold);
                 text-transform: uppercase;
                 border-radius: var(--border-radius);
-                border: none;
+                border: 1px solid var(--secondary-white);
                 box-shadow: var(--box-shadow);
 
                 &:hover {
                     color: var(--tertiary-color);
+                    border: 1px solid var(--tertiary-color);
                 }
 
                 @media (max-width:442px) {

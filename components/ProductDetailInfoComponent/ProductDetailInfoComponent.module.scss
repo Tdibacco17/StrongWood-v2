@@ -92,6 +92,7 @@
                 gap: 1rem;
                 background-color: var(--primary-color);
                 border-radius: var(--border-radius);
+                border: 1px solid var(--secondary-white);
                 color: var(--primary-white);
                 padding: 0.5rem 1rem;
                 box-shadow: var(--box-shadow);
@@ -101,6 +102,7 @@
 
                 &:hover {
                     color: var(--tertiary-color);
+                    border: 1px solid var(--tertiary-color);
                 }
 
                 @media (max-width:442px) {
