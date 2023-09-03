@@ -30,7 +30,7 @@ export default function ContactProductComponent({
     const { productData } = useContext(
         ProductDetailContext
     ) as ProductsDataContextInterface;
-
+    
     return (
         <div className={styles['container-section-product-contact']}>
             <div className={styles['container-wrapper-card-contact-vertical']}>
@@ -53,16 +53,16 @@ export default function ContactProductComponent({
                     </div>
                     <form onSubmit={handleSubmit} className={styles['container-section-form']}>
                         <div className={styles['wrapper-field-complete']}>
-                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={false} fieldProps={data.contact.fields.name} valueRef={nameRef} />
-                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={false} fieldProps={data.contact.fields.phone} valueRef={phoneRef} />
+                            <FieldToCompleteComponent contactPage={false} isTextAreaField={false} isSelectField={false} fieldProps={data.contact.fields.name} valueRef={nameRef} />
+                            <FieldToCompleteComponent contactPage={false} isTextAreaField={false} isSelectField={false} fieldProps={data.contact.fields.phone} valueRef={phoneRef} />
                         </div>
                         <div className={styles['wrapper-field-complete']}>
-                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={false} fieldProps={data.contact.fields.email} valueRef={emailRef} />
-                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={false} fieldProps={data.contact.fields.direction} valueRef={directionRef} />
+                            <FieldToCompleteComponent contactPage={false} isTextAreaField={false} isSelectField={false} fieldProps={data.contact.fields.email} valueRef={emailRef} />
+                            <FieldToCompleteComponent contactPage={false} isTextAreaField={false} isSelectField={false} fieldProps={data.contact.fields.direction} valueRef={directionRef} />
                         </div>
                         <div className={styles['wrapper-field-complete']}>
-                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={false} fieldProps={data.contact.fields.location} valueRef={locationRef} />
-                            <FieldToCompleteComponent isTextAreaField={false} isSelectField={true} selectProps={data.contact.fields.select.options} handlePaymentChange={handlePaymentChange} selectRef={selectRef} selectedPayment={selectedPayment} />
+                            <FieldToCompleteComponent contactPage={false} isTextAreaField={false} isSelectField={false} fieldProps={data.contact.fields.location} valueRef={locationRef} />
+                            <FieldToCompleteComponent contactPage={false} paymentMethod={paymentMethod} isSelect={isSelect} isTextAreaField={false} isSelectField={true} selectProps={data.contact.fields.select.options} handlePaymentChange={handlePaymentChange} selectRef={selectRef} selectedPayment={selectedPayment} />
                         </div>
                         <div className={styles['wrapper-field-complete']}>
                             <button className={styles['btn-custom']}
@@ -72,19 +72,41 @@ export default function ContactProductComponent({
                                 aria-label={data.contact.buttons.addNote.ariaLabel}>
                                 {data.contact.buttons.addNote.text}
                             </button>
+                        </div>
+
+                        <div className={`${styles['wrapper-field-complete']} ${styles['space-btn-submit']}`}>
                             <button className={styles['btn-send-custom']}
                                 type='submit'
                                 disabled={loadingText}
                                 aria-label={data.contact.buttons.submit.ariaLabel}>
                                 {loadingText ? data.contact.buttons.submit.loading : data.contact.buttons.submit.text}
                             </button>
+                            {
+                                isSelect && !isSelect ?
+                                    <p className={styles['resume-total']}>
+                                        Total: {paymentMethod ?
+                                            (paymentMethod === "tarjeta" ?
+                                                productData?.details.payment.card.offerPrice
+                                                : productData?.details.payment.cash.offerPrice)
+                                            : ""}
+                                    </p>
+                                    : <p className={styles['resume-total']}>
+                                        Total: {selectedPayment ?
+                                            (selectedPayment === "tarjeta" ?
+                                                productData?.details.payment.card.offerPrice
+                                                : productData?.details.payment.cash.offerPrice)
+                                            : ""
+                                        }
+                                    </p>
+                            }
                         </div>
+
                         <p className={styles['text-note-custom']}>{data.contact.info}</p>
                     </form>
                 </div>
                 {errorMessage && <p className={styles['text-error-custom']}>{errorMessage}</p>}
                 {isNote &&
-                    <FieldToCompleteComponent isTextAreaField={true} isSelectField={false} fieldProps={data.contact.fields.textarea} handleChangeNoteRef={handleChangeNoteRef} />}
+                    <FieldToCompleteComponent contactPage={false} isTextAreaField={true} isSelectField={false} fieldProps={data.contact.fields.textarea} handleChangeNoteRef={handleChangeNoteRef} />}
             </div>
         </div>
     )

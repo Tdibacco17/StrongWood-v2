@@ -4,14 +4,30 @@
     gap: 1rem;
     width: 100%;
 
+    --width-large-form: 20rem;
+
+    @media (max-width:1250px) {
+        --width-large-form: 18rem;
+    }
+
+    @media (max-width:1170px) {
+        --width-large-form: 16rem;
+    }
+
     .text-custom {
         font-weight: var(--font-bold);
         font-size: var(--font-xmedium);
     }
 
     .input-custom {
-        min-width: 100%;
-        max-width: 100%;
+        min-width: var(--width-large-form);
+        max-width: var(--width-large-form);
+
+        &.contact-page {
+            min-width: 100%;
+            max-width: 100%;
+        }
+
         outline: none;
         background-color: transparent;
         border: none;
@@ -39,50 +55,49 @@
             max-width: 100%;
         }
 
-        @media (max-width:600px) {
+        @media (max-width:640px) {
             padding: 0.5rem;
         }
     }
 
-
-.select-custom {
-    min-width: var(--width-large-form);
-    max-width: var(--width-large-form);
-    outline: none;
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-radius);
-    border: 1px solid var(--secondary-white);
-    font-weight: var(--font-bold);
-    font-size: var(--font-medium);
-    appearance: none;
-    position: relative;
-    background-color: var(--primary-color);
-    color: var(--primary-white);
-    cursor: pointer;
-
-    &:hover {
-        color: var(--tertiary-color);
-        border: 1px solid var(--tertiary-color);
-    }
-
-    &:focus {
+    .select-custom {
+        min-width: var(--width-large-form);
+        max-width: var(--width-large-form);
+        outline: none;
+        padding: 0.5rem 1rem;
+        border-radius: var(--border-radius);
+        border: 1px solid var(--secondary-white);
+        font-weight: var(--font-bold);
+        font-size: var(--font-medium);
+        appearance: none;
+        position: relative;
+        background-color: var(--primary-color);
         color: var(--primary-white);
-        border: 1px solid var(--primary-white);
-    }
+        cursor: pointer;
 
-    &::-ms-expand {
-        display: none;
-    }
+        &:hover {
+            color: var(--tertiary-color);
+            border: 1px solid var(--tertiary-color);
+        }
 
-    @media (max-width:992px) {
-        min-width: 100%;
-        max-width: 100%;
-    }
+        &:focus {
+            color: var(--primary-white);
+            border: 1px solid var(--primary-white);
+        }
 
-    @media (max-width:600px) {
-        padding: 0.5rem;
+        &::-ms-expand {
+            display: none;
+        }
+
+        @media (max-width:992px) {
+            min-width: 100%;
+            max-width: 100%;
+        }
+
+        @media (max-width:640px) {
+            padding: 0.5rem;
+        }
     }
-}
 }
 
 .wrapper-note {

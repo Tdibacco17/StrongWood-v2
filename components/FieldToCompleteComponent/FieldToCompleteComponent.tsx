@@ -13,6 +13,7 @@ export default function FieldToCompleteComponent({
     isSelectField,
     paymentMethod,
     isSelect,
+    contactPage
 }: FieldToCompleteProps) {
 
     if (isTextAreaField) {
@@ -57,7 +58,7 @@ export default function FieldToCompleteComponent({
         <label className={styles['wrapper-label']}>
             <p className={styles['text-custom']}>{fieldProps?.label}</p>
             <input
-                className={styles['input-custom']}
+                className={`${styles['input-custom']} ${contactPage ? styles['contact-page'] : ""}`}
                 // required
                 type={fieldProps?.input.type}
                 name={fieldProps?.input.name}

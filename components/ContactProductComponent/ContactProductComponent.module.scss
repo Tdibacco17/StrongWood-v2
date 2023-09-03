@@ -13,31 +13,32 @@
 
     .container-wrapper-card-contact-vertical {
         display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        background-color: var(--secondary-color);
-        border-radius: var(--border-radius);
-        box-shadow: var(--box-shadow);
-        padding: 2rem;
+        justify-content: center;
         overflow: hidden;
-
-        @media (max-width:1170px) {
-            padding: 2rem 1.3rem;
-        }
-
-        @media (max-width:992px) {
-            padding: 2rem 1rem;
-        }
 
         .container-wrapper-card-contact {
             display: flex;
             flex-direction: row-reverse;
             justify-content: space-between;
+            background-color: var(--secondary-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 3rem;
+            gap: 3rem;
+
+            @media (max-width:1170px) {
+                padding: 2rem;
+            }
 
             @media (max-width:992px) {
                 flex-direction: column;
                 align-items: center;
+                width: 100%;
                 gap: 2rem;
+            }
+
+            @media (max-width:640px) {
+                padding: 1rem;
             }
 
             .container-outer-image-product-contact {
@@ -108,10 +109,23 @@
                     max-width: 100%;
                 }
 
+                @media (max-width:305px) {
+                    min-width: var(--width-large-form);
+                    max-width: var(--width-large-form);
+                }
+
+                @media (max-width:290px) {
+                    --width-large-form: 15rem;
+                }
+
                 .wrapper-field-complete {
                     display: flex;
                     align-items: flex-end;
                     gap: 3rem;
+
+                    &.space-btn-submit {
+                        padding-top: 3rem;
+                    }
 
                     @media (max-width:1170px) {
                         gap: 1.5rem;
@@ -122,8 +136,17 @@
                         grid-template-columns: repeat(2, 1fr);
                     }
 
-                    @media (max-width:600px) {
+                    @media (max-width:640px) {
                         grid-template-columns: repeat(1, 1fr);
+                    }
+
+                    .resume-total {
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                        font-size: var(--font-xmedium);
+                        font-weight: var(--font-bold);
+                        text-transform: uppercase;
                     }
 
                     .btn-custom {
@@ -158,7 +181,7 @@
                             max-width: 100%;
                         }
 
-                        @media (max-width:600px) {
+                        @media (max-width:640px) {
                             padding: 0.5rem;
                         }
 
@@ -204,7 +227,7 @@
                             max-width: 100%;
                         }
 
-                        @media (max-width:600px) {
+                        @media (max-width:640px) {
                             padding: 0.5rem;
                         }
 

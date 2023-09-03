@@ -11,39 +11,46 @@
         padding: 6rem 0rem;
     }
 
-    .container-section-form {
+    .container-wrapper-card-contact {
         display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        background-color: var(--secondary-color);
-        border-radius: var(--border-radius);
-        box-shadow: var(--box-shadow);
-        padding: 2rem;
-        overflow: hidden;
+        justify-content: center;
 
-        @media (max-width:1170px) {
-            padding: 2rem 1.3rem;
-        }
-
-        @media (max-width:992px) {
-            padding: 2rem 1rem;
-            min-width: 100%;
-            max-width: 100%;
-        }
-
-        .wrapper-field-complete {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            min-width: 100%;
-            max-width: 100%;
-            gap: 3rem;
+        .container-section-form {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            background-color: var(--secondary-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+            overflow: hidden;
+            min-width: 80vw;
+            max-width: 80vw;
 
             @media (max-width:1170px) {
-                gap: 1.5rem;
+                padding: 2rem 1.3rem;
             }
 
-            @media (max-width:600px) {
-                grid-template-columns: repeat(1, 1fr);
+            @media (max-width:992px) {
+                padding: 2rem 1rem;
+                min-width: 100%;
+                max-width: 100%;
+            }
+
+            .wrapper-field-complete {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                min-width: 100%;
+                max-width: 100%;
+                gap: 3rem;
+
+                @media (max-width:1170px) {
+                    gap: 1.5rem;
+                }
+
+                @media (max-width:600px) {
+                    grid-template-columns: repeat(1, 1fr);
+                }
             }
         }
     }
@@ -98,5 +105,5 @@
         color: var(--tertiary-color);
         font-weight: var(--font-bold);
         font-size: var(--font-medium);
-    }  
+    }
 }

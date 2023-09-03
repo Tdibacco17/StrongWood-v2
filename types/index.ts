@@ -44,7 +44,8 @@ export interface FieldToCompleteProps {
     paymentMethod?: string,
     isSelect?: boolean,
     isTextAreaField: boolean,
-    isSelectField: boolean
+    isSelectField: boolean,
+    contactPage: boolean
 }
 
 export interface FieldProps {
@@ -108,7 +109,6 @@ export interface ContactProps {
     emailRef: React.RefObject<HTMLInputElement>,
     directionRef: React.RefObject<HTMLInputElement>,
     locationRef: React.RefObject<HTMLInputElement>,
-    noteRef: string,
     handleChangeNoteRef: (event: React.ChangeEvent<HTMLTextAreaElement>) => void
     loadingText: boolean,
     errorMessage: string,

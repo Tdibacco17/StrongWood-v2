@@ -97,7 +97,6 @@ export default function ContactContainer() {
         emailRef={emailRef}
         directionRef={directionRef}
         locationRef={locationRef}
-        noteRef={noteRef}
         handleChangeNoteRef={handleChangeNoteRef}
         loadingText={loadingText}
         errorMessage={errorMessage}
