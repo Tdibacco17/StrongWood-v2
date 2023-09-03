@@ -21,11 +21,17 @@
         @media (max-width:992px) {
             flex-direction: column-reverse;
             justify-content: space-between;
+            align-items: center;
             gap: 2rem;
             padding: 1.5rem;
             align-items: flex-start;
-            min-height: 57rem;
+            min-height: 54rem;
             max-height: revert;
+        }
+
+        @media (max-width:768px) {
+            min-height: 57rem;
+            gap: 3rem;
         }
 
         .container-loader {
