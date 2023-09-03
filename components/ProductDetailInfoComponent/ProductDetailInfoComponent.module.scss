@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    @media (max-width:992px) {
+    @media (max-width:1080px) {
         min-height: revert;
         max-height: revert;
         min-width: 42rem;
@@ -51,7 +51,7 @@
         font-weight: var(--font-bold);
         font-size: var(--font-xmedium);
 
-        @media (max-width:992px) {
+        @media (max-width:1080px) {
             flex-direction: row;
         }
 

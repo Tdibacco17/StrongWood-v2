@@ -13,13 +13,15 @@ export default function ProductDetailComponent() {
 
     return (
         <div className={styles['container-section-product-detail']}>
-            <div className={styles['wrapper-header-product-detail']}>
-                <ProductDetailGalleryContainer />
-                {productData ?
-                    <ProductDetailInfoComponent />
-                    : <div className={styles['container-loader']}>
-                        <LoadingComponent />
-                    </div>}
+            <div className={styles['container-card-prodcut-detail']}>
+                <div className={styles['wrapper-header-product-detail']}>
+                    <ProductDetailGalleryContainer />
+                    {productData ?
+                        <ProductDetailInfoComponent />
+                        : <div className={styles['container-loader']}>
+                            <LoadingComponent />
+                        </div>}
+                </div>
             </div>
             <div className={styles['description-product-detail']}>
                 <p className={styles['title-description']}>{productData?.details.description.title}</p>
