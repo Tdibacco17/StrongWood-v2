@@ -7,16 +7,27 @@
     align-items: flex-start;
 
     @media (max-width:1080px) {
-        min-height: revert;
-        max-height: revert;
+        min-height: 19rem;
+        max-height: 19rem;
         min-width: 42rem;
         max-width: 42rem;
         gap: 5rem;
     }
 
     @media (max-width:768px) {
+        min-height: 29rem;
+        max-height: 29rem;
         min-width: 100%;
         max-width: 100%;
+    }
+
+    @media (max-width: 523px) {
+        padding: 0 1rem;
+    }
+
+    @media (max-width:350px) {
+        min-height: 33rem;
+        max-height: revert;
     }
 
     .container-section-old-prices {

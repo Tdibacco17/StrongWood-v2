@@ -48,7 +48,7 @@ export default function ProductDetailGalleryComponent({
                                         alt={image.imgAlt}
                                         placeholder='blur'
                                         blurDataURL={image.imgBlur}
-                                        quality={50}
+                                        quality={35}
                                         sizes='(max-width:442px) 33vw, 40vw'
                                         fill
                                         className={styles['container-inner-image-carousel']}
