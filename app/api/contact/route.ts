@@ -13,18 +13,18 @@ export async function POST(req: Request) {
         const contentHtml = templateContactHtml(body.messageData)
 
         const transporter = nodemailer.createTransport({
-            host: `${process.env.EMAIL_SERVICE}`,
+            host: `${process.env.NEXT_PUBLIC_EMAIL_SERVICE}`,
             port: 465,
             secure: true,
             auth: {
-                user: `${process.env.USERNAME_TEST}`,
-                pass: `${process.env.PASSWORD_TEST}`
+                user: `${process.env.NEXT_PUBLIC_USERNAME_TEST}`,
+                pass: `${process.env.NEXT_PUBLIC_PASSWORD_TEST}`
             }
         });
 
         const mailOptions = {
-            from: `STRONGWOOD ${process.env.USERNAME_TEST}`,
-            to: [`${process.env.USERNAME_TEST}`, body.messageData.email],
+            from: `STRONGWOOD ${process.env.NEXT_PUBLIC_USERNAME_TEST}`,
+            to: [`${process.env.NEXT_PUBLIC_USERNAME_TEST}`, body.messageData.email],
             subject: "Consulta de contacto",
             html: contentHtml,
         };
