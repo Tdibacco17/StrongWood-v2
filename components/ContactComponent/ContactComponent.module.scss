@@ -95,10 +95,18 @@
             transition: var(--transition-scale-mobile);
 
             &:hover {
+                color: var(--primary-white);
+                border: 1px solid var(--secondary-white);
                 transform: var(--scale-mobile);
                 transition: var(--transition-scale-mobile);
             }
         }
+    }
+
+    .text-note-custom {
+        font-weight: var(--font-bold);
+        font-size: var(--font-small);
+        color: var(--secondary-white);
     }
 
     .text-error-custom {

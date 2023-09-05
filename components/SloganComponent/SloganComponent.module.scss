@@ -110,6 +110,7 @@
 
                     &:hover {
                         color: var(--primary-white);
+                        border: 1px solid var(--secondary-white);
                         transform: var(--scale-mobile);
                         transition: var(--transition-scale-mobile);
                     }
