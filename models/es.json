@@ -264,6 +264,7 @@
         "sectionLink": "top"
     },
     "contact": {
+        "sectionLink": "top",
         "fields": {
             "name": {
                 "label": "Nombre",
@@ -311,20 +312,20 @@
                     "placeholder": "Ej: Dejanos tu consulta"
                 }
             },
-            "select":{
-                "options":[
+            "select": {
+                "options": [
                     {
-                        "option_id":1,
+                        "option_id": 1,
                         "text": "Seleccionar metodo de pago",
                         "value": ""
                     },
                     {
-                        "option_id":2,
+                        "option_id": 2,
                         "text": "Tarjeta",
                         "value": "tarjeta"
                     },
                     {
-                        "option_id":3,
+                        "option_id": 3,
                         "text": "Efectivo",
                         "value": "efectivo"
                     }
