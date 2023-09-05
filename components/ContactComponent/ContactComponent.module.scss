@@ -37,6 +37,10 @@
                 max-width: 100%;
             }
 
+            @media (max-width:442px) {
+                border-radius: revert;
+            }
+
             .wrapper-field-complete {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
