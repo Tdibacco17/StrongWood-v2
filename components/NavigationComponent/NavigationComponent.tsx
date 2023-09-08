@@ -18,8 +18,8 @@ export default function NavigationComponent({
     return (
         <section className={`${styles['container-section-navigation']}`}>
             <div className={styles['wrapper-nav']}>
-                {showUrl ? <Link href={`${showUrl ? url : "/"}`} className={`${styles['container-icon-back']}`}>
-                    {showUrl && <ArrowLeftIconComponent fill={'white'} height={30} width={30} />}
+                {showUrl ? <Link href={`${url ?? "/"}`} className={`${styles['container-icon-back']}`}>
+                    <ArrowLeftIconComponent fill={'white'} height={30} width={30} />
                 </Link>
                     : <div className={styles['showUrl']} />
                 }
