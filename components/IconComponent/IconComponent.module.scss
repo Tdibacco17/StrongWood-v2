@@ -4,20 +4,12 @@
     align-items: center;
     padding: 0.3rem;
 
-    &:hover {
-        .icon-svg {
-            cursor: pointer;
-            fill: var(--tertiary-color);
-            transition: color 0s ease-in-out;
-        }
-    }
-
-    @media (max-width: 442px) {
+    @media (min-width: 442px) {
         &:hover {
             .icon-svg {
-                cursor: default;
-                fill: initial;
-                transition: initial;
+                cursor: pointer;
+                fill: var(--tertiary-color);
+                transition: color 0s ease-in-out;
             }
         }
     }
