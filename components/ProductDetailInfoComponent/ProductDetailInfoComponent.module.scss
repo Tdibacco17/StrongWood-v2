@@ -101,12 +101,11 @@
                 display: flex;
                 align-items: center;
                 gap: 1rem;
-                background-color: var(--primary-color);
+                background-color: var(--secondary-color);
                 border-radius: var(--border-radius);
                 border: 1px solid var(--secondary-white);
                 color: var(--primary-white);
                 padding: 0.5rem 1rem;
-                box-shadow: var(--box-shadow);
                 cursor: pointer;
                 font-weight: var(--font-bold);
                 font-size: var(--font-medium);
@@ -118,6 +117,7 @@
 
                 @media (max-width:442px) {
                     transition: var(--transition-scale-mobile);
+                    box-shadow: var(--box-shadow);
 
                     &:hover {
                         color: var(--primary-white);

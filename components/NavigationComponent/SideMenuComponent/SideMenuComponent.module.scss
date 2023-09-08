@@ -1,8 +1,8 @@
 .container-menu-mobile {
     position: absolute;
     top: 0;
-    right: -60vw;
-    min-width: 60vw;
+    right: -50vw;
+    min-width: 50vw;
     min-height: 100vh;
     max-height: 100vh;
     background-color: var(--primary-color);
@@ -16,6 +16,11 @@
     &.isOpen {
         right: 0;
         opacity: 1;
+    }
+
+    @media (max-width:768px) {
+        right: -60vw;
+        width: 60vw;
     }
 
     @media (max-width:442px) {
@@ -69,7 +74,6 @@
                 border: none;
                 background-color: var(--secondary-color);
                 border-radius: var(--border-radius);
-                box-shadow: var(--box-shadow);
             }
         }
 

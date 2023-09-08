@@ -9,7 +9,7 @@ import ProyectsContainer from '@/containers/ProyectsContainer/ProyectsContainer'
 export default function HomePage() {
   return (
     <section id={data.homePage.sectionLink} className={styles['container-section-home-page']}>
-      <NavigationContainer isHome={true} />
+      <NavigationContainer isHome={true} showUrl={false} url={''} />
       <BannerComponent imgData={data.banner.image} />
       <SloganComponent />
       <CategoriesComponent />

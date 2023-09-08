@@ -1,10 +1,9 @@
 import styles from './NavigationComponent.module.scss'
 import data from '@/models/es.json'
 import Link from 'next/link'
-import { BurgerMenuIconComponent } from '../IconComponent/IconComponent'
-import NavDesktopComponent from './NavDesktopComponent/NavDesktopComponent'
-import NavMobileComponent from './NavMobileComponent/NavMobileComponent'
-import { NavigationProps } from '@/types'
+import { ArrowLeftIconComponent, BurgerMenuIconComponent } from '../IconComponent/IconComponent'
+import { NavigationUrlProps } from '@/types'
+import SideMenuComponent from './SideMenuComponent/SideMenuComponent'
 
 export default function NavigationComponent({
     isHome,
@@ -13,22 +12,21 @@ export default function NavigationComponent({
     showDropdown,
     handleShowDropdown,
     menuRef,
-    dropdownRef
-}: NavigationProps) {
+    url,
+    showUrl,
+}: NavigationUrlProps) {
     return (
         <section className={`${styles['container-section-navigation']}`}>
             <div className={styles['wrapper-nav']}>
+                <Link
+                    href={`${showUrl ? url : "/"}`}
+                    className={`${styles['container-icon-back']} 
+                    ${!showUrl ? styles['showUrl'] : ""}`}>
+                    {showUrl && <ArrowLeftIconComponent fill={'white'} height={30} width={30} />}
+                </Link>
                 <Link /*as={data.navigation.link}*/ href={data.navigation.link}>
                     <h1 className={styles['menu-logo']}>{data.navigation.title}</h1>
                 </Link>
-                <NavDesktopComponent
-                    isHome={isHome}
-                    showDropdown={showDropdown}
-                    handleShowDropdown={handleShowDropdown}
-                    menuRef={menuRef}
-                    showMenu={showMenu}
-                    dropdownRef={dropdownRef}
-                />
                 <button
                     type='button'
                     aria-label="Mostrar menú"
@@ -38,7 +36,7 @@ export default function NavigationComponent({
                     <BurgerMenuIconComponent fill={'white'} width={30} height={30} />
                 </button>
             </div>
-            <NavMobileComponent
+            <SideMenuComponent
                 isHome={isHome}
                 showMenu={showMenu}
                 handleShowMenu={handleShowMenu}
@@ -46,6 +44,6 @@ export default function NavigationComponent({
                 handleShowDropdown={handleShowDropdown}
                 menuRef={menuRef}
             />
-        </section>
+        </section >
     )
 }

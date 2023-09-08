@@ -1,11 +1,11 @@
 import { NavigationDropdownInterface, NavigationInterface, NavigationProps } from '@/types'
-import styles from './NavMobileComponent.module.scss'
+import styles from './SideMenuComponent.module.scss'
 import BtnScrollToSectionComponent from '../BtnScrollToComponent/BtnScrollToComponent'
 import data from '@/models/es.json'
 import Link from 'next/link'
 import { CloseIconComponent } from '@/components/IconComponent/IconComponent'
 
-export default function NavMobileComponent({
+export default function SideMenuComponent({
     isHome,
     showMenu,
     handleShowMenu,

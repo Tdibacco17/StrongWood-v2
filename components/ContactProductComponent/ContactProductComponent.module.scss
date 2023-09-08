@@ -21,7 +21,6 @@
         padding: 2rem;
         background-color: var(--secondary-color);
         border-radius: var(--border-radius);
-        box-shadow: var(--box-shadow);
         gap: 3rem;
 
         @media (max-width:1180px) {
@@ -173,7 +172,6 @@
                         background-color: var(--primary-color);
                         color: var(--primary-white);
                         cursor: pointer;
-                        box-shadow: var(--box-shadow);
 
                         &:hover {
                             color: var(--tertiary-color);
@@ -200,6 +198,7 @@
 
                         @media (max-width:442px) {
                             transition: var(--transition-scale-mobile);
+                            box-shadow: var(--box-shadow);
 
                             &:hover {
                                 color: var(--primary-white);
@@ -220,7 +219,6 @@
                         font-size: var(--font-medium);
                         background-color: var(--primary-color);
                         color: var(--primary-white);
-                        box-shadow: var(--box-shadow);
                         cursor: pointer;
 
                         &:hover {
@@ -248,6 +246,7 @@
 
                         @media (max-width:442px) {
                             transition: var(--transition-scale-mobile);
+                            box-shadow: var(--box-shadow);
 
                             &:hover {
                                 color: var(--primary-white);

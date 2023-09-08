@@ -23,12 +23,16 @@ export interface NavigationDropdownInterface {
 
 export interface NavigationProps {
     isHome: boolean,
-    showMenu?: boolean,
-    handleShowMenu?: () => void,
-    showDropdown?: boolean,
-    handleShowDropdown?: () => void,
-    menuRef?: React.RefObject<HTMLDivElement>;
-    dropdownRef?: React.RefObject<HTMLDivElement>;
+    showMenu: boolean,
+    handleShowMenu: () => void,
+    showDropdown: boolean,
+    handleShowDropdown: () => void,
+    menuRef: React.RefObject<HTMLDivElement>;
+}
+
+export interface NavigationUrlProps extends NavigationProps {
+    url: string,
+    showUrl: boolean
 }
 
 export type PaymentMethodInterface = 'efectivo' | 'tarjeta';
