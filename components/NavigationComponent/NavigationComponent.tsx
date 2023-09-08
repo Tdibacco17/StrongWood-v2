@@ -18,12 +18,11 @@ export default function NavigationComponent({
     return (
         <section className={`${styles['container-section-navigation']}`}>
             <div className={styles['wrapper-nav']}>
-                <Link
-                    href={`${showUrl ? url : "/"}`}
-                    className={`${styles['container-icon-back']} 
-                    ${!showUrl ? styles['showUrl'] : ""}`}>
+                {showUrl ? <Link href={`${showUrl ? url : "/"}`} className={`${styles['container-icon-back']}`}>
                     {showUrl && <ArrowLeftIconComponent fill={'white'} height={30} width={30} />}
                 </Link>
+                    : <div className={styles['showUrl']} />
+                }
                 <Link /*as={data.navigation.link}*/ href={data.navigation.link}>
                     <h1 className={styles['menu-logo']}>{data.navigation.title}</h1>
                 </Link>

@@ -39,11 +39,15 @@
             min-height: 2.5rem;
             max-height: 2.5rem;
             cursor: pointer;
+        }
 
-            &.showUrl {
-                background-color: transparent;
-                pointer-events: none;
-            }
+        .showUrl {
+            background-color: transparent;
+            pointer-events: none;
+            min-width: 2.5rem;
+            max-width: 2.5rem;
+            min-height: 2.5rem;
+            max-height: 2.5rem;
         }
 
         .menu-logo {
