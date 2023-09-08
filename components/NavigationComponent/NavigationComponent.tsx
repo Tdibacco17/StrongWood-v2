@@ -18,7 +18,7 @@ export default function NavigationComponent({
     return (
         <section className={`${styles['container-section-navigation']}`}>
             <div className={styles['wrapper-nav']}>
-                {showUrl ? <Link href={`${url}`} className={`${styles['container-icon-back']}`}>
+                {showUrl ? <Link href={`${url}`} className={`${styles['container-icon-back']}`} aria-label="Volver atrás">
                     <ArrowLeftIconComponent fill={'white'} height={30} width={30} />
                 </Link>
                     : <div className={styles['showUrl']} />
