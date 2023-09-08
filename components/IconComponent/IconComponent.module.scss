@@ -11,4 +11,14 @@
             transition: color 0s ease-in-out;
         }
     }
+
+    @media (max-width: 442px) {
+        &:hover {
+            .icon-svg {
+                cursor: default;
+                fill: initial;
+                transition: initial;
+            }
+        }
+    }
 }

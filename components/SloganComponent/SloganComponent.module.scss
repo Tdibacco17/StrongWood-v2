@@ -99,21 +99,17 @@
                 border-radius: var(--border-radius);
                 border: 1px solid var(--secondary-white);
 
-                &:hover {
-                    color: var(--tertiary-color);
-                    border: 1px solid var(--tertiary-color);
+                @media (min-width: 443px) {
+                    &:hover {
+                        color: var(--tertiary-color);
+                        border: 1px solid var(--tertiary-color);
+                    }
                 }
 
                 @media (max-width:442px) {
                     transition: var(--transition-scale-mobile);
                     box-shadow: var(--box-shadow);
                     border: 1px solid var(--secondary-white);
-
-                    &:hover {
-                        color: var(--primary-white);
-                        transform: var(--scale-mobile);
-                        transition: var(--transition-scale-mobile);
-                    }
                 }
             }
         }
