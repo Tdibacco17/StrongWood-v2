@@ -110,21 +110,15 @@
                 font-weight: var(--font-bold);
                 font-size: var(--font-medium);
 
-                &:hover {
-                    color: var(--tertiary-color);
-                    border: 1px solid var(--tertiary-color);
+                @media (min-width: 442px) {
+                    &:hover {
+                        color: var(--tertiary-color);
+                        border: 1px solid var(--tertiary-color);
+                    }
                 }
 
                 @media (max-width:442px) {
-                    transition: var(--transition-scale-mobile);
                     box-shadow: var(--box-shadow);
-
-                    &:hover {
-                        color: var(--primary-white);
-                        border: 1px solid var(--secondary-white);
-                        transform: var(--scale-mobile);
-                        transition: var(--transition-scale-mobile);
-                    }
                 }
             }
         }
