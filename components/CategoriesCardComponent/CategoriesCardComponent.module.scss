@@ -71,16 +71,17 @@
         pointer-events: none;
     }
 
+    @media (min-width: 442px) {
+        &:hover {
+            .container-overlay-card-services {
+                opacity: 0;
+                transition: opacity 350ms ease-in-out;
+            }
 
-    &:hover {
-        .container-overlay-card-services {
-            opacity: 0;
-            transition: opacity 350ms ease-in-out;
-        }
-
-        .title-services-overlay {
-            opacity: 0;
-            transition: opacity 350ms ease-in-out;
+            .title-services-overlay {
+                opacity: 0;
+                transition: opacity 350ms ease-in-out;
+            }
         }
     }
 
