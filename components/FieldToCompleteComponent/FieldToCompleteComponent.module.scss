@@ -75,6 +75,13 @@
         color: var(--primary-white);
         cursor: pointer;
 
+        @media (min-width: 442px) {
+            &:hover {
+                color: var(--tertiary-color);
+                border: 1px solid var(--tertiary-color);
+            }
+        }
+
         &:focus {
             color: var(--primary-white);
             border: 1px solid var(--primary-white);
@@ -93,12 +100,7 @@
             padding: 0.5rem;
         }
 
-        @media (min-width: 442px) {
-            &:hover {
-                color: var(--tertiary-color);
-                border: 1px solid var(--tertiary-color);
-            }
-        }
+
 
         @media (max-width:442px) {
             box-shadow: var(--box-shadow);

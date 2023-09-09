@@ -22,6 +22,7 @@
         background-color: var(--secondary-color);
         border-radius: var(--border-radius);
         gap: 3rem;
+        max-width: 75rem;
 
         @media (max-width:1180px) {
             padding: 2rem 1.5rem;

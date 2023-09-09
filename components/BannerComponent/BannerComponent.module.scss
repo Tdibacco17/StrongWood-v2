@@ -11,6 +11,18 @@
 
     .container-inner-banner-image {
         object-fit: cover;
-        object-position: 7.5% 40%;
+
+        &.homePage {
+            object-position: 7.5% 40%;
+        }
+
+
+        &.productPage {
+            object-position: 50% 35%;
+        }
+
+        &.aboutUsPage {
+            object-position: 50% 0%;
+        }
     }
 }

@@ -34,7 +34,7 @@ export interface NavigationUrlProps extends NavigationProps {
     url: string,
     showUrl: boolean
 }
-
+export type BannerPositionInterface = "homePage" | "aboutUsPage" | "productPage";
 export type PaymentMethodInterface = 'efectivo' | 'tarjeta';
 
 export interface FieldToCompleteProps {
@@ -79,6 +79,7 @@ export interface MessageContactProductDataInterface {
     paymentMethod: string,
     price: string,
 }
+
 export interface ContactProductProps {
     handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
     handlePaymentChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
@@ -98,6 +99,7 @@ export interface ContactProductProps {
     handleChangeIsNote: () => void,
     isNote: boolean
 }
+
 //CONTACT FORM
 export interface MessageContactDataInterface {
     name: string,

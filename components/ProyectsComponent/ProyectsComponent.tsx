@@ -14,15 +14,15 @@ export default function ProyectsComponent({
     handleScrollRight: () => void,
 }) {
     return (
-        <section id={data.projects.sectionLink} className={styles['container-section-proyects']}>
+        <section id={data.homePage.projects.sectionLink} className={styles['container-section-proyects']}>
             <div className={styles['container-header-proyects']}>
-                <p className={styles['proyects-title']}>{data.projects.title}</p>
-                <p className={styles['proyects-subtitle']}>{data.projects.subtitle}</p>
+                <p className={styles['proyects-title']}>{data.homePage.projects.title}</p>
+                <p className={styles['proyects-subtitle']}>{data.homePage.projects.subtitle}</p>
             </div>
             <div className={styles['container-carousel']}>
                 <div className={styles['container-cards-proyects']} ref={carouselRef}>
                     {
-                        data.projects.cards.map((card: ImgDataInterface) => {
+                        data.homePage.projects.cards.map((card: ImgDataInterface) => {
                             return <ProyectsCardComponent imageData={card} key={card.img_id} />
                         })
                     }
