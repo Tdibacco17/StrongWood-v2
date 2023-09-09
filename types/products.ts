@@ -41,7 +41,6 @@ export interface DescriptionDataInterface {
     measures?: string
 }
 
-
 export interface ProductGalleryProps {
     width: number,
     handleScrollLeft: () => void;

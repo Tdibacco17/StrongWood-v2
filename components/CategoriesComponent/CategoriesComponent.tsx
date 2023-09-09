@@ -13,7 +13,10 @@ export default function CategoriesComponent() {
             <div className={styles['container-cards-categories']}>
                 {
                     data.homePage.categories.images.map((card: ImgDataInterface) => {
-                        return <CategoriesCardComponent imageData={card} key={card.img_id} />
+                        return <CategoriesCardComponent
+                            key={card.img_id}
+                            imageData={card}
+                        />
                     })
                 }
             </div>
