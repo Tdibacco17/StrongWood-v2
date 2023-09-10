@@ -11,36 +11,36 @@ export const designData: DesignDataInterface = {
                 images: [
                     {
                         img_id: 1,
-                        imgSrc: "/assets/img/design/cocina/serieNordica.webp",
+                        imgSrc: "/assets/img/cocinaPage/Strong-cocina-004.webp",
                         imgAlt: "Serie Nordica",
                         imgBlur: ""
                     }, {
                         img_id: 2,
-                        imgSrc: "/assets/img/design/cocina/serieNewYork.webp",
+                        imgSrc: "/assets/img/cocinaPage/Strong-cocina-001.webp",
                         imgAlt: "Serie New York",
                         imgBlur: ""
                     }, {
                         img_id: 3,
-                        imgSrc: "/assets/img/design/cocina/seriePremium.webp",
+                        imgSrc: "/assets/img/cocinaPage/Strong-cocina-002.webp",
                         imgAlt: "Serie Premiun",
                         imgBlur: ""
                     }, {
                         img_id: 4,
-                        imgSrc: "/assets/img/design/cocina/serieNova.webp",
+                        imgSrc: "/assets/img/cocinaPage/Strong-cocina-003.webp",
                         imgAlt: "Serie Nova",
                         imgBlur: ""
                     }, {
                         img_id: 5,
-                        imgSrc: "/assets/img/design/cocina/serieDeLuxe.webp",
-                        imgAlt: "Serie De Luxe",
+                        imgSrc: "/assets/img/cocinaPage/Strong-cocina-000.webp",
+                        imgAlt: "Serie de Luxe",
                         imgBlur: ""
                     },
                 ]
             }
         ]
     },
-    "ba%C3%B1o": {
-        design_slug: "ba%C3%B1o",
+    "banio": {
+        design_slug: "banio",
         subcategories: [
             {
                 subcategorie_slug: "vanitory",
@@ -49,17 +49,17 @@ export const designData: DesignDataInterface = {
                 images: [
                     {
                         img_id: 1,
-                        imgSrc: "/assets/img/design/baño/vanitoryNewYork.webp",
+                        imgSrc: "/assets/img/banioPage/Strong-vanitory-001.webp",
                         imgAlt: "Vanitory New York",
                         imgBlur: ""
                     }, {
                         img_id: 2,
-                        imgSrc: "/assets/img/design/baño/vanitoryEscandinavo.webp",
+                        imgSrc: "/assets/img/banioPage/Strong-vanitory-000.webp",
                         imgAlt: "Vanitory Escandinavo",
                         imgBlur: ""
                     }, {
                         img_id: 3,
-                        imgSrc: "/assets/img/design/baño/vanitoryNordico.webp",
+                        imgSrc: "/assets/img/banioPage/Strong-vanitory-002.webp",
                         imgAlt: "Vanitory Nordico",
                         imgBlur: ""
                     },
@@ -77,14 +77,14 @@ export const designData: DesignDataInterface = {
                 images: [
                     {
                         img_id: 1,
-                        imgSrc: "/assets/img/design/placares/categorieVestidor1.webp",
+                        imgSrc: "/assets/img/placaresPage/Strong-categorieVestidor-000.webp",
                         imgAlt: "Vestidor de luxe",
                         imgBlur: ""
                     },
                     {
                         img_id: 2,
-                        imgSrc: "/assets/img/design/placares/categorieVestidor2.webp",
-                        imgAlt: "Vestidor  Fusion",
+                        imgSrc: "/assets/img/placaresPage/Strong-categorieVestidor-001.webp",
+                        imgAlt: "Vestidor Fusion",
                         imgBlur: ""
                     }
                 ]
@@ -95,8 +95,8 @@ export const designData: DesignDataInterface = {
                 images: [
                     {
                         img_id: 1,
-                        imgSrc: "/assets/img/design/placares/categoriePlacar1.webp",
-                        imgAlt: "PLacard  UrbanWood",
+                        imgSrc: "/assets/img/placaresPage/Strong-categoriePlacar-000.webp",
+                        imgAlt: "PLacard UrbanWood",
                         imgBlur: ""
                     }
                 ]
@@ -113,13 +113,13 @@ export const designData: DesignDataInterface = {
                 images: [
                     {
                         img_id: 1,
-                        imgSrc: "/assets/img/design/dormitorio/camaIndividual1.webp",
+                        imgSrc: "/assets/img/dormitorioPage/Strong-camaIndividual-000.webp",
                         imgAlt: "Individual",
                         imgBlur: ""
                     },
                     {
                         img_id: 2,
-                        imgSrc: "/assets/img/design/dormitorio/camaMatrimonial1.webp",
+                        imgSrc: "/assets/img/dormitorioPage/Strong-camaMatrimonial-001.webp",
                         imgAlt: "Matrimonial",
                         imgBlur: ""
                     },
@@ -131,7 +131,7 @@ export const designData: DesignDataInterface = {
                 images: [
                     {
                         img_id: 1,
-                        imgSrc: "/assets/img/design/dormitorio/mesa-de-luz-1.webp",
+                        imgSrc: "/assets/img/dormitorioPage/Strong-mesadeluz-000.webp",
                         imgAlt: "Mesa de Luz",
                         imgBlur: ""
                     },
@@ -143,7 +143,7 @@ export const designData: DesignDataInterface = {
                 images: [
                     {
                         img_id: 1,
-                        imgSrc: "/assets/img/design/dormitorio/comoda-1.webp",
+                        imgSrc: "/assets/img/dormitorioPage/Strong-comoda-001.webp",
                         imgAlt: "Comoda",
                         imgBlur: ""
                     },
@@ -155,7 +155,7 @@ export const designData: DesignDataInterface = {
                 images: [
                     {
                         img_id: 1,
-                        imgSrc: "/assets/img/design/dormitorio/escritorio-1.webp",
+                        imgSrc: "/assets/img/dormitorioPage/Strong-escritorio-001.webp",
                         imgAlt: "Escritorio",
                         imgBlur: ""
                     },

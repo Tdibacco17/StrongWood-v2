@@ -6,7 +6,7 @@ export default function BathroomPage() {
     return (
         <section className={styles['container-section-bathroom-page']}>
             <NavigationContainer isHome={false} showUrl={true} url={'/'} />
-            <CategorieStyleComponent designKey={'ba%C3%B1o'} />
+            <CategorieStyleComponent designKey={'banio'} />
         </section>
     )
 }

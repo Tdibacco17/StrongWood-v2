@@ -6,7 +6,7 @@ export interface DesignDataContextInterface {
     paymentMethod: PaymentMethodInterface;
     handlePaymentMethod: (method: PaymentMethodInterface) => void;
 }
-export type DesignCategorieInterface = 'cocina' | 'ba%C3%B1o' | 'placares' | 'dormitorio';
+export type DesignCategorieInterface = 'cocina' | 'banio' | 'placares' | 'dormitorio';
 
 export interface DesignDataInterface {
     [id: string]: DesignInterface;
