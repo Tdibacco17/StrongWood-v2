@@ -1,3 +1,19 @@
-.container-section-categorie-style-card{
-    
+.container-outer-categorie-style-image {
+    position: relative;
+    min-height: 23rem;
+    max-height: 23rem;
+    min-width: 40rem;
+    max-width: 40rem;
+    user-select: none;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+
+    * {
+        pointer-events: none;
+    }
+
+    .container-inner-categorie-style-image {
+        object-fit: cover;
+        object-position: center;
+    }
 }

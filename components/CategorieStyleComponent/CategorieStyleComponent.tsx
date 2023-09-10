@@ -3,15 +3,18 @@ import CategorieStyleCardComponent from '../CategorieStyleCardComponent/Categori
 import styles from './CategorieStyleComponent.module.scss';
 import { designData } from '@/models/design'
 import { ImgDataInterface } from '@/types';
+import CarrouselCategorieStyleContainer from '@/containers/CarrouselCategorieStyleContainer/CarrouselCategorieStyleContainer';
 
 export default function CategorieStyleComponent({ designKey }: { designKey: DesignCategorieInterface }) {
     return (
-        <div className={styles['container-section-categorie-style']}>
-            <div key={designKey} className={styles['container-table-categorie-style']}>
-                {designData[designKey].subcategories.map((subcategorieTable: SubCategorieDataInterface) => {
-                    return <div key={subcategorieTable.subcategorie_slug}>
-                        <p>{subcategorieTable.title}</p>
-                        <p>{subcategorieTable.subtitle}</p>
+        <>
+            {designData[designKey].subcategories.map((subcategorieTable: SubCategorieDataInterface) => {
+                return <div key={subcategorieTable.subcategorie_slug} className={styles['container-table-categorie-style']}>
+                    <p className={styles['title-table']}>{subcategorieTable.title}</p>
+                    <p className={styles['subtitle-table']}>{subcategorieTable.subtitle}</p>
+                    {/* CONTAINER */}
+                    {/* <CarrouselCategorieStyleContainer /> */}
+                    {/* <div className={styles['container-images-categorie-style']}>
                         {
                             subcategorieTable.images.map((imageData: ImgDataInterface) => {
                                 return <CategorieStyleCardComponent
@@ -20,9 +23,9 @@ export default function CategorieStyleComponent({ designKey }: { designKey: Desi
                                 />
                             })
                         }
-                    </div>
-                })}
-            </div>
-        </div>
+                    </div> */}
+                </div>
+            })}
+        </>
     )
 }

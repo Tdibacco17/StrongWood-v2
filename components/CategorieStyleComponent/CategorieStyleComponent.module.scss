@@ -1,3 +1,27 @@
-.container-section-categorie-style{
+.container-table-categorie-style {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 
+    .title-table {
+        font-size: var(--font-large);
+        font-weight: var(--font-bold);
+        text-transform: uppercase;
+    }
+
+    .subtitle-table {
+        font-size: var(--font-xmedium);
+        font-weight: var(--font-regular);
+    }
+
+    .container-images-categorie-style {
+        display: flex;
+        justify-content: flex-start;
+        min-width: 100%;
+        max-width: 100%;
+        gap: 1rem;
+    }
 }

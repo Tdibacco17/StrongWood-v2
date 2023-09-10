@@ -6,7 +6,7 @@ export default function ClosetsPage() {
     return (
         <section className={styles['container-section-closets-page']}>
             <NavigationContainer isHome={false} showUrl={true} url={'/'} />
-            <CategorieStyleComponent designKey={'dormitorio'} />
+            <CategorieStyleComponent designKey={'placares'} />
         </section>
     )
 }
