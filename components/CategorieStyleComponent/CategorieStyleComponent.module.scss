@@ -1,27 +1,72 @@
 .container-table-categorie-style {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     min-width: 100%;
     max-width: 100%;
     overflow: hidden;
 
-    .title-table {
-        font-size: var(--font-large);
-        font-weight: var(--font-bold);
-        text-transform: uppercase;
+    &:hover {
+        .container-header-table .container-carousel-btns .carousel-btn-arrow {
+            opacity: 1;
+
+            @media (max-width: 442px) {
+                display: none;
+            }
+        }
     }
 
-    .subtitle-table {
-        font-size: var(--font-xmedium);
-        font-weight: var(--font-regular);
-    }
-
-    .container-images-categorie-style {
+    .container-header-table {
         display: flex;
-        justify-content: flex-start;
-        min-width: 100%;
-        max-width: 100%;
-        gap: 1rem;
+        justify-content: space-between;
+        padding: 0 1.5rem;
+
+        @media (max-width: 523px) {
+            padding: 0 1rem;
+        }
+
+        .title-table {
+            font-size: var(--font-large);
+            font-weight: var(--font-bold);
+            text-transform: uppercase;
+        }
+
+        .subtitle-table {
+            font-size: var(--font-xmedium);
+            font-weight: var(--font-regular);
+        }
+
+        .container-carousel-btns {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .carousel-btn-arrow {
+                opacity: 0;
+                background-color: var(--secondary-color);
+                pointer-events: auto;
+                border: none;
+                cursor: pointer;
+                width: 2.5rem;
+                height: 2.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &.left {
+                    border-top-left-radius: var(--border-radius);
+                    border-bottom-left-radius: var(--border-radius);
+                }
+
+                &.right {
+                    border-top-right-radius: var(--border-radius);
+                    border-bottom-right-radius: var(--border-radius);
+                }
+
+                @media (max-width: 442px) {
+                    display: none;
+                }
+            }
+        }
     }
 }
