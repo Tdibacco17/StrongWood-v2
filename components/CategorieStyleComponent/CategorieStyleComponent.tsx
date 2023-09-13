@@ -42,6 +42,7 @@ export default function CategorieStyleComponent({
                         </div>
                     </div>
                     <CarrouselCategorieStyleComponent
+                        designKey={designKey}
                         carouselRef={carouselRef}
                         imagesData={subcategorieTable.images}
                     />

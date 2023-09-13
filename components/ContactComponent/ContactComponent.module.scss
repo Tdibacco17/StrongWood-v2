@@ -2,13 +2,16 @@
     min-width: 100%;
     max-width: 100%;
     padding: 6rem 1.5rem;
+    padding-top: 8.5rem;
 
     @media (max-width:523px) {
         padding: 6rem 1rem;
+        padding-top: 8.5rem;
     }
 
     @media (max-width:442px) {
         padding: 6rem 0rem;
+        padding-top: 8.5rem;
     }
 
     .container-wrapper-card-contact {

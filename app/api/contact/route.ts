@@ -17,14 +17,14 @@ export async function POST(req: Request) {
             port: 465,
             secure: true,
             auth: {
-                user: `${process.env.NEXT_PUBLIC_STRONG_USERNAME_TEST}`,
-                pass: `${process.env.NEXT_PUBLIC_STRONG_PASSWORD_TEST}`
+                user: `${process.env.NEXT_PUBLIC_STRONG_USERNAME}`,
+                pass: `${process.env.NEXT_PUBLIC_STRONG_PASSWORD}`
             }
         });
 
         const mailOptions = {
-            from: `STRONGWOOD ${process.env.NEXT_PUBLIC_STRONG_USERNAME_TEST}`,
-            to: [`${process.env.NEXT_PUBLIC_STRONG_USERNAME_TEST}`, body.messageData.email],
+            from: `STRONGWOOD ${process.env.NEXT_PUBLIC_STRONG_USERNAME}`,
+            to: [`${process.env.NEXT_PUBLIC_STRONG_EMAIL_SENDER}`, body.messageData.email],
             subject: "Consulta de contacto",
             html: contentHtml,
         };

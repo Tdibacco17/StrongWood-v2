@@ -2,10 +2,17 @@ import Link from 'next/link'
 import styles from './CarrouselCategorieStyleCardComponent.module.scss'
 import { ImgDataInterface } from '@/types'
 import Image from 'next/image'
+import { DesignCategorieInterface } from '@/types/design'
 
-export default function CarrouselCategorieStyleCardComponent({ imageData }: { imageData: ImgDataInterface }) {
+export default function CarrouselCategorieStyleCardComponent({
+    designKey,
+    imageData
+}: {
+    designKey: DesignCategorieInterface,
+    imageData: ImgDataInterface
+}) {
     return (
-        <Link href={`/`} className={styles["container-section-card-categorie-style"]}>
+        <Link href={`/${designKey}/${imageData.link ?? ""}`} className={styles["container-section-card-categorie-style"]}>
             <div className={styles['container-outer-categorie-style-image']}>
                 <Image
                     className={`${styles['container-inner-categorie-style-image']}`}

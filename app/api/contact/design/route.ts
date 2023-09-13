@@ -120,18 +120,18 @@ export async function POST(req: Request) {
     `
 
         const transporter = nodemailer.createTransport({
-            host: `${process.env.EMAIL_SERVICE}`,
+            host: `${process.env.NEXT_PUBLIC_EMAIL_SERVICE}`,
             port: 465,
             secure: true,
             auth: {
-                user: `${process.env.USERNAME_TEST}`,
-                pass: `${process.env.PASSWORD_TEST}`
+                user: `${process.env.NEXT_PUBLIC_STRONG_USERNAME}`,
+                pass: `${process.env.NEXT_PUBLIC_STRONG_PASSWORD}`
             }
         });
 
         const mailOptions = {
-            from: "NODEMAILER",
-            to: `${process.env.USERNAME_TEST}`,
+            from: `STRONGWOOD ${process.env.NEXT_PUBLIC_STRONG_USERNAME}`,
+            to: [`${process.env.NEXT_PUBLIC_STRONG_EMAIL_SENDER}`, body.messageData.email],
             subject: "Prueba nodemailer!",
             html: contentHtml,
         };
