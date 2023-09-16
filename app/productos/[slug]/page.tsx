@@ -5,10 +5,12 @@ import NavigationContainer from '@/containers/NavigationContainer/NavigationCont
 
 export default function ProductDetailPage({ params }: { params: { slug: string } }) {
     return (
-        <section id={data.productPage.sectionLink} >
+        <>
             <NavigationContainer isHome={false} showUrl={true} url={`/productos`} />
-            <ProductDetailContainer params={params} />
-            <ServicesComponent />
-        </section>
+            <section id={data.productPage.sectionLink} >
+                <ProductDetailContainer params={params} />
+                <ServicesComponent />
+            </section>
+        </>
     )
 }

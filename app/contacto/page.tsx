@@ -4,9 +4,11 @@ import data from '@/models/es.json'
 
 export default function ContactPage() {
     return (
-        <section id={data.contact.sectionLink}>
+        <>
             <NavigationContainer isHome={false} showUrl={true} url={`/`} />
-            <ContactContainer />
-        </section>
+            <section id={data.contact.sectionLink}>
+                <ContactContainer />
+            </section>
+        </>
     )
 }

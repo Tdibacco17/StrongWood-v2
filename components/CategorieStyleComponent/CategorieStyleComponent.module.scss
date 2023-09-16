@@ -19,6 +19,7 @@
     .container-header-table {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 0 1.5rem;
 
         @media (max-width: 523px) {
@@ -26,9 +27,10 @@
         }
 
         .title-table {
-            font-size: var(--font-large);
+            font-size: var(--font-big);
             font-weight: var(--font-bold);
             text-transform: uppercase;
+            color: var(--tertiary-color);
         }
 
         .subtitle-table {

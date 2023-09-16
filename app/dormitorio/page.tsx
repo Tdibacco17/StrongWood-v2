@@ -4,9 +4,11 @@ import CategorieStyleContainer from '@/containers/CategorieStyleContainer/Catego
 
 export default function BedroomPage() {
     return (
-        <section className={styles['container-section-bedroom-page']}>
+        <>
             <NavigationContainer isHome={false} showUrl={true} url={'/'} />
-            <CategorieStyleContainer designKey={'dormitorio'} />
-        </section>
+            <section className={styles['container-section-bedroom-page']}>
+                <CategorieStyleContainer designKey={'dormitorio'} />
+            </section>
+        </>
     )
 }

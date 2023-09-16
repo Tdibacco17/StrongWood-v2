@@ -42,7 +42,321 @@ export const designData: DesignDataInterface = {
                     },
                 ]
             }
-        ]
+        ],
+        details: {
+            "generic": [
+                {
+                    tableId: 1,
+                    tableTitle: "Combinación de colores",
+                    maxSelections: 1,
+                    askMeasure: false,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/combinacionDeColores/melamina.webp",
+                            imgAlt: "Melamina",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 2,
+                            imgSrc: "/assets/img/designSelectData/combinacionDeColores/laqueado.webp",
+                            imgAlt: "Laqueado",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 3,
+                            imgSrc: "/assets/img/designSelectData/combinacionDeColores/enchapadoMadera.webp",
+                            imgAlt: "Enchapado en madera",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 4,
+                            imgSrc: "/assets/img/designSelectData/combinacionDeColores/perfectSens.webp",
+                            imgAlt: "Perfect sense",
+                            imgBlur: ""
+                        },
+                    ],
+                }, {
+                    tableId: 2,
+                    tableTitle: "Calidad de herrajes",
+                    maxSelections: 1,
+                    askMeasure: false,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/calidadDeHerrajes/herrajesEstandar.webp",
+                            imgAlt: "Herraje estandar",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 2,
+                            imgSrc: "/assets/img/designSelectData/calidadDeHerrajes/herrajesMedium.webp",
+                            imgAlt: "Herraje medium",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 3,
+                            imgSrc: "/assets/img/designSelectData/calidadDeHerrajes/herrajesPremium.webp",
+                            imgAlt: "Herraje premium",
+                            imgBlur: ""
+                        },
+                    ],
+                }, {
+                    tableId: 3,
+                    tableTitle: "Incluir",
+                    maxSelections: 9,
+                    askMeasure: false,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/incluir/cajoneraCocina.webp",
+                            imgAlt: "Cajonera",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 2,
+                            imgSrc: "/assets/img/designSelectData/incluir/tacho.webp",
+                            imgAlt: "Tacho",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 3,
+                            imgSrc: "/assets/img/designSelectData/incluir/carroEspeciero.webp",
+                            imgAlt: "Carro especiero",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 4,
+                            imgSrc: "/assets/img/designSelectData/incluir/carroEsquinero.webp",
+                            imgAlt: "Carro esquinero",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 5,
+                            imgSrc: "/assets/img/designSelectData/incluir/torreHeladera.webp",
+                            imgAlt: "Torre de heladera",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 6,
+                            imgSrc: "/assets/img/designSelectData/incluir/torreHornoMasMicroondas.webp",
+                            imgAlt: "Torre de horno + microondas",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 7,
+                            imgSrc: "/assets/img/designSelectData/incluir/mesadaMaderaMaciza.webp",
+                            imgAlt: "Mesada de madera maciza",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 8,
+                            imgSrc: "/assets/img/designSelectData/incluir/luzLed.webp",
+                            imgAlt: "Luces LED",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 9,
+                            imgSrc: "/assets/img/designSelectData/incluir/manijas.webp",
+                            imgAlt: "Manijas",
+                            imgBlur: ""
+                        },
+                    ],
+                }, {
+                    tableId: 4,
+                    tableTitle: "Puertas",
+                    maxSelections: 2,
+                    askMeasure: false,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/puertas/cocina/combinacionesPuertasBatiente.webp",
+                            imgAlt: "Puertas batiente",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 2,
+                            imgSrc: "/assets/img/designSelectData/puertas/cocina/combinacionesPuertasConPiston.webp",
+                            imgAlt: "Puertas con piston",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 3,
+                            imgSrc: "/assets/img/designSelectData/isla/cocina/cocinaSinIsla.webp",
+                            imgAlt: "Cocina sin isla",
+                            imgBlur: ""
+                        },
+                    ],
+                }, {
+                    tableId: 5,
+                    tableTitle: "Con isla",
+                    maxSelections: 1,
+                    askMeasure: false,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/isla/cocina/cocinaEnIsla.webp",
+                            imgAlt: "Cocina con isla",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 2,
+                            imgSrc: "/assets/img/designSelectData/isla/cocina/cocinaSinIsla.webp",
+                            imgAlt: "Cocina sin isla",
+                            imgBlur: ""
+                        },
+                    ],
+                }, {
+                    tableId: 6,
+                    tableTitle: "Distribución",
+                    maxSelections: 1,
+                    askMeasure: true,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/distribucion/cocina/cocinaEnL.webp",
+                            imgAlt: "Cocina en L",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 2,
+                            imgSrc: "/assets/img/designSelectData/distribucion/cocina/cocinaEnU.webp",
+                            imgAlt: "Cocina en U",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 3,
+                            imgSrc: "/assets/img/designSelectData/distribucion/cocina/cocinaEnG.webp",
+                            imgAlt: "Cocina en G",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 4,
+                            imgSrc: "/assets/img/designSelectData/distribucion/cocina/cocinaLineal.webp",
+                            imgAlt: "Cocina lineal",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 5,
+                            imgSrc: "/assets/img/designSelectData/distribucion/cocina/cocinaEnParalelo.webp",
+                            imgAlt: "Cocina en paralelo",
+                            imgBlur: ""
+                        },
+                    ],
+                },
+            ]
+        },
+        measures: {
+            "cocina-en-l": {
+                numValuesToComplete: 2,
+                measure_slug: "cocina-en-l",
+                leters: [
+                    {
+                        measure_id: 1,
+                        title: "Medida A",
+                        measure: 0
+                    }, {
+                        measure_id: 2,
+                        title: "Medida B",
+                        measure: 0
+                    }, {
+                        measure_id: 3,
+                        title: "Altura",
+                        measure: 0
+                    }
+                ]
+            },
+            "cocina-en-u": {
+                numValuesToComplete: 3,
+                measure_slug: "cocina-en-u",
+                leters: [
+                    {
+                        measure_id: 1,
+                        title: "Medida A",
+                        measure: 0
+                    },
+                    {
+                        measure_id: 2,
+                        title: "Medida B",
+                        measure: 0
+                    },
+                    {
+                        measure_id: 3,
+                        title: "Medida C",
+                        measure: 0
+                    }, {
+                        measure_id: 4,
+                        title: "Altura",
+                        measure: 0
+                    }
+                ]
+            },
+            "cocina-en-g": {
+                numValuesToComplete: 4,
+                measure_slug: "cocina-en-g",
+                leters: [
+                    {
+                        measure_id: 1,
+                        title: "Medida A",
+                        measure: 0
+                    },
+                    {
+                        measure_id: 2,
+                        title: "Medida B",
+                        measure: 0
+                    },
+                    {
+                        measure_id: 3,
+                        title: "Medida C",
+                        measure: 0
+                    },
+                    {
+                        measure_id: 4,
+                        title: "Medida D",
+                        measure: 0
+                    }, {
+                        measure_id: 5,
+                        title: "Altura",
+                        measure: 0
+                    }
+                ]
+            },
+            "cocina-lineal": {
+                numValuesToComplete: 1,
+                measure_slug: "cocina-lineal",
+                leters: [
+                    {
+                        measure_id: 1,
+                        title: "Medida A",
+                        measure: 0
+                    }, {
+                        measure_id: 2,
+                        title: "Altura",
+                        measure: 0
+                    }
+                ]
+            },
+            "cocina-en-paralelo": {
+                numValuesToComplete: 2,
+                measure_slug: "cocina-en-paralelo",
+                leters: [
+                    {
+                        measure_id: 1,
+                        title: "Medida A",
+                        measure: 0
+                    },
+                    {
+                        measure_id: 2,
+                        title: "Medida B",
+                        measure: 0
+                    }, {
+                        measure_id: 3,
+                        title: "Altura",
+                        measure: 0
+                    }
+                ]
+            }
+        }
     },
     "banio": {
         design_slug: "banio",
@@ -73,7 +387,93 @@ export const designData: DesignDataInterface = {
                     },
                 ]
             }
-        ]
+        ],
+        details: {
+            "generic": [
+                {
+                    tableId: 1,
+                    tableTitle: "Combinación de colores",
+                    maxSelections: 1,
+                    askMeasure: false,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/combinacionDeColores/melamina.webp",
+                            imgAlt: "Melamina",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 2,
+                            imgSrc: "/assets/img/designSelectData/combinacionDeColores/laqueado.webp",
+                            imgAlt: "Laqueado",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 3,
+                            imgSrc: "/assets/img/designSelectData/combinacionDeColores/enchapadoMadera.webp",
+                            imgAlt: "Enchapado en madera",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 4,
+                            imgSrc: "/assets/img/designSelectData/combinacionDeColores/perfectSens.webp",
+                            imgAlt: "Perfect sense",
+                            imgBlur: ""
+                        },
+                    ],
+                }, {
+                    tableId: 2,
+                    tableTitle: "Calidad de herrajes",
+                    maxSelections: 1,
+                    askMeasure: false,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/calidadDeHerrajes/herrajesEstandar.webp",
+                            imgAlt: "Herraje estandar",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 2,
+                            imgSrc: "/assets/img/designSelectData/calidadDeHerrajes/herrajesPremium.webp",
+                            imgAlt: "Herraje premium",
+                            imgBlur: ""
+                        },
+                    ],
+                }, {
+                    tableId: 3,
+                    tableTitle: "Distribución",
+                    maxSelections: 4,
+                    askMeasure: false,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/puertas/cocina/combinacionesPuertasBatiente.webp",
+                            imgAlt: "Puertas batiente",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 2,
+                            imgSrc: "/assets/img/designSelectData/incluir/cajoneraCocina.webp",
+                            imgAlt: "Cajonera",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 3,
+                            imgSrc: "/assets/img/designSelectData/incluir/estantes.webp",
+                            imgAlt: "Estantes",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 4,
+                            imgSrc: "/assets/img/designSelectData/incluir/manijas.webp",
+                            imgAlt: "Manijas",
+                            imgBlur: ""
+                        },
+                    ],
+                }
+            ]
+        }
     },
     "placares": {
         design_slug: "placares",
@@ -100,7 +500,7 @@ export const designData: DesignDataInterface = {
                 ]
             }, {
                 subcategorie_slug: "placar",
-                title: "Placar",
+                title: "Placares",
                 subtitle: "Selecciona tu placar a cotizar",
                 images: [
                     {
@@ -112,7 +512,292 @@ export const designData: DesignDataInterface = {
                     }
                 ]
             }
-        ]
+        ],
+        details: {
+            "generic": [
+                {
+                    tableId: 1,
+                    tableTitle: "Combinación de colores",
+                    maxSelections: 1,
+                    askMeasure: false,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/combinacionDeColores/melamina.webp",
+                            imgAlt: "Melamina",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 2,
+                            imgSrc: "/assets/img/designSelectData/combinacionDeColores/enchapadoMadera.webp",
+                            imgAlt: "Enchapado en madera",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 3,
+                            imgSrc: "/assets/img/designSelectData/combinacionDeColores/perfectSens.webp",
+                            imgAlt: "Perfect sense",
+                            imgBlur: ""
+                        },
+                    ],
+                }, {
+                    tableId: 2,
+                    tableTitle: "Calidad de herrajes",
+                    maxSelections: 1,
+                    askMeasure: false,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/calidadDeHerrajes/herrajesEstandar.webp",
+                            imgAlt: "Herraje estandar",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 2,
+                            imgSrc: "/assets/img/designSelectData/calidadDeHerrajes/herrajesPremium.webp",
+                            imgAlt: "Herraje premium",
+                            imgBlur: ""
+                        },
+                    ],
+                }, {
+                    tableId: 3,
+                    tableTitle: "Incluir",
+                    maxSelections: 4,
+                    askMeasure: false,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/incluir/pantalonero.webp",
+                            imgAlt: "Pantalonero",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 2,
+                            imgSrc: "/assets/img/designSelectData/incluir/zapatero.webp",
+                            imgAlt: "Zapatero",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 3,
+                            imgSrc: "/assets/img/designSelectData/incluir/luzLed.webp",
+                            imgAlt: "Luces LED",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 4,
+                            imgSrc: "/assets/img/designSelectData/incluir/barralParaPerchas.webp",
+                            imgAlt: "Barral para perchas",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 5,
+                            imgSrc: "/assets/img/designSelectData/incluir/cajoneraPlacar.webp",
+                            imgAlt: "Cajonera",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 6,
+                            imgSrc: "/assets/img/designSelectData/incluir/estantes.webp",
+                            imgAlt: "Estantes",
+                            imgBlur: ""
+                        },
+                    ],
+                }, {
+                    tableId: 4,
+                    tableTitle: "Puertas",
+                    maxSelections: 1,
+                    askMeasure: false,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/puertas/placares/puertaDeVidrio.webp",
+                            imgAlt: "Puertas de vidrio",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 2,
+                            imgSrc: "/assets/img/designSelectData/puertas/placares/puertasCorredizas.webp",
+                            imgAlt: "Corredizas",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 3,
+                            imgSrc: "/assets/img/designSelectData/puertas/placares/placarSinPuerta.webp",
+                            imgAlt: "Sin puerta",
+                            imgBlur: ""
+                        },
+                    ],
+                }, {
+                    tableId: 5,
+                    tableTitle: "Con isla",
+                    maxSelections: 1,
+                    askMeasure: false,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/isla/placares/placarEnIsla.webp",
+                            imgAlt: "Placar con isla",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 2,
+                            imgSrc: "/assets/img/designSelectData/isla/placares/placarSinIsla.webp",
+                            imgAlt: "Placar sin isla",
+                            imgBlur: ""
+                        },
+                    ],
+                }, {
+                    tableId: 6,
+                    tableTitle: "Distribución",
+                    maxSelections: 1,
+                    askMeasure: true,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/distribucion/placares/placarEnL.webp",
+                            imgAlt: "Placar en L",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 2,
+                            imgSrc: "/assets/img/designSelectData/distribucion/placares/placarEnC.webp",
+                            imgAlt: "Placar en C",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 3,
+                            imgSrc: "/assets/img/designSelectData/distribucion/placares/placarEnG.webp",
+                            imgAlt: "Placar en G",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 4,
+                            imgSrc: "/assets/img/designSelectData/distribucion/placares/placarLineal.webp",
+                            imgAlt: "Placar lineal",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 5,
+                            imgSrc: "/assets/img/designSelectData/distribucion/placares/placarEnParalelo.webp",
+                            imgAlt: "Placar en paralelo",
+                            imgBlur: ""
+                        },
+                    ],
+                }
+            ]
+        },
+        measures: {
+            "placar-en-l": {
+                numValuesToComplete: 2,
+                measure_slug: "placar-en-l",
+                leters: [
+                    {
+                        measure_id: 1,
+                        title: "Medida A",
+                        measure: 0
+                    },
+                    {
+                        measure_id: 2,
+                        title: "Medida B",
+                        measure: 0
+                    }, {
+                        measure_id: 3,
+                        title: "Altura",
+                        measure: 0
+                    }
+                ]
+            },
+            "placar-en-c": {
+                numValuesToComplete: 3,
+                measure_slug: "placar-en-c",
+                leters: [
+                    {
+                        measure_id: 1,
+                        title: "Medida A",
+                        measure: 0
+                    },
+                    {
+                        measure_id: 2,
+                        title: "Medida B",
+                        measure: 0
+                    },
+                    {
+                        measure_id: 3,
+                        title: "Medida C",
+                        measure: 0
+                    }, {
+                        measure_id: 4,
+                        title: "Altura",
+                        measure: 0
+                    }
+                ]
+            },
+            "placar-en-g": {
+                numValuesToComplete: 4,
+                measure_slug: "placar-en-g",
+                leters: [
+                    {
+                        measure_id: 1,
+                        title: "Medida A",
+                        measure: 0
+                    },
+                    {
+                        measure_id: 2,
+                        title: "Medida B",
+                        measure: 0
+                    },
+                    {
+                        measure_id: 3,
+                        title: "Medida C",
+                        measure: 0
+                    },
+                    {
+                        measure_id: 4,
+                        title: "Medida D",
+                        measure: 0
+                    }, {
+                        measure_id: 5,
+                        title: "Altura",
+                        measure: 0
+                    }
+                ]
+            },
+            "placar-lineal": {
+                numValuesToComplete: 1,
+                measure_slug: "placar-lineal",
+                leters: [
+                    {
+                        measure_id: 1,
+                        title: "Medida A",
+                        measure: 0
+                    }, {
+                        measure_id: 2,
+                        title: "Altura",
+                        measure: 0
+                    }
+                ]
+            },
+            "placar-en-paralelo": {
+                numValuesToComplete: 2,
+                measure_slug: "placar-en-paralelo",
+                leters: [
+                    {
+                        measure_id: 1,
+                        title: "Medida A",
+                        measure: 0
+                    },
+                    {
+                        measure_id: 2,
+                        title: "Medida B",
+                        measure: 0
+                    }, {
+                        measure_id: 3,
+                        title: "Altura",
+                        measure: 0
+                    }
+                ]
+            }
+        }
     },
     "dormitorio": {
         design_slug: "dormitorio",
@@ -177,6 +862,233 @@ export const designData: DesignDataInterface = {
                     },
                 ]
             }
-        ]
+        ],
+        details: {
+            "individual": [
+                {
+                    tableId: 1,
+                    tableTitle: "Combinación de colores",
+                    maxSelections: 2,
+                    askMeasure: false,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/detalle/camaIndividual1.webp",
+                            imgAlt: "Blanco",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 2,
+                            imgSrc: "/assets/img/designSelectData/detalle/camaIndividual2.webp",
+                            imgAlt: "Con detalle",
+                            imgBlur: ""
+                        },
+                    ],
+                }, {
+                    tableId: 2,
+                    tableTitle: "Medidas del colchon",
+                    maxSelections: 1,
+                    askMeasure: false,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/medidas/colchon.webp",
+                            imgAlt: "90cm x 1,90cm",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 2,
+                            imgSrc: "/assets/img/designSelectData/medidas/colchon.webp",
+                            imgAlt: "100cm x 200cm",
+                            imgBlur: ""
+                        },
+                    ],
+                }
+            ],
+            "matrimonial": [
+                {
+                    tableId: 1,
+                    tableTitle: "Combinación de colores",
+                    maxSelections: 2,
+                    askMeasure: false,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/detalle/camaMatrimonial1.webp",
+                            imgAlt: "Blanco",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 2,
+                            imgSrc: "/assets/img/designSelectData/detalle/camaMatrimonial2.webp",
+                            imgAlt: "Con detalle",
+                            imgBlur: ""
+                        },
+                    ],
+                }, {
+                    tableId: 2,
+                    tableTitle: "Medidas del colchon",
+                    maxSelections: 1,
+                    askMeasure: false,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/medidas/colchon.webp",
+                            imgAlt: "90cm x 190cm",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 2,
+                            imgSrc: "/assets/img/designSelectData/medidas/colchon.webp",
+                            imgAlt: "140cm x 190cm",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 3,
+                            imgSrc: "/assets/img/designSelectData/medidas/colchon.webp",
+                            imgAlt: "160cm x 190cm",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 4,
+                            imgSrc: "/assets/img/designSelectData/medidas/colchon.webp",
+                            imgAlt: "180cm x 190cm",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 5,
+                            imgSrc: "/assets/img/designSelectData/medidas/colchon.webp",
+                            imgAlt: "190cm x 200cm",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 6,
+                            imgSrc: "/assets/img/designSelectData/medidas/colchon.webp",
+                            imgAlt: "200cm x 200cm",
+                            imgBlur: ""
+                        },
+                    ],
+                }
+            ],
+            "mesa-de-luz": [
+                {
+                    tableId: 1,
+                    tableTitle: "Combinación de colores",
+                    maxSelections: 2,
+                    askMeasure: false,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/detalle/mesa-de-luz-1.webp",
+                            imgAlt: "Blanco",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 2,
+                            imgSrc: "/assets/img/designSelectData/detalle/mesa-de-luz-2.webp",
+                            imgAlt: "Con detalle",
+                            imgBlur: ""
+                        },
+                    ],
+                }, {
+                    tableId: 2,
+                    tableTitle: "Medidas (ancho x largo x profundidad)",
+                    maxSelections: 1,
+                    askMeasure: false,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/detalle/mesa-de-luz-1.webp",
+                            imgAlt: "45cm x 60cm x 40cm",
+                            imgBlur: ""
+                        }
+                    ],
+                }
+            ],
+            "comoda": [
+                {
+                    tableId: 1,
+                    tableTitle: "Combinación de colores",
+                    maxSelections: 2,
+                    askMeasure: false,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/detalle/comoda-1.webp",
+                            imgAlt: "Blanco",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 2,
+                            imgSrc: "/assets/img/designSelectData/detalle/comoda-2.webp",
+                            imgAlt: "Con detalle",
+                            imgBlur: ""
+                        },
+                    ],
+                }, {
+                    tableId: 2,
+                    tableTitle: "Medidas (ancho x largo x profundidad)",
+                    maxSelections: 1,
+                    askMeasure: false,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/detalle/comoda-1.webp",
+                            imgAlt: "45cm x 60cm x 40cm",
+                            imgBlur: ""
+                        }
+                    ],
+                }
+            ],
+            "escritorio": [
+                {
+                    tableId: 1,
+                    tableTitle: "Combinación de colores",
+                    maxSelections: 2,
+                    askMeasure: false,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/detalle/escritorio-1.webp",
+                            imgAlt: "Blanco",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 2,
+                            imgSrc: "/assets/img/designSelectData/detalle/escritorio-2.webp",
+                            imgAlt: "Con detalle",
+                            imgBlur: ""
+
+                        },
+                    ],
+                },
+                {
+                    tableId: 2,
+                    tableTitle: "Medidas (ancho x largo x profundidad)",
+                    maxSelections: 1,
+                    askMeasure: false,
+                    cards: [
+                        {
+                            img_id: 1,
+                            imgSrc: "/assets/img/designSelectData/detalle/escritorio-1.webp",
+                            imgAlt: "140cm x 75cm x 45cm",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 2,
+                            imgSrc: "/assets/img/designSelectData/detalle/escritorio-1.webp",
+                            imgAlt: "160cm x 75cm x 45cm",
+                            imgBlur: ""
+                        },
+                        {
+                            img_id: 3,
+                            imgSrc: "/assets/img/designSelectData/detalle/escritorio-1.webp",
+                            imgAlt: "180cm x 75cm x 45cm",
+                            imgBlur: ""
+                        },
+                    ],
+                }
+            ]
+        }
     }
 }

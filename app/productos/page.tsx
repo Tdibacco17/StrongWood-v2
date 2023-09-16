@@ -6,10 +6,12 @@ import data from '@/models/es.json'
 
 export default function ProductsPage() {
     return (
-        <section id={data.productPage.sectionLink} className={styles['container-section-product-page']}>
+        <>
             <NavigationContainer isHome={false} showUrl={true} url={'/'} />
-            <BannerComponent imgData={data.productPage.banner.image} imgPosition={'productPage'}/>
-            <ProductsComponent />
-        </section>
+            <section id={data.productPage.sectionLink} className={styles['container-section-product-page']}>
+                <BannerComponent imgData={data.productPage.banner.image} imgPosition={'productPage'} />
+                <ProductsComponent />
+            </section>
+        </>
     )
 }

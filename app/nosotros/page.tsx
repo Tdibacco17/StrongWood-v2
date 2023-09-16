@@ -5,9 +5,11 @@ import BannerComponent from '@/components/BannerComponent/BannerComponent'
 
 export default function AboutUsPage() {
     return (
-        <section id={data.designPage.sectionLink} className={styles['container-section-aboutus-page']}>
+        <>
             <NavigationContainer isHome={false} showUrl={true} url={'/'} />
-            <BannerComponent imgData={data.aboutUsPage.banner.image} imgPosition={'aboutUsPage'} />
-        </section>
+            <section id={data.designPage.sectionLink} className={styles['container-section-aboutus-page']}>
+                <BannerComponent imgData={data.aboutUsPage.banner.image} imgPosition={'aboutUsPage'} />
+            </section>
+        </>
     )
 }

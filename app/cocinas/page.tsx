@@ -5,9 +5,11 @@ import data from '@/models/es.json'
 
 export default function KitchenPage() {
     return (
-        <section id={data.designPage.sectionLink} className={styles['container-section-kitchen-page']}>
+        <>
             <NavigationContainer isHome={false} showUrl={true} url={'/'} />
-            <CategorieStyleContainer designKey={'cocinas'} />
-        </section>
+            <section id={data.designPage.sectionLink} className={styles['container-section-kitchen-page']}>
+                <CategorieStyleContainer designKey={'cocinas'} />
+            </section>
+        </>
     )
 }
