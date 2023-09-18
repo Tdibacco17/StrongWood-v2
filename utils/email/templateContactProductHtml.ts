@@ -88,7 +88,7 @@ export const templateContactProductHtml = (messageData:MessageContactProductData
                 font-weight: 500;
                 margin: 0;
                 padding: 0;
-                padding-top: 15px;
+                padding-top: 60px;
             }
         </style>
     </head>

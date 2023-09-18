@@ -75,7 +75,7 @@ export const templateContactHtml = (messageData: MessageContactDataInterface) =>
                 font-weight: 500;
                 margin: 0;
                 padding: 0;
-                padding-top: 15px;
+                padding-top: 60px;
             }
         </style>
     </head>
