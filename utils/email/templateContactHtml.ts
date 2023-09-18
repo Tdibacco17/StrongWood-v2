@@ -82,7 +82,7 @@ export const templateContactHtml = (messageData: MessageContactDataInterface) =>
     <body>
         <div class="container">
             <div class="header">
-                <h1>StrongWood</h1>
+                <h1>STRONGWOOD</h1>
             </div>
             <div class="content">
                 <div class="personal-info">
