@@ -36,12 +36,15 @@ export const templateContactProductHtml = (messageData:MessageContactProductData
             .content {
                 padding: 20px 0;
                 border-top: 1px solid #ccc;
-                border-bottom: 1px solid #ccc;
             }
     
             .personal-info {
                 margin-bottom: 15px;
                 color: #3a3a3a;
+            }
+
+            .personal-info ul{
+                padding-left: 10px;
             }
     
             .personal-info li {
@@ -53,6 +56,9 @@ export const templateContactProductHtml = (messageData:MessageContactProductData
             .order-summary {
                 margin-bottom: 15px;
                 color: #3a3a3a;
+            }
+            .order-summary ul{
+                padding-left: 10px;
             }
     
             .order-summary li {
@@ -66,15 +72,23 @@ export const templateContactProductHtml = (messageData:MessageContactProductData
             }
 
             .footer {
-                margin-bottom: 15px;
                 text-align: left;
-                padding-top: 20px;
+                padding-bottom:20px;
+                border-bottom: 1px solid #ccc;
             }
 
-            .footer li {
+            .footer p {
                 list-style-type: none;
                 margin-bottom: 5px;
                 color: #3a3a3a;
+            }
+
+            .secondaryFooter p {
+                color: #3a3a3a;
+                font-weight: 500;
+                margin: 0;
+                padding: 0;
+                padding-top: 15px;
             }
         </style>
     </head>
@@ -82,7 +96,7 @@ export const templateContactProductHtml = (messageData:MessageContactProductData
     <body>
         <div class="container">
             <div class="header">
-                <h1>StrongWood</h1>
+                <h1>STRONGWOOD</h1>
             </div>
             <div class="content">
                 <div class="personal-info">
@@ -95,7 +109,7 @@ export const templateContactProductHtml = (messageData:MessageContactProductData
                         <li><strong>Dirección: </strong>${messageData.direction}</li>
                     </ul>
                 </div>
-                <br></br>
+                <br>
                 <div class="order-summary">
                     <h3>Resumen del pedido:</h3>
                     <ul>
@@ -106,7 +120,11 @@ export const templateContactProductHtml = (messageData:MessageContactProductData
                 </div>
             </div>
             <div class="footer">
-                <li><strong>Nota: </strong>${messageData.note}</li>
+                <h3>Nota:</h3>
+                <p>${messageData.note}</p>
+            </div>
+            <div class="secondaryFooter">
+                <p>Este mensaje se ha enviado desde un formulario de contacto en ( <strong class="link">https://strongwood.com.ar</strong> )</p>
             </div>
         </div>
     </body>

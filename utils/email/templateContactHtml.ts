@@ -36,12 +36,15 @@ export const templateContactHtml = (messageData: MessageContactDataInterface) =>
             .content {
                 padding: 20px 0;
                 border-top: 1px solid #ccc;
-                border-bottom: 1px solid #ccc;
             }
     
             .personal-info {
                 margin-bottom: 15px;
                 color: #3a3a3a;
+            }
+
+            .personal-info ul{
+                padding-left: 10px;
             }
     
             .personal-info li {
@@ -53,6 +56,26 @@ export const templateContactHtml = (messageData: MessageContactDataInterface) =>
             .link {
                 color: #007bff;
                 text-decoration: none;
+            }
+
+            .footer {
+                text-align: left;
+                padding-bottom:20px;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .footer p {
+                list-style-type: none;
+                margin-bottom: 5px;
+                color: #3a3a3a;
+            }
+
+            .secondaryFooter p {
+                color: #3a3a3a;
+                font-weight: 500;
+                margin: 0;
+                padding: 0;
+                padding-top: 15px;
             }
         </style>
     </head>
@@ -70,9 +93,15 @@ export const templateContactHtml = (messageData: MessageContactDataInterface) =>
                         <li><strong>Teléfono: </strong><a href="https://wa.me/{phone}" class="link">${messageData.phone}</a></li>
                         <li><strong>Localidad: </strong>${messageData.location}</li>
                         <li><strong>Dirección: </strong>${messageData.direction}</li>
-                        <li><strong>Nota: </strong>${messageData.note}</li>
                     </ul>
                 </div>
+            </div>
+            <div class="footer">
+                <h3>Nota:</h3>
+                <p>${messageData.note}</p>
+            </div>
+            <div class="secondaryFooter">
+                <p>Este mensaje se ha enviado desde un formulario de contacto en ( <strong class="link">https://strongwood.com.ar</strong> )</p>
             </div>
         </div>
     </body>
