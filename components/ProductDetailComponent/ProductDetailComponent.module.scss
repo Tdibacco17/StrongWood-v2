@@ -26,15 +26,15 @@
         }
 
         .wrapper-header-product-detail {
-            padding: 2rem;
+            padding: 1.5rem;
             background-color: var(--secondary-color);
             border-bottom-right-radius: var(--border-radius);
             border-top-right-radius: var(--border-radius);
             overflow: hidden;
             min-width: 46rem;
             max-width: 46rem;
-            min-height: 34rem;
-            max-height: 34rem;
+            min-height: 33rem;
+            max-height: 33rem;
 
             @media (max-width:1170px) {
                 gap: 2rem;
