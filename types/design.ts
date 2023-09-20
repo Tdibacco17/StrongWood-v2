@@ -1,8 +1,8 @@
 import { ImgDataInterface, PaymentMethodInterface } from ".";
 
 export interface DesignDataContextInterface {
-    designData?: DesignInterface;
-    handleDesignDataChange?: Function;
+    designData: FurnitureTableInterface[];
+    handleDesignDataChange: Function;
     paymentMethod: PaymentMethodInterface;
     handlePaymentMethod: (method: PaymentMethodInterface) => void;
 }
