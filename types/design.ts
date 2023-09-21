@@ -1,8 +1,8 @@
 import { ImgDataInterface, PaymentMethodInterface } from ".";
 
-export interface DesignDataContextInterface {
-    designData: FurnitureTableInterface[];
-    handleDesignDataChange: Function;
+export interface FurnitureDataContextInterface {
+    furnitureData: DetailsFurnitureInterface;
+    handleFurnitureDataChange: Function;
     paymentMethod: PaymentMethodInterface;
     handlePaymentMethod: (method: PaymentMethodInterface) => void;
 }
@@ -15,8 +15,10 @@ export interface DesignDataInterface {
 export interface DesignInterface {
     design_slug: string;
     subcategories: SubCategorieDataInterface[],
-    details: FurnitureDataInterface,
-    measures?: MeasureDataInterface
+    details: {
+        tables: FurnitureDataInterface,
+        measures?: MeasureDataInterface
+    }
 }
 
 export interface SubCategorieDataInterface {
@@ -24,6 +26,11 @@ export interface SubCategorieDataInterface {
     title: string,
     subtitle: string,
     images: ImgDataInterface[]
+}
+
+export interface DetailsFurnitureInterface {
+    tables: FurnitureTableInterface[],
+    measures?: MeasureDataInterface
 }
 
 export interface FurnitureDataInterface {
@@ -39,10 +46,10 @@ export interface FurnitureTableInterface {
 }
 
 export interface MeasureDataInterface {
-    [id: string]: Measure;
+    [id: string]: MeasureInterface;
 }
 
-export interface Measure {
+export interface MeasureInterface {
     numValuesToComplete: number,
     measure_slug: string,
     leters: MeasureType[]
@@ -54,8 +61,6 @@ export interface MeasureType {
     measure: number
 }
 
-export interface FurnitureDataCardsInterface {
-    cardId: number,
-    cardTitle: string,
-    image?: ImgDataInterface
+export interface MeasureValues {
+    [measureName: string]: number;
 }

@@ -1,4 +1,4 @@
-import { DesignDetailProvider } from "@/context/DesignDetailProvider"
+import { FurnitureDetailProvider } from "@/context/FurnitureDetailProvider"
 
 export default function KitchenDetailLayout({
     children,
@@ -6,8 +6,8 @@ export default function KitchenDetailLayout({
     children: React.ReactNode
 }) {
     return (
-        <DesignDetailProvider>
+        <FurnitureDetailProvider>
             {children}
-        </DesignDetailProvider>
+        </FurnitureDetailProvider>
     )
 }

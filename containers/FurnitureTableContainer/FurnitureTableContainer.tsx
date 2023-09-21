@@ -8,7 +8,7 @@ export default function FurnitureTableContainer({
 }: {
     table: FurnitureTableInterface,
 }) {
-    console.log("[TABLE-ITEM]: ", table)
+    // console.log("[TABLE-ITEM]: ", table)
 
     const carouselRef = useRef<HTMLDivElement>(null);
 
