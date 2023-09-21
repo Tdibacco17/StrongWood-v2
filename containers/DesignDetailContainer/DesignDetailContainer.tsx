@@ -2,17 +2,25 @@
 import { designData } from '@/models/design'
 import { useContext, useEffect } from "react";
 import { DesignDetailContext } from "@/context/DesignDetailProvider";
-import { DesignDataContextInterface } from "@/types/design";
+import { DesignCategorieInterface, DesignDataContextInterface } from "@/types/design";
 import DesignDetailComponent from '@/components/DesignDetailComponent/DesignDetailComponent';
 
-export default function DesignDetailContainer({ params, isGeneric }: { params: { slug: string }, isGeneric: boolean }) {
+export default function DesignDetailContainer({
+    designKey,
+    params,
+    isGeneric
+}: {
+    designKey: DesignCategorieInterface,
+    params: { slug: string },
+    isGeneric: boolean
+}) {
     const { handleDesignDataChange } = useContext(
         DesignDetailContext
     ) as DesignDataContextInterface
 
     useEffect(() => {
         if (isGeneric) {
-            handleDesignDataChange(designData['cocinas'].details.generic);
+            handleDesignDataChange(designData['cocinas'].details['generic']);
         } else {
             if (params.slug) {
                 handleDesignDataChange(designData['cocinas'].details[params.slug]);
@@ -20,5 +28,5 @@ export default function DesignDetailContainer({ params, isGeneric }: { params: {
         }
     }, [params.slug]);
 
-    return <DesignDetailComponent />
+    return <DesignDetailComponent designKey={designKey} />
 }

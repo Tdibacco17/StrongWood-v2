@@ -1,8 +1,8 @@
 import { DesignCategorieInterface, SubCategorieDataInterface } from '@/types/design';
 import styles from './CategorieStyleComponent.module.scss';
 import { designData } from '@/models/design'
-import CarrouselCategorieStyleComponent from '../CarrouselCategorieStyleComponent/CarrouselCategorieStyleComponent';
 import { ArrowLeftIconComponent, ArrowRightIconComponent } from '../IconComponent/IconComponent';
+import CategorieStyleCarrouselComponent from '../CategorieStyleCarrouselComponent/CategorieStyleCarrouselComponent';
 
 export default function CategorieStyleComponent({
     designKey,
@@ -41,7 +41,7 @@ export default function CategorieStyleComponent({
                             </button>
                         </div>
                     </div>
-                    <CarrouselCategorieStyleComponent
+                    <CategorieStyleCarrouselComponent
                         designKey={designKey}
                         carouselRef={carouselRef}
                         imagesData={subcategorieTable.images}

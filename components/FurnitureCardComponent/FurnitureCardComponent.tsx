@@ -1,33 +1,33 @@
-import Link from 'next/link'
-import styles from './CarrouselCategorieStyleCardComponent.module.scss'
 import { ImgDataInterface } from '@/types'
+import styles from './FurnitureCardComponent.module.scss'
+import Link from 'next/link'
 import Image from 'next/image'
 import { DesignCategorieInterface } from '@/types/design'
-
-export default function CarrouselCategorieStyleCardComponent({
+//FALTAN IMAGENES BLURS
+export default function FurnitureCardComponent({
     designKey,
-    imageData
+    imageData,
 }: {
     designKey: DesignCategorieInterface,
-    imageData: ImgDataInterface
+    imageData: ImgDataInterface,
 }) {
     return (
-        <Link href={`/${designKey}/${imageData.link ?? ""}`} className={styles["container-section-card-categorie-style"]}>
+        <div className={styles["container-section-card-categorie-style"]}>
             <div className={styles['container-outer-categorie-style-image']}>
-                <Image
+                {/* <Image
                     className={`${styles['container-inner-categorie-style-image']}`}
                     src={imageData.imgSrc}
                     alt={imageData.imgAlt}
                     fill
                     sizes='(max-width: 1024px) 75vw, (max-width: 768px) 35vw,(max-width: 442px) 33vw, 100vw'
                     priority
-                    placeholder='blur'
-                    blurDataURL={imageData.imgBlur}
-                />
+                    // placeholder='blur'
+                    // blurDataURL={imageData.imgBlur}
+                /> */}
             </div>
             <div className={styles["container-overlay-image"]}>
                 <p className={styles["title-overlay"]}>{imageData.imgAlt}</p>
             </div>
-        </Link>
+        </div>
     )
 }

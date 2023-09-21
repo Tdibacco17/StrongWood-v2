@@ -1,9 +1,9 @@
 import { ImgDataInterface } from '@/types'
-import styles from './CarrouselCategorieStyleComponent.module.scss'
-import CarrouselCategorieStyleCardComponent from '../CarrouselCategorieStyleCardComponent/CarrouselCategorieStyleCardComponent'
+import styles from './CategorieStyleCarrouselComponent.module.scss'
 import { DesignCategorieInterface } from '@/types/design'
+import CategorieStyleCardComponent from '../CategorieStyleCardComponent/CategorieStyleCardComponent'
 
-export default function CarrouselCategorieStyleComponent({
+export default function CategorieStyleCarrouselComponent({
     designKey,
     carouselRef,
     imagesData
@@ -17,7 +17,7 @@ export default function CarrouselCategorieStyleComponent({
             <div className={styles['carousel-subcategories']} ref={carouselRef}>
                 {
                     imagesData.map((imageData: ImgDataInterface) => {
-                        return <CarrouselCategorieStyleCardComponent
+                        return <CategorieStyleCardComponent
                             designKey={designKey}
                             key={imageData.img_id}
                             imageData={imageData}
