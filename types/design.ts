@@ -1,7 +1,7 @@
 import { ImgDataInterface, PaymentMethodInterface } from ".";
 
 export interface FurnitureDataContextInterface {
-    furnitureData: DetailsFurnitureInterface;
+    furnitureData: FurnitureTableInterface[],
     handleFurnitureDataChange: Function;
     paymentMethod: PaymentMethodInterface;
     handlePaymentMethod: (method: PaymentMethodInterface) => void;
@@ -26,11 +26,6 @@ export interface SubCategorieDataInterface {
     title: string,
     subtitle: string,
     images: ImgDataInterface[]
-}
-
-export interface DetailsFurnitureInterface {
-    tables: FurnitureTableInterface[],
-    measures?: MeasureDataInterface
 }
 
 export interface FurnitureDataInterface {

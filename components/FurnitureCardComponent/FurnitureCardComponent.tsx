@@ -7,15 +7,16 @@ import { DesignCategorieInterface, FurnitureDataCardsInterface } from '@/types/d
 export default function FurnitureCardComponent({
     imageData,
     tableId,
+    tableTitle,
     handleImageClick
 }: {
     imageData: FurnitureDataCardsInterface,
     tableId: number,
-    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number) => void
-
+    tableTitle: string,
+    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void
 }) {
     return (
-        <div onClick={() => handleImageClick(imageData, tableId)} className={styles["container-section-card-furniture"]}>
+        <div onClick={() => handleImageClick(imageData, tableId, tableTitle)} className={styles["container-section-card-furniture"]}>
             <div className={styles['container-outer-furniture-image']}>
                 <Image
                     className={`${styles['container-inner-furniture-image']}`}

@@ -11,7 +11,7 @@ export default function FurnitureComponent({
     handleImageClick
 }: {
     visibleTables: number[];
-    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number) => void
+    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void
 }) {
     const { furnitureData } = useContext(
         FurnitureDetailContext
@@ -21,12 +21,13 @@ export default function FurnitureComponent({
         <div className={styles['container-section-design-detail']}>
             {
                 furnitureData ?
-                    furnitureData.tables.map((table: FurnitureTableInterface, index: number) => {
+                    furnitureData.map((table: FurnitureTableInterface, index: number) => {
                         return (
                             <div key={table.table_id} style={{ display: visibleTables.includes(index + 1) ? 'block' : 'none' }}>
                                 <FurnitureTableContainer
                                     table={table}
                                     tableId={table.table_id}
+                                    tableTitle={table.title}
                                     handleImageClick={handleImageClick}
                                 />
                             </div>

@@ -6,14 +6,15 @@ import { FurnitureDataCardsInterface } from '@/types/design'
 export default function FurnitureCarrouselComponent({
     carouselRef,
     tableId,
+    tableTitle,
     imagesData,
     handleImageClick
 }: {
     carouselRef: React.RefObject<HTMLDivElement>,
     tableId: number,
+    tableTitle: string,
     imagesData: FurnitureDataCardsInterface[],
-    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number) => void
-
+    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void
 }) {
     return (
         <div className={styles['container-section-carousel-furniture']}>
@@ -23,6 +24,7 @@ export default function FurnitureCarrouselComponent({
                         return <FurnitureCardComponent
                             key={imageData.img_id}
                             tableId={tableId}
+                            tableTitle={tableTitle}
                             imageData={imageData}
                             handleImageClick={handleImageClick}
                         />

@@ -7,11 +7,13 @@ import { useRef } from "react";
 export default function FurnitureTableContainer({
     table,
     tableId,
+    tableTitle,
     handleImageClick
 }: {
     table: FurnitureTableInterface,
     tableId: number,
-    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number) => void
+    tableTitle: string,
+    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void
 }) {
 
     const carouselRef = useRef<HTMLDivElement>(null);
@@ -36,6 +38,7 @@ export default function FurnitureTableContainer({
     return <FurnitureTableComponent
         table={table}
         tableId={tableId}
+        tableTitle={tableTitle}
         carouselRef={carouselRef}
         handleScrollLeft={handleScrollLeft}
         handleScrollRight={handleScrollRight}

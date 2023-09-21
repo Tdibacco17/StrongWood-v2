@@ -7,6 +7,7 @@ import { ImgDataInterface } from '@/types'
 export default function FurnitureTableComponent({
     table,
     tableId,
+    tableTitle,
     carouselRef,
     handleScrollLeft,
     handleScrollRight,
@@ -14,11 +15,11 @@ export default function FurnitureTableComponent({
 }: {
     table: FurnitureTableInterface,
     tableId: number,
+    tableTitle: string,
     carouselRef: React.RefObject<HTMLDivElement>,
     handleScrollLeft: () => void,
     handleScrollRight: () => void,
-    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number) => void
-
+    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void
 }) {
     return (
         <div className={styles['container-section-furniture-table']}>
@@ -46,6 +47,7 @@ export default function FurnitureTableComponent({
             </div>
             <FurnitureCarrouselComponent
                 tableId={tableId}
+                tableTitle={tableTitle}
                 carouselRef={carouselRef}
                 imagesData={table.cards}
                 handleImageClick={handleImageClick}
