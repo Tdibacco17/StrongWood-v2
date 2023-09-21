@@ -1,23 +1,21 @@
 import { DesignCategorieInterface, FurnitureTableInterface } from '@/types/design'
-import FurnitureCarrouselComponent from '../FurnitureCarrouselComponent/CarrouselFurnitureComponent'
 import { ArrowLeftIconComponent, ArrowRightIconComponent } from '../IconComponent/IconComponent'
 import styles from './FurnitureTableComponent.module.scss'
+import FurnitureCarrouselComponent from '../FurnitureCarrouselComponent/FurnitureCarrouselComponent'
 
 export default function FurnitureTableComponent({
-    designKey,
     table,
     carouselRef,
     handleScrollLeft,
     handleScrollRight,
 }: {
-    designKey: DesignCategorieInterface,
     table: FurnitureTableInterface
     carouselRef: React.RefObject<HTMLDivElement>,
     handleScrollLeft: () => void,
     handleScrollRight: () => void,
 }) {
     return (
-        <div>
+        <div className={styles['container-section-furniture-table']}>
             <div className={styles['container-header-table']}>
                 <div>
                     <p className={styles['title-table']}>TITULO</p>
@@ -41,7 +39,6 @@ export default function FurnitureTableComponent({
                 </div>
             </div>
             <FurnitureCarrouselComponent
-                designKey={designKey}
                 carouselRef={carouselRef}
                 imagesData={table.cards}
             />

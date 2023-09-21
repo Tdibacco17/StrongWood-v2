@@ -5,17 +5,15 @@ import Image from 'next/image'
 import { DesignCategorieInterface } from '@/types/design'
 //FALTAN IMAGENES BLURS
 export default function FurnitureCardComponent({
-    designKey,
     imageData,
 }: {
-    designKey: DesignCategorieInterface,
     imageData: ImgDataInterface,
 }) {
     return (
-        <div className={styles["container-section-card-categorie-style"]}>
-            <div className={styles['container-outer-categorie-style-image']}>
-                {/* <Image
-                    className={`${styles['container-inner-categorie-style-image']}`}
+        <div className={styles["container-section-card-furniture"]}>
+            <div className={styles['container-outer-furniture-image']}>
+                <Image
+                    className={`${styles['container-inner-furniture-image']}`}
                     src={imageData.imgSrc}
                     alt={imageData.imgAlt}
                     fill
@@ -23,7 +21,7 @@ export default function FurnitureCardComponent({
                     priority
                     // placeholder='blur'
                     // blurDataURL={imageData.imgBlur}
-                /> */}
+                />
             </div>
             <div className={styles["container-overlay-image"]}>
                 <p className={styles["title-overlay"]}>{imageData.imgAlt}</p>

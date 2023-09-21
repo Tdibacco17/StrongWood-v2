@@ -1,0 +1,44 @@
+.container-section-carousel-furniture {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+
+    .carousel-furniture {
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        scroll-behavior: smooth;
+        user-select: none;
+        gap: 1.5rem;
+        min-width: 100vw;
+        max-width: 100vw;
+        overflow-x: scroll;
+        justify-content: flex-start;
+        overflow-y: hidden;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+        &::-webkit-scrollbar {
+            height: 0px;
+            background-color: transparent;
+        }
+
+        @media (max-width:992px) {
+            gap: 1.25rem;
+        }
+
+        @media (max-width:768px) {
+            gap: 1rem;
+        }
+
+        @media (max-width: 523px) {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        @media (max-width:480px) {
+            gap: 0.75rem;
+        }
+    }
+}

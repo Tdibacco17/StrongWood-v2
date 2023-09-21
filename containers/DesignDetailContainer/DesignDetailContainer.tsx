@@ -1,9 +1,11 @@
 'use client'
 import { designData } from '@/models/design'
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { DesignDetailContext } from "@/context/DesignDetailProvider";
-import { DesignCategorieInterface, DesignDataContextInterface } from "@/types/design";
+import { DesignCategorieInterface, DesignDataContextInterface, FurnitureDataCardsInterface } from "@/types/design";
 import DesignDetailComponent from '@/components/DesignDetailComponent/DesignDetailComponent';
+import { useRouter } from 'next/navigation';
+import { ImgDataInterface } from '@/types';
 
 export default function DesignDetailContainer({
     designKey,
@@ -28,5 +30,17 @@ export default function DesignDetailContainer({
         }
     }, [params.slug]);
 
-    return <DesignDetailComponent designKey={designKey} />
+    const router = useRouter();
+
+    const [inputError, setInputError] = useState<boolean>(false);
+    const [currentTableId, setCurrentTableId] = useState<number | null>(null);
+    const [measureValues, setMeasureValues] = useState<any>({});
+    const [visibleTables, setVisibleTables] = useState([1]);
+    const [clickedImages, setClickedImages] = useState<{ [key: number]: FurnitureDataCardsInterface[] }>({});
+    const [validated, setValidated] = useState<boolean>(false);
+    const [showMissingFields, setShowMissingFields] = useState(false);
+    const [buttonClicked, setButtonClicked] = useState(false);
+    const [imgData, setImgData] = useState<ImgDataInterface | undefined>(undefined);
+
+    return <DesignDetailComponent />
 }

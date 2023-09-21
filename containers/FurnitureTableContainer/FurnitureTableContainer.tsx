@@ -4,10 +4,8 @@ import { DesignCategorieInterface, FurnitureTableInterface } from "@/types/desig
 import { useRef } from "react";
 
 export default function FurnitureTableContainer({
-    designKey,
     table,
 }: {
-    designKey: DesignCategorieInterface,
     table: FurnitureTableInterface,
 }) {
     console.log("[TABLE-ITEM]: ", table)
@@ -32,7 +30,6 @@ export default function FurnitureTableContainer({
     };
 
     return <FurnitureTableComponent
-        designKey={designKey}
         table={table}
         carouselRef={carouselRef}
         handleScrollLeft={handleScrollLeft}

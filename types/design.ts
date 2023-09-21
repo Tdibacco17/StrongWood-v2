@@ -53,3 +53,9 @@ export interface MeasureType {
     title: string,
     measure: number
 }
+
+export interface FurnitureDataCardsInterface {
+    cardId: number,
+    cardTitle: string,
+    image?: ImgDataInterface
+}

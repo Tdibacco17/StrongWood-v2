@@ -6,9 +6,7 @@ import LoadingComponent from '../LoadingComponent/LoadingComponent'
 import FurnitureTableContainer from '@/containers/FurnitureTableContainer/FurnitureTableContainer'
 
 export default function DesignDetailComponent({
-    designKey,
 }: {
-    designKey: DesignCategorieInterface,
 }) {
     const { designData } = useContext(
         DesignDetailContext
@@ -22,7 +20,6 @@ export default function DesignDetailComponent({
                 designData ?
                     designData.map((table: FurnitureTableInterface) => {
                         return <FurnitureTableContainer
-                            designKey={designKey}
                             key={table.tableId}
                             table={table}
                         />;
