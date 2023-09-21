@@ -1,8 +1,7 @@
 'use client'
 import { designData } from '@/models/design'
 import { useContext, useEffect, useState } from "react";
-import { DesignCategorieInterface, FurnitureDataContextInterface, MeasureValues } from "@/types/design";
-import { useRouter } from 'next/navigation';
+import { DesignCategorieInterface, FurnitureDataCardsInterface, FurnitureDataContextInterface } from "@/types/design";
 import { ImgDataInterface } from '@/types';
 import FurnitureComponent from '@/components/FurnitureComponent/FurnitureComponent';
 import { FurnitureDetailContext } from '@/context/FurnitureDetailProvider';
@@ -28,9 +27,26 @@ export default function FurnitureContainer({
         });
     }, [params.slug, isGeneric]);
 
+    const [visibleTables, setVisibleTables] = useState<number[]>([1]);
+    const [clickedImageSlugs, setClickedImageSlugs] = useState<string[]>([]);
+
+    const handleImageClick = (image: FurnitureDataCardsInterface, tableId: number) => {
+        // Verificamos si la imagen ya está en el array clickedImageSlugs
+        const nextTableId = tableId + 1;
+        if (!visibleTables.includes(nextTableId)) {
+            setVisibleTables(prevTables => [...prevTables, nextTableId]);
+        }
+
+        if (!clickedImageSlugs.includes(image.title_slug)) {
+            // Si no está en el array, lo agregamos
+            setClickedImageSlugs([...clickedImageSlugs, image.title_slug]);
+        }
+    };
+
+    console.log(clickedImageSlugs)
+
     return <FurnitureComponent
-        // measureValues={measureValues}
-        // imgSlugsWithAskMeasure={imgSlugsWithAskMeasure}
-        // handleMeasureChange={handleMeasureChange}
+        visibleTables={visibleTables}
+        handleImageClick={handleImageClick}
     />
 }

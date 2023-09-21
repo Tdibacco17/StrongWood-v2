@@ -1,20 +1,18 @@
-import { DesignCategorieInterface, FurnitureDataContextInterface, FurnitureTableInterface, MeasureValues } from '@/types/design'
+import { FurnitureDataCardsInterface, FurnitureDataContextInterface, FurnitureTableInterface } from '@/types/design'
 import styles from './FurnitureComponent.module.scss'
 import { useContext } from 'react'
 import LoadingComponent from '../LoadingComponent/LoadingComponent'
 import FurnitureTableContainer from '@/containers/FurnitureTableContainer/FurnitureTableContainer'
-import FurnitureMeasureComponent from '../FurnitureMeasureComponent/FurnitureMeasureComponent'
 import { FurnitureDetailContext } from '@/context/FurnitureDetailProvider'
+import { ImgDataInterface } from '@/types'
 
 export default function FurnitureComponent({
-    // measureValues,
-    // imgSlugsWithAskMeasure,
-    // handleMeasureChange,
+    visibleTables,
+    handleImageClick
 }: {
-        // measureValues: MeasureValues,
-        // imgSlugsWithAskMeasure: string[],
-        // handleMeasureChange: (measureName: string, value: number) => void,
-    }) {
+    visibleTables: number[];
+    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number) => void
+}) {
     const { furnitureData } = useContext(
         FurnitureDetailContext
     ) as FurnitureDataContextInterface
@@ -23,25 +21,20 @@ export default function FurnitureComponent({
         <div className={styles['container-section-design-detail']}>
             {
                 furnitureData ?
-                    furnitureData.tables.map((table: FurnitureTableInterface) => {
-                        return <FurnitureTableContainer
-                            key={table.tableId}
-                            table={table}
-                        />
+                    furnitureData.tables.map((table: FurnitureTableInterface, index: number) => {
+                        return (
+                            <div key={table.table_id} style={{ display: visibleTables.includes(index + 1) ? 'block' : 'none' }}>
+                                <FurnitureTableContainer
+                                    table={table}
+                                    tableId={table.table_id}
+                                    handleImageClick={handleImageClick}
+                                />
+                            </div>
+                        )
                     })
                     : <LoadingComponent />
             }
             <div className={`${styles["container-all-inputs-measures"]}`}>
-                {/* {
-                furnitureData && furnitureData.measures ?
-                    <FurnitureMeasureComponent
-                        measureData={furnitureData.measures}
-                        imgSlugsWithAskMeasure={imgSlugsWithAskMeasure}
-                        handleMeasureChange={handleMeasureChange}
-                        measureValues={measureValues}
-                    />
-                    : <LoadingComponent />
-            } */}
             </div>
         </div>
     )

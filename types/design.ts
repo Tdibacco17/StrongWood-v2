@@ -38,11 +38,15 @@ export interface FurnitureDataInterface {
 }
 
 export interface FurnitureTableInterface {
-    tableId: number,
-    tableTitle: string,
+    table_id: number,
+    title: string,
     maxSelections: number,
     askMeasure: boolean,
-    cards: ImgDataInterface[],
+    cards: FurnitureDataCardsInterface[],
+}
+
+export interface FurnitureDataCardsInterface extends ImgDataInterface {
+    title_slug: string,
 }
 
 export interface MeasureDataInterface {

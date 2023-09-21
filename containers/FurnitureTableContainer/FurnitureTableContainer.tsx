@@ -1,14 +1,18 @@
 'use client'
 import FurnitureTableComponent from "@/components/FurnitureTableComponent/FurnitureTableComponent";
-import { DesignCategorieInterface, FurnitureTableInterface } from "@/types/design";
+import { ImgDataInterface } from "@/types";
+import { FurnitureDataCardsInterface, FurnitureTableInterface } from "@/types/design";
 import { useRef } from "react";
 
 export default function FurnitureTableContainer({
     table,
+    tableId,
+    handleImageClick
 }: {
     table: FurnitureTableInterface,
+    tableId: number,
+    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number) => void
 }) {
-    // console.log("[TABLE-ITEM]: ", table)
 
     const carouselRef = useRef<HTMLDivElement>(null);
 
@@ -31,8 +35,10 @@ export default function FurnitureTableContainer({
 
     return <FurnitureTableComponent
         table={table}
+        tableId={tableId}
         carouselRef={carouselRef}
         handleScrollLeft={handleScrollLeft}
         handleScrollRight={handleScrollRight}
+        handleImageClick={handleImageClick}
     />
 }
