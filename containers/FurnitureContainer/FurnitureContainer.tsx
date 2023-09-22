@@ -1,6 +1,6 @@
 'use client'
 import { designData } from '@/models/design'
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import { DesignCategorieInterface, FurnitureDataCardsInterface, FurnitureDataContextInterface, MeasureInterface } from "@/types/design";
 import { ImgDataInterface } from '@/types';
 import FurnitureComponent from '@/components/FurnitureComponent/FurnitureComponent';
@@ -25,11 +25,22 @@ export default function FurnitureContainer({
     }, [params.slug, isGeneric]);
 
     const [measureValues, setMeasureValues] = useState<MeasureInterface | {}>({});
+    const [selectedMeasureImage, setSelectedMeasureImage] = useState<string | null>(null);
 
     const [visibleTables, setVisibleTables] = useState<number[]>([1]);
-    const [clickedImages, setClickedImages] = useState<{ tableId: number, tableTitle: string, images: string[], askMeasure?: boolean }[]>([]);
+    const [clickedImages, setClickedImages] = useState<{ tableId: number, tableTitle: string, images: string[] }[]>([]);
 
-    const handleImageClick = (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string) => {
+    useEffect(() => {
+        // Aquí actualizamos measureValues en función de selectedMeasureImage
+        if (selectedMeasureImage) {
+            designData['cocinas'].details.measures && setMeasureValues(designData['cocinas'].details.measures[selectedMeasureImage]);
+        } else {
+            // Si no hay una imagen seleccionada para medir, reseteamos measureValues
+            setMeasureValues({});
+        }
+    }, [selectedMeasureImage]);
+
+    const handleImageClick = useMemo(() => (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string) => {
         // Verificamos si la imagen ya está en el array clickedImageSlugs
         const nextTableId = tableId + 1;
         if (!visibleTables.includes(nextTableId)) {
@@ -38,6 +49,10 @@ export default function FurnitureContainer({
 
         //busco que tabla tiene la prop askMeasure en true (pedir medidas)
         const currentTable = furnitureData.find(table => table.table_id === tableId);
+        if (currentTable?.askMeasure) {
+            // Si la propiedad askMeasure está en true, actualizamos selectedMeasureImage
+            setSelectedMeasureImage(image.title_slug);
+        }
 
         // Verificamos si la imagen ya está en la lista de imágenes seleccionadas para esta tabla
         const selectedImageIndex = clickedImages.findIndex(item => item.tableId === tableId);
@@ -93,10 +108,10 @@ export default function FurnitureContainer({
                 }
             }
         }
-    }
+    }, [furnitureData, clickedImages, visibleTables]);
 
-    console.log("[measureValues]: ", measureValues)
-    console.log("[clickedImages]: ", clickedImages)
+    console.log("[MEASURE-VALUES]: ", measureValues)
+    console.log("[CLICKED-IMAGES]: ", clickedImages)
 
     return <FurnitureComponent
         visibleTables={visibleTables}
