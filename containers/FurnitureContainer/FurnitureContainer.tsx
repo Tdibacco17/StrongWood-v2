@@ -20,9 +20,10 @@ export default function FurnitureContainer({
     ) as FurnitureDataContextInterface
 
     useEffect(() => {
-        const selectedDesignData = isGeneric ? designData['cocinas'].details.tables['generic'] : designData['cocinas'].details.tables[params.slug];
+        const selectedDesignData = isGeneric ? designData[designKey].details.tables['generic'] : designData[designKey].details.tables[params.slug];
+        console.log(selectedDesignData, "SELECT")
         handleFurnitureDataChange(selectedDesignData);
-    }, [params.slug, isGeneric]);
+    }, [params.slug, isGeneric, designKey]);
 
     const [measureValues, setMeasureValues] = useState<MeasureInterface | {}>({});
     const [selectedMeasureImage, setSelectedMeasureImage] = useState<string | null>(null);
@@ -33,7 +34,12 @@ export default function FurnitureContainer({
     useEffect(() => {
         // Aquí actualizamos measureValues en función de selectedMeasureImage
         if (selectedMeasureImage) {
-            designData['cocinas'].details.measures && setMeasureValues(designData['cocinas'].details.measures[selectedMeasureImage]);
+            if (designKey === "cocinas") {
+                designData['cocinas'].details.measures && setMeasureValues(designData['cocinas'].details.measures[selectedMeasureImage]);
+            }
+            if (designKey === "placares") {
+                designData['placares'].details.measures && setMeasureValues(designData['placares'].details.measures[selectedMeasureImage]);
+            }
         } else {
             // Si no hay una imagen seleccionada para medir, reseteamos measureValues
             setMeasureValues({});
@@ -104,7 +110,12 @@ export default function FurnitureContainer({
 
                 // Verificamos si la propiedad askMeasure está en true y guardamos el title_slug
                 if (currentTable?.askMeasure) {
-                    designData['cocinas'].details.measures && setMeasureValues(designData['cocinas'].details.measures[image.title_slug]);
+                    if (designKey === "cocinas") {
+                        designData['cocinas'].details.measures && setMeasureValues(designData['cocinas'].details.measures[image.title_slug]);
+                    }
+                    if (designKey === "placares") {
+                        designData['placares'].details.measures && setMeasureValues(designData['placares'].details.measures[image.title_slug]);
+                    }
                 }
             }
         }
