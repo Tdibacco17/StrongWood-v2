@@ -2,7 +2,6 @@
 import { designData } from '@/models/design'
 import { useContext, useEffect, useMemo, useState } from "react";
 import { DesignCategorieInterface, FurnitureDataCardsInterface, FurnitureDataContextInterface, MeasureInterface } from "@/types/design";
-import { ImgDataInterface } from '@/types';
 import FurnitureComponent from '@/components/FurnitureComponent/FurnitureComponent';
 import { FurnitureDetailContext } from '@/context/FurnitureDetailProvider';
 
@@ -18,6 +17,12 @@ export default function FurnitureContainer({
     const { furnitureData, handleFurnitureDataChange } = useContext(
         FurnitureDetailContext
     ) as FurnitureDataContextInterface
+
+    useEffect(() => {
+        return () => {
+            handleFurnitureDataChange([]); // Clear furnitureData when unmounting
+        };
+    }, []);
 
     useEffect(() => {
         const selectedDesignData = isGeneric ? designData[designKey].details.tables['generic'] : designData[designKey].details.tables[params.slug];
