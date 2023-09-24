@@ -30,11 +30,13 @@ export default function FurnitureContainer({
         handleFurnitureDataChange(selectedDesignData);
     }, [params.slug, isGeneric, designKey]);
 
-    const [measureValues, setMeasureValues] = useState<MeasureInterface | {}>({});
+    const [measureValues, setMeasureValues] = useState<MeasureInterface | undefined>(undefined);
     const [selectedMeasureImage, setSelectedMeasureImage] = useState<string | null>(null);
 
     const [visibleTables, setVisibleTables] = useState<number[]>([1]);
     const [clickedImages, setClickedImages] = useState<{ tableId: number, tableTitle: string, images: string[] }[]>([]);
+
+    const [missingTableIds, setMissingTableIds] = useState<number[]>([]);
 
     useEffect(() => {
         // Aquí actualizamos measureValues en función de selectedMeasureImage
@@ -47,7 +49,7 @@ export default function FurnitureContainer({
             }
         } else {
             // Si no hay una imagen seleccionada para medir, reseteamos measureValues
-            setMeasureValues({});
+            setMeasureValues(undefined);
         }
     }, [selectedMeasureImage]);
 
@@ -126,10 +128,39 @@ export default function FurnitureContainer({
         }
     }, [furnitureData, clickedImages, visibleTables]);
 
-    console.log("[MEASURE-VALUES]: ", measureValues)
-    console.log("[CLICKED-IMAGES]: ", clickedImages)
+    const validateSelectedImages = () => {
+        const tableIdsWithImages = clickedImages.map(item => item.tableId);
+        const allTableIds = furnitureData.map(item => item.table_id);
+
+        const missingTableIds = allTableIds.filter(tableId => !tableIdsWithImages.includes(tableId));
+
+        setMissingTableIds(missingTableIds);
+    };
+
+    const handleValidate = () => {
+        validateSelectedImages()
+
+        if (missingTableIds.length > 0) {
+            // Handle the case where some tables are missing images
+            // You can display an error message or take any other action here
+            console.log("Tables missing images:", missingTableIds);
+        } else {
+            // All tables have at least one image selected
+            console.log("All tables have at least one image selected");
+        }
+    }
+
+    //ACTUALIZAR UNA VEZ QUE SE APRETO EL BOTON
+    // useEffect(() => {
+    //     if (furnitureData?.length < visibleTables.length) {
+    //         validateSelectedImages();
+    //     }
+    // }, [clickedImages])
 
     return <FurnitureComponent
+        measureValues={measureValues}
+        missingTableIds={missingTableIds}
+        handleValidate={handleValidate}
         visibleTables={visibleTables}
         handleImageClick={handleImageClick}
     />
