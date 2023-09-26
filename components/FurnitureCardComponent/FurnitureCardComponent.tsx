@@ -1,22 +1,23 @@
-import { ImgDataInterface } from '@/types'
 import styles from './FurnitureCardComponent.module.scss'
-import Link from 'next/link'
 import Image from 'next/image'
-import { DesignCategorieInterface, FurnitureDataCardsInterface } from '@/types/design'
+import { FurnitureDataCardsInterface } from '@/types/design'
+
 //FALTAN IMAGENES BLURS
 export default function FurnitureCardComponent({
     imageData,
     tableId,
     tableTitle,
-    handleImageClick
+    handleImageClick,
+    isSelected
 }: {
     imageData: FurnitureDataCardsInterface,
     tableId: number,
     tableTitle: string,
-    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void
+    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void,
+    isSelected: any
 }) {
     return (
-        <div onClick={() => handleImageClick(imageData, tableId, tableTitle)} className={styles["container-section-card-furniture"]}>
+        <div id={`${imageData.img_id}`} onClick={() => handleImageClick(imageData, tableId, tableTitle)} className={`${styles["container-section-card-furniture"]}`}>
             <div className={styles['container-outer-furniture-image']}>
                 <Image
                     className={`${styles['container-inner-furniture-image']}`}
@@ -32,6 +33,7 @@ export default function FurnitureCardComponent({
             <div className={styles["container-overlay-image"]}>
                 <p className={styles["title-overlay"]}>{imageData.imgAlt}</p>
             </div>
-        </div>
+            { isSelected && <div className={styles["clicked-image"]} /> }
+        </div >
     )
 }

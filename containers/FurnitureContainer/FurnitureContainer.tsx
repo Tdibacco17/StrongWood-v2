@@ -1,6 +1,6 @@
 'use client'
 import { designData } from '@/models/design'
-import { useContext, useEffect, useMemo, useState } from "react";
+import { ChangeEvent, useContext, useEffect, useMemo, useState } from "react";
 import { DesignCategorieInterface, FurnitureDataCardsInterface, FurnitureDataContextInterface, MeasureInterface } from "@/types/design";
 import FurnitureComponent from '@/components/FurnitureComponent/FurnitureComponent';
 import { FurnitureDetailContext } from '@/context/FurnitureDetailProvider';
@@ -23,21 +23,40 @@ export default function FurnitureContainer({
             handleFurnitureDataChange([]); // Clear furnitureData when unmounting
         };
     }, []);
-
     useEffect(() => {
         const selectedDesignData = isGeneric ? designData[designKey].details.tables['generic'] : designData[designKey].details.tables[params.slug];
-        console.log(selectedDesignData, "SELECT")
         handleFurnitureDataChange(selectedDesignData);
     }, [params.slug, isGeneric, designKey]);
 
     const [measureValues, setMeasureValues] = useState<MeasureInterface | undefined>(undefined);
     const [selectedMeasureImage, setSelectedMeasureImage] = useState<string | null>(null);
-
     const [visibleTables, setVisibleTables] = useState<number[]>([1]);
     const [clickedImages, setClickedImages] = useState<{ tableId: number, tableTitle: string, images: string[] }[]>([]);
-
     const [missingTableIds, setMissingTableIds] = useState<number[]>([]);
+    const [submitButtonClicked, setSubmitButtonClicked] = useState(false);
+    const [inputValues, setInputValues] = useState<{ [key: string]: number }>({});
+    const [areInputsEmpty, setAreInputsEmpty] = useState<boolean>(false);
 
+    const initialInputValues: { [key: string]: number } = {};
+    // Itera sobre leters y establece valores iniciales en el estado
+    measureValues?.leters.forEach((inputItem) => {
+        initialInputValues[inputItem.title] = 0; // Puedes establecer el valor inicial que desees
+    });
+
+    const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+        const newValue = parseFloat(e.target.value);
+        const inputName = e.target.name;
+
+        setInputValues((prevInputValues) => ({
+            ...prevInputValues,
+            [inputName]: newValue,
+        }));
+    };
+
+    // Efecto para limpiar inputValues cuando measureValues cambia
+    useEffect(() => {
+        setInputValues({}); // Limpia inputValues cuando measureValues cambia
+    }, [measureValues]);
     useEffect(() => {
         // Aquí actualizamos measureValues en función de selectedMeasureImage
         if (selectedMeasureImage) {
@@ -52,6 +71,16 @@ export default function FurnitureContainer({
             setMeasureValues(undefined);
         }
     }, [selectedMeasureImage]);
+    useEffect(() => {
+        if (submitButtonClicked) {
+            if (designKey === "cocinas" || designKey === "placares") {
+                validateSelectedImages();
+                validateCompleteInputs();
+            } else {
+                validateSelectedImages();
+            }
+        }
+    }, [clickedImages, inputValues])
 
     const handleImageClick = useMemo(() => (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string) => {
         // Verificamos si la imagen ya está en el array clickedImageSlugs
@@ -137,31 +166,63 @@ export default function FurnitureContainer({
         setMissingTableIds(missingTableIds);
     };
 
-    const handleValidate = () => {
-        validateSelectedImages()
+    const validateCompleteInputs = () => {
+        const isEmpty = Object.keys(inputValues).length === 0; // Verificar si el objeto inputValues está vacío
+        const hasEqualLength = Object.keys(inputValues).length === measureValues?.leters.length; // Verificar si tiene la misma cantidad de keys que measureValues
 
-        if (missingTableIds.length > 0) {
-            // Handle the case where some tables are missing images
-            // You can display an error message or take any other action here
-            console.log("Tables missing images:", missingTableIds);
+        const areInputsComplete = !isEmpty && hasEqualLength; // Comprobar si no está vacío y tiene la misma cantidad de keys
+
+        // Verificar si alguno de los valores en inputValues es NaN
+        const hasNaNValues = Object.values(inputValues).some((value) => isNaN(value));
+
+        if (areInputsComplete) {
+            if (hasNaNValues) {
+                setAreInputsEmpty(true); // Marcar como vacío si hay valores NaN
+            } else {
+                setAreInputsEmpty(false); // Marcar como no vacío si todos los valores son válidos
+            }
         } else {
-            // All tables have at least one image selected
-            console.log("All tables have at least one image selected");
+            setAreInputsEmpty(true); // Marcar como vacío si no están completos
         }
-    }
+    };
 
-    //ACTUALIZAR UNA VEZ QUE SE APRETO EL BOTON
-    // useEffect(() => {
-    //     if (furnitureData?.length < visibleTables.length) {
-    //         validateSelectedImages();
-    //     }
-    // }, [clickedImages])
+    const handleSubmit = () => {
+        setSubmitButtonClicked(true); // Marcar el botón como presionado
+
+        if (designKey === "cocinas" || designKey === "placares") {
+            validateSelectedImages();
+            validateCompleteInputs();
+            if (missingTableIds.length > 0 || areInputsEmpty || (Object.keys(inputValues).length === 0)) {
+                // Handle the case where some tables are missing images or inputs are not complete
+                if (missingTableIds.length > 0) {
+                    // console.log("Mesas sin imágenes:", missingTableIds);
+                }
+                if (areInputsEmpty) {
+                    // console.log("Algunos inputs están vacíos");
+                }
+            } else {
+                // Todas las mesas tienen al menos una imagen seleccionada y todos los inputs están completos
+                // console.log("Todas las mesas tienen al menos una imagen seleccionada y todos los inputs están completos");
+            }
+        } else {
+            validateSelectedImages();
+            if (missingTableIds.length > 0) {
+                // console.log("Mesas sin imágenes:", missingTableIds);
+            } else {
+                // console.log("Todas las mesas tienen al menos una imagen seleccionada");
+            }
+        }
+    };
 
     return <FurnitureComponent
         measureValues={measureValues}
         missingTableIds={missingTableIds}
-        handleValidate={handleValidate}
+        handleSubmit={handleSubmit}
         visibleTables={visibleTables}
         handleImageClick={handleImageClick}
+        handleInputChange={handleInputChange}
+        inputValues={inputValues}
+        areInputsEmpty={areInputsEmpty}
+        clickedImages={clickedImages}
     />
 }

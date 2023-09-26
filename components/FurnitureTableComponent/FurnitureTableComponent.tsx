@@ -11,7 +11,9 @@ export default function FurnitureTableComponent({
     carouselRef,
     handleScrollLeft,
     handleScrollRight,
-    handleImageClick
+    handleImageClick,
+    clickedImages,
+    isMissingImage
 }: {
     table: FurnitureTableInterface,
     tableId: number,
@@ -19,10 +21,12 @@ export default function FurnitureTableComponent({
     carouselRef: React.RefObject<HTMLDivElement>,
     handleScrollLeft: () => void,
     handleScrollRight: () => void,
-    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void
+    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void,
+    clickedImages: { tableId: number, tableTitle: string, images: string[] }[],
+    isMissingImage: boolean
 }) {
     return (
-        <div className={styles['container-section-furniture-table']}>
+        <div className={`${styles['container-section-furniture-table']}`}>
             <div className={styles['container-header-table']}>
                 <div>
                     <p className={styles['title-table']}>TITULO</p>
@@ -51,7 +55,9 @@ export default function FurnitureTableComponent({
                 carouselRef={carouselRef}
                 imagesData={table.cards}
                 handleImageClick={handleImageClick}
+                clickedImages={clickedImages}
             />
+            {isMissingImage && <div className={styles['tableStyle']} />}
         </div>
     )
 }

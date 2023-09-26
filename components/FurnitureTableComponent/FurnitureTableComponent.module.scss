@@ -8,6 +8,7 @@
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     background-color: var(--secondary-color);
+    position: relative;
 
     &:hover {
         .container-header-table .container-carousel-btns .carousel-btn-arrow {
@@ -73,5 +74,14 @@
                 }
             }
         }
+    }
+
+    .tableStyle {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: 0.15rem solid red;
+        pointer-events: none;
     }
 }

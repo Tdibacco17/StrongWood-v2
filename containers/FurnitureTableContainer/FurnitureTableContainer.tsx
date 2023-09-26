@@ -8,12 +8,16 @@ export default function FurnitureTableContainer({
     table,
     tableId,
     tableTitle,
-    handleImageClick
+    handleImageClick,
+    clickedImages,
+    isMissingImage
 }: {
     table: FurnitureTableInterface,
     tableId: number,
     tableTitle: string,
-    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void
+    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void,
+    clickedImages: { tableId: number, tableTitle: string, images: string[] }[],
+    isMissingImage: boolean
 }) {
 
     const carouselRef = useRef<HTMLDivElement>(null);
@@ -43,5 +47,7 @@ export default function FurnitureTableContainer({
         handleScrollLeft={handleScrollLeft}
         handleScrollRight={handleScrollRight}
         handleImageClick={handleImageClick}
+        clickedImages={clickedImages}
+        isMissingImage={isMissingImage}
     />
 }

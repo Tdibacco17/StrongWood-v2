@@ -1,22 +1,31 @@
-import { FurnitureDataCardsInterface, FurnitureDataContextInterface, FurnitureTableInterface, MeasureInterface } from '@/types/design'
+import { FurnitureDataCardsInterface, FurnitureDataContextInterface, FurnitureTableInterface, MeasureInterface, MeasureType } from '@/types/design'
 import styles from './FurnitureComponent.module.scss'
-import { useContext } from 'react'
+import { ChangeEvent, useContext } from 'react'
 import LoadingComponent from '../LoadingComponent/LoadingComponent'
 import FurnitureTableContainer from '@/containers/FurnitureTableContainer/FurnitureTableContainer'
 import { FurnitureDetailContext } from '@/context/FurnitureDetailProvider'
+import FurnitureMeasureComponent from '../FurnitureMeasureComponent/FurnitureMeasureComponent'
 
 export default function FurnitureComponent({
     measureValues,
     visibleTables,
     handleImageClick,
-    handleValidate,
+    handleSubmit,
     missingTableIds,
+    handleInputChange,
+    inputValues,
+    areInputsEmpty,
+    clickedImages
 }: {
     measureValues: MeasureInterface | undefined,
     visibleTables: number[];
     handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void,
-    handleValidate: () => void,
-    missingTableIds: number[]
+    handleSubmit: () => void,
+    missingTableIds: number[],
+    handleInputChange: (e: ChangeEvent<HTMLInputElement>) => void,
+    inputValues: any,
+    areInputsEmpty: boolean,
+    clickedImages: { tableId: number, tableTitle: string, images: string[] }[],
 }) {
     const { furnitureData } = useContext(
         FurnitureDetailContext
@@ -30,28 +39,35 @@ export default function FurnitureComponent({
                         const isMissingImage = missingTableIds.includes(table.table_id);
 
                         return (
-                            <div key={table.table_id} style={{ display: visibleTables.includes(index + 1) ? 'block' : 'none' }}
-                                className={`${isMissingImage ? styles['tableStyle'] : ""}`}>
+                            <div key={table.table_id} style={{ display: visibleTables.includes(index + 1) ? 'block' : 'none' }}>
                                 <FurnitureTableContainer
                                     table={table}
                                     tableId={table.table_id}
                                     tableTitle={table.title}
                                     handleImageClick={handleImageClick}
+                                    clickedImages={clickedImages}
+                                    isMissingImage={isMissingImage}
                                 />
                             </div>
                         )
                     })
                     : <LoadingComponent />
             }
-            {furnitureData?.length < visibleTables.length && <button onClick={handleValidate}>handleValidate</button>}
-            <div className={`${styles["container-all-inputs-measures"]}`}>
-                {
-                    furnitureData?.length < visibleTables.length &&
-                    measureValues?.leters.map((e: any, index: number) => {
-                        return <div key={index}>medida + {index}</div>
-                    })
-                }
-            </div>
+            {
+                furnitureData?.length < visibleTables.length && measureValues &&
+                <div className={`${styles["container-all-inputs-measures"]}`}>
+                    {measureValues?.leters.map((inputItem: MeasureType, index: number) => {
+                        return <FurnitureMeasureComponent
+                            key={index}
+                            inputItem={inputItem}
+                            handleInputChange={handleInputChange}
+                            value={inputValues[inputItem.title] || ""}
+                        />
+                    })}
+                    {areInputsEmpty && <div className={styles['tableStyle']} />}
+                </div>
+            }
+            {furnitureData?.length < visibleTables.length && <button onClick={handleSubmit}>handleValidate</button>}
         </div>
     )
 }
