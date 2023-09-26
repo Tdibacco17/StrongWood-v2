@@ -28,9 +28,11 @@ export default function FurnitureTableComponent({
     return (
         <div className={`${styles['container-section-furniture-table']}`}>
             <div className={styles['container-header-table']}>
-                <div>
-                    <p className={styles['title-table']}>TITULO</p>
-                    <p className={styles['subtitle-table']}>SUB TITULO</p>
+                <div className={styles['container-titles-header-table']}>
+                    <p className={styles['title-table']}>{table.title}</p>
+                    <p className={styles['subtitle-table']}>{table.maxSelections === 1 ?
+                        `Mínimo elegir 1 opción`
+                        : `Mínimo elegir 1 opción, máximo ${table.maxSelections}`}</p>
                 </div>
                 <div className={styles['container-carousel-btns']}>
                     <button

@@ -30,6 +30,8 @@
   --primary-color: #232730;
   --secondary-color: #2F3540;
   --tertiary-color: #d87e2a;
+  --success-color: green;
+  --danger-color: red;
   /* btn mobile */
   --box-shadow: rgb(0, 0, 0, 0.2) 5px 5px 10px;
   --scale-mobile: scale(1.025);

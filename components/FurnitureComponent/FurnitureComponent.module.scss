@@ -3,13 +3,7 @@
     flex-direction: column;
     justify-content: flex-start;
     gap: 6rem;
-    // padding: 0 1.5rem;
     position: relative;
-
-    // @media (max-width: 523px) {
-    //     padding-left: 1rem;
-    //     padding-right: 1rem;
-    // }
 
     .container-all-inputs-measures {
         position: relative;
@@ -21,6 +15,20 @@
             height: 100%;
             border: 0.15rem solid red;
             pointer-events: none;
+        }
+    }
+
+    .container-loader-furniture-table {
+        min-height: 27rem;
+        max-height: 27rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--secondary-color);
+
+        @media (max-width: 672px) {
+            min-height: 28rem;
+            max-height: 28rem;
         }
     }
 }

@@ -51,7 +51,7 @@ export default function FurnitureComponent({
                             </div>
                         )
                     })
-                    : <LoadingComponent />
+                    : <div className={styles['container-loader-furniture-table']}><LoadingComponent /></div>
             }
             {
                 furnitureData?.length < visibleTables.length && measureValues &&
