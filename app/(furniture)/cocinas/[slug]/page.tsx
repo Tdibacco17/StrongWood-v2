@@ -5,11 +5,9 @@ import FurnitureContainer from '@/containers/FurnitureContainer/FurnitureContain
 
 export default function KitchenDetailPage({ params }: { params: { slug: string } }) {
     return (
-        <>
+        <section id={data.designPage.sectionLink} className={styles['container-section-kitchen-detail-page']}>
             <NavigationContainer isHome={false} showUrl={true} url={'/cocinas'} />
-            <section id={data.designPage.sectionLink} className={styles['container-section-kitchen-detail-page']}>
-                <FurnitureContainer designKey='cocinas' params={params} isGeneric={true}/>
-            </section>
-        </>
+            <FurnitureContainer designKey='cocinas' params={params} isGeneric={true} />
+        </section>
     )
 }

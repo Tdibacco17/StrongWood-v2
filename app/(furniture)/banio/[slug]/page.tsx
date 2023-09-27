@@ -5,11 +5,9 @@ import FurnitureContainer from '@/containers/FurnitureContainer/FurnitureContain
 
 export default function BathroomDetailPage({ params }: { params: { slug: string } }) {
     return (
-        <>
+        <section id={data.designPage.sectionLink} className={styles['container-section-bathroom-detail-page']}>
             <NavigationContainer isHome={false} showUrl={true} url={'/banio'} />
-            <section id={data.designPage.sectionLink} className={styles['container-section-bathroom-detail-page']}>
-                <FurnitureContainer designKey='banio' params={params} isGeneric={true}/>
-            </section>
-        </>
+            <FurnitureContainer designKey='banio' params={params} isGeneric={true} />
+        </section>
     )
 }

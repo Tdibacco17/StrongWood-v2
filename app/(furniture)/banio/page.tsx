@@ -5,11 +5,9 @@ import data from '@/models/es.json'
 
 export default function BathroomPage() {
     return (
-        <>
+        <section id={data.designPage.sectionLink} className={styles['container-section-bathroom-page']}>
             <NavigationContainer isHome={false} showUrl={true} url={'/'} />
-            <section id={data.designPage.sectionLink} className={styles['container-section-bathroom-page']}>
-                <CategorieStyleContainer designKey={'banio'} />
-            </section>
-        </>
+            <CategorieStyleContainer designKey={'banio'} />
+        </section>
     )
 }

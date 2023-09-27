@@ -5,11 +5,9 @@ import data from '@/models/es.json'
 
 export default function ClosetsPage() {
     return (
-        <>
+        <section id={data.designPage.sectionLink} className={styles['container-section-closets-page']}>
             <NavigationContainer isHome={false} showUrl={true} url={'/'} />
-            <section id={data.designPage.sectionLink} className={styles['container-section-closets-page']}>
-                <CategorieStyleContainer designKey={'placares'} />
-            </section>
-        </>
+            <CategorieStyleContainer designKey={'placares'} />
+        </section>
     )
 }

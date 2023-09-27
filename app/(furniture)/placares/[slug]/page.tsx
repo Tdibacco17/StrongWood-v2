@@ -5,11 +5,9 @@ import FurnitureContainer from '@/containers/FurnitureContainer/FurnitureContain
 
 export default function ClosetsDetailPage({ params }: { params: { slug: string } }) {
     return (
-        <>
-        <NavigationContainer isHome={false} showUrl={true} url={'/placares'} />
         <section id={data.designPage.sectionLink} className={styles['container-section-closets-detail-page']}>
+            <NavigationContainer isHome={false} showUrl={true} url={'/placares'} />
             <FurnitureContainer designKey='placares' params={params} isGeneric={true} />
         </section>
-    </>
     )
 }

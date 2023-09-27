@@ -67,7 +67,7 @@ body {
   font-weight: var(--font-regular);
   font-size: var(--calc-rem);
   /* scrollbar */
-  scrollbar-gutter: stable;
+  /* scrollbar-gutter: stable; */
   scroll-padding: 0 0.2rem;
   /* height footer: 6rem + padding top: 6rem + gap:6rem */
   padding-bottom: 6rem;
