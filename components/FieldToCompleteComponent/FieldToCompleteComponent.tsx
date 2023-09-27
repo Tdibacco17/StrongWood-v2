@@ -13,7 +13,8 @@ export default function FieldToCompleteComponent({
     isSelectField,
     paymentMethod,
     isSelect,
-    contactPage
+    contactPage,
+    selectWidth
 }: FieldToCompleteProps) {
 
     if (isTextAreaField) {
@@ -30,7 +31,7 @@ export default function FieldToCompleteComponent({
 
     if (isSelectField) {
         return (
-            <label className={styles['wrapper-label']}>
+            <label className={`${styles['wrapper-label']}`}>
                 {
                     isSelect && !isSelect ?
                         <p className={styles['text-custom']}>
@@ -41,7 +42,7 @@ export default function FieldToCompleteComponent({
                         </p>
                 }
                 <select
-                    className={styles['select-custom']}
+                    className={`${styles['select-custom']}  ${selectWidth ? styles['max-width'] : ""}`}
                     value={selectedPayment && selectedPayment}
                     onChange={handlePaymentChange && handlePaymentChange}
                     ref={selectRef && selectRef}>{

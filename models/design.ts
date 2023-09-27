@@ -270,7 +270,7 @@ export const designData: DesignDataInterface = {
                 "cocina-en-l": {
                     numValuesToComplete: 2,
                     measure_slug: "cocina-en-l",
-                    leters: [
+                    letters: [
                         {
                             measure_id: 1,
                             title: "Medida A",
@@ -289,7 +289,7 @@ export const designData: DesignDataInterface = {
                 "cocina-en-u": {
                     numValuesToComplete: 3,
                     measure_slug: "cocina-en-u",
-                    leters: [
+                    letters: [
                         {
                             measure_id: 1,
                             title: "Medida A",
@@ -314,7 +314,7 @@ export const designData: DesignDataInterface = {
                 "cocina-en-g": {
                     numValuesToComplete: 4,
                     measure_slug: "cocina-en-g",
-                    leters: [
+                    letters: [
                         {
                             measure_id: 1,
                             title: "Medida A",
@@ -344,7 +344,7 @@ export const designData: DesignDataInterface = {
                 "cocina-lineal": {
                     numValuesToComplete: 1,
                     measure_slug: "cocina-lineal",
-                    leters: [
+                    letters: [
                         {
                             measure_id: 1,
                             title: "Medida A",
@@ -359,7 +359,7 @@ export const designData: DesignDataInterface = {
                 "cocina-en-paralelo": {
                     numValuesToComplete: 2,
                     measure_slug: "cocina-en-paralelo",
-                    leters: [
+                    letters: [
                         {
                             measure_id: 1,
                             title: "Medida A",
@@ -745,7 +745,7 @@ export const designData: DesignDataInterface = {
                 "placar-en-l": {
                     numValuesToComplete: 2,
                     measure_slug: "placar-en-l",
-                    leters: [
+                    letters: [
                         {
                             measure_id: 1,
                             title: "Medida A",
@@ -765,7 +765,7 @@ export const designData: DesignDataInterface = {
                 "placar-en-c": {
                     numValuesToComplete: 3,
                     measure_slug: "placar-en-c",
-                    leters: [
+                    letters: [
                         {
                             measure_id: 1,
                             title: "Medida A",
@@ -790,7 +790,7 @@ export const designData: DesignDataInterface = {
                 "placar-en-g": {
                     numValuesToComplete: 4,
                     measure_slug: "placar-en-g",
-                    leters: [
+                    letters: [
                         {
                             measure_id: 1,
                             title: "Medida A",
@@ -820,7 +820,7 @@ export const designData: DesignDataInterface = {
                 "placar-lineal": {
                     numValuesToComplete: 1,
                     measure_slug: "placar-lineal",
-                    leters: [
+                    letters: [
                         {
                             measure_id: 1,
                             title: "Medida A",
@@ -835,7 +835,7 @@ export const designData: DesignDataInterface = {
                 "placar-en-paralelo": {
                     numValuesToComplete: 2,
                     measure_slug: "placar-en-paralelo",
-                    leters: [
+                    letters: [
                         {
                             measure_id: 1,
                             title: "Medida A",

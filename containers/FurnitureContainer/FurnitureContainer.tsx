@@ -1,9 +1,10 @@
 'use client'
 import { designData } from '@/models/design'
 import { ChangeEvent, useContext, useEffect, useMemo, useState } from "react";
-import { DesignCategorieInterface, FurnitureDataCardsInterface, FurnitureDataContextInterface, MeasureInterface } from "@/types/design";
+import { ClickedImagesInterface, DesignCategorieInterface, FurnitureDataCardsInterface, FurnitureDataContextInterface, MeasureInterface } from "@/types/design";
 import FurnitureComponent from '@/components/FurnitureComponent/FurnitureComponent';
 import { FurnitureDetailContext } from '@/context/FurnitureDetailProvider';
+import { useRouter } from 'next/navigation';
 
 export default function FurnitureContainer({
     designKey,
@@ -14,9 +15,11 @@ export default function FurnitureContainer({
     params: { slug: string },
     isGeneric: boolean
 }) {
-    const { furnitureData, handleFurnitureDataChange } = useContext(
+    const { furnitureData, handleFurnitureDataChange, handleContactData } = useContext(
         FurnitureDetailContext
     ) as FurnitureDataContextInterface
+
+    const router = useRouter()
 
     useEffect(() => {
         return () => {
@@ -31,15 +34,15 @@ export default function FurnitureContainer({
     const [measureValues, setMeasureValues] = useState<MeasureInterface | undefined>(undefined);
     const [selectedMeasureImage, setSelectedMeasureImage] = useState<string | null>(null);
     const [visibleTables, setVisibleTables] = useState<number[]>([1]);
-    const [clickedImages, setClickedImages] = useState<{ tableId: number, tableTitle: string, images: string[] }[]>([]);
+    const [clickedImages, setClickedImages] = useState<ClickedImagesInterface[]>([]);
     const [missingTableIds, setMissingTableIds] = useState<number[]>([]);
     const [submitButtonClicked, setSubmitButtonClicked] = useState(false);
     const [inputValues, setInputValues] = useState<{ [key: string]: number }>({});
     const [areInputsEmpty, setAreInputsEmpty] = useState<boolean>(false);
 
     const initialInputValues: { [key: string]: number } = {};
-    // Itera sobre leters y establece valores iniciales en el estado
-    measureValues?.leters.forEach((inputItem) => {
+    // Itera sobre letters y establece valores iniciales en el estado
+    measureValues?.letters.forEach((inputItem) => {
         initialInputValues[inputItem.title] = 0; // Puedes establecer el valor inicial que desees
     });
 
@@ -168,7 +171,7 @@ export default function FurnitureContainer({
 
     const validateCompleteInputs = () => {
         const isEmpty = Object.keys(inputValues).length === 0; // Verificar si el objeto inputValues está vacío
-        const hasEqualLength = Object.keys(inputValues).length === measureValues?.leters.length; // Verificar si tiene la misma cantidad de keys que measureValues
+        const hasEqualLength = Object.keys(inputValues).length === measureValues?.letters.length; // Verificar si tiene la misma cantidad de keys que measureValues
 
         const areInputsComplete = !isEmpty && hasEqualLength; // Comprobar si no está vacío y tiene la misma cantidad de keys
 
@@ -203,6 +206,8 @@ export default function FurnitureContainer({
             } else {
                 // Todas las mesas tienen al menos una imagen seleccionada y todos los inputs están completos
                 // console.log("Todas las mesas tienen al menos una imagen seleccionada y todos los inputs están completos");
+                handleContactData({ measureValues, clickedImages })
+                router.push(`/${designKey}/${params.slug}/contacto`)
             }
         } else {
             validateSelectedImages();
@@ -210,6 +215,8 @@ export default function FurnitureContainer({
                 // console.log("Mesas sin imágenes:", missingTableIds);
             } else {
                 // console.log("Todas las mesas tienen al menos una imagen seleccionada");
+                handleContactData({ measureValues, clickedImages })
+                router.push(`/${designKey}/${params.slug}/contacto`)
             }
         }
     };

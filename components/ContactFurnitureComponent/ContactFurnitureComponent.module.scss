@@ -1,0 +1,165 @@
+.container-section-furniture-contact {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 6rem 1.5rem;
+    padding-top: 8.5rem;
+
+    @media (max-width:523px) {
+        padding: 6rem 1rem;
+        padding-top: 8.5rem;
+    }
+
+    @media (max-width:442px) {
+        padding: 6rem 0rem;
+        padding-top: 8.5rem;
+    }
+
+    .container-wrapper-card-contact {
+        display: flex;
+        justify-content: center;
+
+        .container-section-form {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            background-color: var(--secondary-color);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            overflow: hidden;
+            min-width: 80vw;
+            max-width: 80vw;
+
+            @media (max-width:1170px) {
+                padding: 2rem 1.3rem;
+            }
+
+            @media (max-width:992px) {
+                padding: 2rem 1rem;
+                min-width: 100%;
+                max-width: 100%;
+            }
+
+            @media (max-width:442px) {
+                border-radius: revert;
+            }
+
+            .wrapper-field-complete {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                min-width: 100%;
+                max-width: 100%;
+                gap: 3rem;
+
+                @media (max-width:1170px) {
+                    gap: 1.5rem;
+                }
+
+                @media (max-width:600px) {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+
+                .btn-custom {
+                    min-width: var(--width-large-form);
+                    max-width: var(--width-large-form);
+                    border: 1px solid var(--secondary-white);
+                    padding: 0.5rem 1rem;
+                    border-radius: var(--border-radius);
+                    font-weight: var(--font-bold);
+                    font-size: var(--font-medium);
+                    background-color: var(--primary-color);
+                    color: var(--primary-white);
+                    cursor: pointer;
+
+                    &:disabled {
+                        cursor: not-allowed;
+                        opacity: 0.6;
+
+                        &:hover {
+                            color: var(--primary-white);
+                        }
+                    }
+
+                    @media (max-width:992px) {
+                        min-width: 100%;
+                        max-width: 100%;
+                    }
+
+                    @media (max-width:640px) {
+                        padding: 0.5rem;
+                    }
+
+                    @media (min-width: 442px) {
+                        &:hover {
+                            color: var(--tertiary-color);
+                            border: 1px solid var(--tertiary-color);
+                        }
+                    }
+
+                    @media (max-width:442px) {
+                        box-shadow: var(--box-shadow);
+                    }
+                }
+
+                &.space-btn-submit {
+                    padding-top: 3rem;
+                }
+            }
+
+        }
+    }
+
+    .btn-send-custom {
+        min-width: var(--width-large-form);
+        max-width: var(--width-large-form);
+        border: 1px solid var(--secondary-white);
+        padding: 0.5rem 1rem;
+        border-radius: var(--border-radius);
+        font-weight: var(--font-bold);
+        font-size: var(--font-medium);
+        background-color: var(--primary-color);
+        color: var(--primary-white);
+        cursor: pointer;
+
+
+        &:disabled {
+            cursor: not-allowed;
+            opacity: 0.6;
+
+            &:hover {
+                color: var(--primary-white);
+            }
+        }
+
+        @media (max-width:992px) {
+            min-width: 100%;
+            max-width: 100%;
+        }
+
+        @media (max-width:600px) {
+            padding: 0.5rem;
+        }
+
+        @media (min-width: 442px) {
+            &:hover {
+                color: var(--tertiary-color);
+                border: 1px solid var(--tertiary-color);
+            }
+        }
+
+        @media (max-width:442px) {
+            box-shadow: var(--box-shadow);
+        }
+    }
+
+    .text-note-custom {
+        font-weight: var(--font-bold);
+        font-size: var(--font-small);
+        color: var(--secondary-white);
+    }
+
+    .text-error-custom {
+        color: var(--tertiary-color);
+        font-weight: var(--font-bold);
+        font-size: var(--font-medium);
+    }
+}

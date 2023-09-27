@@ -17,6 +17,7 @@ export default function ContactComponent({
 
     return (
         <div className={styles['container-section-contact']}>
+            {/* MODAL */}
             <div className={styles['container-wrapper-card-contact']}>
                 <form onSubmit={handleSubmit} className={styles['container-section-form']}>
                     <div className={styles['wrapper-field-complete']}>

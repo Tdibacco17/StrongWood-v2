@@ -46,7 +46,7 @@ export default function FurnitureComponent({
             {
                 furnitureData?.length < visibleTables.length && measureValues &&
                 <div className={`${styles["container-all-inputs-measures"]}`}>
-                    {measureValues?.leters.map((inputItem: MeasureType) => {
+                    {measureValues?.letters.map((inputItem: MeasureType) => {
                         return <FurnitureMeasureComponent
                             key={inputItem.measure_id}
                             inputItem={inputItem}

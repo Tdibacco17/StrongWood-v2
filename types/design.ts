@@ -1,11 +1,11 @@
 import { ChangeEvent } from "react";
-import { ImgDataInterface, PaymentMethodInterface } from ".";
+import { ImgDataInterface } from ".";
 
 export interface FurnitureDataContextInterface {
     furnitureData: FurnitureTableInterface[],
     handleFurnitureDataChange: Function;
-    paymentMethod: PaymentMethodInterface;
-    handlePaymentMethod: (method: PaymentMethodInterface) => void;
+    contactData: ContactDataInterface,
+    handleContactData: Function
 }
 export type DesignCategorieInterface = 'cocinas' | 'banio' | 'placares' | 'dormitorio';
 
@@ -29,6 +29,11 @@ export interface SubCategorieDataInterface {
     images: ImgDataInterface[]
 }
 
+export interface ContactDataInterface {
+    clickedImages: ClickedImagesInterface[],
+    measureValues: MeasureInterface
+}
+
 export interface FurnitureDataInterface {
     [id: string]: FurnitureTableInterface[];
 }
@@ -45,6 +50,12 @@ export interface FurnitureDataCardsInterface extends ImgDataInterface {
     title_slug: string,
 }
 
+export interface ClickedImagesInterface {
+    tableId: number,
+    tableTitle: string,
+    images: string[]
+}
+
 export interface MeasureDataInterface {
     [id: string]: MeasureInterface;
 }
@@ -52,7 +63,7 @@ export interface MeasureDataInterface {
 export interface MeasureInterface {
     numValuesToComplete: number,
     measure_slug: string,
-    leters: MeasureType[]
+    letters: MeasureType[]
 }
 
 export interface MeasureType {
@@ -75,7 +86,7 @@ export interface FurnitureProps {
     handleInputChange: (e: ChangeEvent<HTMLInputElement>) => void,
     inputValues: { [key: string]: number },
     areInputsEmpty: boolean,
-    clickedImages: { tableId: number, tableTitle: string, images: string[] }[],
+    clickedImages: ClickedImagesInterface[],
 }
 
 export interface FurnitureTableContainerProps {
@@ -83,7 +94,7 @@ export interface FurnitureTableContainerProps {
     tableId: number,
     tableTitle: string,
     handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void,
-    clickedImages: { tableId: number, tableTitle: string, images: string[] }[],
+    clickedImages: ClickedImagesInterface[],
     isMissingImage: boolean
 }
 
@@ -95,7 +106,7 @@ export interface FurnitureTableComponentProps {
     handleScrollLeft: () => void,
     handleScrollRight: () => void,
     handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void,
-    clickedImages: { tableId: number, tableTitle: string, images: string[] }[],
+    clickedImages: ClickedImagesInterface[],
     isMissingImage: boolean
 }
 
@@ -105,7 +116,7 @@ export interface FurnitureCarrouselProps {
     tableTitle: string,
     imagesData: FurnitureDataCardsInterface[],
     handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void,
-    clickedImages: { tableId: number, tableTitle: string, images: string[] }[],
+    clickedImages: ClickedImagesInterface[],
 }
 
 export interface FurnitureCardComponentProps {

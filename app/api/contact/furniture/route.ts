@@ -1,16 +1,16 @@
-import { MessageContactProductDataInterface } from "@/types"
-import { templateContactProductHtml } from "@/utils/email/templateContactProductHtml";
+import { MessageContactFurnitureDataInterface } from "@/types";
+import { templateContactFurnitureHtml } from "@/utils/email/templateContactFurnitureHtml";
 import { NextResponse } from "next/server";
 const nodemailer = require("nodemailer");
 
 interface FormRequestInterface {
-    messageData: MessageContactProductDataInterface
+    messageData: MessageContactFurnitureDataInterface
 }
 
 export async function POST(req: Request) {
     try {
         const body = (await req.json()) as FormRequestInterface;
-        const contentHtml = templateContactProductHtml(body.messageData)
+        const contentHtml = templateContactFurnitureHtml(body.messageData)
 
         const transporter = nodemailer.createTransport({
             host: `${process.env.NEXT_PUBLIC_EMAIL_SERVICE}`,
@@ -25,7 +25,7 @@ export async function POST(req: Request) {
         const mailOptions = {
             from: `STRONGWOOD ${process.env.NEXT_PUBLIC_STRONG_USERNAME}`,
             to: [`${process.env.NEXT_PUBLIC_STRONG_EMAIL_SENDER}`, body.messageData.email],
-            subject: "Nueva venta",
+            subject: "COTIZACIÓN",
             html: contentHtml,
         };
 

@@ -13,9 +13,10 @@ export default function FurnitureMeasureComponent({
 }) {
 
     return (
-        <label>
-            <p>{inputItem.title}</p>
+        <label className={`${styles['container-section-measures']}`}>
+            <p className={`${styles["title-measure"]}`}>{inputItem.title}</p>
             <input
+                className={`${styles["input-measure"]}`}
                 type="number"
                 placeholder="En cm"
                 value={value}

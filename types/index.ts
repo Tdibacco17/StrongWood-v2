@@ -1,3 +1,5 @@
+import { ClickedImagesInterface, MeasureInterface } from "./design";
+
 export interface ImgDataInterface {
     img_id: number,
     imgSrc: string,
@@ -49,7 +51,8 @@ export interface FieldToCompleteProps {
     isSelect?: boolean,
     isTextAreaField: boolean,
     isSelectField: boolean,
-    contactPage: boolean
+    contactPage: boolean,
+    selectWidth?:boolean
 }
 
 export interface FieldProps {
@@ -109,6 +112,7 @@ export interface MessageContactDataInterface {
     location: string,
     note: string,
 }
+
 export interface ContactProps {
     nameRef: React.RefObject<HTMLInputElement>,
     phoneRef: React.RefObject<HTMLInputElement>,
@@ -119,4 +123,36 @@ export interface ContactProps {
     loadingText: boolean,
     errorMessage: string,
     handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+}
+
+//CONTACT FURNITURE
+export interface MessageContactFurnitureDataInterface {
+    name: string,
+    phone: string,
+    email: string,
+    direction: string,
+    location: string,
+    note: string,
+    paymentMethod: string,
+    measures: MeasureInterface,
+    clickedImages: ClickedImagesInterface[],
+}
+
+export interface ContactFurnitureProps {
+    handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+    handlePaymentChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+    nameRef: React.RefObject<HTMLInputElement>,
+    phoneRef: React.RefObject<HTMLInputElement>,
+    emailRef: React.RefObject<HTMLInputElement>,
+    directionRef: React.RefObject<HTMLInputElement>,
+    locationRef: React.RefObject<HTMLInputElement>,
+    noteRef: string,
+    handleChangeNoteRef: (event: React.ChangeEvent<HTMLTextAreaElement>) => void
+    selectRef: React.RefObject<HTMLSelectElement>,
+    selectedPayment: string,
+    isSelect: boolean,
+    loadingText: boolean,
+    errorMessage: string,
+    handleChangeIsNote: () => void,
+    isNote: boolean,
 }

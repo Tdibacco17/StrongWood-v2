@@ -105,6 +105,11 @@
         @media (max-width:442px) {
             box-shadow: var(--box-shadow);
         }
+
+        &.max-width {
+            min-width: 100%;
+            max-width: 100%;
+        }
     }
 }
 
