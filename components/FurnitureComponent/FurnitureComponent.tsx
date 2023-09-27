@@ -1,6 +1,6 @@
-import { FurnitureDataCardsInterface, FurnitureDataContextInterface, FurnitureTableInterface, MeasureInterface, MeasureType } from '@/types/design'
+import { FurnitureDataContextInterface, FurnitureProps, FurnitureTableInterface, MeasureType } from '@/types/design'
 import styles from './FurnitureComponent.module.scss'
-import { ChangeEvent, useContext } from 'react'
+import { useContext } from 'react'
 import LoadingComponent from '../LoadingComponent/LoadingComponent'
 import FurnitureTableContainer from '@/containers/FurnitureTableContainer/FurnitureTableContainer'
 import { FurnitureDetailContext } from '@/context/FurnitureDetailProvider'
@@ -16,17 +16,7 @@ export default function FurnitureComponent({
     inputValues,
     areInputsEmpty,
     clickedImages
-}: {
-    measureValues: MeasureInterface | undefined,
-    visibleTables: number[];
-    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void,
-    handleSubmit: () => void,
-    missingTableIds: number[],
-    handleInputChange: (e: ChangeEvent<HTMLInputElement>) => void,
-    inputValues: any,
-    areInputsEmpty: boolean,
-    clickedImages: { tableId: number, tableTitle: string, images: string[] }[],
-}) {
+}: FurnitureProps) {
     const { furnitureData } = useContext(
         FurnitureDetailContext
     ) as FurnitureDataContextInterface
@@ -56,9 +46,9 @@ export default function FurnitureComponent({
             {
                 furnitureData?.length < visibleTables.length && measureValues &&
                 <div className={`${styles["container-all-inputs-measures"]}`}>
-                    {measureValues?.leters.map((inputItem: MeasureType, index: number) => {
+                    {measureValues?.leters.map((inputItem: MeasureType) => {
                         return <FurnitureMeasureComponent
-                            key={index}
+                            key={inputItem.measure_id}
                             inputItem={inputItem}
                             handleInputChange={handleInputChange}
                             value={inputValues[inputItem.title] || ""}

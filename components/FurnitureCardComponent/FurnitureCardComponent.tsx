@@ -1,6 +1,6 @@
 import styles from './FurnitureCardComponent.module.scss'
 import Image from 'next/image'
-import { FurnitureDataCardsInterface } from '@/types/design'
+import { FurnitureCardComponentProps } from '@/types/design'
 
 //FALTAN IMAGENES BLURS
 export default function FurnitureCardComponent({
@@ -9,13 +9,7 @@ export default function FurnitureCardComponent({
     tableTitle,
     handleImageClick,
     isSelected
-}: {
-    imageData: FurnitureDataCardsInterface,
-    tableId: number,
-    tableTitle: string,
-    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void,
-    isSelected: any
-}) {
+}: FurnitureCardComponentProps) {
     return (
         <div id={`${imageData.img_id}`} onClick={() => handleImageClick(imageData, tableId, tableTitle)} className={`${styles["container-section-card-furniture"]}`}>
             <div className={styles['container-outer-furniture-image']}>
@@ -33,7 +27,7 @@ export default function FurnitureCardComponent({
             <div className={styles["container-overlay-image"]}>
                 <p className={styles["title-overlay"]}>{imageData.imgAlt}</p>
             </div>
-            { isSelected && <div className={styles["clicked-image"]} /> }
+            {isSelected && <div className={styles["clicked-image"]} />}
         </div >
     )
 }

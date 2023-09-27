@@ -1,7 +1,6 @@
 'use client'
 import FurnitureTableComponent from "@/components/FurnitureTableComponent/FurnitureTableComponent";
-import { ImgDataInterface } from "@/types";
-import { FurnitureDataCardsInterface, FurnitureTableInterface } from "@/types/design";
+import { FurnitureTableContainerProps } from "@/types/design";
 import { useRef } from "react";
 
 export default function FurnitureTableContainer({
@@ -11,14 +10,7 @@ export default function FurnitureTableContainer({
     handleImageClick,
     clickedImages,
     isMissingImage
-}: {
-    table: FurnitureTableInterface,
-    tableId: number,
-    tableTitle: string,
-    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void,
-    clickedImages: { tableId: number, tableTitle: string, images: string[] }[],
-    isMissingImage: boolean
-}) {
+}: FurnitureTableContainerProps) {
 
     const carouselRef = useRef<HTMLDivElement>(null);
 

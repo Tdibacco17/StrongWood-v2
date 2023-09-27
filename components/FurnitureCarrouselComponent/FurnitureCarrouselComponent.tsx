@@ -1,7 +1,6 @@
-import { ImgDataInterface } from '@/types'
 import styles from './FurnitureCarrouselComponent.module.scss'
 import FurnitureCardComponent from '../FurnitureCardComponent/FurnitureCardComponent'
-import { FurnitureDataCardsInterface } from '@/types/design'
+import { FurnitureCarrouselProps, FurnitureDataCardsInterface } from '@/types/design'
 
 export default function FurnitureCarrouselComponent({
     carouselRef,
@@ -10,14 +9,7 @@ export default function FurnitureCarrouselComponent({
     imagesData,
     handleImageClick,
     clickedImages
-}: {
-    carouselRef: React.RefObject<HTMLDivElement>,
-    tableId: number,
-    tableTitle: string,
-    imagesData: FurnitureDataCardsInterface[],
-    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void,
-    clickedImages: { tableId: number, tableTitle: string, images: string[] }[],
-}) {
+}: FurnitureCarrouselProps) {
     // Función para verificar si una imagen está seleccionada
     const isImageSelected = (imageData: FurnitureDataCardsInterface) => {
         // Buscar la tabla actual en clickedImages

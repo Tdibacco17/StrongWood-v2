@@ -1,4 +1,4 @@
-import { MeasureDataInterface, MeasureInterface, MeasureType, MeasureValues } from '@/types/design'
+import { MeasureType } from '@/types/design'
 import styles from './FurnitureMeasureComponent.module.scss'
 import { ChangeEvent } from "react";
 

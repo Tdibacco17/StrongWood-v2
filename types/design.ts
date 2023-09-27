@@ -1,3 +1,4 @@
+import { ChangeEvent } from "react";
 import { ImgDataInterface, PaymentMethodInterface } from ".";
 
 export interface FurnitureDataContextInterface {
@@ -62,4 +63,55 @@ export interface MeasureType {
 
 export interface MeasureValues {
     [measureName: string]: number;
+}
+
+//furniture props
+export interface FurnitureProps {
+    measureValues: MeasureInterface | undefined,
+    visibleTables: number[];
+    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void,
+    handleSubmit: () => void,
+    missingTableIds: number[],
+    handleInputChange: (e: ChangeEvent<HTMLInputElement>) => void,
+    inputValues: { [key: string]: number },
+    areInputsEmpty: boolean,
+    clickedImages: { tableId: number, tableTitle: string, images: string[] }[],
+}
+
+export interface FurnitureTableContainerProps {
+    table: FurnitureTableInterface,
+    tableId: number,
+    tableTitle: string,
+    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void,
+    clickedImages: { tableId: number, tableTitle: string, images: string[] }[],
+    isMissingImage: boolean
+}
+
+export interface FurnitureTableComponentProps {
+    table: FurnitureTableInterface,
+    tableId: number,
+    tableTitle: string,
+    carouselRef: React.RefObject<HTMLDivElement>,
+    handleScrollLeft: () => void,
+    handleScrollRight: () => void,
+    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void,
+    clickedImages: { tableId: number, tableTitle: string, images: string[] }[],
+    isMissingImage: boolean
+}
+
+export interface FurnitureCarrouselProps {
+    carouselRef: React.RefObject<HTMLDivElement>,
+    tableId: number,
+    tableTitle: string,
+    imagesData: FurnitureDataCardsInterface[],
+    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void,
+    clickedImages: { tableId: number, tableTitle: string, images: string[] }[],
+}
+
+export interface FurnitureCardComponentProps {
+    imageData: FurnitureDataCardsInterface,
+    tableId: number,
+    tableTitle: string,
+    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void,
+    isSelected: boolean
 }

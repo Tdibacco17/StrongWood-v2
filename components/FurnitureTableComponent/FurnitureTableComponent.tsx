@@ -1,8 +1,7 @@
-import { DesignCategorieInterface, FurnitureDataCardsInterface, FurnitureTableInterface } from '@/types/design'
+import { FurnitureTableComponentProps } from '@/types/design'
 import { ArrowLeftIconComponent, ArrowRightIconComponent } from '../IconComponent/IconComponent'
 import styles from './FurnitureTableComponent.module.scss'
 import FurnitureCarrouselComponent from '../FurnitureCarrouselComponent/FurnitureCarrouselComponent'
-import { ImgDataInterface } from '@/types'
 
 export default function FurnitureTableComponent({
     table,
@@ -14,17 +13,7 @@ export default function FurnitureTableComponent({
     handleImageClick,
     clickedImages,
     isMissingImage
-}: {
-    table: FurnitureTableInterface,
-    tableId: number,
-    tableTitle: string,
-    carouselRef: React.RefObject<HTMLDivElement>,
-    handleScrollLeft: () => void,
-    handleScrollRight: () => void,
-    handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void,
-    clickedImages: { tableId: number, tableTitle: string, images: string[] }[],
-    isMissingImage: boolean
-}) {
+}: FurnitureTableComponentProps) {
     return (
         <div className={`${styles['container-section-furniture-table']}`}>
             <div className={styles['container-header-table']}>
