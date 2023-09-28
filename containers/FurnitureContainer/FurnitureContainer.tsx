@@ -30,7 +30,7 @@ export default function FurnitureContainer({
         const selectedDesignData = isGeneric ? designData[designKey].details.tables['generic'] : designData[designKey].details.tables[params.slug];
         handleFurnitureDataChange(selectedDesignData);
     }, [params.slug, isGeneric, designKey]);
-
+    const [errorMessage, setErrorMessage] = useState<string>("")
     const [measureValues, setMeasureValues] = useState<MeasureInterface | undefined>(undefined);
     const [selectedMeasureImage, setSelectedMeasureImage] = useState<string | null>(null);
     const [visibleTables, setVisibleTables] = useState<number[]>([1]);
@@ -79,11 +79,21 @@ export default function FurnitureContainer({
             if (designKey === "cocinas" || designKey === "placares") {
                 validateSelectedImages();
                 validateCompleteInputs();
+                if (missingTableIds.length > 0 || areInputsEmpty || (Object.keys(inputValues).length === 0)) {
+                    setErrorMessage("Por favor, complete todos los campos")
+                } else {
+                    setErrorMessage("")
+                }
             } else {
                 validateSelectedImages();
+                if (missingTableIds.length > 0) {
+                    setErrorMessage("Por favor, complete todos los campos")
+                } else {
+                    setErrorMessage("")
+                }
             }
         }
-    }, [clickedImages, inputValues])
+    }, [clickedImages, inputValues, areInputsEmpty])
 
     const handleImageClick = useMemo(() => (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string) => {
         // Verificamos si la imagen ya está en el array clickedImageSlugs
@@ -104,6 +114,8 @@ export default function FurnitureContainer({
 
         if (selectedImageIndex !== -1) {
             const existingImages = clickedImages[selectedImageIndex].images;
+            const existingTitlesImages = clickedImages[selectedImageIndex].titlesImage; // Nuevo array para imgAlt
+
             const isImageSelected = existingImages.includes(image.title_slug);
             const maxSelections = furnitureData[tableId - 1]?.maxSelections || 0;
             const tableImages = furnitureData[tableId - 1]?.cards || [];
@@ -111,6 +123,7 @@ export default function FurnitureContainer({
             if (isImageSelected) {
                 // Si la imagen ya está en la lista, la eliminamos
                 const updatedImages = existingImages.filter(img => img !== image.title_slug);
+                const updatedTitlesImages = existingTitlesImages.filter((titleImg) => titleImg !== image.imgAlt); // Corrección aquí
 
                 if (updatedImages.length === 0) {
                     // Si no quedan imágenes seleccionadas en esta tabla, la eliminamos
@@ -121,20 +134,26 @@ export default function FurnitureContainer({
                     // Si quedan imágenes seleccionadas en esta tabla, actualizamos la lista
                     const updatedSelectedImages = [...clickedImages];
                     updatedSelectedImages[selectedImageIndex].images = updatedImages;
+                    updatedSelectedImages[selectedImageIndex].titlesImage = updatedTitlesImages; // Corrección aquí
                     setClickedImages(updatedSelectedImages);
                 }
             } else if (maxSelections === 0 || existingImages.length < maxSelections) {
                 // Agregamos la nueva imagen si no se ha alcanzado el límite
                 const updatedSelectedImages = [...clickedImages];
                 updatedSelectedImages[selectedImageIndex].images.push(image.title_slug);
+                updatedSelectedImages[selectedImageIndex].titlesImage.push(image.imgAlt); // Corrección aquí
                 setClickedImages(updatedSelectedImages);
             } else if (maxSelections > 0 && existingImages.length >= maxSelections && maxSelections < tableImages.length) {
                 // Reemplazamos la imagen más antigua si se ha alcanzado el límite y hay más imágenes disponibles
                 const updatedImages = [...existingImages];
+                const updatedTitlesImages = [...existingTitlesImages]; // Corrección aquí
                 updatedImages.shift(); // Elimina la imagen más antigua
+                updatedTitlesImages.shift(); // Elimina el título de imagen más antiguo para imgAlt
                 updatedImages.push(image.title_slug); // Agrega la nueva imagen
+                updatedTitlesImages.push(image.imgAlt); // Agrega el nuevo título de imagen para imgAlt
                 const updatedSelectedImages = [...clickedImages];
                 updatedSelectedImages[selectedImageIndex].images = updatedImages;
+                updatedSelectedImages[selectedImageIndex].titlesImage = updatedTitlesImages; // Corrección aquí
                 setClickedImages(updatedSelectedImages);
             }
         } else {
@@ -144,7 +163,7 @@ export default function FurnitureContainer({
                 // Si no hay imágenes seleccionadas para esta tabla o no se ha alcanzado el límite, creamos una nueva entrada
                 setClickedImages(prevSelectedImages => [
                     ...prevSelectedImages,
-                    { tableId, tableTitle, images: [image.title_slug] }
+                    { tableId, tableTitle, images: [image.title_slug], titlesImage: [image.imgAlt] }
                 ]);
 
                 // Verificamos si la propiedad askMeasure está en true y guardamos el title_slug
@@ -173,20 +192,16 @@ export default function FurnitureContainer({
         const isEmpty = Object.keys(inputValues).length === 0; // Verificar si el objeto inputValues está vacío
         const hasEqualLength = Object.keys(inputValues).length === measureValues?.letters.length; // Verificar si tiene la misma cantidad de keys que measureValues
 
-        const areInputsComplete = !isEmpty && hasEqualLength; // Comprobar si no está vacío y tiene la misma cantidad de keys
+        let areInputsComplete = !isEmpty && hasEqualLength; // Comprobar si no está vacío y tiene la misma cantidad de keys
 
         // Verificar si alguno de los valores en inputValues es NaN
         const hasNaNValues = Object.values(inputValues).some((value) => isNaN(value));
 
-        if (areInputsComplete) {
-            if (hasNaNValues) {
-                setAreInputsEmpty(true); // Marcar como vacío si hay valores NaN
-            } else {
-                setAreInputsEmpty(false); // Marcar como no vacío si todos los valores son válidos
-            }
-        } else {
-            setAreInputsEmpty(true); // Marcar como vacío si no están completos
+        if (hasNaNValues) {
+            areInputsComplete = false; // Si hay valores NaN, establecer areInputsComplete en false
         }
+
+        setAreInputsEmpty(!areInputsComplete); // Actualizar el estado de areInputsEmpty
     };
 
     const handleSubmit = () => {
@@ -196,26 +211,22 @@ export default function FurnitureContainer({
             validateSelectedImages();
             validateCompleteInputs();
             if (missingTableIds.length > 0 || areInputsEmpty || (Object.keys(inputValues).length === 0)) {
-                // Handle the case where some tables are missing images or inputs are not complete
-                if (missingTableIds.length > 0) {
-                    // console.log("Mesas sin imágenes:", missingTableIds);
-                }
-                if (areInputsEmpty) {
-                    // console.log("Algunos inputs están vacíos");
-                }
+                setErrorMessage("Por favor, complete todos los campos")
             } else {
                 // Todas las mesas tienen al menos una imagen seleccionada y todos los inputs están completos
-                // console.log("Todas las mesas tienen al menos una imagen seleccionada y todos los inputs están completos");
-                handleContactData({ measureValues, clickedImages })
+                setErrorMessage("")
+                handleContactData({ inputValues, clickedImages })
                 router.push(`/${designKey}/${params.slug}/contacto`)
             }
         } else {
             validateSelectedImages();
             if (missingTableIds.length > 0) {
+                setErrorMessage("Por favor, complete todos los campos")
                 // console.log("Mesas sin imágenes:", missingTableIds);
             } else {
+                setErrorMessage("")
                 // console.log("Todas las mesas tienen al menos una imagen seleccionada");
-                handleContactData({ measureValues, clickedImages })
+                handleContactData({ inputValues, clickedImages })
                 router.push(`/${designKey}/${params.slug}/contacto`)
             }
         }
@@ -231,5 +242,6 @@ export default function FurnitureContainer({
         inputValues={inputValues}
         areInputsEmpty={areInputsEmpty}
         clickedImages={clickedImages}
+        errorMessage={errorMessage}
     />
 }

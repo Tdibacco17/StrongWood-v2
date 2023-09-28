@@ -2,11 +2,11 @@
 import ContactFurnitureComponent from "@/components/ContactFurnitureComponent/ContactFurnitureComponent";
 import { FurnitureDetailContext } from "@/context/FurnitureDetailProvider";
 import { MessageContactFurnitureDataInterface, PaymentMethodInterface } from "@/types";
-import { FurnitureDataContextInterface } from "@/types/design";
+import { DesignCategorieInterface, FurnitureDataContextInterface } from "@/types/design";
 import { useRouter } from "next/navigation";
 import { useContext, useEffect, useRef, useState } from "react";
 
-export default function ContactFurnitureContainer({ params }: { params: { slug: string } }) {
+export default function ContactFurnitureContainer({ params, designKey }: { params: { slug: string }, designKey: DesignCategorieInterface }) {
     const { contactData } = useContext(
         FurnitureDetailContext
     ) as FurnitureDataContextInterface
@@ -15,7 +15,7 @@ export default function ContactFurnitureContainer({ params }: { params: { slug: 
 
     useEffect(() => {
         if (!contactData) {
-            router.push(`/cocinas/${params.slug}`)
+            router.push(`/${designKey}/${params.slug}`)
         }
     }, [params.slug]);
 
@@ -102,7 +102,7 @@ export default function ContactFurnitureContainer({ params }: { params: { slug: 
             location: locationRef.current?.value.trim() || "No se paso una localidad",
             note: noteRef.trim().length > 0 ? noteRef.trim() : "No se paso una nota",
             paymentMethod: selectedPayment || "No se paso un metodo de pago",
-            measures: contactData.measureValues,
+            measures: contactData.inputValues,
             clickedImages: contactData.clickedImages
         }
         try {

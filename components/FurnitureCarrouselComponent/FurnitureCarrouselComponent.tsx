@@ -8,7 +8,8 @@ export default function FurnitureCarrouselComponent({
     tableTitle,
     imagesData,
     handleImageClick,
-    clickedImages
+    clickedImages,
+    isMissingImage
 }: FurnitureCarrouselProps) {
     // Función para verificar si una imagen está seleccionada
     const isImageSelected = (imageData: FurnitureDataCardsInterface) => {
@@ -30,6 +31,7 @@ export default function FurnitureCarrouselComponent({
                             imageData={imageData}
                             handleImageClick={handleImageClick}
                             isSelected={isImageSelected(imageData)}
+                            isMissingImage={isMissingImage}
                         />
                     })
                 }

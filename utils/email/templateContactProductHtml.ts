@@ -103,8 +103,8 @@ export const templateContactProductHtml = (messageData:MessageContactProductData
                     <h3>Datos personales:</h3>
                     <ul>
                         <li><strong>Nombre: </strong>${messageData.name}</li>
-                        <li><strong>Email: </strong><a href="mailto:{email}" class="link">${messageData.email}</a></li>
-                        <li><strong>Teléfono: </strong><a href="https://wa.me/{phone}" class="link">${messageData.phone}</a></li>
+                        <li><strong>Email: </strong><a href="mailto:${messageData.email}" class="link">${messageData.email}</a></li>
+                        <li><strong>Teléfono: </strong><a href="https://wa.me/${messageData.phone}" class="link">${messageData.phone}</a></li>
                         <li><strong>Localidad: </strong>${messageData.location}</li>
                         <li><strong>Dirección: </strong>${messageData.direction}</li>
                     </ul>

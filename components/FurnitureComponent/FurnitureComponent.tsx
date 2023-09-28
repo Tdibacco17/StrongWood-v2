@@ -15,7 +15,8 @@ export default function FurnitureComponent({
     handleInputChange,
     inputValues,
     areInputsEmpty,
-    clickedImages
+    clickedImages,
+    errorMessage
 }: FurnitureProps) {
     const { furnitureData } = useContext(
         FurnitureDetailContext
@@ -46,18 +47,25 @@ export default function FurnitureComponent({
             {
                 furnitureData?.length < visibleTables.length && measureValues &&
                 <div className={`${styles["container-all-inputs-measures"]}`}>
-                    {measureValues?.letters.map((inputItem: MeasureType) => {
-                        return <FurnitureMeasureComponent
-                            key={inputItem.measure_id}
-                            inputItem={inputItem}
-                            handleInputChange={handleInputChange}
-                            value={inputValues[inputItem.title] || ""}
-                        />
-                    })}
-                    {areInputsEmpty && <div className={styles['tableStyle']} />}
+                    <div className={`${styles["container-inputs"]}`}>
+                        {measureValues?.letters.map((inputItem: MeasureType) => {
+                            return <FurnitureMeasureComponent
+                                key={inputItem.measure_id}
+                                inputItem={inputItem}
+                                handleInputChange={handleInputChange}
+                                value={inputValues[inputItem.title] || ""}
+                            />
+                        })}
+                    </div>
+                    {areInputsEmpty && <p className={styles['text-error-custom']}>FALTA COMPLETAR ESTE CAMPO</p>}
                 </div>
             }
-            {furnitureData?.length < visibleTables.length && <button onClick={handleSubmit}>handleValidate</button>}
+            {furnitureData?.length < visibleTables.length &&
+                <div className={styles['containaer-btn-finish-order']}>
+                    <button onClick={handleSubmit} className={styles['btn-finish-order']}>COTIZAR</button>
+                    {errorMessage && <p className={styles['text-error-custom']}>{errorMessage}</p>}
+                </div>
+            }
         </div>
     )
 }

@@ -537,7 +537,7 @@ export const designData: DesignDataInterface = {
                 subtitle: "Selecciona tu placar a cotizar",
                 images: [
                     {
-                        link: "Placard-urbanwood",
+                        link: "placard-urbanwood",
                         img_id: 1,
                         imgSrc: "/assets/img/placaresPage/Strong-categoriePlacar-000.webp",
                         imgAlt: "Placard Urbanwood",
@@ -710,10 +710,10 @@ export const designData: DesignDataInterface = {
                                 imgBlur: ""
                             },
                             {
-                                title_slug: "placar-en-c",
+                                title_slug: "placar-en-u",
                                 img_id: 2,
-                                imgSrc: "/assets/img/designSelectData/distribucion/placares/placarEnC.webp",
-                                imgAlt: "Placar en C",
+                                imgSrc: "/assets/img/designSelectData/distribucion/placares/placarEnU.webp",
+                                imgAlt: "Placar en U",
                                 imgBlur: ""
                             },
                             {
@@ -762,9 +762,9 @@ export const designData: DesignDataInterface = {
                         }
                     ]
                 },
-                "placar-en-c": {
+                "placar-en-u": {
                     numValuesToComplete: 3,
-                    measure_slug: "placar-en-c",
+                    measure_slug: "placar-en-u",
                     letters: [
                         {
                             measure_id: 1,

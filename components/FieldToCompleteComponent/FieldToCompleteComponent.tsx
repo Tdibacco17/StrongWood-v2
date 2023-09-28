@@ -10,6 +10,7 @@ export default function FieldToCompleteComponent({
     handlePaymentChange,
     selectedPayment,
     isTextAreaField,
+    isRequired,
     isSelectField,
     paymentMethod,
     isSelect,
@@ -20,7 +21,7 @@ export default function FieldToCompleteComponent({
     if (isTextAreaField) {
         return (
             <label className={styles['wrapper-note']}>
-                <p className={styles['text-custom']}>{fieldProps?.label}</p>
+                <p className={styles['text-custom']}>{fieldProps?.label} {isRequired ? <small className={styles['isRequired']}>*</small> : ""}</p>
                 <textarea
                     className={styles['text-area-custom']}
                     placeholder="Ej: Dejanos tu consulta"
@@ -35,10 +36,10 @@ export default function FieldToCompleteComponent({
                 {
                     isSelect && !isSelect ?
                         <p className={styles['text-custom']}>
-                            Abonar en {paymentMethod ? paymentMethod : ""}
+                            Abonaria en {paymentMethod ? `${paymentMethod}` : ""} <small className={styles['isRequired']}>*</small>
                         </p>
                         : <p className={styles['text-custom']}>
-                            Abonar en {selectedPayment && selectedPayment}
+                            Abonaria en {selectedPayment && `${selectedPayment}`} <small className={styles['isRequired']}>*</small>
                         </p>
                 }
                 <select
@@ -57,7 +58,7 @@ export default function FieldToCompleteComponent({
 
     return (
         <label className={styles['wrapper-label']}>
-            <p className={styles['text-custom']}>{fieldProps?.label}</p>
+            <p className={styles['text-custom']}>{fieldProps?.label} <small className={styles['isRequired']}>*</small></p>
             <input
                 className={`${styles['input-custom']} ${contactPage ? styles['contact-page'] : ""}`}
                 // required

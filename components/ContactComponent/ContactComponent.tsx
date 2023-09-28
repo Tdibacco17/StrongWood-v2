@@ -31,7 +31,7 @@ export default function ContactComponent({
                     <div className={styles['wrapper-field-complete']}>
                         <FieldToCompleteComponent contactPage={true} isTextAreaField={false} isSelectField={false} fieldProps={data.contact.fields.location} valueRef={locationRef} />
                     </div>
-                    <FieldToCompleteComponent contactPage={true} isTextAreaField={true} isSelectField={false} fieldProps={data.contact.fields.textarea} handleChangeNoteRef={handleChangeNoteRef} />
+                    <FieldToCompleteComponent isRequired={true} contactPage={true} isTextAreaField={true} isSelectField={false} fieldProps={data.contact.fields.textarea} handleChangeNoteRef={handleChangeNoteRef} />
                     <button className={styles['btn-send-custom']}
                         type='submit'
                         disabled={loadingText}

@@ -31,7 +31,7 @@ export interface SubCategorieDataInterface {
 
 export interface ContactDataInterface {
     clickedImages: ClickedImagesInterface[],
-    measureValues: MeasureInterface
+    inputValues: { [key: string]: number }
 }
 
 export interface FurnitureDataInterface {
@@ -53,7 +53,8 @@ export interface FurnitureDataCardsInterface extends ImgDataInterface {
 export interface ClickedImagesInterface {
     tableId: number,
     tableTitle: string,
-    images: string[]
+    images: string[],
+    titlesImage: string[]
 }
 
 export interface MeasureDataInterface {
@@ -87,6 +88,7 @@ export interface FurnitureProps {
     inputValues: { [key: string]: number },
     areInputsEmpty: boolean,
     clickedImages: ClickedImagesInterface[],
+    errorMessage: string
 }
 
 export interface FurnitureTableContainerProps {
@@ -117,6 +119,7 @@ export interface FurnitureCarrouselProps {
     imagesData: FurnitureDataCardsInterface[],
     handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void,
     clickedImages: ClickedImagesInterface[],
+    isMissingImage: boolean
 }
 
 export interface FurnitureCardComponentProps {
@@ -124,5 +127,6 @@ export interface FurnitureCardComponentProps {
     tableId: number,
     tableTitle: string,
     handleImageClick: (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string,) => void,
-    isSelected: boolean
+    isSelected: boolean,
+    isMissingImage: boolean
 }

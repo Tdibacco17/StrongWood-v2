@@ -126,8 +126,8 @@
     .text-area-custom {
         min-width: 100%;
         max-width: 100%;
-        min-height: 10rem;
-        max-height: 10rem;
+        min-height: 14rem;
+        max-height: 14rem;
         border-radius: var(--border-radius);
         border: 1px solid var(--secondary-white);
         background-color: transparent;
@@ -138,6 +138,8 @@
         outline: none;
         font-family: var(--font-Roboto), var(--font-mono);
 
+        resize: none;
+        overflow-y: auto;
         &:focus {
             border: 1px solid var(--tertiary-color);
         }
@@ -145,5 +147,18 @@
         &::placeholder {
             font-size: var(--font-small);
         }
+
+        &::-webkit-scrollbar {
+            width: 0.2rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--primary-white);
+            border-radius: 0.15rem;
+        }
     }
+}
+
+.isRequired{
+    color: var(--tertiary-color);
 }

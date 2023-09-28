@@ -1,5 +1,5 @@
 import { MessageContactFurnitureDataInterface } from "@/types"
-import { ClickedImagesInterface, MeasureType } from "@/types/design"
+import { ClickedImagesInterface } from "@/types/design"
 
 export const templateContactFurnitureHtml = (messageData: MessageContactFurnitureDataInterface) => {
     return `
@@ -115,14 +115,12 @@ export const templateContactFurnitureHtml = (messageData: MessageContactFurnitur
                     <h3>Resumen del pedido:</h3>
                     <ul>
                     ${messageData.clickedImages.map((item: ClickedImagesInterface) => {
-        return `<li><strong>${item.tableTitle}:</strong> ${item.images.join(', ')}</li>`;
-    }).join('')
-        }
-        ${
-            messageData.measures.letters.map((letter: MeasureType) => {
-                return `<li><strong>${letter.title}:</strong> ${letter.measure}</li>`;
-            }).join('')
-        }
+                    return `<li><strong>${item.tableTitle}:</strong> ${item.titlesImage.join(', ')}</li>`;
+                    }).join('')
+                    }
+                    ${Object.keys(messageData.measures).map((key: string) => {
+                    return `<li><strong>${key}:</strong> ${messageData.measures[key]}</li>`;
+                    }).join('')}
                         <li><strong>Abona en: </strong>${messageData.paymentMethod}</li>
                     </ul>
                 </div>

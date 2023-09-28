@@ -8,11 +8,12 @@ export default function FurnitureCardComponent({
     tableId,
     tableTitle,
     handleImageClick,
-    isSelected
+    isSelected,
+    isMissingImage
 }: FurnitureCardComponentProps) {
     return (
         <div id={`${imageData.img_id}`} onClick={() => handleImageClick(imageData, tableId, tableTitle)} className={`${styles["container-section-card-furniture"]}`}>
-            <div className={styles['container-outer-furniture-image']}>
+            <div className={`${styles['container-outer-furniture-image']} ${isSelected ? styles['img-selected'] : ""} ${isMissingImage ? styles['img-missing']: ""}`}>
                 <Image
                     className={`${styles['container-inner-furniture-image']}`}
                     src={imageData.imgSrc}
@@ -25,7 +26,7 @@ export default function FurnitureCardComponent({
                 />
             </div>
             <div className={styles["container-overlay-image"]}>
-                <p className={styles["title-overlay"]}>{imageData.imgAlt}</p>
+                <p className={`${styles["title-overlay"]} ${isSelected ? styles['text-img-selected'] : ""}`}>{imageData.imgAlt}</p>
             </div>
             {isSelected && <div className={styles["clicked-image"]} />}
         </div >

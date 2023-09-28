@@ -1,7 +1,17 @@
 .container-section-measures {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 0.6rem;
+
+    @media (max-width:992px) {
+        justify-content: space-between;
+    }
+
+    @media (max-width:523px) {
+        min-width: 100%;
+        max-width: 100%;
+    }
 
     &:focus {
         .line-measure {
@@ -45,9 +55,18 @@
             color: var(--secondary-white);
         }
 
-        @media (max-width:350px) {
-            min-width: 7rem;
-            max-width: 7rem;
+        @media (max-width:992px) {
+            min-width: 10rem;
+            max-width: 10rem;
+        }
+
+        @media (max-width:523px) {
+            min-width: 100%;
+            max-width: 100%;
         }
     }
+}
+
+.isRequired {
+    color: var(--tertiary-color);
 }

@@ -1,5 +1,5 @@
 'use client'
-import { ClickedImagesInterface, ContactDataInterface, FurnitureDataContextInterface, FurnitureTableInterface } from "@/types/design";
+import { ContactDataInterface, FurnitureDataContextInterface, FurnitureTableInterface } from "@/types/design";
 import { ReactNode, createContext, useState } from "react";
 
 export const FurnitureDetailContext = createContext<FurnitureDataContextInterface | {}>({});

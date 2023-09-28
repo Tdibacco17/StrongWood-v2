@@ -19,9 +19,9 @@ export default function FurnitureTableComponent({
             <div className={styles['container-header-table']}>
                 <div className={styles['container-titles-header-table']}>
                     <p className={styles['title-table']}>{table.title}</p>
-                    <p className={styles['subtitle-table']}>{table.maxSelections === 1 ?
-                        `Mínimo elegir 1 opción`
-                        : `Mínimo elegir 1 opción, máximo ${table.maxSelections}`}</p>
+                    {table.maxSelections === 1 ?
+                        <p className={styles['subtitle-table']}>Mínimo elegir 1 opción <small className={styles['isRequired']}>*</small></p>
+                        : <p className={styles['subtitle-table']}>Mínimo elegir 1 opción <small className={styles['isRequired']}>*</small> ,máximo {table.maxSelections}</p>}
                 </div>
                 <div className={styles['container-carousel-btns']}>
                     <button
@@ -47,8 +47,10 @@ export default function FurnitureTableComponent({
                 imagesData={table.cards}
                 handleImageClick={handleImageClick}
                 clickedImages={clickedImages}
+                isMissingImage={isMissingImage}
             />
-            {isMissingImage && <div className={styles['tableStyle']} />}
+            {isMissingImage &&
+                <p className={styles['text-error-custom']}>FALTA COMPLETAR ESTE CAMPO</p>}
         </div>
     )
 }

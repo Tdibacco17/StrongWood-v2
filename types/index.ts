@@ -52,7 +52,8 @@ export interface FieldToCompleteProps {
     isTextAreaField: boolean,
     isSelectField: boolean,
     contactPage: boolean,
-    selectWidth?:boolean
+    selectWidth?: boolean,
+    isRequired?:boolean
 }
 
 export interface FieldProps {
@@ -134,7 +135,7 @@ export interface MessageContactFurnitureDataInterface {
     location: string,
     note: string,
     paymentMethod: string,
-    measures: MeasureInterface,
+    measures: { [key: string]: number },
     clickedImages: ClickedImagesInterface[],
 }
 

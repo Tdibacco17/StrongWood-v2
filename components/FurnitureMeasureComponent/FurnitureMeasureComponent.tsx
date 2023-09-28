@@ -14,7 +14,7 @@ export default function FurnitureMeasureComponent({
 
     return (
         <label className={`${styles['container-section-measures']}`}>
-            <p className={`${styles["title-measure"]}`}>{inputItem.title}</p>
+            <p className={`${styles["title-measure"]}`}>{inputItem.title} <small className={styles['isRequired']}>*</small></p>
             <input
                 className={`${styles["input-measure"]}`}
                 type="number"
