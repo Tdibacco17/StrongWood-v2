@@ -5,12 +5,13 @@ import CategoriesComponent from '@/components/CategoriesComponent/CategoriesComp
 import data from '@/models/es.json'
 import NavigationContainer from '@/containers/NavigationContainer/NavigationContainer';
 import ProyectsContainer from '@/containers/ProyectsContainer/ProyectsContainer';
+import { designData } from '@/models/design'
 
 export default function HomePage() {
   return (
     <section id={data.homePage.sectionLink} className={styles['container-section-home-page']}>
       <NavigationContainer isHome={true} showUrl={false} url={''} />
-      <BannerComponent imgData={data.homePage.banner.image} imgPosition={'homePage'}/>
+      <BannerComponent imgData={data.homePage.banner.image} imgPosition={'homePage'} />
       <SloganComponent />
       <CategoriesComponent />
       <ProyectsContainer />
