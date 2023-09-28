@@ -19,26 +19,21 @@ export default function FurnitureContainer({
         FurnitureDetailContext
     ) as FurnitureDataContextInterface
 
-    const router = useRouter()
-
-    useEffect(() => {
-        return () => {
-            handleFurnitureDataChange([]); // Clear furnitureData when unmounting
-        };
-    }, []);
-    useEffect(() => {
-        const selectedDesignData = isGeneric ? designData[designKey].details.tables['generic'] : designData[designKey].details.tables[params.slug];
-        handleFurnitureDataChange(selectedDesignData);
-    }, [params.slug, isGeneric, designKey]);
+    const [missingTableIds, setMissingTableIds] = useState<number[]>([]);
     const [errorMessage, setErrorMessage] = useState<string>("")
     const [measureValues, setMeasureValues] = useState<MeasureInterface | undefined>(undefined);
     const [selectedMeasureImage, setSelectedMeasureImage] = useState<string | null>(null);
     const [visibleTables, setVisibleTables] = useState<number[]>([1]);
     const [clickedImages, setClickedImages] = useState<ClickedImagesInterface[]>([]);
-    const [missingTableIds, setMissingTableIds] = useState<number[]>([]);
     const [submitButtonClicked, setSubmitButtonClicked] = useState(false);
     const [inputValues, setInputValues] = useState<{ [key: string]: number }>({});
     const [areInputsEmpty, setAreInputsEmpty] = useState<boolean>(false);
+
+    const router = useRouter()
+    useEffect(() => {
+        const selectedDesignData = isGeneric ? designData[designKey].details.tables['generic'] : designData[designKey].details.tables[params.slug];
+        handleFurnitureDataChange(selectedDesignData);
+    }, [params.slug, isGeneric, designKey]);
 
     const initialInputValues: { [key: string]: number } = {};
     // Itera sobre letters y establece valores iniciales en el estado
@@ -74,6 +69,7 @@ export default function FurnitureContainer({
             setMeasureValues(undefined);
         }
     }, [selectedMeasureImage]);
+
     useEffect(() => {
         if (submitButtonClicked) {
             if (designKey === "cocinas" || designKey === "placares") {
@@ -93,7 +89,7 @@ export default function FurnitureContainer({
                 }
             }
         }
-    }, [clickedImages, inputValues, areInputsEmpty])
+    }, [submitButtonClicked, clickedImages, inputValues, areInputsEmpty, clickedImages.length, missingTableIds.length]);
 
     const handleImageClick = useMemo(() => (image: FurnitureDataCardsInterface, tableId: number, tableTitle: string) => {
         // Verificamos si la imagen ya está en el array clickedImageSlugs
@@ -182,7 +178,6 @@ export default function FurnitureContainer({
     const validateSelectedImages = () => {
         const tableIdsWithImages = clickedImages.map(item => item.tableId);
         const allTableIds = furnitureData.map(item => item.table_id);
-
         const missingTableIds = allTableIds.filter(tableId => !tableIdsWithImages.includes(tableId));
 
         setMissingTableIds(missingTableIds);
@@ -207,28 +202,38 @@ export default function FurnitureContainer({
     const handleSubmit = () => {
         setSubmitButtonClicked(true); // Marcar el botón como presionado
 
-        if (designKey === "cocinas" || designKey === "placares") {
-            validateSelectedImages();
-            validateCompleteInputs();
-            if (missingTableIds.length > 0 || areInputsEmpty || (Object.keys(inputValues).length === 0)) {
-                setErrorMessage("Por favor, complete todos los campos")
+        if (furnitureData?.length === clickedImages.length) {
+            if (designKey === "cocinas" || designKey === "placares") {
+                validateSelectedImages();
+                validateCompleteInputs();
+                if (missingTableIds.length > 0 || areInputsEmpty || (Object.keys(inputValues).length === 0)) {
+                    console.log("ENTRE")
+                    setErrorMessage("Por favor, complete todos los campos")
+                    return
+                } else {
+                    // Todas las mesas tienen al menos una imagen seleccionada y todos los inputs están completos
+                    setErrorMessage("")
+                    handleContactData({ inputValues, clickedImages })
+                    router.push(`/${designKey}/${params.slug}/contacto`)
+                    return
+                }
             } else {
-                // Todas las mesas tienen al menos una imagen seleccionada y todos los inputs están completos
-                setErrorMessage("")
-                handleContactData({ inputValues, clickedImages })
-                router.push(`/${designKey}/${params.slug}/contacto`)
+                validateSelectedImages();
+                if (missingTableIds.length > 0) {
+                    setErrorMessage("Por favor, complete todos los campos")
+                    // console.log("Mesas sin imágenes:", missingTableIds);
+                    return
+                } else {
+                    setErrorMessage("")
+                    // console.log("Todas las mesas tienen al menos una imagen seleccionada");
+                    handleContactData({ inputValues, clickedImages })
+                    router.push(`/${designKey}/${params.slug}/contacto`)
+                    return
+                }
             }
         } else {
             validateSelectedImages();
-            if (missingTableIds.length > 0) {
-                setErrorMessage("Por favor, complete todos los campos")
-                // console.log("Mesas sin imágenes:", missingTableIds);
-            } else {
-                setErrorMessage("")
-                // console.log("Todas las mesas tienen al menos una imagen seleccionada");
-                handleContactData({ inputValues, clickedImages })
-                router.push(`/${designKey}/${params.slug}/contacto`)
-            }
+            setErrorMessage("Por favor, complete todos los campos");
         }
     };
 
