@@ -33,7 +33,7 @@
   --success-color: green;
   --danger-color: red;
   /* btn mobile */
-  --box-shadow: rgb(255, 0, 0, 0.2) 6px 6px 10px;
+  --box-shadow: rgb(0, 0, 0, 0.2) 6px 6px 10px;
   --scale-mobile: scale(1.025);
   --transition-scale-mobile: transform 350ms ease-in-out;
 }
