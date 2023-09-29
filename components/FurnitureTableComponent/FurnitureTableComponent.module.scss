@@ -6,13 +6,8 @@
     max-width: 100%;
     overflow: hidden;
     padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
     background-color: var(--secondary-color);
-
-    @media (max-width: 442px) {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
 
     &:hover {
         .container-header-table .container-carousel-btns .carousel-btn-arrow {

@@ -153,7 +153,9 @@
                     }
 
                     @media (max-width:640px) {
-                        grid-template-columns: repeat(1, 1fr);
+                        display: flex;
+                        align-items: flex-start;
+                        flex-direction: column-reverse;
                     }
 
                     .resume-total {

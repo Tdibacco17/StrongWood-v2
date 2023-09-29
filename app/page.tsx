@@ -5,7 +5,6 @@ import CategoriesComponent from '@/components/CategoriesComponent/CategoriesComp
 import data from '@/models/es.json'
 import NavigationContainer from '@/containers/NavigationContainer/NavigationContainer';
 import ProyectsContainer from '@/containers/ProyectsContainer/ProyectsContainer';
-import { designData } from '@/models/design'
 
 export default function HomePage() {
   return (
