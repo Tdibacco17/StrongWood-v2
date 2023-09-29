@@ -1,48 +1,32 @@
 import styles from './ProyectsComponent.module.scss'
 import data from '@/models/es.json'
 import ProyectsCardComponent from '../ProyectsCardComponent/ProyectsCardComponent'
-import { ArrowLeftIconComponent, ArrowRightIconComponent } from '../IconComponent/IconComponent';
-import { ImgDataInterface } from '@/types';
+import { GridPropsInterface } from '@/types';
 
 export default function ProyectsComponent({
-    carouselRef,
-    handleScrollLeft,
-    handleScrollRight,
+    isView,
+    handleViewProyects
 }: {
-    carouselRef: React.RefObject<HTMLDivElement>;
-    handleScrollLeft: () => void,
-    handleScrollRight: () => void,
+    isView: boolean,
+    handleViewProyects: () => void
 }) {
     return (
         <section id={data.homePage.projects.sectionLink} className={styles['container-section-proyects']}>
-            <div className={styles['container-header-proyects']}>
-                <p className={styles['proyects-title']}>{data.homePage.projects.title}</p>
-                <p className={styles['proyects-subtitle']}>{data.homePage.projects.subtitle}</p>
-            </div>
-            <div className={styles['container-carousel']}>
-                <div className={styles['container-cards-proyects']} ref={carouselRef}>
-                    {
-                        data.homePage.projects.cards.map((card: ImgDataInterface) => {
-                            return <ProyectsCardComponent imageData={card} key={card.img_id} />
-                        })
-                    }
+            <div className={styles['bg-proyects']}>
+                <div className={styles['container-header-proyects']}>
+                    <p className={styles['proyects-title']}>{data.homePage.projects.title}</p>
+                    <p className={styles['proyects-subtitle']}>{data.homePage.projects.subtitle}</p>
                 </div>
-                <div className={styles['container-carousel-btns']}>
-                    <button
-                        type='button'
-                        aria-label='Boton izquierda'
-                        className={styles['carousel-btn-arrow']}
-                        onClick={handleScrollLeft}>
-                        <ArrowLeftIconComponent fill={'white'} height={30} width={30} />
-                    </button>
-                    <button
-                        type='button'
-                        aria-label='Boton derecha'
-                        className={styles['carousel-btn-arrow']}
-                        onClick={handleScrollRight}>
-                        <ArrowRightIconComponent fill={'white'} height={30} width={30} />
-                    </button>
+                <div className={`${styles['container-card-proyects']} ${isView ? styles['isView'] : ""}`}>
+                    <div className={styles['container-all-proyects']}>
+                        {
+                            data.homePage.projects.cards.map((card: GridPropsInterface) => {
+                                return <ProyectsCardComponent imageData={card} />
+                            })
+                        }
+                    </div>
                 </div>
+                <p onClick={handleViewProyects} className={styles['btn-see-more']}>{!isView ? 'Ver mas' : 'Ver menos'}</p>
             </div>
         </section>
     )

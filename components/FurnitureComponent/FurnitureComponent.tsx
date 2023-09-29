@@ -57,6 +57,7 @@ export default function FurnitureComponent({
                             />
                         })}
                     </div>
+                    <p className={styles['measure-text-note']}>{`(1m = 100cm)`}</p>
                     {areInputsEmpty && <p className={styles['text-error-custom']}>FALTA COMPLETAR ESTE CAMPO</p>}
                 </div>
             }

@@ -4,7 +4,7 @@ import BannerComponent from '@/components/BannerComponent/BannerComponent'
 import CategoriesComponent from '@/components/CategoriesComponent/CategoriesComponent'
 import data from '@/models/es.json'
 import NavigationContainer from '@/containers/NavigationContainer/NavigationContainer';
-import ProyectsContainer from '@/containers/ProyectsContainer/ProyectsContainer';
+import ProyectsContainer from '@/containers/ProyectsContainer/ProyectsContainer'
 
 export default function HomePage() {
   return (

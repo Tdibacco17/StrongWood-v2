@@ -45,6 +45,13 @@
             }
         }
 
+        .measure-text-note {
+            text-align: center;
+            font-weight: var(--font-bold);
+            font-size: var(--font-small);
+            color: var(--secondary-white);
+        }
+
         .text-error-custom {
             text-align: center;
             color: var(--tertiary-color);

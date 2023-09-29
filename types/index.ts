@@ -9,6 +9,10 @@ export interface ImgDataInterface {
     imgBlur: string,
 }
 
+export interface GridPropsInterface extends ImgDataInterface {
+    imgSpan?: number,
+}
+
 export interface NavigationInterface {
     nav_id: number,
     title: string,
@@ -53,7 +57,7 @@ export interface FieldToCompleteProps {
     isSelectField: boolean,
     contactPage: boolean,
     selectWidth?: boolean,
-    isRequired?:boolean
+    isRequired?: boolean
 }
 
 export interface FieldProps {

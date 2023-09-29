@@ -1,31 +1,13 @@
 'use client'
 import ProyectsComponent from "@/components/ProyectsComponent/ProyectsComponent";
-import { useRef } from "react";
+import { useState } from "react";
 
 export default function ProyectsContainer() {
-    const carouselRef = useRef<HTMLDivElement>(null);
+    const [isView, setIsView] = useState<boolean>(false)
 
-    const handleScrollLeft = () => {
-        if (carouselRef.current) {
-            carouselRef.current.scrollBy({
-                left: -448,
-                behavior: 'smooth',
-            });
-        }
-    };
+    const handleViewProyects = () => {
+        setIsView(!isView)
+    }
 
-    const handleScrollRight = () => {
-        if (carouselRef.current) {
-            carouselRef.current.scrollBy({
-                left: 448,
-                behavior: 'smooth',
-            });
-        }
-    };
-
-    return <ProyectsComponent
-        carouselRef={carouselRef}
-        handleScrollLeft={handleScrollLeft}
-        handleScrollRight={handleScrollRight}
-    />;
+    return <ProyectsComponent handleViewProyects={handleViewProyects} isView={isView} />
 }

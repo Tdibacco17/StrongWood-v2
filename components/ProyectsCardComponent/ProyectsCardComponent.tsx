@@ -1,16 +1,21 @@
 import Image from 'next/image';
 import styles from './ProyectsCardComponent.module.scss';
-import { ImgDataInterface } from '@/types';
+import { GridPropsInterface, ImgDataInterface } from '@/types';
 
-export default function ProyectsCardComponent({ imageData }: { imageData: ImgDataInterface }) {
+function getRandomHeight(min: number, max: number) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+export default function ProyectsCardComponent({ imageData }: { imageData: GridPropsInterface }) {
     return (
-        <div key={imageData.img_id} className={`${styles['container-outer-proyects-card']}`}>
+        <div key={imageData.img_id} className={`${styles['proyectos-outer-image']}`} style={{ gridRow: `span ${imageData.imgSpan ? imageData.imgSpan : getRandomHeight(2, 5)}` }}>
             <Image
                 src={imageData.imgSrc}
                 alt={imageData.imgAlt}
-                fill
+                width={275}
+                height={275}
                 sizes='(max-width: 1024px) 75vw,(max-width: 992px) 50vw,(max-width: 768px) 35vw,(max-width: 442px) 33vw, 100vw'
-                className={styles['container-inner-proyects-card']}
+                className={styles['proyectos-inner-image']}
                 placeholder='blur'
                 blurDataURL={imageData.imgBlur}
             />
