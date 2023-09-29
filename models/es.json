@@ -356,7 +356,67 @@
                 "imgAlt": "Nosotros",
                 "imgBlur": "data:image/svg+xml;base64,CiAgICAgICAgPHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA4IDUnPgogICAgICAgIDxmaWx0ZXIgaWQ9J2InIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0nc1JHQic+CiAgICAgICAgICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249JzEnLz4KICAgICAgICA8L2ZpbHRlcj4KICAgICAgICAgICAgPGltYWdlIHByZXNlcnZlQXNwZWN0UmF0aW89J25vbmUnIGZpbHRlcj0ndXJsKCNiKScgeD0nMCcgeT0nMCcgaGVpZ2h0PScxMDAlJyB3aWR0aD0nMTAwJScgaHJlZj0nZGF0YTppbWFnZS93ZWJwO2Jhc2U2NCwvOWovMndCREFBRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRSC8yd0JEQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFIL3dBQVJDQUFMQUJBREFTSUFBaEVCQXhFQi84UUFGZ0FCQVFFQUFBQUFBQUFBQUFBQUFBQUFDUVVJLzhRQUloQUFBUVVCQUFFRUF3QUFBQUFBQUFBQUJRRUNBd1FHQnhJSUNSRVZBQlF4LzhRQUZRRUJBUUFBQUFBQUFBQUFBQUFBQUFBQUJRYi94QUFjRVFBREFBTUJBUUVBQUFBQUFBQUFBQUFCQWdNRUJSSVJFeUgvMmdBTUF3RUFBaEVERVFBL0FBazF2Q3hCZjFlajl5NFdPVEpuK252N0FJZVFHcVF6emJHaW8wOVNZRTZtYUVxSmMrT2pwSEQxcFp0a3RTRTJ3aEdEdmxna042eVdHSlQ3VHZxcTQ5TGpiSGF1b1lISjEraVZkZDBET2hpZ0VUYzBaTy9TS0FzZzJLVk12VysxdVpNU0lLaUJBeWdnWWJmK2x4NHlBZFZ0MkViYVVuaUwxZGtiMUxuMm1aVHN5MVV6aGpDMFFpMTFTS1FkVVpka3FKQkJLeEd5ZUMxNTVZMytiM3JKNStjaXVrYTF5U2Zhb3k0UFRjY0x3SEticnNGVFdXSmE4UDdsNnRGSEpKbHMwOTcwanFXYTdIT2M5eXVWWG81VmN2ei9BSDQvSkRkNU50ZmdqNVR4eThYMVZvdTArM213Tmk2aWpEdmhnVlVyNlBRYUEvakFCL1RSbG5XZWoweVZSenRzYXMxb1VTaWxjY3E3SUQ4elJUMHdKVWhXQ0VlbFNULy8yUT09Jy8+CiAgICAgICAgPC9zdmc+CiAgICA="
             }
-        }
+        },
+        "title": "Strong Wood",
+        "subtitle": "Muebles con Pasión y Tradición Familiar",
+        "cards": [
+            {
+                "card_id": 1,
+                "isReverse": false,
+                "image": {
+                    "img_id": 1,
+                    "imgSrc": "/assets/img/aboutUsPage/cards/Strong-1.webp",
+                    "imgAlt": "Quienes somos",
+                    "imgBlur": "data:image/svg+xml;base64,CiAgICAgICAgPHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA4IDUnPgogICAgICAgIDxmaWx0ZXIgaWQ9J2InIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0nc1JHQic+CiAgICAgICAgICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249JzEnLz4KICAgICAgICA8L2ZpbHRlcj4KICAgICAgICAgICAgPGltYWdlIHByZXNlcnZlQXNwZWN0UmF0aW89J25vbmUnIGZpbHRlcj0ndXJsKCNiKScgeD0nMCcgeT0nMCcgaGVpZ2h0PScxMDAlJyB3aWR0aD0nMTAwJScgaHJlZj0nZGF0YTppbWFnZS93ZWJwO2Jhc2U2NCwvOWovMndCREFBRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRSC8yd0JEQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFIL3dBQVJDQUFMQUJBREFTSUFBaEVCQXhFQi84UUFGZ0FCQVFFQUFBQUFBQUFBQUFBQUFBQUFDUWNLLzhRQUlCQUFBZ01CQVFFQUFnTUFBQUFBQUFBQUJBVUNBd1lCQndnSkV4RVVGdi9FQUJRQkFRQUFBQUFBQUFBQUFBQUFBQUFBQUFYL3hBQWZFUUFEQUFJQ0FnTUFBQUFBQUFBQUFBQUJBZ01FRWdVVEFCRUdGQ0wvMmdBTUF3RUFBaEVERVFBL0FKdDdoOWtmTS9pWmVvK2U2SDZRTDFxcU9DWFZoYUd0K3VRMGdiZXo5ekpnSm9zMWw5ajBWdm1jMUNUaVFUSldQRGhUTE85bDBnWStmT2FaL3dBYUdTeE9NK2F6RmVkYWQwNmpxNVZjTnFEcmJTN2RZTk5Jc0gvMVhUYjdDTFNwUGV4NjB0c2lhWkdrb200Yit6S1ZFb3dCWFlmSGZ6R1pwL1A5YzU4YXlPbzBlNVRhemNhaHJzNlR0c1F4MDJlMG5qR1pVSDF3MXB6cWhiUU1pMXI1YllxVlZCSnpLQ1J1bWdFMnFsTmdMZjhBak45K0QrVmZMTGNuZmVxc2ZrcVZEU1g3clR2MnFwTlNsa0Z3L0dVak9MZ1J3QkJ4Z3hWM0JLUW9WUjZIQ2lmOHk2VjhiNWpLNUw2c3NoNmw3WTBEK3FCMFVzWTJJbVFpTWlsMllOdDJraWNncFQwM2lIUDhSaDRFclV4NVRCVElvNVlUNjJZYVVqNm9ONnJRb2lxWjZkQURWdDJDbnFldi85az0nLz4KICAgICAgICA8L3N2Zz4KICAgIA=="
+                },
+                "text": {
+                    "title": "Quienes somos",
+                    "description": "Somos Strong Wood, una empresa familiar apasionada por el diseño y la fabricación de muebles excepcionales. Desde hace generaciones, hemos entregado a nuestros clientes la calidad y el cuidado en cada pieza que creamos. Nos enorgullece ser una empresa que lleva el arte de trabajar la madera en su ADN."
+                }
+            },
+            {
+                "card_id": 2,
+                "isReverse": true,
+                "image": {
+                    "img_id": 2,
+                    "imgSrc": "/assets/img/aboutUsPage/cards/Strong-23.webp",
+                    "imgAlt": "Nuestra historia",
+                    "imgBlur": "data:image/svg+xml;base64,CiAgICAgICAgPHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA4IDUnPgogICAgICAgIDxmaWx0ZXIgaWQ9J2InIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0nc1JHQic+CiAgICAgICAgICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249JzEnLz4KICAgICAgICA8L2ZpbHRlcj4KICAgICAgICAgICAgPGltYWdlIHByZXNlcnZlQXNwZWN0UmF0aW89J25vbmUnIGZpbHRlcj0ndXJsKCNiKScgeD0nMCcgeT0nMCcgaGVpZ2h0PScxMDAlJyB3aWR0aD0nMTAwJScgaHJlZj0nZGF0YTppbWFnZS93ZWJwO2Jhc2U2NCwvOWovMndCREFBRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRSC8yd0JEQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFIL3dBQVJDQUFMQUJBREFTSUFBaEVCQXhFQi84UUFGZ0FCQVFFQUFBQUFBQUFBQUFBQUFBQUFDQWNKLzhRQUlCQUFBZ01BQWdJREFRQUFBQUFBQUFBQUF3UUNCUVlCQndnVUV4VVdHUC9FQUJVQkFRRUFBQUFBQUFBQUFBQUFBQUFBQUFVRy84UUFIUkVBQXdFQUF3QURBQUFBQUFBQUFBQUFBUUlEQkJFU0V3VWlRdi9hQUF3REFRQUNFUU1SQUQ4QW0zY1hrbHArNk12b2tPcmRMbTl6cTM2NWdxeWRRZUxyS2hKUkdyOXFZNmZNSHFZRUs3aE0vTmdScE1zbFV3UmdWSi80NWlLdmgvdDVkaVlOSzU3V3NNOGZZZG03L0RZWWdhejJySXFXV3JQejZkalIyQVlUY09ybzlOYm5rMXRNNnhNc2Nxd2lKNXAwVmVzeU5OTmFmUTJBTEhDWENJcWVwc3I2eDNOVGROMFdkejlBUzByNm5xMndzNjVaNk5MV0lEWTRVZE5Jb3lFaEl2TVlBRE1rZ0xMaUZtUDRPS3JmeXBvTG5oY01iYkczL2FUbWJzWUNoQnl1YVpvTkhRelB5eENNU09FSFZXOW1xcEorVFhvOHVuWlM5ZHFYQitKSFVVcDhVbW12MzlVemFwTjVoYnFsbDJwNXZRVUs4czJTYlVJUThCaXN5Q3BlaWVXbk8yMEpvWm1WYlpLRDE3UkxTT0toZEptUWJnRFV5cDJmOEJuVnVWV2YvOWs9Jy8+CiAgICAgICAgPC9zdmc+CiAgICA="
+                },
+                "text": {
+                    "title": "Nuestra historia",
+                    "description": "Comenzamos como carpinteros locales, construyendo muebles a mano con un enfoque inquebrantable en la calidad y la atención al detalle. A lo largo de los años, hemos crecido y evolucionado, pero nuestra dedicación a la excelencia y nuestra pasión por la madera nunca han cambiado."
+                }
+            },
+            {
+                "card_id": 3,
+                "isReverse": false,
+                "image": {
+                    "img_id": 3,
+                    "imgSrc": "/assets/img/aboutUsPage/cards/Strong-58.webp",
+                    "imgAlt": "Lo que hacemos",
+                    "imgBlur": "data:image/svg+xml;base64,CiAgICAgICAgPHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA4IDUnPgogICAgICAgIDxmaWx0ZXIgaWQ9J2InIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0nc1JHQic+CiAgICAgICAgICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249JzEnLz4KICAgICAgICA8L2ZpbHRlcj4KICAgICAgICAgICAgPGltYWdlIHByZXNlcnZlQXNwZWN0UmF0aW89J25vbmUnIGZpbHRlcj0ndXJsKCNiKScgeD0nMCcgeT0nMCcgaGVpZ2h0PScxMDAlJyB3aWR0aD0nMTAwJScgaHJlZj0nZGF0YTppbWFnZS93ZWJwO2Jhc2U2NCwvOWovMndCREFBRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRSC8yd0JEQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFIL3dBQVJDQUFMQUJBREFTSUFBaEVCQXhFQi84UUFGZ0FCQVFFQUFBQUFBQUFBQUFBQUFBQUFDUUVJLzhRQUlSQUFBUVVCQUFJQ0F3QUFBQUFBQUFBQUJRRUNBd1FHQndBSUVSUVRGU1QveEFBVkFRRUJBQUFBQUFBQUFBQUFBQUFBQUFBR0IvL0VBQ0FSQUFNQkFBSUJCUUVBQUFBQUFBQUFBQUVDQXdRRkV4UUFFUkloTVRULzJnQU1Bd0VBQWhFREVRQS9BRDAwTngzcDEwbmttVzV3UEQzTTMwNmZDNi9mTFYwaGI3TUJvVlIxWE93bHNjT29GaGlYZzVLYWlKZWRZV2ZvUjljMUlQZmFxMlcyYVRQTHpYQlh2YkR2SXZ2Zlh1S1puVDRLWHFlbXBQdXZHYnBXRnMrSkR2QWlEVTRqb2VmUUpveDlTclREV2g5cXdURzUvV2tyeFUyK2FrVUV3Wnlyakh1eG9qVzZSNm9NcnpSUk1NQ2JJZ2cxbFNtaVNqcE9wUDFUNnNhZlgvbGFwOE9OSW8rcCtDVnNsU09GcjBySytCN2M4dWpxaStpanVYVUJvZURDNThFRkhod242WVZLNmpUcDV3WXRhQmhXYW5JYWtTRlhPVmo1eU1zbnlxcXIxWHlmYkd6WU5qYk1tS01xYXpENkJJL25wUmpXakFFdFdpbElrS0ZUcG1xRUg5OVBvUTJjcndlZkRyM1Z2UGpNL0lPMUtNVmZxcDRJOGZPRVBzc2tjOTRXak0zZFN6QjFWdmlmLzlrPScvPgogICAgICAgIDwvc3ZnPgogICAg"
+                },
+                "text": {
+                    "title": "Lo que hacemos",
+                    "description": "Nos especializamos en diseñar y fabricar muebles a medida para todo tipo de proyectos, ya sea para hogares, oficinas o locales comerciales. Desde la conceptualización hasta la instalación final, nos encargamos de cada paso del proceso. Nuestro compromiso con la calidad se refleja en cada mueble que creamos, utilizando maderas selectas y técnicas artesanales."
+                }
+            },
+            {
+                "card_id": 4,
+                "isReverse": true,
+                "image": {
+                    "img_id": 4,
+                    "imgSrc": "/assets/img/aboutUsPage/cards/Strong-29.webp",
+                    "imgAlt": "Nuestra filosofía",
+                    "imgBlur": "data:image/svg+xml;base64,CiAgICAgICAgPHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA4IDUnPgogICAgICAgIDxmaWx0ZXIgaWQ9J2InIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0nc1JHQic+CiAgICAgICAgICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249JzEnLz4KICAgICAgICA8L2ZpbHRlcj4KICAgICAgICAgICAgPGltYWdlIHByZXNlcnZlQXNwZWN0UmF0aW89J25vbmUnIGZpbHRlcj0ndXJsKCNiKScgeD0nMCcgeT0nMCcgaGVpZ2h0PScxMDAlJyB3aWR0aD0nMTAwJScgaHJlZj0nZGF0YTppbWFnZS93ZWJwO2Jhc2U2NCwvOWovMndCREFBRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRSC8yd0JEQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFIL3dBQVJDQUFMQUJBREFTSUFBaEVCQXhFQi84UUFGd0FBQXdFQUFBQUFBQUFBQUFBQUFBQUFBZ1FJQ2YvRUFDRVFBQUlDQXdBQ0FnTUFBQUFBQUFBQUFBTUVBZ1VCQmdjSUNSRVVFaE1WLzhRQUZBRUJBQUFBQUFBQUFBQUFBQUFBQUFBQUJ2L0VBQndSQUFNQkFRRUJBUUVBQUFBQUFBQUFBQUVDQXdRRkVSSVVJdi9hQUF3REFRQUNFUU1SQUQ4QWtUclhrT2xVY3AzRkpYYUs2ajJPZ1ZveVU5RlozUDhBSEx0RndqWjFXR3FSY21Kd0s4MHNtc1IzSzN6R0lId1Y0eVNYWWFTekxJandsOGxlbGFuMk8zNXMvRUxCYVdoWTFPbDFMR3dYZXc2cmpibGRxUll0TCtJYkxZU0xaSytURnhsa1ZRelUxcFF0UlpORE1WeVNZYzZoVm83WDdCTlQwbllneXR0VWhhYlF0Q2phT3hsT0k3STNYN3B5VWNRTEFtRHp0QmdiRTFnbjJWWktwalZNRUtTZ3duNi9NL1Q5bUhTQnF4Z0FRcnZ5SkNBSTRRd0ZZYU4rYWFXRlEvait0V1Njc1JrcVJlSWlMeWhESXBRekNHWW00cGkyNStqTFRqaG96N09QRFl1ZTBWZEZBYXBpck1XSlYxSUpaNUtqZ2svTCtCUXFCUDFjNnZNdm4xV2xveTlldVpyU295RStyRkxGVkFIMHJCaUZTck12Z0g4Z2xpZi8yUT09Jy8+CiAgICAgICAgPC9zdmc+CiAgICA="
+                },
+                "text": {
+                    "title": "Nuestra filosofía",
+                    "description": "En Strong Wood, creemos que los muebles no solo deben ser funcionales, sino también una expresión de la belleza y la personalidad de quienes los poseen. Cada proyecto es una colaboración, donde trabajamos estrechamente con nuestros clientes para dar vida a sus visiones y crear piezas únicas que perduren en el tiempo."
+                }
+            }
+        ]
     },
     "designPage": {
         "sectionLink": "top"

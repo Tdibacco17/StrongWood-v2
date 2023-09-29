@@ -75,6 +75,16 @@ export interface SelectProps {
     value: string
 }
 
+export interface AboutUscardInterface {
+    card_id: number,
+    isReverse: boolean,
+    image: ImgDataInterface,
+    text: {
+        title?: string,
+        description: string
+    }
+}
+
 //CONTACT PRODUCT
 export interface MessageContactProductDataInterface {
     name: string,

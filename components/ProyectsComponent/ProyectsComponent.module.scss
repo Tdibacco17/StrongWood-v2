@@ -11,7 +11,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
         padding: 1.5rem 0;
 
         .container-header-proyects {
@@ -31,7 +30,7 @@
             min-width: 100%;
             max-width: 100%;
             overflow-y: hidden;
-            padding: 0 1.5rem;
+            padding: 2rem 1.5rem;
             display: flex;
             justify-content: center;
 
@@ -46,7 +45,7 @@
                 min-width: 90vw;
                 max-width: 90vw;
                 height: 100%;
-                
+
                 @media (max-width:992px) {
                     min-width: 100%;
                     max-width: 100%;

@@ -1,0 +1,50 @@
+.container-section-abouts {
+    min-width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12rem;
+
+    .aboutus-title {
+        text-align: center;
+        font-size: var(--font-xbig);
+        font-weight: var(--font-bold);
+        color: var(--tertiary-color);
+        text-transform: uppercase;
+        padding: 0 1.5rem;
+
+        @media (max-width:523px) {
+            padding: 0 1rem;
+        }
+    }
+
+    .aboutus-subtitle {
+        text-align: center;
+        font-size: var(--font-xlarge);
+        font-weight: var(--font-bold);
+        padding: 0 1.5rem;
+
+        @media (max-width:523px) {
+            padding: 0 1rem;
+        }
+    }
+
+    .container-aboutus-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 12rem;
+        min-width: 90vw;
+        max-width: 90vw;
+
+        @media (max-width:992px) {
+            min-width: 100vw;
+            max-width: 100vw;
+            padding: 0 1.5rem;
+        }
+
+        @media (max-width:523px) {
+            padding: 0 1rem;
+        }
+    }
+}

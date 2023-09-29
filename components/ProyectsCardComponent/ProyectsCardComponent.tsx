@@ -2,13 +2,14 @@ import Image from 'next/image';
 import styles from './ProyectsCardComponent.module.scss';
 import { GridPropsInterface, ImgDataInterface } from '@/types';
 
-function getRandomHeight(min: number, max: number) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+// function getRandomHeight(min: number, max: number) {
+//     return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
 
 export default function ProyectsCardComponent({ imageData }: { imageData: GridPropsInterface }) {
     return (
-        <div key={imageData.img_id} className={`${styles['proyectos-outer-image']}`} /* style={{ gridRow: `span ${imageData.imgSpan ? imageData.imgSpan : getRandomHeight(2, 5)}` }} */>
+        <div key={imageData.img_id} className={`${styles['proyectos-outer-image']}`}
+        /* style={{ gridRow: `span ${imageData.imgSpan ? imageData.imgSpan : getRandomHeight(2, 5)}` }} */>
             <Image
                 src={imageData.imgSrc}
                 alt={imageData.imgAlt}
