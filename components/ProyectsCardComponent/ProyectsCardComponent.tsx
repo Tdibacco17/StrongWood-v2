@@ -8,12 +8,11 @@ function getRandomHeight(min: number, max: number) {
 
 export default function ProyectsCardComponent({ imageData }: { imageData: GridPropsInterface }) {
     return (
-        <div key={imageData.img_id} className={`${styles['proyectos-outer-image']}`} style={{ gridRow: `span ${imageData.imgSpan ? imageData.imgSpan : getRandomHeight(2, 5)}` }}>
+        <div key={imageData.img_id} className={`${styles['proyectos-outer-image']}`} /* style={{ gridRow: `span ${imageData.imgSpan ? imageData.imgSpan : getRandomHeight(2, 5)}` }} */>
             <Image
                 src={imageData.imgSrc}
                 alt={imageData.imgAlt}
-                width={275}
-                height={275}
+                fill
                 sizes='(max-width: 1024px) 75vw,(max-width: 992px) 50vw,(max-width: 768px) 35vw,(max-width: 442px) 33vw, 100vw'
                 className={styles['proyectos-inner-image']}
                 placeholder='blur'
