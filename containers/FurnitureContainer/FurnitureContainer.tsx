@@ -207,7 +207,6 @@ export default function FurnitureContainer({
                 validateSelectedImages();
                 validateCompleteInputs();
                 if (missingTableIds.length > 0 || areInputsEmpty || (Object.keys(inputValues).length === 0)) {
-                    console.log("ENTRE")
                     setErrorMessage("Por favor, complete todos los campos")
                     return
                 } else {
