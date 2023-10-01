@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const routesWeb = ["", "placares", "cocina", "banio", "dormitorio", "productos"];
-
-const placaresItems = ["vestidor-de-luxe", "vestidor-fusion", "placard-urbanwood"] 
+const placaresItems = ["vestidor-de-luxe", "vestidor-fusion", "placard-urbanwood"]
 const cocinasItems = ["serie-nordica", "serie-new-york", "serie-premium", "serie-nova", "serie-de-luxe",]
 const banioItems = ["vanitory-new-york", "vanitory-escandinavo", "vanitory-nordico",]
 const dormitorioItems = ["comoda", "escritorio", "mesa-de-luz", "cama-individual", "cama-matrimonial"]
@@ -64,6 +62,8 @@ export function middleware(request: NextRequest) {
             return NextResponse.redirect(new URL("/banio", request.url));
         }
     }
+
+
 
     return NextResponse.next();
 }
