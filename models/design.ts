@@ -601,7 +601,7 @@ export const designData: DesignDataInterface = {
                     }, {
                         table_id: 3,
                         title: "Incluir",
-                        maxSelections: 4,
+                        maxSelections: 6,
                         askMeasure: false,
                         cards: [
                             {
