@@ -283,6 +283,10 @@ export const designData: DesignDataInterface = {
                             measure_id: 3,
                             title: "Altura",
                             measure: 0
+                        }, {
+                            measure_id: 4,
+                            title: "Profundidad",
+                            measure: 0
                         }
                     ]
                 },
@@ -307,6 +311,10 @@ export const designData: DesignDataInterface = {
                         }, {
                             measure_id: 4,
                             title: "Altura",
+                            measure: 0
+                        }, {
+                            measure_id: 5,
+                            title: "Profundidad",
                             measure: 0
                         }
                     ]
@@ -338,6 +346,10 @@ export const designData: DesignDataInterface = {
                             measure_id: 5,
                             title: "Altura",
                             measure: 0
+                        }, {
+                            measure_id: 6,
+                            title: "Profundidad",
+                            measure: 0
                         }
                     ]
                 },
@@ -352,6 +364,10 @@ export const designData: DesignDataInterface = {
                         }, {
                             measure_id: 2,
                             title: "Altura",
+                            measure: 0
+                        }, {
+                            measure_id: 3,
+                            title: "Profundidad",
                             measure: 0
                         }
                     ]
@@ -372,6 +388,10 @@ export const designData: DesignDataInterface = {
                         }, {
                             measure_id: 3,
                             title: "Altura",
+                            measure: 0
+                        }, {
+                            measure_id: 4,
+                            title: "Profundidad",
                             measure: 0
                         }
                     ]
@@ -759,6 +779,10 @@ export const designData: DesignDataInterface = {
                             measure_id: 3,
                             title: "Altura",
                             measure: 0
+                        }, {
+                            measure_id: 4,
+                            title: "Profundidad",
+                            measure: 0
                         }
                     ]
                 },
@@ -783,6 +807,10 @@ export const designData: DesignDataInterface = {
                         }, {
                             measure_id: 4,
                             title: "Altura",
+                            measure: 0
+                        },  {
+                            measure_id: 5,
+                            title: "Profundidad",
                             measure: 0
                         }
                     ]
@@ -814,6 +842,10 @@ export const designData: DesignDataInterface = {
                             measure_id: 5,
                             title: "Altura",
                             measure: 0
+                        },  {
+                            measure_id: 6,
+                            title: "Profundidad",
+                            measure: 0
                         }
                     ]
                 },
@@ -828,6 +860,10 @@ export const designData: DesignDataInterface = {
                         }, {
                             measure_id: 2,
                             title: "Altura",
+                            measure: 0
+                        },  {
+                            measure_id: 3,
+                            title: "Profundidad",
                             measure: 0
                         }
                     ]
@@ -848,6 +884,10 @@ export const designData: DesignDataInterface = {
                         }, {
                             measure_id: 3,
                             title: "Altura",
+                            measure: 0
+                        },  {
+                            measure_id: 4,
+                            title: "Profundidad",
                             measure: 0
                         }
                     ]
